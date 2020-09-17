@@ -1,0 +1,134 @@
+// colors
+
+$color-var-primary-100: #fff0ee;
+$color-var-primary-300: #ffc2bc;
+$color-var-primary-500: #ff5c17;
+$color-var-primary-700: #cc8f89;
+$color-var-primary-900: #996b67;
+
+$color-var-foreground: #f6f6f6;
+$color-var-background: #020303;
+
+$color-var-wash-900: #1a1a1a;
+$color-var-wash-800: #333;
+$color-var-wash-700: #4d4d4d;
+$color-var-wash-600: #666;
+$color-var-wash-500: #808080;
+$color-var-wash-400: #999;
+$color-var-wash-300: #b3b3b3;
+$color-var-wash-200: #ccc;
+$color-var-wash-100: #e6e6e6;
+
+$color-var-blue-100: #e7f6fd;
+$color-var-blue-200: #c4e9fb;
+$color-var-blue-300: #a0dbf8;
+$color-var-blue-400: #59c0f2;
+$color-var-blue-500: #12a5ed;
+$color-var-blue-600: #1095d5;
+$color-var-blue-700: #0b638e;
+$color-var-blue-800: #084a6b;
+$color-var-blue-900: #053247;
+
+$color-var-red-100: #feebef;
+$color-var-red-200: #fdccd6;
+$color-var-red-300: #fbadbd;
+$color-var-red-400: #f8708c;
+$color-var-red-500: #f5325b;
+$color-var-red-600: #dd2d52;
+$color-var-red-700: #931e37;
+$color-var-red-800: #6e1729;
+$color-var-red-900: #4a0f1b;
+
+$color-var-yellow-100: #fff9ee;
+$color-var-yellow-200: #fff1d5;
+$color-var-yellow-300: #ffe8bc;
+$color-var-yellow-400: #ffd78a;
+$color-var-yellow-500: #ffc658;
+$color-var-yellow-600: #e6b24f;
+$color-var-yellow-700: #997735;
+$color-var-yellow-800: #735928;
+$color-var-yellow-900: #4d3b1a;
+
+$color-var-green-100: #f2fbe9;
+$color-var-green-200: #dff4c8;
+$color-var-green-300: #cbeda6;
+$color-var-green-400: #a5e064;
+$color-var-green-500: #7ed321;
+$color-var-green-600: #71be1e;
+$color-var-green-700: #4c7f14;
+$color-var-green-800: #395f0f;
+$color-var-green-900: #263f0a;
+
+// theme
+
+:root {
+  --color-primary-900: #{$color-var-primary-900};
+  --color-primary-500: #{$color-var-primary-500};
+  --color-primary-300: #{$color-var-primary-300};
+  --color-primary-100: #{$color-var-primary-100};
+  --color-foreground: #{$color-var-background};
+  --color-background: #{$color-var-foreground};
+  --color-wash-100: #{$color-var-wash-100};
+  --color-wash-200: #{$color-var-wash-200};
+  --color-wash-300: #{$color-var-wash-300};
+  --color-wash-400: #{$color-var-wash-400};
+  --color-wash-500: #{$color-var-wash-500};
+  --color-wash-600: #{$color-var-wash-600};
+  --color-wash-700: #{$color-var-wash-700};
+  --color-wash-800: #{$color-var-wash-800};
+  --color-wash-900: #{$color-var-wash-900};
+  --color-blue-100: #{$color-var-blue-100};
+  --color-blue-200: #{$color-var-blue-200};
+  --color-blue-300: #{$color-var-blue-300};
+  --color-blue-400: #{$color-var-blue-400};
+  --color-blue-500: #{$color-var-blue-500};
+  --color-blue-600: #{$color-var-blue-600};
+  --color-blue-700: #{$color-var-blue-700};
+  --color-blue-800: #{$color-var-blue-800};
+  --color-blue-900: #{$color-var-blue-900};
+  --color-red-100: #{$color-var-red-100};
+  --color-red-200: #{$color-var-red-200};
+  --color-red-300: #{$color-var-red-300};
+  --color-red-400: #{$color-var-red-400};
+  --color-red-500: #{$color-var-red-500};
+  --color-red-600: #{$color-var-red-600};
+  --color-red-700: #{$color-var-red-700};
+  --color-red-800: #{$color-var-red-800};
+  --color-red-900: #{$color-var-red-900};
+  --color-yellow-100: #{$color-var-yellow-100};
+  --color-yellow-200: #{$color-var-yellow-200};
+  --color-yellow-300: #{$color-var-yellow-300};
+  --color-yellow-400: #{$color-var-yellow-400};
+  --color-yellow-500: #{$color-var-yellow-500};
+  --color-yellow-600: #{$color-var-yellow-600};
+  --color-yellow-700: #{$color-var-yellow-700};
+  --color-yellow-800: #{$color-var-yellow-800};
+  --color-yellow-900: #{$color-var-yellow-900};
+  --color-green-100: #{$color-var-green-100};
+  --color-green-200: #{$color-var-green-200};
+  --color-green-300: #{$color-var-green-300};
+  --color-green-400: #{$color-var-green-400};
+  --color-green-500: #{$color-var-green-500};
+  --color-green-600: #{$color-var-green-600};
+  --color-green-700: #{$color-var-green-700};
+  --color-green-800: #{$color-var-green-800};
+  --color-green-900: #{$color-var-green-900};
+  --mix-blend-mode: lighten;
+}
+
+// base
+
+html {
+  color: theme('colors.foreground');
+  background-color: theme('colors.background');
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// font
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
