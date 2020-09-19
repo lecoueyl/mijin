@@ -6,18 +6,23 @@
     >
       <h1
         class="pb-2 text-gray-600"
-        :class="{ 'pt-8': sectionIndex != 0 }"
+        :class="{ 'pt-10': sectionIndex != 0 }"
       >
-        {{ sectionName }}
+        {{ $t(`sections.${sectionName}.title`) }}
       </h1>
 
       <ul>
         <li
-          v-for="(item, itemName) in section"
-          :key="itemName"
+          v-for="(menu, menuName, menuIndex) in section"
+          :key="menuName"
+          :class="{ 'pt-2': menuIndex != 0 }"
         >
-          <nuxt-link to="">
-            {{ itemName }}
+          <nuxt-link
+            :to="localePath(`${sectionName}-${menuName}`)"
+            class="hover:text-primary-500 transition-colors duration-100 ease-in-out px-2 py-1 block"
+            active-class="text-primary-700 hover:text-primary-700  bg-primary-200 rounded"
+          >
+            {{ $t(`sections.${sectionName}.${menuName}.title`) }}
           </nuxt-link>
         </li>
       </ul>
@@ -34,10 +39,10 @@ export default Vue.extend({
       // https://www.flexport.com/design/components
       // https://vercel.com/design/status-dot
       sections: {
-        fundations: {
+        foundations: {
           color: {},
-          typo: {},
           layout: {},
+          typography: {},
         },
         atoms: {
           button: {},

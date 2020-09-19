@@ -1,10 +1,15 @@
 // colors
 
-$color-var-primary-100: #fff0ee;
-$color-var-primary-300: #ffc2bc;
-$color-var-primary-500: #ff5c17;
-$color-var-primary-700: #cc8f89;
-$color-var-primary-900: #996b67;
+$color-var-primary-50: #fff4f9;
+$color-var-primary-100: #fee9f3;
+$color-var-primary-200: #fdc9e1;
+$color-var-primary-300: #fca8ce;
+$color-var-primary-400: #f966aa;
+$color-var-primary-500: #f72585;
+$color-var-primary-600: #de2178;
+$color-var-primary-700: #941650;
+$color-var-primary-800: #6f113c;
+$color-var-primary-900: #4a0b28;
 
 $color-var-background: #f6f6f6;
 $color-var-foreground: #020303;
@@ -63,10 +68,16 @@ $color-var-green-900: #263f0a;
 // theme
 
 :root {
-  --color-primary-900: #{$color-var-primary-900};
-  --color-primary-500: #{$color-var-primary-500};
-  --color-primary-300: #{$color-var-primary-300};
   --color-primary-100: #{$color-var-primary-100};
+  --color-primary-100: #{$color-var-primary-100};
+  --color-primary-200: #{$color-var-primary-200};
+  --color-primary-300: #{$color-var-primary-300};
+  --color-primary-400: #{$color-var-primary-400};
+  --color-primary-500: #{$color-var-primary-500};
+  --color-primary-600: #{$color-var-primary-600};
+  --color-primary-700: #{$color-var-primary-700};
+  --color-primary-800: #{$color-var-primary-800};
+  --color-primary-900: #{$color-var-primary-900};
   --color-background: #{$color-var-background};
   --color-foreground: #{$color-var-foreground};
   --color-gray-100: #{$color-var-gray-100};

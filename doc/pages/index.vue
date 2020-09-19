@@ -13,8 +13,10 @@
         <div class="p-4 border border-gray-300 rounded-md">
           Test
         </div>
-        <!-- ... -->
-        <div>9</div>
+
+        <div class="p-4 bg-gray-100 rounded-lg h-24">
+          Test
+        </div>
       </div>
     </div>
   </div>

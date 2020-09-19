@@ -1,3 +1,5 @@
+import i18n from './doc/i18n';
+
 export default {
   srcDir: 'doc',
   /*
@@ -58,6 +60,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    ['nuxt-i18n', i18n],
   ],
   /*
   ** Build configuration
