@@ -6,18 +6,19 @@ $color-var-primary-500: #ff5c17;
 $color-var-primary-700: #cc8f89;
 $color-var-primary-900: #996b67;
 
-$color-var-foreground: #f6f6f6;
-$color-var-background: #020303;
+$color-var-background: #f6f6f6;
+$color-var-foreground: #020303;
 
-$color-var-wash-900: #1a1a1a;
-$color-var-wash-800: #333;
-$color-var-wash-700: #4d4d4d;
-$color-var-wash-600: #666;
-$color-var-wash-500: #808080;
-$color-var-wash-400: #999;
-$color-var-wash-300: #b3b3b3;
-$color-var-wash-200: #ccc;
-$color-var-wash-100: #e6e6e6;
+$color-var-gray-50: #f9f9f9;
+$color-var-gray-100: #f2f2f2;
+$color-var-gray-200: #dfdfdf;
+$color-var-gray-300: #ccc;
+$color-var-gray-400: #a6a6a6;
+$color-var-gray-500: #808080;
+$color-var-gray-600: #737373;
+$color-var-gray-700: #4d4d4d;
+$color-var-gray-800: #3a3a3a;
+$color-var-gray-900: #262626;
 
 $color-var-blue-100: #e7f6fd;
 $color-var-blue-200: #c4e9fb;
@@ -66,17 +67,17 @@ $color-var-green-900: #263f0a;
   --color-primary-500: #{$color-var-primary-500};
   --color-primary-300: #{$color-var-primary-300};
   --color-primary-100: #{$color-var-primary-100};
-  --color-foreground: #{$color-var-background};
-  --color-background: #{$color-var-foreground};
-  --color-wash-100: #{$color-var-wash-100};
-  --color-wash-200: #{$color-var-wash-200};
-  --color-wash-300: #{$color-var-wash-300};
-  --color-wash-400: #{$color-var-wash-400};
-  --color-wash-500: #{$color-var-wash-500};
-  --color-wash-600: #{$color-var-wash-600};
-  --color-wash-700: #{$color-var-wash-700};
-  --color-wash-800: #{$color-var-wash-800};
-  --color-wash-900: #{$color-var-wash-900};
+  --color-background: #{$color-var-background};
+  --color-foreground: #{$color-var-foreground};
+  --color-gray-100: #{$color-var-gray-100};
+  --color-gray-200: #{$color-var-gray-200};
+  --color-gray-300: #{$color-var-gray-300};
+  --color-gray-400: #{$color-var-gray-400};
+  --color-gray-500: #{$color-var-gray-500};
+  --color-gray-600: #{$color-var-gray-600};
+  --color-gray-700: #{$color-var-gray-700};
+  --color-gray-800: #{$color-var-gray-800};
+  --color-gray-900: #{$color-var-gray-900};
   --color-blue-100: #{$color-var-blue-100};
   --color-blue-200: #{$color-var-blue-200};
   --color-blue-300: #{$color-var-blue-300};
@@ -121,6 +122,8 @@ $color-var-green-900: #263f0a;
 html {
   color: theme('colors.foreground');
   background-color: theme('colors.background');
+
+  @apply font-medium;
 }
 
 body {
@@ -131,4 +134,4 @@ body {
 
 // font
 
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&display=swap');

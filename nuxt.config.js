@@ -29,6 +29,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '~/assets/css/main.scss',
   ],
   /*
   ** Plugins to load before mounting the App
@@ -45,11 +46,14 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/eslint-module',
     '@nuxt/typescript-build',
+    '@nuxtjs/eslint-module',
     '@nuxtjs/stylelint-module',
     '@nuxtjs/tailwindcss',
   ],
+  tailwindcss: {
+    configPath: '../tailwind.config.js',
+  },
   /*
   ** Nuxt.js modules
   */
@@ -60,5 +64,7 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+    publicPath: '/assets/',
+    extractCSS: true,
   },
 };

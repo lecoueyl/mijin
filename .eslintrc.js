@@ -1,3 +1,5 @@
+const { resolve } = require('path');
+
 module.exports = {
   root: true,
   env: {
@@ -25,9 +27,15 @@ module.exports = {
     'import/resolver': {
       node: {
         extensions: ['.js', '.vue'],
+        alias: {
+          '~': resolve(__dirname, 'doc'),
+        },
       },
       nuxt: {
         extensions: ['.js', '.vue'],
+        alias: {
+          '~': resolve(__dirname, 'doc'),
+        },
       },
     },
   },
