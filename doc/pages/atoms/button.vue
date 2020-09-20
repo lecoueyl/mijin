@@ -7,6 +7,8 @@
     >
       Button
     </Headline>
+
+    <Sample />
   </div>
 </template>
 

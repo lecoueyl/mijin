@@ -1,4 +1,10 @@
 module.exports = {
+  error: {
+    title: 'Not found',
+    notFound: 'Oh, could not find what you are looking for.',
+    occurred: 'Oups, an error occurred.',
+  },
+
   head: {
     title: 'Welcome',
     description: '',
@@ -36,11 +42,8 @@ module.exports = {
     },
   },
 
-  // error
-
-  error: {
-    title: 'Not found',
-    notFound: 'Oh, could not find what you are looking for.',
-    occured: 'Oups, an error occurred.',
+  theme: {
+    dark: 'Dark',
+    light: 'Light',
   },
 };
