@@ -1,24 +1,38 @@
 <template>
   <div>
-    <Headline
+    <bb-headline
       :level="1"
       :size="2"
       class="pb-8"
     >
       Button
-    </Headline>
+    </bb-headline>
 
-    <Sample />
+    <Sample title="Default">
+      <bb-button>Default</bb-button>
+    </Sample>
+
+    <Sample title="Secondary">
+      <bb-button
+        type="secondary"
+      >
+        Secondary
+      </bb-button>
+    </Sample>
+
+    <Sample title="Disabled">
+      <bb-button
+        disabled
+      >
+        Disabled
+      </bb-button>
+    </Sample>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import { Headline } from '../../../lib/index';
 
 export default Vue.extend({
-  components: {
-    Headline,
-  },
 });
 </script>
