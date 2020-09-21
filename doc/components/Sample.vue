@@ -1,7 +1,7 @@
 <template functional>
   <section class="pb-10">
     <BbHeadline
-      :id="props.title"
+      :id="$options.id(props.title)"
       :level="2"
       :size="4"
       class="pb-8"
@@ -28,6 +28,10 @@ export default Vue.extend({
       type: String,
       required: true,
     },
+  },
+
+  id(title) {
+    return title.toLowerCase().replace(/ /g, '-');
   },
 });
 </script>

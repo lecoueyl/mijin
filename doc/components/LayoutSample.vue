@@ -10,20 +10,32 @@
       </BbHeadline>
 
       <slot />
+
+      <template v-if="props">
+        <BbHeadline
+          :level="2"
+          :size="2"
+          class="pb-8"
+        >
+          Props
+        </BbHeadline>
+
+        {{ props }}
+      </template>
     </div>
 
-    <nav class="w-1/4 pl-10 pt-10 sticky top-0 left-0 text-sm">
+    <nav class="w-1/4 pl-10 pt-10 sticky top-0 self-start text-sm">
       <ul>
         <li
-          v-for="(anchor, anchorName, anchorIndex) in anchors"
-          :key="anchorName"
+          v-for="(anchor, anchorIndex) in anchors"
+          :key="anchor.id"
           :class="{ 'pt-2': anchorIndex != 0 }"
         >
           <a
-            :href="`#${anchor}`"
+            :href="`#${anchor.id}`"
             class="transition-fast text-gray-700 hover:text-foreground"
           >
-            {{ anchor }}
+            {{ anchor.name }}
           </a>
         </li>
       </ul>
@@ -36,9 +48,14 @@ import Vue from 'vue';
 
 export default Vue.extend({
   props: {
+    props: {
+      default: null,
+      required: false,
+      type: Object,
+    },
     title: {
-      type: String,
       required: true,
+      type: String,
     },
   },
 
@@ -49,7 +66,10 @@ export default Vue.extend({
   },
 
   mounted() {
-    document.querySelectorAll('h2').forEach((element) => this.anchors.push(element.textContent.trim()));
+    document.querySelectorAll('h2').forEach((element) => this.anchors.push({
+      id: element.id,
+      name: element.textContent.trim(),
+    }));
   },
 });
 </script>

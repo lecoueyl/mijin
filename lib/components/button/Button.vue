@@ -43,8 +43,8 @@ export default {
 
   props: {
     disabled: {
-      type: Boolean,
       default: false,
+      type: Boolean,
     },
 
     icon: {
@@ -53,13 +53,13 @@ export default {
     },
 
     iconRight: {
-      type: Boolean,
       default: false,
+      type: Boolean,
     },
 
     loading: {
-      type: Boolean,
       default: false,
+      type: Boolean,
     },
 
     size: {

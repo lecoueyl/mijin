@@ -1,5 +1,8 @@
 <template>
-  <LayoutSample title="Button">
+  <LayoutSample
+    title="Button"
+    :props="props"
+  >
     <Sample title="Default">
       <bb-button>Default</bb-button>
     </Sample>
@@ -32,7 +35,13 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { Button } from '../../../lib';
 
 export default Vue.extend({
+  data() {
+    return {
+      props: Button.props,
+    };
+  },
 });
 </script>
