@@ -13,6 +13,7 @@
 
       <template v-if="props">
         <BbHeadline
+          id="props"
           :level="2"
           :size="2"
           class="pb-8"
@@ -23,9 +24,21 @@
         <table class="w-full table-auto">
           <thead>
             <tr class="text-left">
-              <th class="py-2">Name</th>
-              <th class="py-2">Default</th>
-              <th class="py-2">Required</th>
+              <th class="py-2">
+                Name
+              </th>
+
+              <th class="py-2">
+                Type
+              </th>
+
+              <th class="py-2">
+                Default
+              </th>
+
+              <th class="py-2">
+                Required
+              </th>
             </tr>
           </thead>
 
@@ -39,6 +52,15 @@
               </td>
 
               <td class="border-b py-2">
+                <span
+                  v-for="type in prop.type"
+                  :key="type"
+                >
+                  {{ type }}
+                </span>
+              </td>
+
+              <td class="border-b py-2">
                 {{ prop.default }}
               </td>
 
@@ -48,7 +70,6 @@
             </tr>
           </tbody>
         </table>
-
       </template>
     </div>
 
@@ -95,16 +116,17 @@ export default Vue.extend({
   computed: {
     props() {
       const props = this.$root?.$options?.components[`Bb${this.component}`]?.options?.props;
-      console.table(props);
-      const test = Object.keys(props).map((key) => ({
-        name: key,
-        required: props[key].required,
-        type: JSON.stringify(props[key].type),
-        default: props[key].default,
-      }));
 
-      // console.table(test);
-      return test;
+      if (props) {
+        return Object.keys(props).map((key) => ({
+          name: key,
+          required: props[key].required,
+          type: Array.isArray(props[key].type) ? props[key].type.map((type) => type.name) : [props[key].type.name],
+          default: props[key].default,
+        }));
+      }
+
+      return null;
     },
   },
 
