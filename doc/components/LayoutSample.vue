@@ -20,7 +20,35 @@
           Props
         </BbHeadline>
 
-        {{ props }}
+        <table class="w-full table-auto">
+          <thead>
+            <tr class="text-left">
+              <th class="py-2">Name</th>
+              <th class="py-2">Default</th>
+              <th class="py-2">Required</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr
+              v-for="prop in props"
+              :key="prop.name"
+            >
+              <td class="border-b py-2">
+                {{ prop.name }}
+              </td>
+
+              <td class="border-b py-2">
+                {{ prop.default }}
+              </td>
+
+              <td class="border-b py-2">
+                {{ prop.required || false }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
       </template>
     </div>
 
@@ -49,8 +77,7 @@ import Vue from 'vue';
 export default Vue.extend({
   props: {
     component: {
-      default: null,
-      required: false,
+      required: true,
       type: String,
     },
     title: {
@@ -67,7 +94,17 @@ export default Vue.extend({
 
   computed: {
     props() {
-      return this.$root?.$options?.components[`Bb${this.component}`]?.options?.props || null;
+      const props = this.$root?.$options?.components[`Bb${this.component}`]?.options?.props;
+      console.table(props);
+      const test = Object.keys(props).map((key) => ({
+        name: key,
+        required: props[key].required,
+        type: JSON.stringify(props[key].type),
+        default: props[key].default,
+      }));
+
+      // console.table(test);
+      return test;
     },
   },
 
