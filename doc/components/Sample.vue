@@ -1,15 +1,19 @@
-<template>
+<template functional>
   <section class="pb-10">
     <BbHeadline
       :level="2"
       :size="4"
       class="pb-8"
     >
-      {{ title }}
+      {{ props.title }}
     </BbHeadline>
 
-    <div class="p-4 border border-gray-300 rounded-md">
+    <div class="p-4 bg-gray-100 rounded-t-lg">
       <slot />
+    </div>
+
+    <div class="p-4 bg-gray-200 rounded-b-lg">
+      View code
     </div>
   </section>
 </template>

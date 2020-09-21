@@ -27,6 +27,14 @@
         Disabled
       </bb-button>
     </Sample>
+
+    <Sample title="Icon">
+      <bb-button
+        icon="test"
+      >
+        Icon
+      </bb-button>
+    </Sample>
   </div>
 </template>
 
