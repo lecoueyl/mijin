@@ -1,6 +1,7 @@
 <template functional>
   <section class="pb-10">
     <BbHeadline
+      :id="props.title"
       :level="2"
       :size="4"
       class="pb-8"

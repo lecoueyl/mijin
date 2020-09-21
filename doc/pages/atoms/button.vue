@@ -1,13 +1,5 @@
 <template>
-  <div>
-    <bb-headline
-      :level="1"
-      :size="2"
-      class="pb-8"
-    >
-      Button
-    </bb-headline>
-
+  <LayoutSample title="Button">
     <Sample title="Default">
       <bb-button>Default</bb-button>
     </Sample>
@@ -35,7 +27,7 @@
         Icon
       </bb-button>
     </Sample>
-  </div>
+  </LayoutSample>
 </template>
 
 <script lang="ts">
