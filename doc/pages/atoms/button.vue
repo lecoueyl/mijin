@@ -1,7 +1,7 @@
 <template>
   <LayoutSample
     title="Button"
-    :props="props"
+    component="Button"
   >
     <Sample title="Default">
       <bb-button>Default</bb-button>

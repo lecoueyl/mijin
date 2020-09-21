@@ -43,15 +43,15 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
 import Vue from 'vue';
 
 export default Vue.extend({
   props: {
-    props: {
+    component: {
       default: null,
       required: false,
-      type: Object,
+      type: String,
     },
     title: {
       required: true,
@@ -65,10 +65,16 @@ export default Vue.extend({
     };
   },
 
+  computed: {
+    props() {
+      return this.$root?.$options?.components[`Bb${this.component}`]?.options?.props || null;
+    },
+  },
+
   mounted() {
     document.querySelectorAll('h2').forEach((element) => this.anchors.push({
       id: element.id,
-      name: element.textContent.trim(),
+      name: element?.textContent?.trim() || '',
     }));
   },
 });
