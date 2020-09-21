@@ -21,22 +21,22 @@
           Props
         </BbHeadline>
 
-        <table class="w-full table-auto">
+        <table class="w-full table-auto relative">
           <thead>
-            <tr class="text-left">
-              <th class="py-2">
+            <tr class="text-left text-gray-700">
+              <th class="bg-background py-2 font-medium sticky top-0">
                 Name
               </th>
 
-              <th class="py-2">
+              <th class="bg-background py-2 font-medium sticky top-0">
                 Type
               </th>
 
-              <th class="py-2">
+              <th class="bg-background py-2 font-medium sticky top-0">
                 Default
               </th>
 
-              <th class="py-2">
+              <th class="bg-background py-2 font-medium sticky top-0">
                 Required
               </th>
             </tr>
@@ -47,11 +47,11 @@
               v-for="prop in props"
               :key="prop.name"
             >
-              <td class="border-b py-2">
+              <td class="border-b border-gray-200 py-2">
                 {{ prop.name }}
               </td>
 
-              <td class="border-b py-2">
+              <td class="border-b border-gray-200 py-2">
                 <span
                   v-for="type in prop.type"
                   :key="type"
@@ -60,11 +60,11 @@
                 </span>
               </td>
 
-              <td class="border-b py-2">
+              <td class="border-b border-gray-200 py-2">
                 {{ prop.default }}
               </td>
 
-              <td class="border-b py-2">
+              <td class="border-b border-gray-200 py-2">
                 {{ prop.required || false }}
               </td>
             </tr>
