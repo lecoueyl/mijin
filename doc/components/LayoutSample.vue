@@ -23,7 +23,7 @@
 
         <table class="w-full table-auto relative">
           <thead>
-            <tr class="text-left text-gray-700">
+            <tr class="text-left text-sm text-gray-700">
               <th class="bg-background py-2 font-medium sticky top-0">
                 Name
               </th>

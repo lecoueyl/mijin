@@ -11,6 +11,17 @@ $color-var-primary-700: #941650;
 $color-var-primary-800: #6f113c;
 $color-var-primary-900: #4a0b28;
 
+$color-var-primary-50: #f9f5ff;
+$color-var-primary-100: #f3eaff;
+$color-var-primary-200: #e1ccfe;
+$color-var-primary-300: #ceadfd;
+$color-var-primary-400: #aa6ffc;
+$color-var-primary-500: #8531fa;
+$color-var-primary-600: #782ce1;
+$color-var-primary-700: #501d96;
+$color-var-primary-800: #3c1671;
+$color-var-primary-900: #280f4b;
+
 $color-var-background: #f6f6f6;
 $color-var-foreground: #191919;
 
@@ -150,7 +161,7 @@ html {
   color: theme('colors.foreground');
   background-color: theme('colors.background');
 
-  @apply font-medium;
+  // @apply font-medium;
 }
 
 body {

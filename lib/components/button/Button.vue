@@ -2,7 +2,7 @@
   <Component
     :is="props.tag"
     :ref="data.ref"
-    class="font-medium border py-2 px-6 rounded-md transition-colors duration-100 cursor-pointer
+    class="font-medium border py-2 px-6 rounded-lg transition-colors duration-100 cursor-pointer
       focus:outline-none"
     :class="[
       {
