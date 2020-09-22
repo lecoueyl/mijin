@@ -14,7 +14,14 @@
     </div>
 
     <div class="p-4 bg-gray-200 rounded-b-lg">
-      View code
+      {{ parent.$t('common.viewCode') }}
+
+      <code
+        v-if="props.snippet"
+        class="whitespace-pre"
+      >
+        {{ props.snippet }}
+      </code>
     </div>
   </section>
 </template>
@@ -24,9 +31,14 @@ import Vue from 'vue';
 
 export default Vue.extend({
   props: {
-    title: {
+    snippet: {
+      default: null,
       type: String,
+    },
+
+    title: {
       required: true,
+      type: String,
     },
   },
 

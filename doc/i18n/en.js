@@ -1,14 +1,12 @@
 module.exports = {
+  common: {
+    viewCode: 'View code',
+  },
+
   error: {
     title: 'Not found',
     notFound: 'Oh, could not find what you are looking for.',
     occurred: 'Oups, an error occurred.',
-  },
-
-  head: {
-    title: 'Welcome',
-    description: '',
-    keywords: '',
   },
 
   sections: {

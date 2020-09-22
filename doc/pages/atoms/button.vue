@@ -3,7 +3,13 @@
     title="Button"
     component="Button"
   >
-    <Sample title="Default">
+    <Sample
+      title="Default"
+      snippet="
+<bb-button>
+  Default
+</bb-button>"
+    >
       <bb-button>Default</bb-button>
     </Sample>
 
@@ -28,6 +34,18 @@
         icon="test"
       >
         Icon
+      </bb-button>
+    </Sample>
+
+    <Sample
+      title="Link"
+    >
+      <bb-button
+        tag="nuxt-link"
+        :to="localePath('atom-button')"
+        class="inline-block"
+      >
+        Link
       </bb-button>
     </Sample>
   </LayoutSample>
