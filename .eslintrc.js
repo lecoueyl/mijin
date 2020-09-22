@@ -13,15 +13,14 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
-    'max-len': ['error', { code: 160 }],
-    'no-return-assign': 0,
-    'no-param-reassign': 0,
-    'import/no-extraneous-dependencies': 0,
     'import/extensions': ['error', 'always', {
       js: 'never',
-      vue: 'never',
       svg: 'never',
+      vue: 'never',
     }],
+    'import/no-extraneous-dependencies': 0,
+    'max-len': ['error', { code: 160 }],
+    'vue/no-v-html': 0,
   },
   settings: {
     'import/resolver': {

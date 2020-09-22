@@ -9,6 +9,14 @@ module.exports = {
     occurred: 'Oups, an error occurred.',
   },
 
+  props: {
+    default: 'Default',
+    disabled: 'Disabled',
+    icon: 'Icon',
+    link: 'Link',
+    secondary: 'Secondary',
+  },
+
   sections: {
     foundations: {
       title: 'Foundations',

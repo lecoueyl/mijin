@@ -13,15 +13,12 @@
       <slot />
     </div>
 
-    <div class="p-4 bg-gray-200 rounded-b-lg">
-      {{ parent.$t('common.viewCode') }}
-
+    <div class="p-4 bg-gray-900 rounded-b-lg">
       <code
-        v-if="props.snippet"
-        class="whitespace-pre"
-      >
-        {{ props.snippet }}
-      </code>
+        v-for="(code, index) in props.snippet"
+        :key="index"
+        class="whitespace-pre text-sm text-gray-100"
+      >{{ code }}</code>
     </div>
   </section>
 </template>
@@ -32,8 +29,8 @@ import Vue from 'vue';
 export default Vue.extend({
   props: {
     snippet: {
-      default: null,
-      type: String,
+      default: () => [],
+      type: Array,
     },
 
     title: {

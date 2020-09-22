@@ -1,51 +1,82 @@
 <template>
   <LayoutSample
-    title="Button"
+    :title="$t('sections.atoms.button.title')"
     component="Button"
   >
-    <Sample
-      title="Default"
-      snippet="
-<bb-button>
-  Default
-</bb-button>"
+    <!-- <Sample
+      v-for="(sampleArray, sampleName) in samples"
+      :key="sampleName"
+      :title="$t(`props.${sampleName}`)"
+      :snippet="sampleArray"
     >
-      <bb-button>Default</bb-button>
+      {{ sampleName }}
+      <div
+        v-for="(sample, index) in sampleArray"
+        :key="index"
+        v-html="sample"
+      />
+    </Sample> -->
+
+    <Sample
+      :title="$t('props.default')"
+      :snippet="samples.default"
+    >
+      <bb-button>
+        {{ $t('props.default') }}
+      </bb-button>
     </Sample>
 
-    <Sample title="Secondary">
+    <Sample
+      :title="$t('props.secondary')"
+      :snippet="samples.secondary"
+    >
       <bb-button
         type="secondary"
       >
-        Secondary
+        {{ $t('props.secondary') }}
       </bb-button>
     </Sample>
 
-    <Sample title="Disabled">
+    <Sample :title="$t('props.disabled')">
       <bb-button
         disabled
       >
-        Disabled
-      </bb-button>
-    </Sample>
-
-    <Sample title="Icon">
-      <bb-button
-        icon="test"
-      >
-        Icon
+        {{ $t('props.disabled') }}
       </bb-button>
     </Sample>
 
     <Sample
-      title="Link"
+      :title="$t('props.icon')"
+      :snippet="samples.icon"
+    >
+      <bb-button
+        icon="test"
+      >
+        {{ $t('props.icon') }}
+      </bb-button>
+
+      <bb-button
+        icon="test"
+        icon-right
+      >
+        {{ $t('props.icon') }}
+      </bb-button>
+
+      <bb-button
+        icon="test"
+      />
+    </Sample>
+
+    <Sample
+      :title="$t('props.link')"
+      :snippet="samples.link"
     >
       <bb-button
         tag="nuxt-link"
-        :to="localePath('atom-button')"
+        :to="localePath('/')"
         class="inline-block"
       >
-        Link
+        {{ $t('props.link') }}
       </bb-button>
     </Sample>
   </LayoutSample>
@@ -55,5 +86,44 @@
 import Vue from 'vue';
 
 export default Vue.extend({
+  data() {
+    return {
+      samples: {
+        default: [
+          `<bb-button>
+  Default
+</bb-button>`,
+        ],
+        secondary: [
+          `<bb-button type="secondary">
+  Default
+</bb-button>`,
+        ],
+        icon: [
+          `<bb-button icon="test">
+  Icon
+</bb-button>
+
+<bb-button
+  icon="test"
+  icon-right
+>
+  Icon
+</bb-button>
+
+<bb-button icon="test" />`,
+        ],
+        link: [
+          `<bb-button
+  tag="nuxt-link"
+  to="/"
+  class="inline-block""
+>
+  Link
+</bb-button>`,
+        ],
+      },
+    };
+  },
 });
 </script>
