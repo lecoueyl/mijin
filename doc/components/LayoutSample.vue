@@ -73,7 +73,10 @@
       </template>
     </div>
 
-    <nav class="w-1/4 pl-10 pt-10 sticky top-0 self-start text-sm">
+    <nav
+      v-if="anchors.length > 0"
+      class="w-1/4 pl-10 pt-10 sticky top-0 self-start text-sm"
+    >
       <ul>
         <li
           v-for="(anchor, anchorIndex) in anchors"
@@ -98,7 +101,7 @@ import Vue from 'vue';
 export default Vue.extend({
   props: {
     component: {
-      required: true,
+      default: null,
       type: String,
     },
     title: {
@@ -135,6 +138,12 @@ export default Vue.extend({
       id: element.id,
       name: element?.textContent?.trim() || '',
     }));
+  },
+
+  head() {
+    return {
+      title: this.title,
+    };
   },
 });
 </script>

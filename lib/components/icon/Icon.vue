@@ -1,21 +1,5 @@
 <template>
   <svg
-    v-if="type === 'glyph'"
-    xmlns="http://www.w3.org/2000/svg"
-    width="30"
-    height="30"
-    viewBox="0 0 30 30"
-    fill="currentColor"
-    :aria-labelledby="name"
-    role="presentation"
-    class="c-icon"
-    :class="[utilityClasses, classes]"
-  >
-    <g v-html="icons[type][name]" />
-  </svg>
-
-  <svg
-    v-else
     xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -33,12 +17,8 @@
 </template>
 
 <script>
-import { Base } from '../..';
-
 export default {
-
-  name: 'BlueberryVueIcon',
-  extends: Base,
+  name: 'UiIcon',
 
   props: {
     alignText: {
@@ -58,7 +38,7 @@ export default {
         'm',
         'l',
         'xl',
-      ].indexOf(value) >= 0,
+      ].includes(value),
     },
     color: {
       type: String,
@@ -70,12 +50,13 @@ export default {
       validator: (value) => [
         'stroke',
         'glyph',
-      ].indexOf(value) >= 0,
+      ].includes(value),
     },
   },
-  /* eslint-disable max-len */
+
   data() {
     return {
+      /* eslint-disable max-len */
       icons: {
         glyph: {
           agency: '<path d="M25,28 L25,26 L23,26 L23,28 L22,28 L22,12 L25,12 C26.1045695,12 27,12.8954305 27,14 L27,26 C27,27.1045695 26.1045695,28 25,28 Z M15,28 L15,26 L9,26 L9,28 L5,28 C3.8954305,28 3,27.1045695 3,26 L3,4 C3,2.8954305 3.8954305,2 5,2 L19,2 C20.1045695,2 21,2.8954305 21,4 L21,28 L15,28 Z M5,6 L11,6 L11,4 L5,4 L5,6 Z M23,16 L25,16 L25,14 L23,14 L23,16 Z M23,20 L25,20 L25,18 L23,18 L23,20 Z M23,24 L25,24 L25,22 L23,22 L23,24 Z M13,6 L19,6 L19,4 L13,4 L13,6 Z M5,10 L11,10 L11,8 L5,8 L5,10 Z M13,10 L19,10 L19,8 L13,8 L13,10 Z M5,14 L11,14 L11,12 L5,12 L5,14 Z M13,14 L19,14 L19,12 L13,12 L13,14 Z M5,18 L11,18 L11,16 L5,16 L5,18 Z M13,18 L19,18 L19,16 L13,16 L13,18 Z M5,22 L11,22 L11,20 L5,20 L5,22 Z M13,22 L19,22 L19,20 L13,20 L13,22 Z"/>',
@@ -345,6 +326,7 @@ export default {
   <line x1="8" y1="11" x2="14" y2="11"/>`,
         },
       },
+      /* eslint-enable max-len */
     };
   },
 

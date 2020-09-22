@@ -50,7 +50,8 @@ export default Vue.extend({
       // https://vercel.com/design/status-dot
       sections: {
         foundations: {
-          color: {},
+          colors: {},
+          icons: {},
           layout: {},
           typography: {},
         },

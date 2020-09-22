@@ -15,8 +15,12 @@ module.exports = {
     foundations: {
       title: 'Foundations',
 
-      color: {
-        title: 'Color',
+      colors: {
+        title: 'Colors',
+      },
+
+      icons: {
+        title: 'Icons',
       },
 
       layout: {

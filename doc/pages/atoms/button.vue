@@ -35,13 +35,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { Button } from '../../../lib';
 
 export default Vue.extend({
-  data() {
-    return {
-      props: Button.props,
-    };
-  },
 });
 </script>
