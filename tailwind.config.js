@@ -96,4 +96,16 @@ module.exports = {
     borderRadius: ['responsive', 'first', 'last', 'hover', 'focus'],
     opacity: ['responsive', 'hover', 'focus', 'group-hover'],
   },
+  purge: {
+    // Learn more on https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css
+    enabled: process.env.NODE_ENV === 'production',
+    content: [
+      'doc/components/**/*.vue',
+      'doc/layouts/**/*.vue',
+      'doc/pages/**/*.vue',
+      'doc/plugins/**/*.js',
+      'lib/components/**/*.vue',
+      'nuxt.config.js',
+    ],
+  },
 };
