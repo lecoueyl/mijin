@@ -31,6 +31,7 @@
       data.style,
       data.staticStyle,
     ]"
+    :disabled="props.disabled"
     v-bind="data.attrs"
     v-on="listeners"
   >
