@@ -79,6 +79,42 @@
         {{ $t('props.link') }}
       </bb-button>
     </Sample>
+
+    <Sample
+      :title="$t('props.size')"
+      :snippet="samples.size"
+    >
+      <bb-button size="sm">
+        {{ $t('props.size') }}
+      </bb-button>
+
+      <bb-button size="lg">
+        {{ $t('props.size') }}
+      </bb-button>
+    </Sample>
+
+    <Sample
+      :title="$t('props.group')"
+      :snippet="samples.size"
+    >
+      <div
+        class="flex"
+        role="group"
+      >
+        <bb-button group="first">
+          {{ $t('props.group') }}
+        </bb-button>
+
+        <bb-button group>
+          {{ $t('props.group') }}
+        </bb-button>
+
+        <bb-button
+          icon="test"
+          group="last"
+        />
+      </div>
+    </Sample>
   </LayoutSample>
 </template>
 
@@ -120,6 +156,15 @@ export default Vue.extend({
   class="inline-block""
 >
   Link
+</bb-button>`,
+        ],
+        size: [
+          `<bb-button size="sm">
+  Size
+</bb-button>
+
+<bb-button size="lg">
+  Size
 </bb-button>`,
         ],
       },

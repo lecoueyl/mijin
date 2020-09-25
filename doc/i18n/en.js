@@ -12,9 +12,11 @@ module.exports = {
   props: {
     default: 'Default',
     disabled: 'Disabled',
+    group: 'Group',
     icon: 'Icon',
     link: 'Link',
     secondary: 'Secondary',
+    size: 'Size',
   },
 
   sections: {
