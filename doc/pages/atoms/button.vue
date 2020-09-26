@@ -3,25 +3,11 @@
     :title="$t('sections.atoms.button.title')"
     component="Button"
   >
-    <!-- <Sample
-      v-for="(sampleArray, sampleName) in samples"
-      :key="sampleName"
-      :title="$t(`props.${sampleName}`)"
-      :snippet="sampleArray"
-    >
-      {{ sampleName }}
-      <div
-        v-for="(sample, index) in sampleArray"
-        :key="index"
-        v-html="sample"
-      />
-    </Sample> -->
-
     <Sample
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <bb-button>
+      <bb-button type="reset">
         {{ $t('props.default') }}
       </bb-button>
     </Sample>
@@ -31,7 +17,7 @@
       :snippet="samples.secondary"
     >
       <bb-button
-        type="secondary"
+        variant="secondary"
       >
         {{ $t('props.secondary') }}
       </bb-button>
@@ -131,7 +117,7 @@ export default Vue.extend({
 </bb-button>`,
         ],
         secondary: [
-          `<bb-button type="secondary">
+          `<bb-button variant="secondary">
   Default
 </bb-button>`,
         ],

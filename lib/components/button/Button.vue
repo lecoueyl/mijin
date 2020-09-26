@@ -5,10 +5,10 @@
     class="font-medium border transition-colors duration-100 cursor-pointer focus:outline-none"
     :class="[
       {
-        // style
+        // variant
         'text-white border-primary-500 bg-primary-500 hover:border-primary-600 hover:bg-primary-600 focus:bg-primary-600':
-          props.type === 'primary' && !props.disabled,
-        'text-foreground border-gray-300 hover:border-foreground': props.type === 'secondary' && !props.disabled,
+          props.variant === 'primary' && !props.disabled,
+        'text-foreground border-gray-300 hover:border-foreground': props.variant === 'secondary' && !props.disabled,
         // disabled
         'border-gray-300 bg-gray-200 text-gray-600 cursor-not-allowed': props.disabled,
         // icon
@@ -31,7 +31,9 @@
       data.style,
       data.staticStyle,
     ]"
+    :aria-disabled="props.tag !== 'button' && props.disabled ? 'true' : null"
     :disabled="props.disabled"
+    :type="props.tag === 'button' ? props.type : null"
     v-bind="data.attrs"
     v-on="listeners"
   >
@@ -47,10 +49,8 @@
     >
       <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
     </svg>
-
-    <span v-if="!$slots.default">&#8203;</span>
-
     <slot />
+    <span v-if="!$slots.default">&#8203;</span>
   </Component>
 </template>
 
@@ -107,6 +107,11 @@ export default {
     },
 
     type: {
+      type: String,
+      default: 'button',
+    },
+
+    variant: {
       default: 'primary',
       type: String,
       validator: (value) => [
