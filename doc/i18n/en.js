@@ -15,6 +15,7 @@ module.exports = {
     group: 'Group',
     icon: 'Icon',
     link: 'Link',
+    multiple: 'Multiple',
     secondary: 'Secondary',
     size: 'Size',
   },

@@ -5,19 +5,32 @@
     :aria-checked="checked"
     :aria-disabled="disabled ? 'true' : null"
   >
-    <div class="flex items-center">
+    <div
+      class="flex items-center"
+      :class="{ 'cursor-not-allowed': disabled }"
+    >
       <input
         v-model="selected"
         type="checkbox"
         class="invisible absolute"
         :value="value"
+        :disabled="disabled"
       >
       <div
-        class="border-2 rounded w-5 h-5 flex justify-center items-center hover:border-primary-500"
-        :class="[checked ? 'bg-primary-500 border-primary-500': 'bg-background border-gray-600']"
+        class="border-2 rounded w-5 h-5 flex justify-center items-center"
+        :class="[
+          {
+            'hover:border-primary-500': !disabled,
+            'bg-primary-500 border-primary-500': checked && !disabled,
+            'bg-background border-gray-600': !checked && !disabled,
+            // disabled
+            'bg-gray-500 border-gray-600': checked && disabled,
+            'bg-background border-gray-300': !checked && disabled,
+          }
+        ]"
       >
         <svg
-          class="fill-current w-3 h-3 text-white-500"
+          class="fill-current w-3 h-3 text-primary-100"
           :class="{ 'opacity-0': !checked }"
           viewBox="0 0 20 20"
         >
@@ -54,14 +67,18 @@ export default {
 
   computed: {
     checked() {
-      if (typeof this.options === 'boolean') return this.options;
-      return this.options.includes(this.value);
+      if (Array.isArray(this.options)) {
+        return this.options.includes(this.value);
+      }
+
+      return this.options;
     },
 
     selected: {
       get() {
         return this.options;
       },
+
       set(val) {
         this.$emit('input', val);
       },
