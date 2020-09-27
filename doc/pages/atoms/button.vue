@@ -7,7 +7,7 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <bb-button type="reset">
+      <bb-button>
         {{ $t('props.default') }}
       </bb-button>
     </Sample>

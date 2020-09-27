@@ -57,6 +57,7 @@ export default Vue.extend({
         },
         atoms: {
           button: {},
+          checkbox: {},
           icon: {},
           statusDot: {},
         },

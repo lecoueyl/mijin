@@ -45,6 +45,9 @@ module.exports = {
       button: {
         title: 'Button',
       },
+      checkbox: {
+        title: 'Checkbox',
+      },
       icon: {
         title: 'Icon',
       },
