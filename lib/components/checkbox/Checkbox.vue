@@ -7,10 +7,10 @@
   >
     <div class="flex items-center">
       <input
-        ref="input"
+        v-model="selected"
         type="checkbox"
         class="invisible absolute"
-        @change="onChange"
+        :value="value"
       >
       <div
         class="border-2 rounded w-5 h-5 flex justify-center items-center hover:border-primary-500"
@@ -33,23 +33,38 @@
 export default {
   name: 'UiCheckbox',
 
+  model: {
+    prop: 'options',
+  },
+
   props: {
     disabled: {
       type: Boolean,
       default: false,
     },
+    options: {
+      type: [String, Number, Boolean, Function, Object, Array],
+      default: null,
+    },
+    value: {
+      type: [String, Number, Boolean, Function, Object, Array],
+      default: null,
+    },
   },
 
-  data() {
-    return {
-      checked: this.value,
-    };
-  },
+  computed: {
+    checked() {
+      if (typeof this.options === 'boolean') return this.options;
+      return this.options.includes(this.value);
+    },
 
-  methods: {
-    onChange(event) {
-      this.checked = event.target.checked;
-      this.$emit('input', event.target.checked);
+    selected: {
+      get() {
+        return this.options;
+      },
+      set(val) {
+        this.$emit('input', val);
+      },
     },
   },
 };

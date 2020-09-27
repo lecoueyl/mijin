@@ -7,14 +7,19 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <bb-checkbox v-model="model.default" name="default">
+      <bb-checkbox v-model="model.default">
         {{ $t('props.default') }}
       </bb-checkbox>
 
-      <bb-checkbox v-model="model.default" name="default">
+      <bb-checkbox v-model="model.array" value="salut">
+        {{ $t('props.default') }}
+      </bb-checkbox>
+
+      <bb-checkbox v-model="model.array" :value="2">
         {{ $t('props.default') }}
       </bb-checkbox>
       {{ model.default }}
+      {{ model.array }}
     </Sample>
   </LayoutSample>
 </template>
@@ -26,7 +31,8 @@ export default Vue.extend({
   data() {
     return {
       model: {
-        default: [],
+        default: true,
+        array: [2],
       },
       samples: {
         default: [
