@@ -1,10 +1,5 @@
 <template>
-  <label
-    role="checkbox"
-    class="inline-block"
-    :aria-checked="checked"
-    :aria-disabled="disabled ? 'true' : null"
-  >
+  <label class="inline-block">
     <div
       class="flex items-center"
       :class="{ 'cursor-not-allowed': disabled }"
@@ -13,8 +8,12 @@
         v-model="selected"
         type="checkbox"
         class="invisible absolute"
-        :value="value"
+        :aria-checked="checked ? 'true' : 'false'"
+        :aria-disabled="disabled ? 'true' : null"
         :disabled="disabled"
+        :name="name"
+        :required="required"
+        :value="value"
       >
       <div
         class="border-2 rounded w-5 h-5 flex justify-center items-center"
@@ -58,6 +57,14 @@ export default {
     options: {
       type: [String, Number, Boolean, Function, Object, Array],
       default: null,
+    },
+    name: {
+      type: String,
+      default: null,
+    },
+    required: {
+      type: Boolean,
+      default: false,
     },
     value: {
       type: [String, Number, Boolean, Function, Object, Array],
