@@ -21,14 +21,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import Vue from 'vue';
-import { Headline } from '../../lib/index';
-
-export default Vue.extend({
-  components: {
-    Headline,
-  },
-});
-</script>
