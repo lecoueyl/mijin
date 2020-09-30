@@ -23,7 +23,10 @@
       </bb-button>
     </Sample>
 
-    <Sample :title="$t('props.disabled')">
+    <Sample
+      :title="$t('props.disabled')"
+      :snippet="samples.disabled"
+    >
       <bb-button
         disabled
       >
@@ -105,6 +108,15 @@
         </bb-button>
       </div>
     </Sample>
+
+    <Sample
+      :title="$t('props.loading')"
+      :snippet="samples.loading"
+    >
+      <bb-button loading>
+        {{ $t('props.loading') }}
+      </bb-button>
+    </Sample>
   </LayoutSample>
 </template>
 
@@ -117,24 +129,29 @@ export default Vue.extend({
       samples: {
         default: [
           `<bb-button>
-  Default
+  ${this.$t('props.default')}
 </bb-button>`,
         ],
         secondary: [
           `<bb-button variant="secondary">
-  Default
+  ${this.$t('props.secondary')}
+</bb-button>`,
+        ],
+        disabled: [
+          `<bb-button disabled>
+  ${this.$t('props.disabled')}
 </bb-button>`,
         ],
         icon: [
           `<bb-button icon="test">
-  Icon
+  ${this.$t('props.icon')}
 </bb-button>
 
 <bb-button
   icon="test"
   icon-right
 >
-  Icon
+  ${this.$t('props.icon')}
 </bb-button>
 
 <bb-button icon="test" />`,
@@ -145,16 +162,21 @@ export default Vue.extend({
   to="/"
   class="inline-block""
 >
-  Link
+  ${this.$t('props.link')}
 </bb-button>`,
         ],
         size: [
           `<bb-button size="sm">
-  Size
+  ${this.$t('props.size')}
 </bb-button>
 
 <bb-button size="lg">
-  Size
+  ${this.$t('props.size')}
+</bb-button>`,
+        ],
+        loading: [
+          `<bb-button loading>
+  ${this.$t('props.loading')}
 </bb-button>`,
         ],
       },

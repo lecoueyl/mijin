@@ -2,7 +2,7 @@
   <Component
     :is="props.tag"
     :ref="data.ref"
-    class="font-medium border transition-colors duration-100 cursor-pointer focus:outline-none"
+    class="relative font-medium border transition-colors duration-100 cursor-pointer focus:outline-none"
     :class="[
       {
         // variant
@@ -15,7 +15,7 @@
         'inline-flex items-center': $slots.icon || props.icon,
         'flex-row-reverse': props.iconRight,
         // size
-        'px-6 py': $slots.default && props.size === 'sm',
+        'px-6 py-1': $slots.default && props.size === 'sm',
         'px-6 py-2': $slots.default && props.size === 'base',
         'px-16 py-4': $slots.default && props.size === 'lg',
         'px-4 py-2': !$slots.default,
@@ -23,6 +23,8 @@
         'rounded-lg': props.group === false,
         'rounded-l-lg': props.group === 'first',
         'rounded-r-lg': props.group === 'last',
+        // loading
+        'animate-pulse cursor-wait': props.loading
       },
       data.class,
       data.staticClass,
@@ -32,11 +34,41 @@
       data.staticStyle,
     ]"
     :aria-disabled="props.tag !== 'button' && props.disabled ? 'true' : null"
-    :disabled="props.disabled"
+    :disabled="props.disabled || props.loading"
     :type="props.tag === 'button' ? props.type : null"
     v-bind="data.attrs"
     v-on="listeners"
   >
+    <!-- <div
+      v-if="props.loading"
+      class="absolute w-full h-full inset-0 cursor-not-allowed"
+      :class="[
+        {
+          // variant
+          'bg-primary-500': props.variant === 'primary',
+          'text-foreground border-gray-300 hover:border-foreground': props.variant === 'secondary',
+          // group
+          'rounded-lg': props.group === false,
+          'rounded-l-lg': props.group === 'first',
+          'rounded-r-lg': props.group === 'last',
+        },
+        data.class,
+        data.staticClass,
+      ]"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="absolute inset-0 w-8 h-8 m-auto"
+      >
+        <circle class="animate-bounce" cx="12" cy="12" r="1" />
+        <circle class="animate-bounce delay-150" cx="19" cy="12" r="1" />
+        <circle class="animate-bounce" cx="5" cy="12" r="1" />
+      </svg>
+    </div> -->
     <svg
       v-if="props.icon"
       class="fill-current w-4 h-4"
