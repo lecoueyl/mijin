@@ -41,7 +41,7 @@
     "stylelint-config-standard": "20.0.0",
     "stylelint-order": "4.1.0",
     "stylelint-scss": "3.18.0",
-    "ts-jest": "26.4.0",
+    "ts-jest": "26.4.1",
     "vue-jest": "3.0.7"
   }
 }

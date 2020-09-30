@@ -12,7 +12,7 @@
         // disabled
         'border-gray-300 bg-gray-200 text-gray-600 cursor-not-allowed': props.disabled,
         // icon
-        'inline-flex items-center': props.icon,
+        'inline-flex items-center': $slots.icon || props.icon,
         'flex-row-reverse': props.iconRight,
         // size
         'px-6 py': $slots.default && props.size === 'sm',
@@ -49,6 +49,16 @@
     >
       <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
     </svg>
+    <span
+      v-if="$slots.icon"
+      class="w-4 h-4 inline-block"
+      :class="[{
+        'mr-1': $slots.default && !props.iconRight,
+        'ml-1': $slots.default && props.iconRight,
+      }]"
+    >
+      <slot name="icon" />
+    </span>
     <slot />
     <span v-if="!$slots.default">&#8203;</span>
   </Component>

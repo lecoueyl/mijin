@@ -5,6 +5,7 @@
       :class="{ 'cursor-not-allowed': disabled }"
     >
       <input
+        :id="id"
         v-model="selected"
         type="checkbox"
         class="invisible absolute"
@@ -47,12 +48,17 @@ export default {
 
   model: {
     prop: 'options',
+    event: 'change',
   },
 
   props: {
     disabled: {
       type: Boolean,
       default: false,
+    },
+    id: {
+      type: String,
+      default: null,
     },
     options: {
       type: [String, Number, Boolean, Function, Object, Array],
@@ -87,7 +93,7 @@ export default {
       },
 
       set(val) {
-        this.$emit('input', val);
+        this.$emit('change', val);
       },
     },
   },

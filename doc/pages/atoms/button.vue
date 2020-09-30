@@ -35,22 +35,25 @@
       :title="$t('props.icon')"
       :snippet="samples.icon"
     >
-      <bb-button
-        icon="test"
-      >
+      <bb-button>
+        <template v-slot:icon>
+          <bb-icon name="copy" />
+        </template>
         {{ $t('props.icon') }}
       </bb-button>
 
-      <bb-button
-        icon="test"
-        icon-right
-      >
+      <bb-button icon-right>
+        <template v-slot:icon>
+          <bb-icon name="filter" />
+        </template>
         {{ $t('props.icon') }}
       </bb-button>
 
-      <bb-button
-        icon="test"
-      />
+      <bb-button>
+        <template v-slot:icon>
+          <bb-icon name="alertCircle" />
+        </template>
+      </bb-button>
     </Sample>
 
     <Sample
@@ -95,10 +98,11 @@
           {{ $t('props.group') }}
         </bb-button>
 
-        <bb-button
-          icon="test"
-          group="last"
-        />
+        <bb-button group="last">
+          <template v-slot:icon>
+            <bb-icon name="calendar" />
+          </template>
+        </bb-button>
       </div>
     </Sample>
   </LayoutSample>

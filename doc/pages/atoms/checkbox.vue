@@ -109,11 +109,5 @@ export default Vue.extend({
       },
     };
   },
-
-  methods: {
-    onChange() {
-      console.log('test');
-    },
-  },
 });
 </script>

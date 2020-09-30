@@ -6,11 +6,11 @@
     viewBox="0 0 24 24"
     stroke="currentColor"
     stroke-linejoin="round"
+    stroke-linecap="round"
     fill="none"
     :aria-labelledby="name"
     role="presentation"
-    class="c-icon"
-    :class="[utilityClasses, classes]"
+    class="w-full h-full stroke-2"
   >
     <g v-html="icons[type][name]" />
   </svg>
@@ -328,17 +328,6 @@ export default {
       },
       /* eslint-enable max-len */
     };
-  },
-
-  computed: {
-    classes() {
-      return {
-        [`c-icon--${this.size}`]: this.size,
-        [`u-color-${this.color}`]: this.color,
-        [`c-icon--${this.type}`]: this.type,
-        'c-icon--align-text': this.alignText,
-      };
-    },
   },
 };
 </script>
