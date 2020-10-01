@@ -75,7 +75,7 @@
 
     <nav
       v-if="anchors.length > 0"
-      class="w-1/4 pl-10 pt-10 sticky top-0 self-start text-sm"
+      class="w-1/4 pl-10 pt-10 sticky top-0 self-start text-sm hidden xl:block"
     >
       <ul>
         <li
