@@ -25,7 +25,6 @@ $color-var-primary-900: #280f4b;
 $color-var-background: #f6f6f6;
 $color-var-foreground: #191919;
 
-// $color-var-gray-50: #f9f9f9;
 $color-var-gray-100: #f2f2f2;
 $color-var-gray-200: #dfdfdf;
 $color-var-gray-300: #ccc;
@@ -34,7 +33,6 @@ $color-var-gray-500: #808080;
 $color-var-gray-600: #737373;
 $color-var-gray-700: #4d4d4d;
 $color-var-gray-800: #3a3a3a;
-// $color-var-gray-900: #262626;
 $color-var-gray-900: #202020;
 
 $color-var-blue-100: #e7f6fd;
@@ -91,6 +89,8 @@ $color-var-green-900: #263f0a;
   --color-primary-700: #{$color-var-primary-700};
   --color-primary-800: #{$color-var-primary-800};
   --color-primary-900: #{$color-var-primary-900};
+  --color-light: #{$color-var-background};
+  --color-dark: #{$color-var-foreground};
   --color-background: #{$color-var-background};
   --color-foreground: #{$color-var-foreground};
   --color-gray-100: #{$color-var-gray-100};
@@ -138,7 +138,6 @@ $color-var-green-900: #263f0a;
   --color-green-700: #{$color-var-green-700};
   --color-green-800: #{$color-var-green-800};
   --color-green-900: #{$color-var-green-900};
-  --mix-blend-mode: lighten;
 }
 
 [data-theme="dark"] {
@@ -160,8 +159,6 @@ $color-var-green-900: #263f0a;
 html {
   color: theme('colors.foreground');
   background-color: theme('colors.background');
-
-  // @apply font-medium;
 }
 
 body {

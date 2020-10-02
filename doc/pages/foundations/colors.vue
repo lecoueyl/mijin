@@ -62,7 +62,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import tailwindConfig from '../../../tailwind.config';
+import tailwindConfig from '../../../lib/tailwind.config';
 
 export default Vue.extend({
   data() {
