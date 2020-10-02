@@ -27,6 +27,10 @@ module.exports = {
 
       colors: {
         title: 'Colors',
+        primary: 'Primary',
+        shades: 'Shades',
+        contrast: 'Contrast',
+        accents: 'Accents',
       },
 
       icons: {

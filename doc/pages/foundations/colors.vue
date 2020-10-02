@@ -3,12 +3,12 @@
     :title="$t('sections.foundations.colors.title')"
   >
     <BbHeadline
-      id="Primary"
+      id="primary"
       :level="2"
       :size="3"
       class="pb-8"
     >
-      Primary
+      {{ $t('sections.foundations.colors.primary') }}
     </BbHeadline>
 
     <SampleColor
@@ -17,18 +17,43 @@
     />
 
     <BbHeadline
-      id="gray"
+      id="shades"
       :level="2"
       :size="3"
       class="pt-8 pb-8"
     >
-      Gray
+      {{ $t('sections.foundations.colors.shades') }}
     </BbHeadline>
+
+    <div class="bg-background p-3 rounded-full border border-gray-200">
+      background
+    </div>
 
     <SampleColor
       name="gray"
       :color="colors.gray"
     />
+
+    <div class="bg-foreground text-background p-3 rounded-full border border border-foreground">
+      foreground
+    </div>
+
+    <BbHeadline
+      id="contrast"
+      :level="2"
+      :size="3"
+      class="pt-8 pb-8"
+    >
+      {{ $t('sections.foundations.colors.contrast') }}
+    </BbHeadline>
+
+    <div class="bg-white text-black p-3 rounded-t-lg border border border-foreground">
+      white
+    </div>
+
+    <div class="bg-black text-white p-3 rounded-b-lg border border border-foreground">
+      black
+    </div>
 
     <BbHeadline
       id="accents"
@@ -36,7 +61,7 @@
       :size="3"
       class="pt-8"
     >
-      Accents
+      {{ $t('sections.foundations.colors.accents') }}
     </BbHeadline>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       <div
@@ -68,6 +93,11 @@ export default Vue.extend({
   data() {
     return {
       colors: tailwindConfig.theme.extend.colors,
+      shades: {
+        background: tailwindConfig.theme.extend.colors.background,
+        ...tailwindConfig.theme.extend.colors.gray,
+        foreground: tailwindConfig.theme.extend.colors.foreground,
+      },
     };
   },
 });
