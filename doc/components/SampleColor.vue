@@ -1,19 +1,19 @@
-<template functional>
+<template>
   <div>
     <div
-      v-for="(value, variation, index) in props.color"
+      v-for="(value, variation, index) in color"
       :key="variation"
       class="p-3"
       :class="[
-        `bg-${props.name}-${variation}`,
-        parseInt(variation) < 500 ? 'text-black' : 'text-white',
+        `bg-${name}-${variation}`,
         {
           'rounded-t-lg': index === 0,
-          'rounded-b-lg': index === Object.keys(props.color).length - 1,
+          'rounded-b-lg': index === Object.keys(color).length - 1,
         },
+        textColor(variation),
       ]"
     >
-      {{ props.name }}-{{ variation }}
+      {{ name }}-{{ variation }}
     </div>
   </div>
 </template>
@@ -31,6 +31,15 @@ export default Vue.extend({
     name: {
       required: true,
       type: String,
+    },
+  },
+
+  methods: {
+    textColor(variation: string) {
+      if (parseInt(variation, 10) < 500) {
+        return this.name === 'gray' ? 'text-foreground' : 'text-black';
+      }
+      return this.name === 'gray' ? 'text-background' : 'text-white';
     },
   },
 });
