@@ -28,8 +28,8 @@
         >
           <nuxt-link
             :to="localePath(`${sectionName}-${menuName}`)"
-            class="hover:text-primary-500 transition-colors duration-200 ease-in-out px-4 py-1 block"
-            active-class="text-primary-700 hover:text-primary-700  bg-primary-200 rounded"
+            class="hover:text-primary-500 transition-colors duration-200 ease-in-out px-4 py-1 block rounded"
+            active-class="text-primary-700 hover:text-primary-700  bg-primary-200"
           >
             {{ $t(`sections.${sectionName}.${menuName}.title`) }}
           </nuxt-link>
