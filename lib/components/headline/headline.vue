@@ -28,7 +28,7 @@ export default {
   props: {
     level: {
       default: 1,
-      type: Number,
+      type: [Number, String],
       validator(value) {
         const headlines = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
         return headlines.includes(`h${value}`);
@@ -36,7 +36,7 @@ export default {
     },
     size: {
       default: null,
-      type: Number,
+      type: [Number, String],
     },
     tag: {
       default: null,

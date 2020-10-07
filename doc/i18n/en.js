@@ -14,6 +14,7 @@ module.exports = {
     disabled: 'Disabled',
     group: 'Group',
     icon: 'Icon',
+    level: 'Level',
     link: 'Link',
     loading: 'Loading',
     multiple: 'Multiple',
@@ -51,12 +52,19 @@ module.exports = {
       button: {
         title: 'Button',
       },
+
       checkbox: {
         title: 'Checkbox',
       },
+
+      headline: {
+        title: 'Headline',
+      },
+
       icon: {
         title: 'Icon',
       },
+
       statusDot: {
         title: 'Status dot',
       },
