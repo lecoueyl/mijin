@@ -1,6 +1,11 @@
 module.exports = {
   common: {
     viewCode: 'View code',
+    name: 'Name',
+    props: 'Props',
+    type: 'Type',
+    default: 'default',
+    required: 'Required',
   },
 
   error: {
@@ -68,11 +73,19 @@ module.exports = {
       statusDot: {
         title: 'Status dot',
       },
+
+      tabs: {
+        title: 'Tabs',
+      },
     },
   },
 
   theme: {
     dark: 'Dark',
     light: 'Light',
+  },
+
+  examples: {
+    array: ['Apple', 'Orange', 'Mango'],
   },
 };

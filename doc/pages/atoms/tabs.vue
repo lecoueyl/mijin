@@ -1,34 +1,23 @@
 <template>
   <LayoutSample
-    :title="$t('sections.atoms.headline.title')"
-    components="Headline"
+    :title="$t('sections.atoms.tabs.title')"
+    :components="['Tabs', 'TabsItem']"
   >
     <Sample
       :title="$t('props.size')"
       :snippet="samples.size"
     >
-      <BbHeadline
-        v-for="index in 4"
-        :key="index"
-        :size="index"
-        :class="{'pt-4': index !== 1 }"
-      >
-        Almost before we knew it, we had left the ground.
-      </BbHeadline>
-    </Sample>
-
-    <Sample
-      :title="$t('props.level')"
-      :snippet="samples.level"
-    >
-      <BbHeadline
-        v-for="index in 4"
-        :key="index"
-        :level="index"
-        :class="{ 'pt-4': index !== 1 }"
-      >
-        H{{ index }}
-      </BbHeadline>
+      <BbTabs>
+        <BbTabsItem
+          v-for="(item, index) in $t('examples.array')"
+          :key="item"
+          :selected="demo.default === index"
+          :class="{ 'ml-4': index !== 0 }"
+          @click="demo.default = index"
+        >
+          {{ item }}
+        </BbTabsItem>
+      </BbTabs>
     </Sample>
   </LayoutSample>
 </template>
@@ -39,6 +28,9 @@ import Vue from 'vue';
 export default Vue.extend({
   data() {
     return {
+      demo: {
+        default: 0,
+      },
       samples: {
         size: [
           `<BbHeadline size="1">

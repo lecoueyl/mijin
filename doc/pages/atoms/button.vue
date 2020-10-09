@@ -1,7 +1,7 @@
 <template>
   <LayoutSample
     :title="$t('sections.atoms.button.title')"
-    component="Button"
+    components="Button"
   >
     <Sample
       :title="$t('props.default')"

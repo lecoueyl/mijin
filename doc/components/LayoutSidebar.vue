@@ -61,6 +61,7 @@ export default Vue.extend({
           headline: {},
           icon: {},
           statusDot: {},
+          tabs: {},
         },
       },
     };

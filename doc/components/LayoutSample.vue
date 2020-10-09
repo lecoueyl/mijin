@@ -11,65 +11,80 @@
 
       <slot />
 
-      <template v-if="props">
+      <template v-if="componentsProps">
         <BbHeadline
           id="props"
           :level="2"
           :size="2"
           class="pb-8"
         >
-          Props
+          {{ $t('common.props') }}
         </BbHeadline>
 
-        <table class="w-full table-auto relative">
-          <thead>
-            <tr class="text-left text-sm text-gray-700">
-              <th class="bg-background py-2 font-medium sticky top-0">
-                Name
-              </th>
+        <div
+          v-for="(props, name, index) in componentsProps"
+          :key="name"
+        >
+          <BbHeadline
+            v-if="Object.keys(componentsProps).length > 1"
+            :class="{ 'pt-10': index > 0 }"
+            :level="3"
+            :size="4"
+            class="pb-8"
+          >
+            {{ name }}
+          </BbHeadline>
 
-              <th class="bg-background py-2 font-medium sticky top-0">
-                Type
-              </th>
+          <table class="w-full table-fixed relative">
+            <thead>
+              <tr class="text-left text-sm text-gray-700">
+                <th class="bg-background py-2 font-medium sticky top-0 w-1/4">
+                  {{ $t('common.name') }}
+                </th>
 
-              <th class="bg-background py-2 font-medium sticky top-0">
-                Default
-              </th>
+                <th class="bg-background py-2 font-medium sticky top-0 w-1/4">
+                  {{ $t('common.type') }}
+                </th>
 
-              <th class="bg-background py-2 font-medium sticky top-0">
-                Required
-              </th>
-            </tr>
-          </thead>
+                <th class="bg-background py-2 font-medium sticky top-0 w-1/4">
+                  {{ $t('common.default') }}
+                </th>
 
-          <tbody>
-            <tr
-              v-for="prop in props"
-              :key="prop.name"
-            >
-              <td class="border-b border-gray-200 py-2">
-                {{ prop.name }}
-              </td>
+                <th class="bg-background py-2 font-medium sticky top-0 w-1/4">
+                  {{ $t('common.required') }}
+                </th>
+              </tr>
+            </thead>
 
-              <td class="border-b border-gray-200 py-2">
-                <span
-                  v-for="type in prop.type"
-                  :key="type"
-                >
-                  {{ type }}
-                </span>
-              </td>
+            <tbody>
+              <tr
+                v-for="prop in props"
+                :key="prop.name"
+              >
+                <td class="border-b border-gray-200 py-2">
+                  {{ prop.name }}
+                </td>
 
-              <td class="border-b border-gray-200 py-2">
-                {{ prop.default }}
-              </td>
+                <td class="border-b border-gray-200 py-2">
+                  <span
+                    v-for="type in prop.type"
+                    :key="type"
+                  >
+                    {{ type }}
+                  </span>
+                </td>
 
-              <td class="border-b border-gray-200 py-2">
-                {{ prop.required || false }}
-              </td>
-            </tr>
-          </tbody>
-        </table>
+                <td class="border-b border-gray-200 py-2">
+                  {{ prop.default }}
+                </td>
+
+                <td class="border-b border-gray-200 py-2">
+                  {{ prop.required || false }}
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </template>
     </div>
 
@@ -85,7 +100,7 @@
         >
           <a
             :href="`#${anchor.id}`"
-            class="transition-fast text-gray-700 hover:text-foreground"
+            class="transition-colors duration-200 ease-in-out text-gray-700 hover:text-foreground"
           >
             {{ anchor.name }}
           </a>
@@ -100,9 +115,9 @@ import Vue from 'vue';
 
 export default Vue.extend({
   props: {
-    component: {
+    components: {
       default: null,
-      type: String,
+      type: [Array, String],
     },
     title: {
       required: true,
@@ -117,19 +132,20 @@ export default Vue.extend({
   },
 
   computed: {
-    props() {
-      const props = this.$root?.$options?.components[`Bb${this.component}`]?.options?.props;
-
-      if (props) {
-        return Object.keys(props).map((key) => ({
+    componentsProps() {
+      const components = Array.isArray(this.components) ? this.components : [this.components];
+      const props = {};
+      components.forEach((component) => {
+        const prop = this.$root?.$options?.components[`Bb${component}`]?.options?.props;
+        props[component] = Object.keys(prop).map((key) => ({
           name: key,
-          required: props[key].required,
-          type: Array.isArray(props[key].type) ? props[key].type.map((type) => type.name) : [props[key].type.name],
-          default: props[key].default,
+          required: prop[key].required,
+          type: Array.isArray(prop[key].type) ? prop[key].type.map((type) => type.name) : [prop[key].type.name],
+          default: prop[key].default,
         }));
-      }
+      });
 
-      return null;
+      return props;
     },
   },
 

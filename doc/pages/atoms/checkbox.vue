@@ -1,7 +1,7 @@
 <template>
   <LayoutSample
     :title="$t('sections.atoms.checkbox.title')"
-    component="Checkbox"
+    components="Checkbox"
   >
     <Sample
       :title="$t('props.default')"
