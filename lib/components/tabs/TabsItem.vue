@@ -2,11 +2,12 @@
   <Component
     :is="props.tag || `h${props.level}`"
     :ref="data.ref"
-    class="pb-2 transition-colors duration-150 ease-in-out cursor-pointer"
+    class="pb-2 transition-colors duration-150 ease-in-out"
     :class="[
       {
         'border-b-2 border-primary-500 text-primary-500': props.selected,
         'hover:text-primary-500': !props.disabled,
+        'cursor-pointer': !props.disabled,
         'cursor-not-allowed text-gray-500': props.disabled,
       },
       data.class,
@@ -16,6 +17,8 @@
       data.style,
       data.staticStyle,
     ]"
+    :aria-disabled="props.disabled ? 'true' : null"
+    :aria-selected="props.selected ? 'true' : 'false'"
     v-bind="data.attrs"
     v-on="listeners"
   >

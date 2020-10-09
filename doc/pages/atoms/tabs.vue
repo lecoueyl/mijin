@@ -4,8 +4,8 @@
     :components="['Tabs', 'TabsItem']"
   >
     <Sample
-      :title="$t('props.size')"
-      :snippet="samples.size"
+      :title="$t('props.default')"
+      :snippet="samples.default"
     >
       <BbTabs>
         <BbTabsItem
@@ -13,6 +13,7 @@
           :key="item"
           :selected="demo.default === index"
           :class="{ 'ml-4': index !== 0 }"
+          disabled
           @click="demo.default = index"
         >
           {{ item }}
@@ -32,22 +33,18 @@ export default Vue.extend({
         default: 0,
       },
       samples: {
-        size: [
-          `<BbHeadline size="1">
-  Size 1
-</BbButton>
-
-<BbHeadline size="2">
-  Size 2
-</BbButton>
-
-<BbHeadline size="3">
-  Size 3
-</BbButton>
-
-<BbHeadline size="4">
-  Size 4
-</BbButton>`,
+        default: [
+          `<BbTabs>
+  <BbTabsItem selected>
+    ${this.$t('examples.array')[0]}
+  </BbTabsItem>
+  <BbTabsItem>
+    ${this.$t('examples.array')[1]}
+  </BbTabsItem>
+  <BbTabsItem>
+    ${this.$t('examples.array')[2]}
+  </BbTabsItem>
+</BbTabs>`,
         ],
         level: [
           `<BbHeadline level="1">
