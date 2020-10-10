@@ -1,8 +1,8 @@
 <template functional>
   <Component
-    :is="props.tag || `h${props.level}`"
+    :is="props.tag"
     :ref="data.ref"
-    class="pb-2 transition-colors duration-150 ease-in-out"
+    class="pb-2 transition-colors duration-150 ease-in-out mr-6 last:mr-0"
     :class="[
       {
         'border-b-2 border-primary-500 text-primary-500': props.selected,

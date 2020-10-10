@@ -12,9 +12,23 @@
           v-for="(item, index) in $t('examples.array')"
           :key="item"
           :selected="demo.default === index"
-          :class="{ 'ml-4': index !== 0 }"
-          disabled
           @click="demo.default = index"
+        >
+          {{ item }}
+        </BbTabsItem>
+      </BbTabs>
+    </Sample>
+
+    <Sample
+      :title="$t('props.disabled')"
+      :snippet="samples.disabled"
+    >
+      <BbTabs>
+        <BbTabsItem
+          v-for="(item, index) in $t('examples.array')"
+          :key="item"
+          :selected="demo.disabled === index"
+          :disabled="index !== 0"
         >
           {{ item }}
         </BbTabsItem>
@@ -31,6 +45,7 @@ export default Vue.extend({
     return {
       demo: {
         default: 0,
+        disabled: 0,
       },
       samples: {
         default: [
@@ -46,22 +61,18 @@ export default Vue.extend({
   </BbTabsItem>
 </BbTabs>`,
         ],
-        level: [
-          `<BbHeadline level="1">
-  H1
-</BbButton>
-
-<BbHeadline level="2">
-  H2
-</BbButton>
-
-<BbHeadline level="3">
-  H3
-</BbButton>
-
-<BbHeadline level="4">
-  H4
-</BbButton>`,
+       disabled: [
+          `<BbTabs>
+  <BbTabsItem selected>
+    ${this.$t('examples.array')[0]}
+  </BbTabsItem>
+  <BbTabsItem disabled>
+    ${this.$t('examples.array')[1]}
+  </BbTabsItem>
+  <BbTabsItem disabled>
+    ${this.$t('examples.array')[2]}
+  </BbTabsItem>
+</BbTabs>`,
         ],
       },
     };

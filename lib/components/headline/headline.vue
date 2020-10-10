@@ -4,10 +4,12 @@
     :ref="data.ref"
     class="leading-tight"
     :class="[
-      ...((props.size || props.level) === 1 ? ['text-3xl sm:text-4xl md:text-5xl'] : []),
-      ...((props.size || props.level) === 2 ? ['text-2xl sm:text-3xl md:text-4xl'] : []),
-      ...((props.size || props.level) === 3 ? ['text-1xl sm:text-2xl md:text-3xl'] : []),
-      ...((props.size || props.level) >= 4 ? ['text-xl sm:text-1xl md:text-2xl'] : []),
+      {
+        'text-3xl sm:text-4xl md:text-5xl': (props.size || props.level) === 1,
+        'text-2xl sm:text-3xl md:text-4xl': (props.size || props.level) === 2,
+        'text-xl sm:text-2xl md:text-3xl': (props.size || props.level) === 3,
+        'text-lg sm:text-xl md:text-2xl': (props.size || props.level) >= 4,
+      },
       data.class,
       data.staticClass,
     ]"

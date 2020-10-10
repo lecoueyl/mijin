@@ -1,6 +1,6 @@
 <template functional>
   <Component
-    :is="props.tag || `h${props.level}`"
+    :is="props.tag"
     :ref="data.ref"
     class="flex shadow-border-b"
     :class="[
