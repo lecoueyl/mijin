@@ -61,7 +61,7 @@ export default Vue.extend({
   </BbTabsItem>
 </BbTabs>`,
         ],
-       disabled: [
+        disabled: [
           `<BbTabs>
   <BbTabsItem selected>
     ${this.$t('examples.array')[0]}

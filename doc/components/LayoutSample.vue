@@ -133,6 +133,8 @@ export default Vue.extend({
 
   computed: {
     componentsProps() {
+      if (!this.components) return null;
+
       const components = Array.isArray(this.components) ? this.components : [this.components];
       const props = {};
       components.forEach((component) => {

@@ -25,6 +25,7 @@ module.exports = {
     multiple: 'Multiple',
     secondary: 'Secondary',
     size: 'Size',
+    variant: 'Variant',
   },
 
   sections: {
@@ -68,6 +69,10 @@ module.exports = {
 
       icon: {
         title: 'Icon',
+      },
+
+      note: {
+        title: 'Note',
       },
 
       statusDot: {

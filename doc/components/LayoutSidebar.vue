@@ -60,6 +60,7 @@ export default Vue.extend({
           checkbox: {},
           headline: {},
           icon: {},
+          note: {},
           statusDot: {},
           tabs: {},
         },
