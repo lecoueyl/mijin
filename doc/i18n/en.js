@@ -17,6 +17,7 @@ module.exports = {
   props: {
     default: 'Default',
     disabled: 'Disabled',
+    filled: 'Filled',
     group: 'Group',
     icon: 'Icon',
     level: 'Level',

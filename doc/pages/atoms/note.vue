@@ -1,7 +1,7 @@
 <template>
   <LayoutSample
     :title="$t('sections.atoms.note.title')"
-    :components="['Tabs', 'TabsItem']"
+    components="Note"
   >
     <Sample
       :title="$t('props.default')"
@@ -20,8 +20,26 @@
         v-for="variant in ['success', 'error', 'warning']"
         :key="variant"
         :variant="variant"
-        class="mb-8"
+        class="mb-8 last:mb-0"
       >
+        {{ variant }}
+      </BbNote>
+    </Sample>
+
+    <Sample
+      :title="$t('props.filled')"
+      :snippet="samples.filled"
+    >
+      <BbNote
+        v-for="variant in [null, 'success', 'error', 'warning']"
+        :key="`filled-${variant}`"
+        :variant="variant"
+        class="mb-8 last:mb-0"
+        filled
+      >
+        <template v-if="!variant">
+          {{ $t('props.default') }}
+        </template>
         {{ variant }}
       </BbNote>
     </Sample>
@@ -54,6 +72,32 @@ export default Vue.extend({
 </BbNote>
 
 <BbNote variant="warning>
+  warning
+</BbNote>`,
+        ],
+        filled: [
+          `<BbNote filled>
+  ${this.$t('props.default')}
+</BbNote>
+
+<BbNote
+  filled
+  variant="success
+>
+  success
+</BbNote>
+
+<BbNote
+  filled
+  variant="error
+>
+  error
+</BbNote>
+
+<BbNote
+  filled
+  variant="warning
+>
   warning
 </BbNote>`,
         ],
