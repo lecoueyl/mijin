@@ -62,15 +62,18 @@
 <script>
 export default {
   name: 'UiNote',
+
   props: {
     filled: {
       default: false,
       type: Boolean,
     },
+
     tag: {
       default: 'div',
       type: String,
     },
+
     variant: {
       default: null,
       type: String,

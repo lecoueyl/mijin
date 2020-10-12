@@ -29,15 +29,18 @@
 <script>
 export default {
   name: 'UiTabs',
+
   props: {
     disabled: {
       type: Boolean,
       default: false,
     },
+
     selected: {
       type: Boolean,
       default: false,
     },
+
     tag: {
       default: 'li',
       type: String,

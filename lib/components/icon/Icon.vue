@@ -25,10 +25,12 @@ export default {
       type: Boolean,
       default: false,
     },
+
     name: {
       default: 'user',
       type: String,
     },
+
     size: {
       type: String,
       default: 's',
@@ -40,10 +42,12 @@ export default {
         'xl',
       ].includes(value),
     },
+
     color: {
       type: String,
       default: null,
     },
+
     type: {
       type: String,
       default: 'stroke',

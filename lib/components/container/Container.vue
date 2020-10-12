@@ -21,6 +21,7 @@
 <script>
 export default {
   name: 'UiContainer',
+
   props: {
     tag: {
       default: 'div',

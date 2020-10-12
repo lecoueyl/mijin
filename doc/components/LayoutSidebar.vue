@@ -56,6 +56,7 @@ export default Vue.extend({
           typography: {},
         },
         atoms: {
+          avatar: {},
           button: {},
           checkbox: {},
           headline: {},

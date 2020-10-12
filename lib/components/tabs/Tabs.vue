@@ -21,6 +21,7 @@
 <script>
 export default {
   name: 'UiTabs',
+
   props: {
     tag: {
       default: 'ul',

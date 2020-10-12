@@ -25,6 +25,7 @@
 <script>
 export default {
   name: 'UiGrid',
+
   props: {
     cols: {
       default: null,

@@ -15,11 +15,14 @@ module.exports = {
   },
 
   props: {
+    color: 'Color',
     default: 'Default',
     disabled: 'Disabled',
     filled: 'Filled',
     group: 'Group',
     icon: 'Icon',
+    image: 'Image',
+    letter: 'Letter',
     level: 'Level',
     link: 'Link',
     loading: 'Loading',
@@ -55,6 +58,10 @@ module.exports = {
     },
     atoms: {
       title: 'Atoms',
+
+      avatar: {
+        title: 'Avatar',
+      },
 
       button: {
         title: 'Button',

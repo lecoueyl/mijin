@@ -27,6 +27,7 @@
 <script>
 export default {
   name: 'UiHeadline',
+
   props: {
     level: {
       default: 1,
@@ -36,10 +37,12 @@ export default {
         return headlines.includes(`h${value}`);
       },
     },
+
     size: {
       default: null,
       type: [Number, String],
     },
+
     tag: {
       default: null,
       type: String,
