@@ -2,13 +2,13 @@
   <Component
     :is="props.tag"
     :ref="data.ref"
-    class="inline-block overflow-hidden flex items-center justify-center"
+    class="flex items-center justify-center overflow-hidden "
     :class="[
       {
-        'h-6 w-6 text-sm': props.size === 'sm',
+        [`h-6 w-6 text-${props.size}`]: props.size === 'sm',
         'h-8 w-8': props.size === 'base',
-        'h-12 w-12 text-lg': props.size === 'lg',
-        'h-20 w-20 text-xl': props.size === 'xl',
+        [`h-12 w-12 text-${props.size}`]: props.size === 'lg',
+        [`h-20 w-20 text-${props.size}`]: props.size === 'xl',
         'rounded-full': props.variant === 'rounded',
         'rounded-md': props.variant === 'squared',
         [`bg-${props.color}-500 text-${props.color}-100`]: props.color,
