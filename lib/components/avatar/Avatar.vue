@@ -32,6 +32,7 @@
       v-if="props.img"
       :alt="props.alt"
       :src="props.img"
+      class="h-full w-full"
     >
   </Component>
 </template>

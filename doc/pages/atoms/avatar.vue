@@ -9,7 +9,7 @@
     >
       <BbAvatar
         alt="image"
-        img="https://images.unsplash.com/photo-1600704613492-edaa3f8cbd2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1232&q=80"
+        img="https://images.unsplash.com/photo-1576502200916-3808e07386a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&q=60"
       />
     </Sample>
 
@@ -43,7 +43,7 @@
     >
       <BbAvatar
         variant="squared"
-        img="https://images.unsplash.com/photo-1600704613492-edaa3f8cbd2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1232&q=80"
+        letter="BB"
       />
     </Sample>
 
