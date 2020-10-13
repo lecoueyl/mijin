@@ -71,6 +71,10 @@ module.exports = {
         title: 'Checkbox',
       },
 
+      divider: {
+        title: 'Divider',
+      },
+
       headline: {
         title: 'Headline',
       },

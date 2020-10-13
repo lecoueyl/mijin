@@ -59,6 +59,7 @@ export default Vue.extend({
           avatar: {},
           button: {},
           checkbox: {},
+          divider: {},
           headline: {},
           icon: {},
           note: {},
