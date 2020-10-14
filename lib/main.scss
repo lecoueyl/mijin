@@ -77,8 +77,7 @@ $color-var-green-900: #263f0a;
 
 // theme
 
-:root,
-[data-theme="light"] {
+:root {
   --color-primary-100: #{$color-var-primary-100};
   --color-primary-100: #{$color-var-primary-100};
   --color-primary-200: #{$color-var-primary-200};
@@ -140,7 +139,7 @@ $color-var-green-900: #263f0a;
   --color-green-900: #{$color-var-green-900};
 }
 
-[data-theme="dark"] {
+.dark-mode {
   --color-background: #{$color-var-foreground};
   --color-foreground: #{$color-var-background};
   --color-gray-100: #{$color-var-gray-900};

@@ -100,6 +100,7 @@ module.exports = {
   theme: {
     dark: 'Dark',
     light: 'Light',
+    system: 'System',
   },
 
   examples: {
