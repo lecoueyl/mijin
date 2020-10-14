@@ -2,7 +2,7 @@
   <Component
     :is="props.tag"
     :ref="data.ref"
-    class="flex items-center justify-center overflow-hidden "
+    class="flex items-center justify-center overflow-hidden"
     :class="[
       {
         [`h-6 w-6 text-${props.size}`]: props.size === 'sm',

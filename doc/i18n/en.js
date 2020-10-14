@@ -87,8 +87,8 @@ module.exports = {
         title: 'Note',
       },
 
-      statusDot: {
-        title: 'Status dot',
+      skeleton: {
+        title: 'Skeleton',
       },
 
       tabs: {

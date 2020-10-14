@@ -62,7 +62,7 @@ export default Vue.extend({
           headline: {},
           icon: {},
           note: {},
-          statusDot: {},
+          skeleton: {},
           tabs: {},
         },
       },

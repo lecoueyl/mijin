@@ -15,7 +15,7 @@
   "dependencies": {
     "@nuxt/typescript-runtime": "2.0.0",
     "nuxt": "2.14.6",
-    "nuxt-i18n": "6.15.1"
+    "nuxt-i18n": "6.15.3"
   },
   "devDependencies": {
     "@nuxt/types": "2.14.6",
