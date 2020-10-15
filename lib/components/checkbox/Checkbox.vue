@@ -25,7 +25,7 @@
             'bg-background border-gray-600': !checked && !disabled,
             // disabled
             'bg-gray-500 border-gray-600': checked && disabled,
-            'bg-background border-gray-300': !checked && disabled,
+            'bg-gray-200 border-gray-300': !checked && disabled,
           }
         ]"
       >

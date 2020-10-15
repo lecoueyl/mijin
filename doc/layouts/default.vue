@@ -1,11 +1,9 @@
 <template>
   <div class="min-h-screen md:flex">
-    <div class="w-full md:max-w-xs bg-gray-100 p-10">
-      <LayoutSidebar />
-    </div>
+    <LayoutSidebar />
 
     <div class="flex-1">
-      <Nuxt class="container mx-auto p-10" />
+      <Nuxt class="container mx-auto px-3 py-6 sm:p-10" />
     </div>
   </div>
 </template>

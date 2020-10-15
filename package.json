@@ -12,6 +12,11 @@
     "lint": "npm run lint:js && npm run lint:style",
     "test": "jest"
   },
+  "config": {
+    "nuxt": {
+      "host": "0.0.0.0"
+    }
+  },
   "dependencies": {
     "@nuxt/typescript-runtime": "2.0.0",
     "nuxt": "2.14.6",

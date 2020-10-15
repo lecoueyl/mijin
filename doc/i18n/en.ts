@@ -18,6 +18,7 @@ module.exports = {
     color: 'Color',
     default: 'Default',
     disabled: 'Disabled',
+    external: 'External',
     filled: 'Filled',
     group: 'Group',
     icon: 'Icon',
@@ -84,6 +85,10 @@ module.exports = {
         title: 'Icon',
       },
 
+      link: {
+        title: 'Link',
+      },
+
       note: {
         title: 'Note',
       },
@@ -109,6 +114,7 @@ module.exports = {
   },
 
   examples: {
+    link: 'This is a link',
     list: {
       1: 'Apple',
       2: 'Orange',
