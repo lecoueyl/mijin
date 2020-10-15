@@ -1,20 +1,20 @@
 <template>
   <aside class="w-full md:max-w-xs bg-gray-100">
-    <div class="flex items-center p-4 sm:p-10">
+    <div class="flex items-center p-4 md:p-10">
       <button
-        class="bg-gray-200 hover:bg-gray-300 py-2 pl-2 pr-2 sm:pr-4 rounded-full inline-flex items-center
+        class="bg-gray-200 hover:bg-gray-300 py-2 pl-2 pr-2 md:pr-4 rounded-full inline-flex items-center
           transition-colors duration-200 ease-in-out font-medium"
         @click="switchTheme()"
       >
         <!-- eslint-disable-next-line -->
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
 
-        <span class="ml-2 hidden sm:inline-block">
+        <span class="ml-2 hidden md:inline-block">
           {{ $t(`theme.${this.$colorMode.preference}`) }}
         </span>
       </button>
 
-      <div class="sm:hidden flex-1 text-right">
+      <div class="md:hidden flex-1 text-right">
         <BbButton
           @click="isOpen = !isOpen"
         >
@@ -26,7 +26,7 @@
     </div>
 
     <nav
-      class="sm:mt-10 absolute sm:static w-full sm:block bg-gray-100 p-4 sm:p-10 z-50 shadow-xl sm:shadow-none"
+      class="md:mt-10 absolute md:static w-full md:block bg-gray-100 p-4 md:p-10 z-50 shadow-xl md:shadow-none"
       :class="isOpen ? 'block': 'hidden'"
     >
       <section
