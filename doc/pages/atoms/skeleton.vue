@@ -7,7 +7,17 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbSkeleton class="rounded h-4" />
+      <BbSkeleton />
+    </Sample>
+
+    <Sample
+      :title="$t('props.rounded')"
+      :snippet="samples.rounded"
+    >
+      <BbSkeleton
+        rounded
+        class="h-10 w-10"
+      />
     </Sample>
 
     <Sample
@@ -18,7 +28,7 @@
         v-for="(color, index) in ['primary-500', 'red-300', 'yellow-500']"
         :key="color"
         :color="color"
-        :class="[{ 'mt-10': index !== 0 }]"
+        :class="[{ 'mt-6': index !== 0 }]"
       />
     </Sample>
   </LayoutSample>
@@ -32,6 +42,10 @@ export default Vue.extend({
     return {
       samples: {
         default: ['<BbSkeleton />'],
+        rounded: [`<BbSkeleton
+  rounded
+  class="h-10 w-10"
+/>`],
         color: [`<BbSkeleton color="primary-500" />
 
 <BbSkeleton color="red-300" />

@@ -27,6 +27,7 @@ module.exports = {
     link: 'Link',
     loading: 'Loading',
     multiple: 'Multiple',
+    rounded: 'Rounded',
     secondary: 'Secondary',
     size: 'Size',
     variant: 'Variant',

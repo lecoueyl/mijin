@@ -2,7 +2,7 @@
   <Component
     :is="props.tag"
     :ref="data.ref"
-    class="animate-pulse h-4"
+    class="animate-pulse"
     :class="[
       {
         [`bg-${props.color}`]: props.color,
@@ -17,7 +17,9 @@
     ]"
     v-bind="data.attrs"
     v-on="listeners"
-  />
+  >
+    &#8203;
+  </Component>
 </template>
 
 <script>
