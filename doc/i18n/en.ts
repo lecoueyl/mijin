@@ -95,6 +95,10 @@ module.exports = {
       tabs: {
         title: 'Tabs',
       },
+
+      toggle: {
+        title: 'Toggle',
+      },
     },
   },
 

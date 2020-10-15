@@ -73,6 +73,7 @@ export default Vue.extend({
           note: {},
           skeleton: {},
           tabs: {},
+          toggle: {},
         },
       },
     };
