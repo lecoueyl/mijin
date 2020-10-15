@@ -1,6 +1,6 @@
 <template>
-  <aside class="w-full md:max-w-xs bg-gray-100 p-4 sm:p-10">
-    <div class="flex items-center">
+  <aside class="w-full md:max-w-xs bg-gray-100">
+    <div class="flex items-center p-4 sm:p-10">
       <button
         class="bg-gray-200 hover:bg-gray-300 py-2 pl-2 pr-2 sm:pr-4 rounded-full inline-flex items-center
           transition-colors duration-200 ease-in-out font-medium"
@@ -26,7 +26,7 @@
     </div>
 
     <nav
-      class="mt-10 sm:block"
+      class="sm:mt-10 absolute sm:static w-full sm:block bg-gray-100 p-4 sm:p-10 z-50 shadow-xl sm:shadow-none"
       :class="isOpen ? 'block': 'hidden'"
     >
       <section
