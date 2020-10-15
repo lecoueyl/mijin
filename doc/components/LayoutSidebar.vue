@@ -41,12 +41,21 @@
 
 <script lang="ts">
 import Vue from 'vue';
+// import * as ColorMode from '@nuxtjs/color-mode';
+
+// // interface Vue {
+// //   $colorMode: ColorModeOptions;
+// // }
+
+// declare module 'vue/types/vue' {
+//   interface Vue {
+//     $colorMode: typeof ColorMode
+//   }
+// }
 
 export default Vue.extend({
   data() {
     return {
-      // https://www.flexport.com/design/components
-      // https://vercel.com/design/status-dot
       sections: {
         foundations: {
           colors: {},

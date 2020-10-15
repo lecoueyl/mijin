@@ -104,6 +104,10 @@ module.exports = {
   },
 
   examples: {
-    array: ['Apple', 'Orange', 'Mango'],
+    list: {
+      1: 'Apple',
+      2: 'Orange',
+      3: 'Mango',
+    },
   },
 };

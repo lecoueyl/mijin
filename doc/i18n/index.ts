@@ -4,7 +4,7 @@ module.exports = {
       code: 'en',
       iso: 'en-US',
       name: 'EN',
-      file: 'en.js',
+      file: 'en.ts',
     },
   ],
   defaultLocale: 'en',

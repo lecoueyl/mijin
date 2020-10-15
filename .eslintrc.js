@@ -25,13 +25,13 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        extensions: ['.js', '.vue'],
+        extensions: ['.js', '.ts', '.vue'],
         alias: {
           '~': resolve(__dirname, 'doc'),
         },
       },
       nuxt: {
-        extensions: ['.js', '.vue'],
+        extensions: ['.js', 'ts', '.vue'],
         alias: {
           '~': resolve(__dirname, 'doc'),
         },

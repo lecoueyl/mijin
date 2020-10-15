@@ -9,8 +9,8 @@
     >
       <BbTabs>
         <BbTabsItem
-          v-for="(item, index) in $t('examples.array')"
-          :key="item"
+          v-for="(item, key, index) in $t('examples.list')"
+          :key="key"
           :selected="demo.default === index"
           @click="demo.default = index"
         >
@@ -25,10 +25,10 @@
     >
       <BbTabs>
         <BbTabsItem
-          v-for="(item, index) in $t('examples.array')"
-          :key="item"
+          v-for="(item, key, index) in $t('examples.list')"
+          :key="key"
           :selected="demo.disabled === index"
-          :disabled="index !== 0"
+          :disabled="key !== 1"
         >
           {{ item }}
         </BbTabsItem>
@@ -51,26 +51,26 @@ export default Vue.extend({
         default: [
           `<BbTabs>
   <BbTabsItem selected>
-    ${this.$t('examples.array')[0]}
+    ${this.$t('examples.list.1')}
   </BbTabsItem>
   <BbTabsItem>
-    ${this.$t('examples.array')[1]}
+    ${this.$t('examples.list.2')}
   </BbTabsItem>
   <BbTabsItem>
-    ${this.$t('examples.array')[2]}
+    ${this.$t('examples.list.3')}
   </BbTabsItem>
 </BbTabs>`,
         ],
         disabled: [
           `<BbTabs>
   <BbTabsItem selected>
-    ${this.$t('examples.array')[0]}
+    ${this.$t('examples.list.1')}
   </BbTabsItem>
   <BbTabsItem disabled>
-    ${this.$t('examples.array')[1]}
+    ${this.$t('examples.list.2')}
   </BbTabsItem>
   <BbTabsItem disabled>
-    ${this.$t('examples.array')[2]}
+    ${this.$t('examples.list.3')}
   </BbTabsItem>
 </BbTabs>`,
         ],
