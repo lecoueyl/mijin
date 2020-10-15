@@ -56,22 +56,27 @@ export default {
       type: Boolean,
       default: false,
     },
+
     id: {
       type: String,
       default: null,
     },
+
     options: {
       type: [String, Number, Boolean, Function, Object, Array],
       default: null,
     },
+
     name: {
       type: String,
       default: null,
     },
+
     required: {
       type: Boolean,
       default: false,
     },
+
     value: {
       type: [String, Number, Boolean, Function, Object, Array],
       default: null,

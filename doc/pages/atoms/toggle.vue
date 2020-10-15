@@ -14,6 +14,45 @@
         {{ $t('props.default') }}
       </BbToggle>
     </Sample>
+
+    <Sample
+      :title="$t('props.disabled')"
+      :snippet="samples.disabled"
+    >
+      <div class="flex">
+        <BbToggle
+          v-model="model.false"
+          disabled
+        >
+          {{ $t('props.disabled') }}
+        </BbToggle>
+
+        <BbToggle
+          v-model="model.true"
+          disabled
+          class="ml-6"
+        >
+          {{ $t('props.disabled') }}
+        </BbToggle>
+      </div>
+    </Sample>
+
+    <Sample
+      :title="$t('props.size')"
+      :snippet="samples.size"
+    >
+      <div class="flex items-center">
+        <BbToggle
+          v-for="size in ['sm', 'base']"
+          :key="size"
+          v-model="model.size"
+          :size="size"
+          class="mr-6"
+        >
+          <span :class="{'text-sm leading-loose' : size === 'sm'}">{{ size }}</span>
+        </BbToggle>
+      </div>
+    </Sample>
   </LayoutSample>
 </template>
 
@@ -24,10 +63,10 @@ export default Vue.extend({
   data() {
     return {
       model: {
-        array: [2],
         default: true,
         false: false,
         true: true,
+        size: false,
       },
       samples: {
         default: [
@@ -38,23 +77,6 @@ export default Vue.extend({
   Default
 </BbToggle>`,
         ],
-        array: [
-          `<BbToggle
-  v-model="value"
-  name="Toggle"
-  :value="1"
->
-  1
-</BbToggle>
-
-<BbToggle
-  v-model="value"
-  name="Toggle"
-  :value="2"
->
-  2
-</BbToggle>`,
-        ],
         disabled: [
           `<BbToggle
   v-model="value"
@@ -62,6 +84,23 @@ export default Vue.extend({
   disabled
 >
   Disabled
+</BbToggle>`,
+        ],
+        size: [
+          `<BbToggle
+  v-model="value"
+  name="Toggle"
+  size="sms
+>
+  sm
+</BbToggle>
+
+<BbToggle
+  v-model="value"
+  name="Toggle"
+  size="base
+>
+  base
 </BbToggle>`,
         ],
       },
