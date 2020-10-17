@@ -1,11 +1,12 @@
 <template>
   <aside class="w-full md:max-w-xs bg-gray-100">
-    <div class="flex items-center p-4 md:p-10">
+    <div class="flex items-center p-4 md:p-10 fixed md:static top-0 w-full z-50 bg-gray-100">
       <button
         class="bg-gray-200 hover:bg-gray-300 py-2 pl-2 pr-2 md:pr-4 rounded-full inline-flex items-center
           transition-colors duration-200 ease-in-out font-medium"
         @click="switchTheme()"
       >
+        <!-- Icon from https://heroicons.com -->
         <!-- eslint-disable-next-line -->
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
 
@@ -15,18 +16,20 @@
       </button>
 
       <div class="md:hidden flex-1 text-right">
-        <BbButton
+        <button
+          class="bg-primary-500 text-primary-100 hover:bg-primary-600 py-2 pl-2 pr-2 md:pr-4 rounded-md inline-flex items-center
+            transition-colors duration-200 ease-in-out font-medium"
           @click="isOpen = !isOpen"
         >
-          <template v-slot:icon>
-            <bb-icon name="calendar" />
-          </template>
-        </BbButton>
+          <!-- Icon from https://heroicons.com -->
+          <!-- eslint-disable-next-line -->
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
       </div>
     </div>
 
     <nav
-      class="md:mt-10 absolute md:static w-full md:block bg-gray-100 p-4 md:p-10 z-50 shadow-xl md:shadow-none"
+      class="pt-24 md:pt-6 fixed md:static top-0 w-full md:block bg-gray-100 p-4 md:p-10 z-40 h-full overflow-y-scroll"
       :class="isOpen ? 'block': 'hidden'"
     >
       <section
@@ -63,17 +66,6 @@
 
 <script lang="ts">
 import Vue from 'vue';
-// import * as ColorMode from '@nuxtjs/color-mode';
-
-// // interface Vue {
-// //   $colorMode: ColorModeOptions;
-// // }
-
-// declare module 'vue/types/vue' {
-//   interface Vue {
-//     $colorMode: typeof ColorMode
-//   }
-// }
 
 export default Vue.extend({
   data() {
@@ -97,6 +89,7 @@ export default Vue.extend({
           note: {},
           skeleton: {},
           tabs: {},
+          tag: {},
           toggle: {},
         },
       },

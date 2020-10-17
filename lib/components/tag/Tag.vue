@@ -2,13 +2,16 @@
   <Component
     :is="props.tag"
     :ref="data.ref"
-    class="transition-colors duration-150 ease-in-out inline-block"
-    :class="[
-      props.color ? `text-${props.color}` : 'text-primary-500',
-      props.colorHover ? `hover:text-${props.colorHover}` : 'hover:text-primary-600',
-      data.class,
-      data.staticClass,
-    ]"
+    class="rounded-full px-3 py-px inline-block"
+    :class="
+      [
+        {
+          [`text-${props.textColor}`]: props.textColor,
+        },
+        `bg-${props.bgColor}`,
+        data.class,
+        data.staticClass,
+      ]"
     :style="[
       data.style,
       data.staticStyle,
@@ -17,7 +20,7 @@
     v-on="listeners"
   >
     <span
-      v-if="props.external"
+      v-if="props.removable"
       class="flex"
     >
       <slot />
@@ -30,10 +33,10 @@
         stroke-linecap="round"
         fill="none"
         role="presentation"
-        class="stroke-2 w-4 ml"
+        class="stroke-2 w-4 ml-1 cursor-pointer hover:text-gray-700 transition-colors duration-150 ease-in-out"
       >
-        <line x1="7" y1="17" x2="17" y2="7" />
-        <polyline points="7 7 17 7 17 17" />
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
       </svg>
     </span>
     <template v-else>
@@ -44,26 +47,26 @@
 
 <script>
 export default {
-  name: 'UiLink',
+  name: 'UiTag',
 
   props: {
-    color: {
-      default: null,
+    bgColor: {
+      default: 'gray-200',
       type: String,
     },
 
-    colorHover: {
-      default: null,
-      type: String,
-    },
-
-    external: {
+    removable: {
       default: false,
       type: Boolean,
     },
 
     tag: {
       default: 'a',
+      type: String,
+    },
+
+    textColor: {
+      default: null,
       type: String,
     },
   },

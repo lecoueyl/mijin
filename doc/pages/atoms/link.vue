@@ -28,13 +28,31 @@
       :title="$t('props.color')"
       :snippet="samples.color"
     >
-      <BbLink
-        v-for="(color, index) in [['foreground', 'primary-500']]"
+      <div
+        v-for="(color, index) in [['gray-700', 'primary-500'], ['red-500', 'red-600']]"
         :key="index"
-        :color="color[0]"
-        :color-hover="color[1]"
         :class="[{ 'mt-6': index !== 0 }]"
-      />
+      >
+        <BbLink
+          :color="color[0]"
+          :color-hover="color[1]"
+          href="#"
+        >
+          {{ $t('examples.link') }}
+        </BbLink>
+      </div>
+    </Sample>
+
+    <Sample
+      :title="$t('props.tag')"
+      :snippet="samples.tag"
+    >
+      <BbLink
+        tag="nuxt-link"
+        to="/"
+      >
+        {{ $t('examples.link') }}
+      </BbLink>
     </Sample>
   </LayoutSample>
 </template>
@@ -46,16 +64,35 @@ export default Vue.extend({
   data() {
     return {
       samples: {
-        default: ['<BbLink hred="#" />'],
+        default: [`<BbLink hred="#">
+  {{ $t('examples.link') }}
+</BbLink>`],
         external: [`<BbLink
   href="#"
   external
-/>`],
-        color: [`<BbLink color="primary-500" />
+>
+  {{ $t('examples.link') }}
+</BbLink>`],
+        color: [`<BbLink
+  color="gray-700"
+  color-hover="primary-500"
+>
+  {{ $t('examples.link') }}
+</BbLink>
 
-<BbLink color="red-300" />
-
-<BbLink color="yellow-500" />`],
+<BbLink
+  color="red-500"
+  color-hover="red-600"
+>
+  {{ $t('examples.link') }}
+</BbLink>
+`],
+        tag: [`<BbLink
+  tag="nuxt-link"
+  to="/"
+>
+  {{ $t('examples.link') }}
+</BbLink>`],
       },
     };
   },

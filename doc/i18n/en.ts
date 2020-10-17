@@ -28,9 +28,11 @@ module.exports = {
     link: 'Link',
     loading: 'Loading',
     multiple: 'Multiple',
+    removable: 'Removable',
     rounded: 'Rounded',
     secondary: 'Secondary',
     size: 'Size',
+    tag: 'Tag',
     variant: 'Variant',
   },
 
@@ -99,6 +101,10 @@ module.exports = {
 
       tabs: {
         title: 'Tabs',
+      },
+
+      tag: {
+        title: 'Tag',
       },
 
       toggle: {
