@@ -61,7 +61,7 @@ export default {
     },
 
     tag: {
-      default: 'a',
+      default: 'span',
       type: String,
     },
 
