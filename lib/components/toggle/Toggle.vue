@@ -6,7 +6,7 @@
     ]"
   >
     <div
-      class=" rounded-full transition-colors duration-300"
+      class="rounded-full transition-colors duration-300"
       :class="[
         {
           'w-6': size === 'sm',
