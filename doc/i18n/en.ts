@@ -23,11 +23,13 @@ module.exports = {
     group: 'Group',
     icon: 'Icon',
     image: 'Image',
+    label: 'Label',
     letter: 'Letter',
     level: 'Level',
     link: 'Link',
     loading: 'Loading',
     multiple: 'Multiple',
+    password: 'Password',
     removable: 'Removable',
     rounded: 'Rounded',
     secondary: 'Secondary',
@@ -60,6 +62,7 @@ module.exports = {
         title: 'Typography',
       },
     },
+
     atoms: {
       title: 'Atoms',
 
@@ -87,6 +90,10 @@ module.exports = {
         title: 'Icon',
       },
 
+      input: {
+        title: 'Input',
+      },
+
       link: {
         title: 'Link',
       },
@@ -111,6 +118,19 @@ module.exports = {
         title: 'Toggle',
       },
     },
+
+    organisms: {
+      title: 'Organisms',
+
+      form: {
+        title: 'Form',
+
+        forgotPassword: 'Forgot Password?',
+        password: 'Password',
+        signIn: 'Sign in',
+        username: 'Username',
+      },
+    },
   },
 
   theme: {
@@ -120,6 +140,10 @@ module.exports = {
   },
 
   examples: {
+    input: {
+      label: 'Input label',
+      placeholder: 'Input placeholder',
+    },
     link: 'This is a link',
     list: {
       1: 'Apple',

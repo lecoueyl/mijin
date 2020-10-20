@@ -78,6 +78,7 @@ export default Vue.extend({
           layout: {},
           typography: {},
         },
+
         atoms: {
           avatar: {},
           button: {},
@@ -85,12 +86,17 @@ export default Vue.extend({
           divider: {},
           headline: {},
           icon: {},
+          input: {},
           link: {},
           note: {},
           skeleton: {},
           tabs: {},
           tag: {},
           toggle: {},
+        },
+
+        organisms: {
+          form: {},
         },
       },
     };
