@@ -6,7 +6,7 @@
       :title="$t('sections.organisms.form.signIn')"
       :snippet="samples.login"
     >
-      <form class="sm:w-1/2 sm:mx-auto grid gap-4 grid-cols-1">
+      <form class="lg:w-1/2 lg:mx-auto grid gap-4">
         <BbInput v-model="model.signIn.username">
           {{ $t('sections.organisms.form.username') }}
         </BbInput>
@@ -18,16 +18,89 @@
           {{ $t('sections.organisms.form.password') }}
         </BbInput>
 
-        <div class="text-right">
-          <BbLink href="#">
-            {{ $t('sections.organisms.form.forgotPassword') }}
-          </BbLink>
+        <div class="flex items-center mt-2">
+          <div class="flex-1">
+            <BbLink href="#">
+              {{ $t('sections.organisms.form.forgotPassword') }}
+            </BbLink>
+          </div>
 
-          <BbButton class="ml-4">
-            {{ $t('sections.organisms.form.signIn') }}
-          </BbButton>
+          <div>
+            <BbButton class="ml-4">
+              {{ $t('sections.organisms.form.signIn') }}
+            </BbButton>
+          </div>
         </div>
       </form>
+    </Sample>
+
+    <Sample
+      :title="$t('sections.organisms.form.vueForm')"
+      :snippet="samples.vueForm"
+    >
+      <vue-form
+        class="lg:w-1/2 lg:mx-auto grid gap-4"
+        :state="vueFormState"
+        @submit.prevent=""
+      >
+        <validate>
+          <BbInput
+            v-model="model.vueForm.email"
+            name="email"
+            type="email"
+            required
+          >
+            {{ $t('sections.organisms.form.email') }}
+
+            <template #error>
+              <field-messages
+                name="email"
+                show="$touched || $submitted"
+              >
+                <div slot="required">
+                  {{ $t('sections.organisms.form.emailRequired') }}
+                </div>
+                <div slot="email">
+                  {{ $t('sections.organisms.form.emailValidation') }}
+                </div>
+              </field-messages>
+            </template>
+          </BbInput>
+        </validate>
+
+        <validate>
+          <BbInput
+            v-model="model.vueForm.password"
+            name="password"
+            type="password"
+            required
+            pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+          >
+            {{ $t('sections.organisms.form.password') }}
+
+            <template #error>
+              <field-messages
+                name="password"
+                show="$touched || $submitted"
+              >
+                <div slot="required">
+                  {{ $t('sections.organisms.form.passwordRequired') }}
+                </div>
+                <div slot="pattern">
+                  {{ $t('sections.organisms.form.passwordPattern') }}
+                </div>
+              </field-messages>
+            </template>
+          </BbInput>
+        </validate>
+
+        <BbButton
+          class="mt-2"
+          type="submit"
+        >
+          {{ $t('sections.organisms.form.signUp') }}
+        </BbButton>
+      </vue-form>
     </Sample>
   </LayoutSample>
 </template>
@@ -38,18 +111,110 @@ import Vue from 'vue';
 export default Vue.extend({
   data() {
     return {
+      vueFormState: {},
       model: {
         signIn: {
           username: '',
           password: '',
         },
+        vueForm: {
+          email: '',
+          password: '',
+        },
       },
       samples: {
         login: [
-          `<BbAvatar
-  alt="image"
-  img="https://..."
-/>`,
+          `<form class="lg:w-1/2 lg:mx-auto grid gap-4">
+  <BbInput v-model="model.signIn.username">
+    ${this.$t('sections.organisms.form.username')}
+  </BbInput>
+
+  <BbInput
+    v-model="model.signIn.password"
+    type="password"
+  >
+    ${this.$t('sections.organisms.form.password')}
+  </BbInput>
+
+  <div class="flex items-center mt-2">
+    <div class="flex-1">
+      <BbLink href="#">
+        ${this.$t('sections.organisms.form.forgotPassword')}
+      </BbLink>
+    </div>
+
+    <div>
+      <BbButton class="ml-4">
+        ${this.$t('sections.organisms.form.signIn')}
+      </BbButton>
+    </div>
+  </div>
+</form>`,
+        ],
+        vueForm: [
+          `<vue-form
+  class="lg:w-1/2 lg:mx-auto grid gap-4"
+  :state="vueFormState"
+  @submit.prevent=""
+>
+  <validate>
+    <BbInput
+      v-model="model.vueForm.email"
+      name="email"
+      type="email"
+      required
+    >
+      ${this.$t('sections.organisms.form.email')}
+
+      <template #error>
+        <field-messages
+          name="email"
+          show="$touched || $submitted"
+        >
+          <div slot="required">
+            ${this.$t('sections.organisms.form.emailRequired')}
+          </div>
+          <div slot="email">
+            ${this.$t('sections.organisms.form.emailValidation')}
+          </div>
+        </field-messages>
+      </template>
+    </BbInput>
+  </validate>
+
+  <validate>
+    <BbInput
+      v-model="model.vueForm.password"
+      name="password"
+      type="password"
+      required
+      pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+    >
+      ${this.$t('sections.organisms.form.password')}
+
+      <template #error>
+        <field-messages
+          name="password"
+          show="$touched || $submitted"
+        >
+          <div slot="required">
+            ${this.$t('sections.organisms.form.passwordRequired')}
+          </div>
+          <div slot="pattern">
+            ${this.$t('sections.organisms.form.passwordPattern')}
+          </div>
+        </field-messages>
+      </template>
+    </BbInput>
+  </validate>
+
+  <BbButton
+    class="mt-2"
+    type="submit"
+  >
+    ${this.$t('sections.organisms.form.signUp')}
+  </BbButton>
+</vue-form>`,
         ],
       },
     };

@@ -2,7 +2,7 @@
   <label class="block">
     <p
       v-if="$slots.default"
-      class="text-sm text-gray-800 mb-1"
+      class="text-gray-800 mb-1"
     >
       <slot />
     </p>
@@ -24,10 +24,10 @@
         class="appearance-none block w-full text-gray-700 placeholder-gray-400 border border-gray-300 rounded-md leading-tight
           focus:outline-none focus:border-primary-500"
         :class="[
-          disabled ? 'bg-gray-100 cursor-not-allowed' : 'bg-background',
           $slots.icon ? 'pl-8' : 'pl-2',
+          disabled ? 'bg-gray-100 cursor-not-allowed' : 'bg-background',
+          size === 'sm' ? 'text-sm py-1' : 'py-2',
           type === 'password' ? 'pr-8' : 'pr-2',
-          size === 'sm' ? 'text-sm py-1' : 'py-2'
         ]"
         :disabled="disabled"
         :max="max"
@@ -68,6 +68,13 @@
         </template>
       </svg>
     </div>
+
+    <p
+      v-if="$slots.error"
+      class="text-sm text-red-500 mt-1"
+    >
+      <slot name="error" />
+    </p>
   </label>
 </template>
 

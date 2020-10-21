@@ -40,6 +40,7 @@ export default {
   */
   plugins: [
     '~plugins/blueberry',
+    '~/plugins/vue-form',
   ],
   /*
   ** Auto import components

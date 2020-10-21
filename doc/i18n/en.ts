@@ -125,10 +125,17 @@ module.exports = {
       form: {
         title: 'Form',
 
+        email: 'Email',
+        emailRequired: 'Email is a required field',
+        emailValidation: 'Email is invalid',
         forgotPassword: 'Forgot Password?',
         password: 'Password',
+        passwordRequired: 'Password is a required field',
+        passwordPattern: 'Password requires UpperCase, LowerCase, Number/SpecialChar and min 8 Chars',
         signIn: 'Sign in',
+        signUp: 'Sign up',
         username: 'Username',
+        vueForm: 'vue-form',
       },
     },
   },
