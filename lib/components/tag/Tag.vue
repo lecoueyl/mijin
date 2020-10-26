@@ -21,7 +21,7 @@
   >
     <span
       v-if="props.removable"
-      class="flex"
+      class="flex items-center"
     >
       <slot />
       <svg
@@ -33,7 +33,7 @@
         stroke-linecap="round"
         fill="none"
         role="presentation"
-        class="stroke-2 w-4 ml-1 cursor-pointer hover:text-gray-700 transition-colors duration-150 ease-in-out"
+        class="stroke-2 w-4 h-4 ml-1 cursor-pointer hover:text-gray-700 transition-colors duration-150 ease-in-out"
       >
         <line x1="18" y1="6" x2="6" y2="18" />
         <line x1="6" y1="6" x2="18" y2="18" />

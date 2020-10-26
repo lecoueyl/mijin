@@ -18,6 +18,7 @@ module.exports = {
     color: 'Color',
     default: 'Default',
     disabled: 'Disabled',
+    expended: 'Expended',
     external: 'External',
     filled: 'Filled',
     group: 'Group',
@@ -76,6 +77,10 @@ module.exports = {
 
       checkbox: {
         title: 'Checkbox',
+      },
+
+      collapse: {
+        title: 'Collapse',
       },
 
       divider: {

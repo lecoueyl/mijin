@@ -61,7 +61,6 @@
         />
       </div>
     </Sample>
-
   </LayoutSample>
 </template>
 
