@@ -17,7 +17,7 @@
       <code
         v-for="(code, index) in props.snippet"
         :key="index"
-        class="whitespace-pre text-sm text-gray-100"
+        class="whitespace-pre-wrap text-sm text-gray-100"
       >{{ code }}</code>
     </div>
   </section>

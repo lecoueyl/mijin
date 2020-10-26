@@ -29,7 +29,7 @@
     </div>
 
     <nav
-      class="pt-24 md:pt-6 fixed md:static top-0 w-full md:block bg-gray-100 p-4 md:p-10 z-40 h-full overflow-y-scroll"
+      class="pt-24 md:pt-6 md:pb-6 fixed md:static top-0 w-full md:block bg-gray-100 p-4 md:p-10 z-40 h-full md:h-auto overflow-y-scroll md:overflow-y-visible"
       :class="isOpen ? 'block': 'hidden'"
     >
       <section
