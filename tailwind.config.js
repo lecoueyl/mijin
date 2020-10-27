@@ -1,4 +1,4 @@
-import tailwindConf from './lib/tailwind.config';
+import tailwindConf from './src/tailwind.config';
 
 tailwindConf.theme.extend.fontFamily = {
   sans: ['Inter', 'sans-serif'],
@@ -11,7 +11,7 @@ tailwindConf.purge = {
     'doc/layouts/**/*.vue',
     'doc/pages/**/*.vue',
     'doc/plugins/**/*.js',
-    'lib/components/**/*.vue',
+    'src/components/**/*.vue',
     'nuxt.config.js',
   ],
 };
