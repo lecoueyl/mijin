@@ -5,45 +5,59 @@
   >
     <Sample
       :title="$t('props.default')"
-      :snippet="samples.image"
+      :snippet="samples.default"
     >
       <BbCollapse>
         {{ $t('props.default') }}
         <template v-slot:content>
-          Hello Hello Hello Hello Hello Hello Hello Hello Hello
-          Hello Hello Hello Hello Hello Hello Hello Hello Hello
-          Hello Hello Hello Hello Hello Hello Hello Hello Hello
-          Hello Hello Hello Hello Hello Hello Hello Hello Hello
+          {{ $t('examples.sentence') }}
         </template>
       </BbCollapse>
     </Sample>
 
     <Sample
-      :title="$t('props.expended')"
-      :snippet="samples.image"
+      :title="$t('props.expanded')"
+      :snippet="samples.expanded"
     >
-      <BbCollapse expended>
-        {{ $t('props.expended') }}
+      <BbCollapse expanded>
+        {{ $t('props.expanded') }}
         <template v-slot:content>
-          Hello Hello Hello Hello Hello Hello Hello Hello Hello
-          Hello Hello Hello Hello Hello Hello Hello Hello Hello
-          Hello Hello Hello Hello Hello Hello Hello Hello Hello
-          Hello Hello Hello Hello Hello Hello Hello Hello Hello
+          {{ $t('examples.sentence') }}
         </template>
       </BbCollapse>
     </Sample>
 
     <Sample
       :title="$t('props.iconPosition')"
-      :snippet="samples.image"
+      :snippet="samples.icon"
     >
       <BbCollapse icon-left>
-        {{ $t('props.expended') }}
+        {{ $t('props.iconPosition') }}
         <template v-slot:content>
-          Hello Hello Hello Hello Hello Hello Hello Hello Hello
-          Hello Hello Hello Hello Hello Hello Hello Hello Hello
-          Hello Hello Hello Hello Hello Hello Hello Hello Hello
-          Hello Hello Hello Hello Hello Hello Hello Hello Hello
+          {{ $t('examples.sentence') }}
+        </template>
+      </BbCollapse>
+    </Sample>
+
+    <Sample
+      :title="$t('props.summary')"
+      :snippet="samples.summary"
+    >
+      <BbCollapse class="pb-4 border-b border-gray-400">
+        <BbHeadline :level="2">
+          {{ $t('props.summary') }}
+        </BbHeadline>
+
+        <template v-slot:summary>
+          <div class="text-gray-700">
+            {{ $t('examples.summary') }}
+          </div>
+        </template>
+
+        <template v-slot:content>
+          <div class="pt-4">
+            {{ $t('examples.sentence') }}
+          </div>
         </template>
       </BbCollapse>
     </Sample>
@@ -61,12 +75,41 @@ export default Vue.extend({
         disabled: 0,
       },
       samples: {
-        image: [
-          `<BbAvatar
-  alt="image"
-  img="https://..."
-/>`,
-        ],
+        default: [`<BbCollapse>
+  ${this.$t('props.default')}
+  <template v-slot:content>
+    ${this.$t('examples.sentence')}
+  </template>
+</BbCollapse>`],
+        expanded: [`<BbCollapse expanded>
+  ${this.$t('props.expanded')}
+  <template v-slot:content>
+    ${this.$t('examples.sentence')}
+  </template>
+</BbCollapse>`],
+        icon: [`<BbCollapse icon-left>
+  ${this.$t('props.iconPosition')}
+  <template v-slot:content>
+    ${this.$t('examples.sentence')}
+  </template>
+</BbCollapse>`],
+        summary: [`<BbCollapse class="pb-4 border-b border-gray-400">
+  <BbHeadline :level="2">
+    ${this.$t('props.summary')}
+  </BbHeadline>
+
+  <template v-slot:summary>
+    <div class="text-gray-700">
+      ${this.$t('examples.summary')}
+    </div>
+  </template>
+
+  <template v-slot:content>
+    <div class="pt-4">
+      ${this.$t('examples.sentence')}
+    </div>
+  </template>
+</BbCollapse>`],
       },
     };
   },

@@ -18,11 +18,12 @@ module.exports = {
     color: 'Color',
     default: 'Default',
     disabled: 'Disabled',
-    expended: 'Expended',
+    expanded: 'Expanded',
     external: 'External',
     filled: 'Filled',
     group: 'Group',
     icon: 'Icon',
+    iconPosition: 'Icon position',
     image: 'Image',
     label: 'Label',
     letter: 'Letter',
@@ -35,6 +36,7 @@ module.exports = {
     rounded: 'Rounded',
     secondary: 'Secondary',
     size: 'Size',
+    summary: 'Summary',
     tag: 'Tag',
     variant: 'Variant',
   },
@@ -162,5 +164,9 @@ module.exports = {
       2: 'Orange',
       3: 'Mango',
     },
+    sentence: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+      incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+      nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+    summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
 };

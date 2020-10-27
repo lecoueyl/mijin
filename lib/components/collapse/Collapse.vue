@@ -1,10 +1,10 @@
 <template>
   <Component
-    :aria-expanded="!collapsed"
     :is="tag"
+    :aria-expanded="collapsed ? 'false' : 'true'"
   >
     <div
-      class="cursor-pointer flex"
+      class="cursor-pointer flex items-center"
       :class="{ 'flex-row-reverse': iconLeft }"
       @click="toggleExpand()"
     >
@@ -22,7 +22,7 @@
           stroke-linecap="round"
           fill="none"
           role="presentation"
-          class="stroke-2 w-5 h-5 mt-1 transform transition-transform duration-200"
+          class="stroke-2 w-5 h-5 transform transition-transform duration-200"
           :class="[
             iconLeft ? 'mr-2' : 'ml-2',
             { 'rotate-180': !collapsed }
@@ -32,6 +32,10 @@
         </svg>
       </div>
     </div>
+
+    <template v-if="$slots.summary">
+      <slot name="summary" />
+    </template>
 
     <div
       class="overflow-y-hidden transition-all duration-300 ease-in-out"
@@ -49,7 +53,7 @@ export default {
   name: 'UiCollapse',
 
   props: {
-    expended: {
+    expanded: {
       default: false,
       type: Boolean,
     },
@@ -67,7 +71,7 @@ export default {
 
   data() {
     return {
-      collapsed: !this.expended,
+      collapsed: !this.expanded,
       maxHeight: 0,
     };
   },
@@ -87,6 +91,7 @@ export default {
   methods: {
     toggleExpand() {
       this.collapsed = !this.collapsed;
+      this.$emit('toggle', this.collapsed);
       this.resizeContent();
     },
 
