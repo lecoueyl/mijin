@@ -83,6 +83,19 @@ module.exports = {
 
       collapse: {
         title: 'Collapse',
+        events: {
+          toggle: {
+            description: 'triggers when collapse is toggled',
+          },
+        },
+        methods: {
+          toggleExpand: {
+            description: 'Toggle between collapse and expand',
+          },
+          resizeContent: {
+            description: 'Resize content container to fit child element size',
+          },
+        },
       },
 
       divider: {
