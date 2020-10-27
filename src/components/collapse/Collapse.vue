@@ -1,11 +1,15 @@
 <template>
   <Component
     :is="tag"
+    :aria-disabled="disabled"
     :aria-expanded="collapsed ? 'false' : 'true'"
   >
     <div
-      class="cursor-pointer flex items-center"
-      :class="{ 'flex-row-reverse': iconLeft }"
+      class="flex items-center"
+      :class="{
+        'cursor-pointer' : !disabled,
+        'flex-row-reverse': iconLeft,
+      }"
       @click="toggleExpand()"
     >
       <div class="flex-1">
@@ -53,6 +57,11 @@ export default {
   name: 'UiCollapse',
 
   props: {
+    disabled: {
+      default: false,
+      type: Boolean,
+    },
+
     expanded: {
       default: false,
       type: Boolean,
@@ -90,6 +99,8 @@ export default {
 
   methods: {
     toggleExpand() {
+      if (this.disabled) return;
+
       this.collapsed = !this.collapsed;
       this.$emit('toggle', this.collapsed);
       this.resizeContent();

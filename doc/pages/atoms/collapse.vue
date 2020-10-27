@@ -40,6 +40,18 @@
     </Sample>
 
     <Sample
+      :title="$t('props.disabled')"
+      :snippet="samples.disabled"
+    >
+      <BbCollapse disabled>
+        {{ $t('props.disabled') }}
+        <template v-slot:content>
+          {{ $t('examples.sentence') }}
+        </template>
+      </BbCollapse>
+    </Sample>
+
+    <Sample
       :title="$t('props.summary')"
       :snippet="samples.summary"
     >
@@ -89,6 +101,12 @@ export default Vue.extend({
 </BbCollapse>`],
         icon: [`<BbCollapse icon-left>
   ${this.$t('props.iconPosition')}
+  <template v-slot:content>
+    ${this.$t('examples.sentence')}
+  </template>
+</BbCollapse>`],
+        disabled: [`<BbCollapse disabled>
+  ${this.$t('props.disabled')}
   <template v-slot:content>
     ${this.$t('examples.sentence')}
   </template>

@@ -1,23 +1,24 @@
 <template>
   <div>
-    <div>
-      <BbHeadline
-        :level="1"
-        :size="2"
-        class="pb-8"
-      >
-        Fundations
-      </BbHeadline>
+    <p>
+      Install package
+    </p>
+    <code>
+      npm install tailwindcss/zephyr
+    </code>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        <div class="p-4 border border-gray-300 rounded-md">
-          Test
-        </div>
+    <p>
+      Import CSS style
+    </p>
+    <code>
+      css/main.scss
+    </code>
 
-        <div class="p-4 bg-gray-100 rounded-lg h-24">
-          Test
-        </div>
-      </div>
-    </div>
+    <p>
+      Import tailwind configuration
+    </p>
+    <code>
+      tailwind.config.js
+    </code>
   </div>
 </template>

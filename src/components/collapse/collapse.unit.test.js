@@ -9,6 +9,7 @@ describe('Collapse', () => {
 
     expect(wrapper.element.tagName).toBe('DIV');
     expect(wrapper.attributes('aria-expanded')).toBe('false');
+    expect(wrapper.attributes('aria-disabled')).not.toBeDefined();
     expect(wrapper.vm.collapsed).toBe(true);
   });
 
@@ -31,6 +32,23 @@ describe('Collapse', () => {
     });
 
     expect(wrapper.element.tagName).toBe('SECTION');
+  });
+
+  it('accepts disabled prop', async () => {
+    const wrapper = shallowMount(Collapse, {
+      propsData: {
+        disabled: true,
+      },
+      slots: {
+        default: '<span>disabled</span>',
+      },
+    });
+
+    expect(wrapper.attributes('aria-disabled')).toBeDefined();
+    expect(wrapper.attributes('aria-disabled')).toBe('true');
+    expect(wrapper.vm.collapsed).toBe(true);
+    await wrapper.find('span').trigger('click');
+    expect(wrapper.vm.collapsed).toBe(true);
   });
 
   it('accepts expanded prop', async () => {
