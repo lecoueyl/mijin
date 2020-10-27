@@ -44,7 +44,7 @@
       :snippet="samples.summary"
     >
       <BbCollapse class="pb-4 border-b border-gray-400">
-        <BbHeadline :level="2">
+        <BbHeadline :level="3">
           {{ $t('props.summary') }}
         </BbHeadline>
 

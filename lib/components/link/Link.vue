@@ -18,7 +18,7 @@
   >
     <span
       v-if="props.external"
-      class="flex"
+      class="flex items-center"
     >
       <slot />
       <svg
@@ -30,7 +30,7 @@
         stroke-linecap="round"
         fill="none"
         role="presentation"
-        class="stroke-2 w-4 ml"
+        class="stroke-2 w-4 h-4 ml"
       >
         <line x1="7" y1="17" x2="17" y2="7" />
         <polyline points="7 7 17 7 17 17" />
