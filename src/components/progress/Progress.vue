@@ -36,6 +36,15 @@
         />
       </svg>
     </div>
+
+    <template v-if="variant === 'score'">
+      <div
+        v-for="index in scoreLength"
+        :key="index"
+        class="rounded-sm h-2 w-3 inline-block mr-1 last:mr-0"
+        :class="color && isScoreActive(index) ? `bg-${color}` : 'bg-gray-200'"
+      />
+    </template>
   </Component>
 </template>
 
@@ -54,6 +63,12 @@ export default {
       default: 0,
       required: true,
       validator: (val) => val >= 0 && val <= 100,
+    },
+
+    scoreLength: {
+      type: Number,
+      default: 3,
+      validator: (val) => val >= 3 && val <= 5,
     },
 
     tag: {
@@ -76,6 +91,14 @@ export default {
     circleProgress() {
       const progressLimit = 251;
       return (progressLimit / 100) * this.percentage;
+    },
+  },
+
+  methods: {
+    isScoreActive(item) {
+      if (this.percentage > (item - 1) * (100 / this.scoreLength)) return true;
+
+      return false;
     },
   },
 };

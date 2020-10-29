@@ -35,6 +35,7 @@ module.exports = {
     password: 'Password',
     removable: 'Removable',
     rounded: 'Rounded',
+    score: 'Score',
     secondary: 'Secondary',
     size: 'Size',
     summary: 'Summary',

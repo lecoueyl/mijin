@@ -36,6 +36,23 @@
         variant="circle"
       />
     </Sample>
+
+    <Sample
+      :title="$t('props.score')"
+      :snippet="samples.score"
+    >
+      <BbProgress
+        :percentage="50"
+        variant="score"
+      />
+
+      <BbProgress
+        class="mt-4"
+        :percentage="50"
+        :score-length="5"
+        variant="score"
+      />
+    </Sample>
   </LayoutSample>
 </template>
 
@@ -59,6 +76,16 @@ export default Vue.extend({
         circle: [`<BbProgress
   :percentage="75"
   variant="75"
+/>`],
+        score: [`<BbProgress
+  :percentage="50"
+  variant="score"
+/>
+
+<BbProgress
+  :percentage="50"
+  :score-length="5"
+  variant="score"
 />`],
       },
     };
