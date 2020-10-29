@@ -15,6 +15,7 @@ module.exports = {
   },
 
   props: {
+    circle: 'Circle',
     color: 'Color',
     default: 'Default',
     disabled: 'Disabled',
@@ -120,6 +121,10 @@ module.exports = {
 
       note: {
         title: 'Note',
+      },
+
+      progress: {
+        title: 'Progress',
       },
 
       skeleton: {

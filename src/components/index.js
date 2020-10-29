@@ -10,6 +10,7 @@ export { default as Icon } from './icon/Icon';
 export { default as Input } from './input/Input';
 export { default as Link } from './link/Link';
 export { default as Note } from './note/Note';
+export { default as Progress } from './progress/Progress';
 export { default as Skeleton } from './skeleton/Skeleton';
 export { default as Tabs } from './tabs/Tabs';
 export { default as Tag } from './tag/Tag';
