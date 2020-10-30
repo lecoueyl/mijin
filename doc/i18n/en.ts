@@ -15,6 +15,7 @@ module.exports = {
   },
 
   props: {
+    bordered: 'Bordered',
     circle: 'Circle',
     color: 'Color',
     default: 'Default',
@@ -126,6 +127,15 @@ module.exports = {
 
       progress: {
         title: 'Progress',
+      },
+
+      radio: {
+        title: 'Radio',
+        slots: {
+          summary: {
+            description: 'Summary placeholder',
+          },
+        },
       },
 
       skeleton: {

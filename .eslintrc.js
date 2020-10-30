@@ -19,7 +19,7 @@ module.exports = {
       vue: 'never',
     }],
     'import/no-extraneous-dependencies': 0,
-    'max-len': ['error', { code: 160 }],
+    'max-len': ['error', { code: 180 }],
     'vue/no-v-html': 0,
   },
   settings: {

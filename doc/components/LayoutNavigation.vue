@@ -91,6 +91,7 @@ export default Vue.extend({
           link: {},
           note: {},
           progress: {},
+          radio: {},
           skeleton: {},
           tabs: {},
           tag: {},

@@ -1,6 +1,7 @@
 <template>
   <label
-    class="inline-block"
+    class="inline-block cursor-pointer"
+    :class="{ 'rounded border border-gray-300 p-2 hover:border-primary-500 focus:outline-none focus:border-primary-500 transition-colors duration-150 ease-in-out': bordered }"
     :aria-checked="checked ? 'true' : 'false'"
     :aria-disabled="disabled ? 'true' : null"
     :tabindex="0"
@@ -12,7 +13,7 @@
       <input
         :id="id"
         v-model="selected"
-        type="checkbox"
+        type="radio"
         class="invisible absolute"
         :disabled="disabled"
         :name="name"
@@ -20,7 +21,7 @@
         :value="value"
       >
       <div
-        class="border-2 rounded w-5 h-5 flex justify-center items-center"
+        class="border rounded-full w-5 h-5 flex justify-center items-center"
         :class="[
           {
             'hover:border-primary-500': !disabled,
@@ -40,14 +41,21 @@
           <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
         </svg>
       </div>
-      <span class="pl-2"><slot /></span>
+      <div class="pl-2"><slot /></div>
+    </div>
+
+    <div
+      v-if="$slots.summary"
+      class="pl-6 ml-1"
+    >
+      <slot name="summary" />
     </div>
   </label>
 </template>
 
 <script>
 export default {
-  name: 'UiCheckbox',
+  name: 'UiRadio',
 
   model: {
     prop: 'options',
@@ -55,6 +63,11 @@ export default {
   },
 
   props: {
+    bordered: {
+      type: Boolean,
+      default: false,
+    },
+
     disabled: {
       type: Boolean,
       default: false,
@@ -88,11 +101,7 @@ export default {
 
   computed: {
     checked() {
-      if (Array.isArray(this.options)) {
-        return this.options.includes(this.value);
-      }
-
-      return this.options;
+      return this.options === this.value;
     },
 
     selected: {
