@@ -1,7 +1,5 @@
 <template>
-  <Component
-    :is="tag"
-  >
+  <Component :is="tag">
     <div
       v-if="variant === 'bar'"
       class="rounded-lg bg-gray-200 overflow-hidden"
@@ -61,7 +59,6 @@ export default {
     percentage: {
       type: Number,
       default: 0,
-      required: true,
       validator: (val) => val >= 0 && val <= 100,
     },
 
@@ -90,6 +87,7 @@ export default {
   computed: {
     circleProgress() {
       const progressLimit = 251;
+
       return (progressLimit / 100) * this.percentage;
     },
   },

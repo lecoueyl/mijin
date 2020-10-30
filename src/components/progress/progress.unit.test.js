@@ -1,19 +1,17 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Skeleton from './Skeleton';
+import Progress from './Progress';
 
-describe('Skeleton', () => {
+describe('Progress', () => {
   enableAutoDestroy(afterEach);
 
   it('has default structure', async () => {
-    const wrapper = shallowMount(Skeleton);
+    const wrapper = shallowMount(Progress);
 
     expect(wrapper.element.tagName).toBe('DIV');
-    expect(wrapper.classes('bg-gray-300')).toBe(true);
-    expect(wrapper.classes('rounded-sm')).toBe(true);
   });
 
   it('do not renders default slot content', async () => {
-    const wrapper = shallowMount(Skeleton, {
+    const wrapper = shallowMount(Progress, {
       slots: {
         default: '<span>foobar</span>',
       },
@@ -24,7 +22,7 @@ describe('Skeleton', () => {
   });
 
   it('renders custom root element', async () => {
-    const wrapper = shallowMount(Skeleton, {
+    const wrapper = shallowMount(Progress, {
       propsData: {
         tag: 'span',
       },
@@ -34,58 +32,21 @@ describe('Skeleton', () => {
   });
 
   it('accepts color prop', async () => {
-    const wrapper = shallowMount(Skeleton, {
+    const wrapper = shallowMount(Progress, {
       propsData: {
         color: 'red-500',
       },
     });
 
-    expect(wrapper.classes('bg-red-500')).toBe(true);
+    expect(wrapper.find('.bg-red-500').exists()).toBe(true);
   });
 
-  it('accepts rounded prop', async () => {
-    const wrapper = shallowMount(Skeleton, {
+  it('accepts circle variant prop', async () => {
+    const wrapper = shallowMount(Progress, {
       propsData: {
-        rounded: true,
+        variant: 'circle',
       },
     });
-
-    expect(wrapper.classes('rounded-full')).toBe(true);
-  });
-
-  it('should emit events', async () => {
-    let called = 0;
-    let event = null;
-    const wrapper = shallowMount(Skeleton, {
-      listeners: {
-        blur: (e) => {
-          event = e;
-          called += 1;
-        },
-        click: (e) => {
-          event = e;
-          called += 1;
-        },
-        focus: (e) => {
-          event = e;
-          called += 1;
-        },
-      },
-    });
-
-    expect(called).toBe(0);
-    expect(event).toEqual(null);
-
-    await wrapper.trigger('click');
-    expect(called).toBe(1);
-    expect(event).toBeInstanceOf(MouseEvent);
-
-    await wrapper.element.dispatchEvent(new Event('focus'));
-    expect(called).toBe(2);
-    expect(event).toBeInstanceOf(Event);
-
-    await wrapper.element.dispatchEvent(new Event('blur'));
-    expect(called).toBe(3);
-    expect(event).toBeInstanceOf(Event);
+    expect(wrapper.find('svg').exists()).toBe(true);
   });
 });
