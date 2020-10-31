@@ -60,12 +60,13 @@
               <tr
                 v-for="prop in props"
                 :key="prop.name"
+                class="align-top border-b border-gray-200"
               >
-                <td class="border-b border-gray-200 py-2">
+                <td class="py-2">
                   {{ prop.name }}
                 </td>
 
-                <td class="border-b border-gray-200 py-2">
+                <td class="py-2">
                   <span
                     v-for="type in prop.type"
                     :key="type"
@@ -74,11 +75,11 @@
                   </span>
                 </td>
 
-                <td class="border-b border-gray-200 py-2">
+                <td class="py-2">
                   {{ prop.default }}
                 </td>
 
-                <td class="border-b border-gray-200 py-2">
+                <td class="py-2">
                   {{ prop.required || false }}
                 </td>
               </tr>

@@ -20,7 +20,7 @@
         :value="value"
       >
       <div
-        class="border-2 rounded w-5 h-5 flex justify-center items-center"
+        class="border rounded w-5 h-5 flex justify-center items-center"
         :class="[
           {
             'hover:border-primary-500': !disabled,

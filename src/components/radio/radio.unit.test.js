@@ -51,7 +51,11 @@ describe('Radio', () => {
   });
 
   it('should emit events', async () => {
-    const wrapper = shallowMount(Radio);
+    const wrapper = shallowMount(Radio, {
+      propsData: {
+        value: 'foobar',
+      },
+    });
 
     expect(wrapper.vm).toBeDefined();
     expect(wrapper.vm.selected).toBeDefined();
