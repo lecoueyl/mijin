@@ -4,7 +4,7 @@ module.exports = {
     name: 'Name',
     props: 'Props',
     type: 'Type',
-    default: 'default',
+    default: 'Default',
     required: 'Required',
   },
 
@@ -142,6 +142,10 @@ module.exports = {
         title: 'Skeleton',
       },
 
+      table: {
+        title: 'Table',
+      },
+
       tabs: {
         title: 'Tabs',
       },
@@ -197,5 +201,24 @@ module.exports = {
       incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
       nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
     summary: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    table: {
+      header: {
+        1: 'Name',
+        2: 'Description',
+        3: 'Count',
+      },
+      row: {
+        1: {
+          1: 'Banana',
+          2: 'Super delicious',
+          3: '20',
+        },
+        2: {
+          1: 'Orange',
+          2: 'Super delicious',
+          3: '20',
+        },
+      },
+    },
   },
 };
