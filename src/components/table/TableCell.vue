@@ -1,7 +1,10 @@
 <template>
   <td
     :class="[
-      tableProps.density === 'tight' ? 'py-1' : 'py-2'
+      {
+        [`align-${verticalAlign}`]: verticalAlign,
+      },
+      tableProps && tableProps.density === 'tight' ? 'py-1' : 'py-2'
     ]"
   >
     <slot />
@@ -13,11 +16,24 @@ export default {
   name: 'UiTableCell',
 
   props: {
+    verticalAlign: {
+      default: null,
+      type: String,
+      validator: (value) => [
+        null,
+        'baseline',
+        'bottom',
+        'middle',
+        'text-bottom',
+        'text-top',
+        'top',
+      ].includes(value),
+    },
   },
 
   computed: {
     tableProps() {
-      return this.$parent.$parent.$props;
+      return this.$parent.$parent.$parent.$props;
     },
   },
 

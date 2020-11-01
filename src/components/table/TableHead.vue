@@ -12,7 +12,11 @@
 export default {
   name: 'UiTableHead',
 
-  props: {
+  created() {
+    if (this.$parent.$options.name !== 'UiTable') {
+      this.$destroy();
+      throw new Error('TableHead must be wrap with Table');
+    }
   },
 };
 </script>

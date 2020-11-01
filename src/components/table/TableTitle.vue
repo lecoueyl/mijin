@@ -1,9 +1,12 @@
 <template>
   <th
     class="py-2 font-medium"
-    :class="{
-      'sticky top-0': tableProps.stickyHeader,
-    }"
+    :class="[
+      {
+        'sticky top-0': tableProps.stickyHeader,
+      },
+      `text-${textAlign}`,
+    ]"
   >
     <slot />
   </th>
@@ -12,6 +15,19 @@
 <script>
 export default {
   name: 'UiTableTitle',
+
+  props: {
+    textAlign: {
+      default: 'left',
+      type: String,
+      validator: (value) => [
+        'left',
+        'center',
+        'right',
+        'justify',
+      ].includes(value),
+    },
+  },
 
   computed: {
     tableProps() {

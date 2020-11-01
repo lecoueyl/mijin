@@ -9,17 +9,20 @@
     >
       <BbTable>
         <BbTableHead>
-          <BbTableTitle class="text-left bg-gray-100">
+          <BbTableTitle class="bg-gray-100">
             {{ $t('examples.table.header.1') }}
           </BbTableTitle>
-          <BbTableTitle class="text-left bg-gray-100">
+
+          <BbTableTitle class="bg-gray-100">
             {{ $t('examples.table.header.2') }}
           </BbTableTitle>
-          <BbTableTitle class="text-left bg-gray-100">
+
+          <BbTableTitle class="bg-gray-100">
             {{ $t('examples.table.header.3') }}
           </BbTableTitle>
         </BbTableHead>
-        <tbody>
+
+        <BbTableBody>
           <BbTableRow
             v-for="(item, key) in $t('examples.table.row')"
             :key="key"
@@ -27,14 +30,16 @@
             <BbTableCell>
               {{ item[1] }}
             </BbTableCell>
+
             <BbTableCell>
               {{ item[2] }}
             </BbTableCell>
+
             <BbTableCell>
               {{ item[3] }}
             </BbTableCell>
           </BbTableRow>
-        </tbody>
+        </BbTableBody>
       </BbTable>
     </Sample>
 
@@ -68,17 +73,43 @@ export default Vue.extend({
       },
       samples: {
         default: [
-          `<BbTabs>
-  <BbTabsItem selected>
-    ${this.$t('examples.list.1')}
-  </BbTabsItem>
-  <BbTabsItem>
-    ${this.$t('examples.list.2')}
-  </BbTabsItem>
-  <BbTabsItem>
-    ${this.$t('examples.list.3')}
-  </BbTabsItem>
-</BbTabs>`,
+          `<BbTable>
+<BbTableHead>
+  <BbTableTitle class="bg-gray-100">
+    ${this.$t('examples.table.header.1')}
+  </BbTableTitle>
+  <BbTableTitle class="bg-gray-100">
+    ${this.$t('examples.table.header.2')}
+  </BbTableTitle>
+  <BbTableTitle class="bg-gray-100">
+    ${this.$t('examples.table.header.3')}
+  </BbTableTitle>
+</BbTableHead>
+<TableBody>
+  <BbTableRow>
+    <BbTableCell>
+      ${this.$t('examples.table.row.1.1')}
+    </BbTableCell>
+    <BbTableCell>
+      ${this.$t('examples.table.row.1.2')}
+    </BbTableCell>
+    <BbTableCell>
+      ${this.$t('examples.table.row.1.3')}
+    </BbTableCell>
+  </BbTableRow>
+  <BbTableRow>
+    <BbTableCell>
+      ${this.$t('examples.table.row.2.1')}
+    </BbTableCell>
+    <BbTableCell>
+      ${this.$t('examples.table.row.2.2')}
+    </BbTableCell>
+    <BbTableCell>
+      ${this.$t('examples.table.row.2.3')}
+    </BbTableCell>
+  </BbTableRow>
+</TableBody>
+</BbTable>`,
         ],
         disabled: [
           `<BbTabs>

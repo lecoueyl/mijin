@@ -210,13 +210,13 @@ module.exports = {
       row: {
         1: {
           1: 'Banana',
-          2: 'Super delicious',
+          2: 'An elongated, edible fruit ',
           3: '20',
         },
         2: {
           1: 'Orange',
-          2: 'Super delicious',
-          3: '20',
+          2: 'Fruit of various citrus species',
+          3: '136',
         },
       },
     },
