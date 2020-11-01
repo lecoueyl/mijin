@@ -1,6 +1,12 @@
 <template>
   <table
     class="w-full"
+    :class="[
+      {
+        'relative': stickyHeader,
+        'table-fixed': fixed,
+      }
+    ]"
   >
     <slot />
   </table>
@@ -18,6 +24,11 @@ export default {
         'tight',
         'normal',
       ].includes(value),
+    },
+
+    fixed: {
+      default: false,
+      type: Boolean,
     },
 
     stickyHeader: {

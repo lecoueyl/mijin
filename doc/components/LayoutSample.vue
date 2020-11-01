@@ -35,56 +35,53 @@
             {{ name }}
           </BbHeadline>
 
-          <table class="w-full table-fixed relative">
-            <thead>
-              <tr class="text-left text-sm text-gray-700">
-                <th class="bg-background py-2 font-medium sticky top-0 w-1/4">
-                  {{ $t('common.name') }}
-                </th>
+          <BbTable>
+            <BbTableHead>
+              <BbTableTitle class="bg-background">
+                {{ $t('common.name') }}
+              </BbTableTitle>
 
-                <th class="bg-background py-2 font-medium sticky top-0 w-1/4">
-                  {{ $t('common.type') }}
-                </th>
+              <BbTableTitle class="bg-background">
+                {{ $t('common.type') }}
+              </BbTableTitle>
 
-                <th class="bg-background py-2 font-medium sticky top-0 w-1/4">
-                  {{ $t('common.default') }}
-                </th>
+              <BbTableTitle class="bg-background">
+                {{ $t('common.default') }}
+              </BbTableTitle>
 
-                <th class="bg-background py-2 font-medium sticky top-0 w-1/4">
-                  {{ $t('common.required') }}
-                </th>
-              </tr>
-            </thead>
+              <BbTableTitle class="bg-background">
+                {{ $t('common.required') }}
+              </BbTableTitle>
+            </BbTableHead>
 
-            <tbody>
-              <tr
+            <BbTableBody>
+              <BbTableRow
                 v-for="prop in props"
                 :key="prop.name"
-                class="align-top border-b border-gray-200"
               >
-                <td class="py-2">
+                <BbTableCell>
                   {{ prop.name }}
-                </td>
+                </BbTableCell>
 
-                <td class="py-2">
+                <BbTableCell>
                   <span
                     v-for="type in prop.type"
                     :key="type"
                   >
                     {{ type }}
                   </span>
-                </td>
+                </BbTableCell>
 
-                <td class="py-2">
+                <BbTableCell>
                   {{ prop.default }}
-                </td>
+                </BbTableCell>
 
-                <td class="py-2">
+                <BbTableCell>
                   {{ prop.required || false }}
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                </BbTableCell>
+              </BbTableRow>
+            </BbTableBody>
+          </BbTable>
         </div>
       </template>
     </div>

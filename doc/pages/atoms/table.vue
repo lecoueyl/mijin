@@ -1,7 +1,7 @@
 <template>
   <LayoutSample
     :title="$t('sections.atoms.table.title')"
-    :components="['Table', 'TableRow', 'TableCell']"
+    :components="['Table', 'TableCell', 'TableRow', 'TableTitle']"
   >
     <Sample
       :title="$t('props.default')"
@@ -35,7 +35,7 @@
               {{ item[2] }}
             </BbTableCell>
 
-            <BbTableCell>
+            <BbTableCell text-align="right">
               {{ item[3] }}
             </BbTableCell>
           </BbTableRow>
@@ -44,19 +44,89 @@
     </Sample>
 
     <Sample
-      :title="$t('props.disabled')"
-      :snippet="samples.disabled"
+      :title="$t('props.fixed')"
+      :snippet="samples.default"
     >
-      <BbTabs>
-        <BbTabsItem
-          v-for="(item, key, index) in $t('examples.list')"
-          :key="key"
-          :selected="demo.disabled === index"
-          :disabled="key !== 1"
-        >
-          {{ item }}
-        </BbTabsItem>
-      </BbTabs>
+      <BbTable fixed>
+        <BbTableHead>
+          <BbTableTitle class="bg-gray-100 w-2/12">
+            {{ $t('examples.table.header.1') }}
+          </BbTableTitle>
+
+          <BbTableTitle class="bg-gray-100">
+            {{ $t('examples.table.header.2') }}
+          </BbTableTitle>
+
+          <BbTableTitle
+            text-align="right"
+            class="bg-gray-100 w-1/12"
+          >
+            {{ $t('examples.table.header.3') }}
+          </BbTableTitle>
+        </BbTableHead>
+
+        <BbTableBody>
+          <BbTableRow
+            v-for="(item, key) in $t('examples.table.row')"
+            :key="key"
+          >
+            <BbTableCell>
+              {{ item[1] }}
+            </BbTableCell>
+
+            <BbTableCell>
+              {{ item[2] }}
+            </BbTableCell>
+
+            <BbTableCell text-align="right">
+              {{ item[3] }}
+            </BbTableCell>
+          </BbTableRow>
+        </BbTableBody>
+      </BbTable>
+    </Sample>
+
+    <Sample
+      :title="$t('props.truncate')"
+      :snippet="samples.default"
+    >
+      <BbTable fixed>
+        <BbTableHead>
+          <BbTableTitle class="bg-gray-100 w-2/12">
+            {{ $t('examples.table.header.1') }}
+          </BbTableTitle>
+
+          <BbTableTitle class="bg-gray-100">
+            {{ $t('examples.table.header.2') }}
+          </BbTableTitle>
+
+          <BbTableTitle
+            text-align="right"
+            class="bg-gray-100 w-1/12"
+          >
+            {{ $t('examples.table.header.3') }}
+          </BbTableTitle>
+        </BbTableHead>
+
+        <BbTableBody>
+          <BbTableRow
+            v-for="(item, key) in $t('examples.table.row')"
+            :key="key"
+          >
+            <BbTableCell>
+              {{ item[1] }}
+            </BbTableCell>
+
+            <BbTableCell truncate>
+              {{ item[2] }}
+            </BbTableCell>
+
+            <BbTableCell text-align="right">
+              {{ item[3] }}
+            </BbTableCell>
+          </BbTableRow>
+        </BbTableBody>
+      </BbTable>
     </Sample>
   </LayoutSample>
 </template>

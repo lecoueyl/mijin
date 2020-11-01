@@ -1,10 +1,13 @@
 <template>
   <td
+    class="last:pr-0"
     :class="[
       {
         [`align-${verticalAlign}`]: verticalAlign,
+        [`text-${textAlign}`]: textAlign,
+        'truncate': truncate && tableProps.fixed,
       },
-      tableProps && tableProps.density === 'tight' ? 'py-1' : 'py-2'
+      tableProps.density === 'tight' ? 'py-1 pr-2' : 'py-2 pr-4'
     ]"
   >
     <slot />
@@ -16,6 +19,23 @@ export default {
   name: 'UiTableCell',
 
   props: {
+    textAlign: {
+      default: null,
+      type: String,
+      validator: (value) => [
+        null,
+        'left',
+        'center',
+        'right',
+        'justify',
+      ].includes(value),
+    },
+
+    truncate: {
+      default: false,
+      type: Boolean,
+    },
+
     verticalAlign: {
       default: null,
       type: String,
@@ -41,6 +61,10 @@ export default {
     if (this.$parent.$options.name !== 'UiTableRow') {
       this.$destroy();
       throw new Error('TableCell must be wrap with TableRow');
+    }
+
+    if (this.truncate && !this.tableProps.fixed) {
+      console.warn('Table must have "fixed" property set to true when using TableCell "truncate" property');
     }
   },
 };

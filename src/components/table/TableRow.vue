@@ -1,7 +1,12 @@
 <template>
   <tr
     class="border-b border-gray-200"
-    :class="`align-${verticalAlign}`"
+    :class="[
+      {
+        'hover:bg-gray-100 cursor-pointer': clickable,
+      },
+      `align-${verticalAlign}`
+    ]"
   >
     <slot />
   </tr>
@@ -12,6 +17,11 @@ export default {
   name: 'UiTableRow',
 
   props: {
+    clickable: {
+      default: false,
+      type: Boolean,
+    },
+
     verticalAlign: {
       default: 'top',
       type: String,

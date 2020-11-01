@@ -23,6 +23,7 @@ module.exports = {
     expanded: 'Expanded',
     external: 'External',
     filled: 'Filled',
+    fixed: 'Fixed',
     group: 'Group',
     icon: 'Icon',
     iconPosition: 'Icon position',
@@ -41,6 +42,7 @@ module.exports = {
     size: 'Size',
     summary: 'Summary',
     tag: 'Tag',
+    truncate: 'Truncate',
     variant: 'Variant',
   },
 
@@ -210,12 +212,12 @@ module.exports = {
       row: {
         1: {
           1: 'Banana',
-          2: 'An elongated, edible fruit ',
+          2: 'A banana is an elongated, edible fruit, botanically a berry. Produced by several kinds of large herbaceous flowering plants in the genus Musa',
           3: '20',
         },
         2: {
           1: 'Orange',
-          2: 'Fruit of various citrus species',
+          2: 'The orange is the fruit of various citrus species in the family Rutaceae (see list of plants known as orange); it primarily refers to Citrus × sinensis',
           3: '136',
         },
       },

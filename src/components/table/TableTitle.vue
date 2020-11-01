@@ -1,6 +1,6 @@
 <template>
   <th
-    class="py-2 font-medium"
+    class="py-2 font-medium pr-1 last:pr-0"
     :class="[
       {
         'sticky top-0': tableProps.stickyHeader,
