@@ -81,6 +81,7 @@ export default Vue.extend({
 
         atoms: {
           avatar: {},
+          badge: {},
           button: {},
           checkbox: {},
           collapse: {},

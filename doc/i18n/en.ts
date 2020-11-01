@@ -78,6 +78,10 @@ module.exports = {
         title: 'Avatar',
       },
 
+      badge: {
+        title: 'Badge',
+      },
+
       button: {
         title: 'Button',
       },

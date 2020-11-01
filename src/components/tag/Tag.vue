@@ -2,11 +2,13 @@
   <Component
     :is="props.tag"
     :ref="data.ref"
-    class="rounded-full px-3 py-px inline-block"
+    class="rounded-full inline-block"
     :class="
       [
         {
           [`text-${props.textColor}`]: props.textColor,
+          'text-sm px-2': props.size === 'sm',
+          'px-3 py-px': props.size === 'base',
         },
         `bg-${props.bgColor}`,
         data.class,
@@ -58,6 +60,15 @@ export default {
     removable: {
       default: false,
       type: Boolean,
+    },
+
+    size: {
+      default: 'base',
+      type: String,
+      validator: (value) => [
+        'sm',
+        'base',
+      ].includes(value),
     },
 
     tag: {

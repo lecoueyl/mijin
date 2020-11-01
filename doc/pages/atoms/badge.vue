@@ -1,51 +1,51 @@
 <template>
   <LayoutSample
-    :title="$t('sections.atoms.tag.title')"
-    components="Tag"
+    :title="$t('sections.atoms.badge.title')"
+    components="Badge"
   >
     <Sample
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbTag>
-        {{ $t('props.default') }}
-      </BbTag>
-    </Sample>
-
-    <Sample
-      :title="$t('props.removable')"
-      :snippet="samples.removable"
-    >
-      <BbTag removable>
-        {{ $t('props.removable') }}
-      </BbTag>
+      <BbBadge>
+        1
+      </BbBadge>
     </Sample>
 
     <Sample
       :title="$t('props.color')"
       :snippet="samples.color"
     >
-      <BbTag
+      <BbBadge
         v-for="(color, index) in [
-          { bg: 'primary-100', text: 'primary-500'},
-          { bg: 'primary-500', text: 'white'},
+          { bg: 'primary-100', text: 'primary-500', value: '12'},
+          { bg: 'primary-500', text: 'white', value: '999'},
         ]"
         :key="index"
         :bg-color="color.bg"
         :text-color="color.text"
         :class="[{ 'ml-2': index !== 0 }]"
       >
-        {{ $t('props.color') }}
-      </BbTag>
+        {{ color.value }}
+      </BbBadge>
+    </Sample>
+
+    <Sample
+      :title="$t('props.variant')"
+      :snippet="samples.variant"
+    >
+      <BbBadge variant="outline">
+        42
+      </BbBadge>
     </Sample>
 
     <Sample
       :title="$t('props.size')"
       :snippet="samples.size"
     >
-      <BbTag size="sm">
+      <BbBadge size="sm">
         {{ $t('props.size') }}
-      </BbTag>
+      </BbBadge>
     </Sample>
   </LayoutSample>
 </template>
@@ -57,32 +57,29 @@ export default Vue.extend({
   data() {
     return {
       samples: {
-        default: [`<BbTag hred="#">
-  ${this.$t('props.tag')}
-</BbTag>`],
-        removable: [`<BbTag
-  href="#"
-  external
->
-  ${this.$t('props.tag')}
-</BbTag>`],
-        color: [`<BbTag
+        default: [`<BbBadge hred="#">
+  1
+</BbBadge>`],
+        color: [`<BbBadge
   bg-color="primary-100"
   text-color="primary-500"
 >
-  ${this.$t('props.color')}
-</BbTag>
+  12
+</BbBadge>
 
-<BbTag
+<BbBadge
   bg-color="primary-500"
   text-color="white"
 >
-  ${this.$t('props.color')}
-</BbTag>
+  999
+</BbBadge>
 `],
-        size: [`<BbTag size="small">
+        variant: [`<BbBadge variant="outline">
+  42
+</BbBadge>`],
+        size: [`<BbBadge size="small">
   ${this.$t('props.size')}
-</BbTag>`],
+</BbBadge>`],
       },
     };
   },

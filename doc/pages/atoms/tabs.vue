@@ -15,6 +15,9 @@
           @click="demo.default = index"
         >
           {{ item }}
+          <BbBadge size="sm">
+            99+
+          </BbBadge>
         </BbTabsItem>
       </BbTabs>
     </Sample>
