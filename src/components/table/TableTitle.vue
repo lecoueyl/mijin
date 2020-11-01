@@ -1,17 +1,9 @@
-<template functional>
+<template>
   <th
-    :ref="data.ref"
-    class="py-2 font-medium sticky top-0"
-    :class="[
-      data.class,
-      data.staticClass,
-    ]"
-    :style="[
-      data.style,
-      data.staticStyle,
-    ]"
-    v-bind="data.attrs"
-    v-on="listeners"
+    class="py-2 font-medium"
+    :class="{
+      'sticky top-0': tableProps.stickyHeader,
+    }"
   >
     <slot />
   </th>
@@ -21,7 +13,17 @@
 export default {
   name: 'UiTableTitle',
 
-  props: {
+  computed: {
+    tableProps() {
+      return this.$parent.$parent.$props;
+    },
+  },
+
+  created() {
+    if (this.$parent.$options.name !== 'UiTableHead') {
+      this.$destroy();
+      throw new Error('TableTitle must be wrap with TableHead');
+    }
   },
 };
 </script>

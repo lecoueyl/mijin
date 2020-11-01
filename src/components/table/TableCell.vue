@@ -1,17 +1,8 @@
-<template functional>
+<template>
   <td
-    :ref="data.ref"
-    class="py-2"
     :class="[
-      data.class,
-      data.staticClass,
+      tableProps.density === 'tight' ? 'py-1' : 'py-2'
     ]"
-    :style="[
-      data.style,
-      data.staticStyle,
-    ]"
-    v-bind="data.attrs"
-    v-on="listeners"
   >
     <slot />
   </td>
@@ -22,6 +13,19 @@ export default {
   name: 'UiTableCell',
 
   props: {
+  },
+
+  computed: {
+    tableProps() {
+      return this.$parent.$parent.$props;
+    },
+  },
+
+  created() {
+    if (this.$parent.$options.name !== 'UiTableRow') {
+      this.$destroy();
+      throw new Error('TableCell must be wrap with TableRow');
+    }
   },
 };
 </script>

@@ -3,11 +3,6 @@ import i18n from './doc/i18n';
 export default {
   srcDir: 'doc',
   /*
-  ** Nuxt rendering mode
-  ** See https://nuxtjs.org/api/configuration-mode
-  */
-  mode: 'universal',
-  /*
   ** Nuxt target
   ** See https://nuxtjs.org/api/configuration-target
   */

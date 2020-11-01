@@ -1,17 +1,6 @@
-<template functional>
+<template>
   <table
-    :ref="data.ref"
     class="w-full"
-    :class="[
-      data.class,
-      data.staticClass,
-    ]"
-    :style="[
-      data.style,
-      data.staticStyle,
-    ]"
-    v-bind="data.attrs"
-    v-on="listeners"
   >
     <slot />
   </table>
@@ -29,6 +18,11 @@ export default {
         'tight',
         'normal',
       ].includes(value),
+    },
+
+    stickyHeader: {
+      default: true,
+      type: Boolean,
     },
   },
 };
