@@ -7,8 +7,8 @@
       [
         {
           [`text-${props.textColor}`]: props.textColor,
-          'text-sm px-2': props.size === 'sm',
-          'px-3 py-px': props.size === 'base',
+          'text-sm px-2 py-1 leading-none': props.size === 'sm',
+          'px-3 py-2 leading-none': props.size === 'base',
         },
         `bg-${props.bgColor}`,
         data.class,
@@ -36,6 +36,7 @@
         fill="none"
         role="presentation"
         class="stroke-2 w-4 h-4 ml-1 cursor-pointer hover:text-gray-700 transition-colors duration-150 ease-in-out"
+        @click="listeners.remove"
       >
         <line x1="18" y1="6" x2="6" y2="18" />
         <line x1="6" y1="6" x2="18" y2="18" />

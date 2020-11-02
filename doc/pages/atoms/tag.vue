@@ -16,7 +16,11 @@
       :title="$t('props.removable')"
       :snippet="samples.removable"
     >
-      <BbTag removable>
+      <BbTag
+        v-if="showTag"
+        removable
+        @remove="removeTag()"
+      >
         {{ $t('props.removable') }}
       </BbTag>
     </Sample>
@@ -56,15 +60,16 @@ import Vue from 'vue';
 export default Vue.extend({
   data() {
     return {
+      showTag: true,
       samples: {
         default: [`<BbTag hred="#">
   ${this.$t('props.tag')}
 </BbTag>`],
         removable: [`<BbTag
-  href="#"
-  external
+  removable
+  @remove="remove()"
 >
-  ${this.$t('props.tag')}
+  ${this.$t('props.removable')}
 </BbTag>`],
         color: [`<BbTag
   bg-color="primary-100"
@@ -85,6 +90,15 @@ export default Vue.extend({
 </BbTag>`],
       },
     };
+  },
+
+  methods: {
+    removeTag() {
+      this.showTag = false;
+      setTimeout(() => {
+        this.showTag = true;
+      }, 500);
+    },
   },
 });
 </script>

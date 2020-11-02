@@ -158,6 +158,11 @@ module.exports = {
 
       tag: {
         title: 'Tag',
+        events: {
+          remove: {
+            description: 'triggers when remove button is triggered',
+          },
+        },
       },
 
       toggle: {

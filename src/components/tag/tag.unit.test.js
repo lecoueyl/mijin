@@ -56,6 +56,28 @@ describe('Tag', () => {
     expect(wrapper.find('svg').exists()).toBe(true);
   });
 
+  it('emits remove on remove button click', async () => {
+    let called = 0;
+    let event = null;
+
+    const wrapper = shallowMount(Tag, {
+      propsData: {
+        removable: true,
+      },
+      listeners: {
+        remove: (e) => {
+          event = e;
+          called += 1;
+        },
+      },
+    });
+
+    expect(event).toEqual(null);
+    await wrapper.find('svg').trigger('click');
+    expect(called).toBe(1);
+    expect(event).toBeInstanceOf(MouseEvent);
+  });
+
   it('should emit events', async () => {
     let called = 0;
     let event = null;
