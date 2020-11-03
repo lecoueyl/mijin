@@ -124,8 +124,10 @@ export default Vue.extend({
   },
 
   data() {
+    const anchors = [];
+
     return {
-      anchors: [],
+      anchors,
     };
   },
 

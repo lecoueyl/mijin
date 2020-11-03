@@ -32,10 +32,10 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
 import Vue from 'vue';
 
-const maxSampleHeight = 100;
+const maxSampleHeight: Number = 100;
 export default Vue.extend({
   props: {
     snippet: {
@@ -50,14 +50,16 @@ export default Vue.extend({
   },
 
   data() {
+    const collapsed: Boolean = true;
+
     return {
-      collapsed: true,
+      collapsed,
       maxSampleHeight,
     };
   },
 
   computed: {
-    id() {
+    id(): string {
       return this.title.toLowerCase().replace(/ /g, '-');
     },
   },
@@ -76,8 +78,6 @@ export default Vue.extend({
 
   methods: {
     toggleCollapse() {
-      if (this.disabled) return;
-
       this.collapsed = !this.collapsed;
       this.$emit('toggle', this.collapsed);
       this.resizeSampleContent();
@@ -87,7 +87,7 @@ export default Vue.extend({
       if (this.collapsed) {
         this.maxSampleHeight = maxSampleHeight;
       } else {
-        this.maxSampleHeight = this.$refs.sample.offsetHeight;
+        this.maxSampleHeight = (this.$refs.sample as HTMLInputElement).offsetHeight;
       }
     },
   },

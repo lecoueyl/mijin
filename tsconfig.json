@@ -24,7 +24,6 @@
     },
     "types": [
       "@nuxt/types",
-      "@nuxtjs/color-mode",
       "@types/node",
       "nuxt-i18n",
     ]
