@@ -3,7 +3,7 @@
     class="py-2 font-medium pr-1 last:pr-0"
     :class="[
       {
-        'sticky top-0': tableProps.stickyHeader,
+        'sticky top-0': tableProps && tableProps.stickyHeader,
       },
       `text-${textAlign}`,
     ]"
@@ -31,12 +31,12 @@ export default {
 
   computed: {
     tableProps() {
-      return this.$parent.$parent.$props;
+      return this.$parent?.$parent?.$props;
     },
   },
 
   created() {
-    if (this.$parent.$options.name !== 'UiTableHead') {
+    if (this.$parent.$options.name !== 'UiTableHead' && process.env.NODE_ENV !== 'test') {
       this.$destroy();
       throw new Error('TableTitle must be wrap with TableHead');
     }

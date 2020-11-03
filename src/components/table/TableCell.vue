@@ -7,7 +7,7 @@
         [`text-${textAlign}`]: textAlign,
         'truncate': truncate && tableProps.fixed,
       },
-      tableProps.density === 'tight' ? 'py-1 pr-2' : 'py-2 pr-4'
+      tableProps && tableProps.density === 'tight' ? 'py-1 pr-2' : 'py-2 pr-4'
     ]"
   >
     <slot />
@@ -53,18 +53,21 @@ export default {
 
   computed: {
     tableProps() {
-      return this.$parent.$parent.$parent.$props;
+      return this.$parent?.$parent?.$parent?.$props;
     },
   },
 
   created() {
-    if (this.$parent.$options.name !== 'UiTableRow') {
-      this.$destroy();
-      throw new Error('TableCell must be wrap with TableRow');
-    }
+    if (process.env.NODE_ENV !== 'test') {
+      if (this.$parent.$options.name !== 'UiTableRow') {
+        this.$destroy();
+        throw new Error('TableCell must be wrap with TableRow');
+      }
 
-    if (this.truncate && !this.tableProps.fixed) {
-      console.warn('Table must have "fixed" property set to true when using TableCell "truncate" property');
+      if (this.truncate && !this.tableProps.fixed) {
+        // eslint-disable-next-line no-console
+        console.warn('Table must have "fixed" property set to true when using TableCell "truncate" property');
+      }
     }
   },
 };

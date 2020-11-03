@@ -26,7 +26,7 @@ describe('Badge', () => {
   it('renders custom root element', async () => {
     const wrapper = shallowMount(Badge, {
       propsData: {
-        Badge: 'div',
+        tag: 'div',
       },
     });
 
@@ -43,17 +43,6 @@ describe('Badge', () => {
 
     expect(wrapper.classes('bg-red-100')).toBe(true);
     expect(wrapper.classes('text-red-500')).toBe(true);
-  });
-
-  it('accepts removable prop', async () => {
-    const wrapper = shallowMount(Badge, {
-      propsData: {
-        removable: true,
-        textColor: 'red-500',
-      },
-    });
-
-    expect(wrapper.find('svg').exists()).toBe(true);
   });
 
   it('should emit events', async () => {

@@ -1,18 +1,16 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Table from './Table';
+import TableTitle from './TableTitle';
 
-describe('Table', () => {
+describe('TableTitle', () => {
   enableAutoDestroy(afterEach);
 
   it('has default structure', async () => {
-    const wrapper = shallowMount(Table);
-
-    expect(wrapper.element.tagName).toBe('TABLE');
-    expect(wrapper.classes('w-full')).toBe(true);
+    const wrapper = shallowMount(TableTitle);
+    expect(wrapper.element.tagName).toBe('TH');
   });
 
   it('renders default slot content', async () => {
-    const wrapper = shallowMount(Table, {
+    const wrapper = shallowMount(TableTitle, {
       slots: {
         default: '<span>foobar</span>',
       },

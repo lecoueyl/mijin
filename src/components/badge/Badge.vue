@@ -11,7 +11,6 @@
           'text-sm px-2 py-px': props.size === 'sm',
           'px-2': props.size === 'base',
         },
-        `text-${props.textColor}`,
         data.class,
         data.staticClass,
       ]"
