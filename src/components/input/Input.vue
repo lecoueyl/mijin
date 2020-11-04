@@ -88,23 +88,6 @@ export default {
       type: Boolean,
     },
 
-    group: {
-      default: false,
-      type: [String, Boolean],
-      validator: (value) => [
-        false,
-        true,
-        '',
-        'first',
-        'last',
-      ].includes(value),
-    },
-
-    icon: {
-      default: null,
-      type: String,
-    },
-
     max: {
       type: Number,
       default: null,

@@ -94,10 +94,12 @@ export default Vue.extend({
           note: {},
           progress: {},
           radio: {},
+          select: {},
           skeleton: {},
           table: {},
           tabs: {},
           tag: {},
+          textarea: {},
           toggle: {},
         },
 

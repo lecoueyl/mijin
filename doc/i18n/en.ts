@@ -151,6 +151,10 @@ module.exports = {
         },
       },
 
+      select: {
+        title: 'Select',
+      },
+
       skeleton: {
         title: 'Skeleton',
       },
@@ -170,6 +174,10 @@ module.exports = {
             description: 'triggers when remove button is triggered',
           },
         },
+      },
+
+      textarea: {
+        title: 'Textarea',
       },
 
       toggle: {
