@@ -14,14 +14,12 @@
         $slots.icon ? 'pl-8' : 'pl-2',
         disabled ? 'bg-gray-100 cursor-not-allowed' : 'bg-background',
         size === 'sm' ? 'text-sm py-1' : 'py-2',
-        type === 'password' ? 'pr-8' : 'pr-2',
       ]"
       :disabled="disabled"
       :maxlength="maxlength"
       :name="name"
       :placeholder="placeholder"
       :readonly="readonly"
-      :type="type"
       :value="value"
       v-bind="$attrs"
       v-on="listeners"
@@ -79,12 +77,6 @@ export default {
       type: [String, Number],
       default: null,
     },
-  },
-
-  data() {
-    return {
-      currentType: this.type,
-    };
   },
 
   computed: {
