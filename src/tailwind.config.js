@@ -94,9 +94,10 @@ module.exports = {
     },
   },
   variants: {
+    borderWidth: ['responsive', 'last'],
     borderRadius: ['responsive', 'first', 'last', 'hover', 'focus'],
     margin: ['responsive', 'last'],
     opacity: ['responsive', 'hover', 'focus', 'group-hover'],
-    padding: ['responsive', 'last'],
+    padding: ['responsive', 'first', 'last'],
   },
 };

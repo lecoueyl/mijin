@@ -25,15 +25,18 @@ module.exports = {
     filled: 'Filled',
     fixed: 'Fixed',
     group: 'Group',
+    gutter: 'Gutter',
     icon: 'Icon',
     iconPosition: 'Icon position',
     image: 'Image',
+    inline: 'Inline',
     label: 'Label',
     letter: 'Letter',
     level: 'Level',
     link: 'Link',
     loading: 'Loading',
     multiple: 'Multiple',
+    orderedList: 'Ordered list',
     password: 'Password',
     removable: 'Removable',
     rounded: 'Rounded',
@@ -125,6 +128,10 @@ module.exports = {
 
       link: {
         title: 'Link',
+      },
+
+      list: {
+        title: 'List',
       },
 
       note: {

@@ -10,6 +10,8 @@ export { default as Headline } from './headline/Headline';
 export { default as Icon } from './icon/Icon';
 export { default as Input } from './input/Input';
 export { default as Link } from './link/Link';
+export { default as List } from './list/List';
+export { default as ListItem } from './list/ListItem';
 export { default as Note } from './note/Note';
 export { default as Progress } from './progress/Progress';
 export { default as Radio } from './radio/Radio';

@@ -90,6 +90,7 @@ export default Vue.extend({
           icon: {},
           input: {},
           link: {},
+          list: {},
           note: {},
           progress: {},
           radio: {},
