@@ -55,10 +55,6 @@ import Vue from 'vue';
 export default Vue.extend({
   data() {
     return {
-      model: {
-        password: '',
-      },
-
       samples: {
         default: [
           `<BbTextarea placeholder="${this.$t('examples.input.placeholder')}" />`,

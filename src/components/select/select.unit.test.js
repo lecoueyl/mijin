@@ -1,23 +1,23 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Input from './Input';
+import Select from './Select';
 
-describe('Input', () => {
+describe('Select', () => {
   enableAutoDestroy(afterEach);
 
   it('has default structure', async () => {
-    const wrapper = shallowMount(Input);
-    const $input = wrapper.find('input');
+    const wrapper = shallowMount(Select);
+    const $select = wrapper.find('Select');
 
     expect(wrapper.element.tagName).toBe('LABEL');
-    expect($input.attributes('type')).toBeDefined();
-    expect($input.attributes('type')).toEqual('text');
-    expect($input.attributes('disabled')).not.toBeDefined();
-    expect($input.attributes('name')).not.toBeDefined();
-    expect($input.attributes('required')).not.toBeDefined();
+    expect($select.attributes('type')).toBeDefined();
+    expect($select.attributes('type')).toEqual('text');
+    expect($select.attributes('disabled')).not.toBeDefined();
+    expect($select.attributes('name')).not.toBeDefined();
+    expect($select.attributes('required')).not.toBeDefined();
   });
 
   it('renders default slot content', async () => {
-    const wrapper = shallowMount(Input, {
+    const wrapper = shallowMount(Select, {
       slots: {
         default: '<span>foobar</span>',
       },
@@ -28,7 +28,7 @@ describe('Input', () => {
   });
 
   it('do not renders custom root element', async () => {
-    const wrapper = shallowMount(Input, {
+    const wrapper = shallowMount(Select, {
       propsData: {
         tag: 'div',
       },
@@ -38,20 +38,20 @@ describe('Input', () => {
   });
 
   it('has attribute disabled when disabled set', () => {
-    const wrapper = shallowMount(Input, {
+    const wrapper = shallowMount(Select, {
       propsData: {
         disabled: true,
       },
     });
 
-    const $input = wrapper.find('input');
-    expect($input.attributes('disabled')).toBeDefined();
+    const $select = wrapper.find('Select');
+    expect($select.attributes('disabled')).toBeDefined();
   });
 
   it('should emit events', async () => {
     let called = 0;
     let event = null;
-    const wrapper = shallowMount(Input, {
+    const wrapper = shallowMount(Select, {
       listeners: {
         blur: (e) => {
           event = e;
@@ -67,7 +67,7 @@ describe('Input', () => {
         },
       },
     });
-    const $input = wrapper.find('input');
+    const $select = wrapper.find('Select');
 
     expect(called).toBe(0);
     expect(event).toEqual(null);
@@ -76,16 +76,16 @@ describe('Input', () => {
     expect(called).toBe(1);
     expect(event).toBeInstanceOf(MouseEvent);
 
-    await $input.element.dispatchEvent(new Event('focus'));
+    await $select.element.dispatchEvent(new Event('focus'));
     expect(called).toBe(2);
 
-    await $input.element.dispatchEvent(new Event('blur'));
+    await $select.element.dispatchEvent(new Event('blur'));
     expect(called).toBe(3);
   });
 
   it('should not emit click event when clicked and disabled', async () => {
     let called = 0;
-    const wrapper = shallowMount(Input, {
+    const wrapper = shallowMount(Select, {
       propsData: {
         disabled: true,
       },

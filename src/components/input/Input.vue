@@ -52,7 +52,6 @@
         stroke-linejoin="round"
         stroke-linecap="round"
         fill="none"
-        role="presentation"
         class="text-gray-700 stroke-2 w-5 absolute my-auto mr-2 inset-y-0 right-0 cursor-pointer"
         @click="togglePasswordVisibility()"
       >
