@@ -9,7 +9,7 @@
 
     <textarea
       class="appearance-none block w-full text-gray-700 placeholder-gray-400 border border-gray-300 rounded-md leading-tight
-        focus:outline-none focus:border-primary-500"
+        focus:outline-none focus:border-primary-500 transition-colors duration-150 ease-in-out"
       :class="[
         $slots.icon ? 'pl-8' : 'pl-2',
         disabled ? 'bg-gray-100 cursor-not-allowed' : 'bg-background',

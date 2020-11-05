@@ -25,10 +25,17 @@
       :title="$t('props.label')"
       :snippet="samples.label"
     >
-      <BbSelect class="sm:w-1/2">
-        <option>test</option>
-        <option>test</option>
-        <option>test</option>
+      <BbSelect
+        v-model="model.label"
+        class="sm:w-1/2"
+      >
+        <option
+          v-for="(option, index) in $t('examples.list')"
+          :key="index"
+          :value="option"
+        >
+          {{ option }}
+        </option>
 
         <template v-slot:label>
           {{ $t('examples.input.label') }}
@@ -45,9 +52,33 @@
         :placeholder="$t('examples.input.placeholder')"
         class="sm:w-1/2"
       >
-        <option>test</option>
-        <option>test</option>
-        <option>test</option>
+        <option
+          v-for="(option, index) in $t('examples.list')"
+          :key="index"
+          :value="option"
+        >
+          {{ option }}
+        </option>
+      </BbSelect>
+    </Sample>
+
+    <Sample
+      :title="$t('props.disabled')"
+      :snippet="samples.disabled"
+    >
+      <BbSelect
+        v-model="model.disabled"
+        :placeholder="$t('examples.input.placeholder')"
+        class="sm:w-1/2"
+        disabled
+      >
+        <option
+          v-for="(option, index) in $t('examples.list')"
+          :key="index"
+          :value="option"
+        >
+          {{ option }}
+        </option>
       </BbSelect>
     </Sample>
   </LayoutSample>
@@ -61,7 +92,9 @@ export default Vue.extend({
     return {
       model: {
         default: this.$t('examples.list.1'),
+        label: this.$t('examples.list.1'),
         placeholder: '',
+        disabled: this.$t('examples.list.2'),
       },
       samples: {
         default: [

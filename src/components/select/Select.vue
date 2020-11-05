@@ -9,10 +9,10 @@
 
     <div class="relative">
       <select
-        class="block appearance-none w-full bg-background border border-gray-300 hover:border-gray-500 pr-8 rounded-md leading-tight
-          focus:outline-none focus:border-primary-500"
+        class="block appearance-none w-full border border-gray-300 pr-8 rounded-md leading-tight
+          focus:outline-none focus:border-primary-500 transition-colors duration-150 ease-in-out"
         :class="[
-          disabled ? 'bg-gray-100 cursor-not-allowed' : 'bg-background',
+          disabled ? 'bg-gray-100 cursor-not-allowed' : 'bg-background hover:border-gray-400',
           size === 'sm' ? 'text-sm py-1 pl-2' : 'py-2 pl-2',
         ]"
         :disabled="disabled"

@@ -3,6 +3,64 @@
     :title="$t('sections.organisms.form.title')"
   >
     <Sample
+      :title="$t('sections.organisms.form.register')"
+      :snippet="samples.login"
+    >
+      <form
+        autocomplete="off"
+        class="lg:w-1/2 lg:mx-auto grid gap-4"
+      >
+        <div class="grid gap-4 sm:grid-cols-2">
+          <BbInput>
+            {{ $t('sections.organisms.form.firstname') }}
+          </BbInput>
+
+          <BbInput>
+            {{ $t('sections.organisms.form.lastname') }}
+          </BbInput>
+        </div>
+
+        <BbInput type="password">
+          {{ $t('sections.organisms.form.password') }}
+        </BbInput>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <BbInput>
+            {{ $t('sections.organisms.form.firstname') }}
+          </BbInput>
+
+          <BbSelect>
+            <option
+              v-for="(option, index) in $t('examples.list')"
+              :key="index"
+              :value="option"
+            >
+              {{ option }}
+            </option>
+
+            <template v-slot:label>
+              {{ $t('examples.input.label') }}
+            </template>
+          </BbSelect>
+        </div>
+
+        <div class="flex items-center mt-2">
+          <div class="flex-1">
+            <BbLink href="#">
+              {{ $t('sections.organisms.form.forgotPassword') }}
+            </BbLink>
+          </div>
+
+          <div>
+            <BbButton class="ml-4">
+              {{ $t('sections.organisms.form.signIn') }}
+            </BbButton>
+          </div>
+        </div>
+      </form>
+    </Sample>
+
+    <Sample
       :title="$t('sections.organisms.form.signIn')"
       :snippet="samples.login"
     >
