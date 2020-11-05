@@ -36,7 +36,7 @@
 
 <script>
 export default {
-  name: 'UiInput',
+  name: 'UiTextarea',
 
   props: {
     disabled: {

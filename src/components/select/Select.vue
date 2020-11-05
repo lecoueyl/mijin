@@ -9,16 +9,27 @@
 
     <div class="relative">
       <select
-        class="block appearance-none w-full bg-background border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded leading-tight
-          focus:outline-none"
+        class="block appearance-none w-full bg-background border border-gray-300 hover:border-gray-500 pr-8 rounded-md leading-tight
+          focus:outline-none focus:border-primary-500"
+        :class="[
+          disabled ? 'bg-gray-100 cursor-not-allowed' : 'bg-background',
+          size === 'sm' ? 'text-sm py-1 pl-2' : 'py-2 pl-2',
+        ]"
         :disabled="disabled"
         :name="name"
         :readonly="readonly"
-        :type="type"
         :value="value"
         v-bind="$attrs"
         v-on="listeners"
       >
+        <option
+          v-if="placeholder"
+          selected
+          disabled
+          value=""
+        >
+          {{ placeholder }}
+        </option>
         <slot />
       </select>
 
@@ -48,7 +59,7 @@
 
 <script>
 export default {
-  name: 'UiInput',
+  name: 'UiSelect',
 
   props: {
     disabled: {
@@ -96,12 +107,6 @@ export default {
       type: [String, Number],
       default: null,
     },
-  },
-
-  data() {
-    return {
-      currentType: this.type,
-    };
   },
 
   computed: {

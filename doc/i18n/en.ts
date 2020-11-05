@@ -38,6 +38,7 @@ module.exports = {
     multiple: 'Multiple',
     orderedList: 'Ordered list',
     password: 'Password',
+    placeholder: 'Placeholder',
     removable: 'Removable',
     rounded: 'Rounded',
     score: 'Score',
