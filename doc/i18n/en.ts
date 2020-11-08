@@ -47,6 +47,7 @@ module.exports = {
     summary: 'Summary',
     tag: 'Tag',
     truncate: 'Truncate',
+    underline: 'Underline',
     variant: 'Variant',
   },
 
@@ -192,18 +193,24 @@ module.exports = {
       form: {
         title: 'Form',
 
+        agreedToTerms: 'Agreed to {terms} and {privacy} statements.',
+        alreadyAUser: 'Already a user? {login}',
+        department: 'Department',
         email: 'Email',
         emailRequired: 'Email is a required field',
         emailValidation: 'Email is invalid',
-        firstname: 'Firstname',
         forgotPassword: 'Forgot Password?',
-        lastname: 'Lastname',
+        login: 'Log in',
         password: 'Password',
         passwordPattern: 'Password requires UpperCase, LowerCase, Number/SpecialChar and min 8 Chars',
         passwordRequired: 'Password is a required field',
+        privacy: 'Privacy',
+        selectDepartment: 'Select a department',
         signIn: 'Sign in',
         signUp: 'Sign up',
+        termsOfUse: 'Terms of Use',
         username: 'Username',
+        usernamePlaceholder: 'First and Last name',
         vueForm: 'vue-form',
       },
     },
@@ -225,6 +232,10 @@ module.exports = {
       1: 'Apple',
       2: 'Orange',
       3: 'Mango',
+    },
+    select: {
+      label: 'Select label',
+      placeholder: 'Select placeholder',
     },
     sentence: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
       incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis

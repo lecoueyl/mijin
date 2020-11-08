@@ -87,7 +87,7 @@
 
     <Sample
       :title="$t('props.group')"
-      :snippet="samples.size"
+      :snippet="samples.group"
     >
       <div
         class="flex"
@@ -173,6 +173,25 @@ export default Vue.extend({
 <BbButton size="lg">
   ${this.$t('props.size')}
 </BbButton>`,
+        ],
+        group: [`<div
+  class="flex"
+  role="group"
+>
+  <BbButton group="first">
+    ${this.$t('props.group')}
+  </BbButton>
+
+  <BbButton group>
+    ${this.$t('props.group')}
+  </BbButton>
+
+  <BbButton group="last">
+    <template v-slot:icon>
+      <bb-icon name="calendar" />
+    </template>
+  </BbButton>
+</div>`,
         ],
         loading: [
           `<BbButton loading>

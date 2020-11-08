@@ -12,8 +12,11 @@
         class="block appearance-none w-full border border-gray-300 pr-8 rounded-md leading-tight
           focus:outline-none focus:border-primary-500 transition-colors duration-150 ease-in-out"
         :class="[
-          disabled ? 'bg-gray-100 cursor-not-allowed' : 'bg-background hover:border-gray-400',
+          disabled ? 'bg-gray-100 cursor-not-allowed text-gray-800' : 'bg-background hover:border-gray-400',
           size === 'sm' ? 'text-sm py-1 pl-2' : 'py-2 pl-2',
+          {
+            'text-gray-400': value === '' || value === null,
+          },
         ]"
         :disabled="disabled"
         :name="name"
@@ -27,15 +30,17 @@
           selected
           disabled
           value=""
+          class="text-gray-600"
         >
           {{ placeholder }}
         </option>
         <slot />
       </select>
 
-      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
         <svg
           class="h-4 w-4 stroke-2"
+          :class="[disabled ? 'text-gray-600': 'text-gray-700']"
           viewBox="0 0 24 24"
           stroke="currentColor"
           stroke-linejoin="round"

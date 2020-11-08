@@ -54,6 +54,18 @@
         {{ $t('examples.link') }}
       </BbLink>
     </Sample>
+
+    <Sample
+      :title="$t('props.underline')"
+      :snippet="samples.underline"
+    >
+      <BbLink
+        href="#"
+        underline
+      >
+        {{ $t('examples.link') }}
+      </BbLink>
+    </Sample>
   </LayoutSample>
 </template>
 
@@ -90,6 +102,12 @@ export default Vue.extend({
         tag: [`<BbLink
   tag="nuxt-link"
   to="/"
+>
+  {{ $t('examples.link') }}
+</BbLink>`],
+        underline: [`<BbLink
+  underline
+  href="#""
 >
   {{ $t('examples.link') }}
 </BbLink>`],

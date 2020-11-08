@@ -38,7 +38,7 @@
         </option>
 
         <template v-slot:label>
-          {{ $t('examples.input.label') }}
+          {{ $t('examples.select.label') }}
         </template>
       </BbSelect>
     </Sample>
@@ -49,7 +49,7 @@
     >
       <BbSelect
         v-model="model.placeholder"
-        :placeholder="$t('examples.input.placeholder')"
+        :placeholder="$t('examples.select.placeholder')"
         class="sm:w-1/2"
       >
         <option

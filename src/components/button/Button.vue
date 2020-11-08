@@ -2,7 +2,7 @@
   <Component
     :is="props.tag"
     :ref="data.ref"
-    class="relative font-medium border transition-colors duration-100 cursor-pointer focus:outline-none"
+    class="relative leading-tight font-medium border transition-colors duration-100 cursor-pointer focus:outline-none"
     :class="[
       {
         // variant

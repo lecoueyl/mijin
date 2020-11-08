@@ -3,60 +3,80 @@
     :title="$t('sections.organisms.form.title')"
   >
     <Sample
-      :title="$t('sections.organisms.form.register')"
+      :title="$t('sections.organisms.form.signUp')"
       :snippet="samples.login"
     >
       <form
         autocomplete="off"
         class="lg:w-1/2 lg:mx-auto grid gap-4"
       >
-        <div class="grid gap-4 sm:grid-cols-2">
-          <BbInput>
-            {{ $t('sections.organisms.form.firstname') }}
-          </BbInput>
-
-          <BbInput>
-            {{ $t('sections.organisms.form.lastname') }}
-          </BbInput>
-        </div>
-
-        <BbInput type="password">
-          {{ $t('sections.organisms.form.password') }}
+        <BbInput :placeholder="$t('sections.organisms.form.usernamePlaceholder')">
+          {{ $t('sections.organisms.form.username') }}
         </BbInput>
 
-        <div class="grid gap-4 sm:grid-cols-2">
-          <BbInput>
-            {{ $t('sections.organisms.form.firstname') }}
-          </BbInput>
+        <BbInput
+          type="email"
+          placeholder="email@address.com"
+        >
+          {{ $t('sections.organisms.form.email') }}
+        </BbInput>
 
-          <BbSelect>
-            <option
-              v-for="(option, index) in $t('examples.list')"
-              :key="index"
-              :value="option"
-            >
-              {{ option }}
-            </option>
+        <BbSelect :placeholder="$t('sections.organisms.form.selectDepartment')">
+          <option
+            v-for="(option, index) in $t('examples.list')"
+            :key="index"
+            :value="option"
+          >
+            {{ option }}
+          </option>
 
-            <template v-slot:label>
-              {{ $t('examples.input.label') }}
+          <template v-slot:label>
+            {{ $t('sections.organisms.form.department') }}
+          </template>
+        </BbSelect>
+
+        <BbCheckbox
+          v-model="model.default"
+          name="checkbox"
+        >
+          <i18n
+            path="sections.organisms.form.agreedToTerms"
+          >
+            <template #terms>
+              <BbLink
+                href="#"
+                color="foreground"
+                underline>
+                {{ $t('sections.organisms.form.termsOfUse') }}
+              </BbLink>
             </template>
-          </BbSelect>
-        </div>
 
-        <div class="flex items-center mt-2">
-          <div class="flex-1">
+            <template #privacy>
+              <BbLink
+                href="#"
+                color="foreground"
+                underline>
+                {{ $t('sections.organisms.form.privacy') }}
+              </BbLink>
+            </template>
+          </i18n>
+        </BbCheckbox>
+
+        <BbButton class="mt-4">
+          {{ $t('sections.organisms.form.signIn') }}
+        </BbButton>
+
+        <i18n
+          path="sections.organisms.form.alreadyAUser"
+          tag="div"
+          class="text-center"
+        >
+          <template #login>
             <BbLink href="#">
-              {{ $t('sections.organisms.form.forgotPassword') }}
+              {{ $t('sections.organisms.form.login') }}
             </BbLink>
-          </div>
-
-          <div>
-            <BbButton class="ml-4">
-              {{ $t('sections.organisms.form.signIn') }}
-            </BbButton>
-          </div>
-        </div>
+          </template>
+        </i18n>
       </form>
     </Sample>
 

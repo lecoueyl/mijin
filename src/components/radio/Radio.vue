@@ -21,7 +21,7 @@
         :value="value"
       >
       <div
-        class="border rounded-full w-5 h-5 flex justify-center items-center"
+        class="border rounded-full w-5 h-5 flex justify-center items-center flex-shrink-0"
         :class="[
           {
             'hover:border-primary-500': !disabled,

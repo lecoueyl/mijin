@@ -9,8 +9,6 @@ describe('Select', () => {
     const $select = wrapper.find('Select');
 
     expect(wrapper.element.tagName).toBe('LABEL');
-    expect($select.attributes('type')).toBeDefined();
-    expect($select.attributes('type')).toEqual('text');
     expect($select.attributes('disabled')).not.toBeDefined();
     expect($select.attributes('name')).not.toBeDefined();
     expect($select.attributes('required')).not.toBeDefined();

@@ -6,6 +6,9 @@
     :class="[
       props.color ? `text-${props.color}` : 'text-primary-500',
       props.colorHover ? `hover:text-${props.colorHover}` : 'hover:text-primary-600',
+      {
+        'underline': props.underline,
+      },
       data.class,
       data.staticClass,
     ]"
@@ -61,10 +64,13 @@ export default {
       default: false,
       type: Boolean,
     },
-
     tag: {
       default: 'a',
       type: String,
+    },
+    underline: {
+      default: false,
+      type: Boolean,
     },
   },
 };

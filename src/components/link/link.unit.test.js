@@ -10,6 +10,7 @@ describe('Link', () => {
     expect(wrapper.element.tagName).toBe('A');
     expect(wrapper.classes('text-primary-500')).toBe(true);
     expect(wrapper.find('svg').exists()).toBe(false);
+    expect(wrapper.classes('underline')).toBe(false);
   });
 
   it('renders default slot content', async () => {
@@ -54,6 +55,17 @@ describe('Link', () => {
 
     expect(wrapper.find('svg').exists()).toBe(true);
   });
+
+  it('accepts underline prop', async () => {
+    const wrapper = shallowMount(Link, {
+      propsData: {
+        underline: true,
+      },
+    });
+
+    expect(wrapper.classes('underline')).toBe(true);
+  });
+
 
   it('should emit events', async () => {
     let called = 0;
