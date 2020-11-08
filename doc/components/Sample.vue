@@ -14,19 +14,50 @@
     </div>
 
     <div
-      class="bg-gray-900 rounded-b-lg overflow-y-hidden transition-all duration-300 ease-in-out"
-      :style="{ maxHeight: maxSampleHeight + 'px' }"
-      @click="toggleCollapse()"
+      v-if="snippet.length > 0"
+      class="bg-gray-900 rounded-b-lg overflow-y-hidden relative"
+      :class="{ 'transition-all duration-300 ease-in-out': mounted }"
+      :style="{ maxHeight: codeSnippetMaxHeight + 'px' }"
     >
       <div
         ref="sample"
         class="p-4"
       >
-        <code
-          v-for="(code, index) in snippet"
-          :key="index"
-          class="whitespace-pre-wrap text-sm text-gray-100"
-        >{{ code }}</code>
+        <div
+          ref="dummyCode"
+          class="invisible absolute p-4"
+        >
+          <code
+            class="whitespace-pre-wrap text-sm"
+          >&#8203;
+            &#8203;
+            &#8203;
+            &#8203;</code>
+        </div>
+
+        <div
+          ref="snippet"
+          :class="{ 'pb-4': isSnippetCodeOverflow }"
+        >
+          <code
+            v-for="(code, index) in snippet"
+            :key="index"
+            class="whitespace-pre-wrap text-sm text-gray-100"
+          >{{ code }}</code>
+        </div>
+      </div>
+
+      <div
+        v-if="isSnippetCodeOverflow"
+        ref="expandButton"
+        class="absolute bottom-0 p-2 text-center w-full bg-gradient-to-t from-foreground"
+      >
+        <button
+          class="bg-gray-800 text-gray-200 rounded-full px-2 py-1 text-sm leading-tight focus:outline-none"
+          @click="toggleCollapse()"
+        >
+          Expand
+        </button>
       </div>
     </div>
   </section>
@@ -35,7 +66,6 @@
 <script lang="ts">
 import Vue from 'vue';
 
-const maxSampleHeight: Number = 100;
 export default Vue.extend({
   props: {
     snippet: {
@@ -50,11 +80,16 @@ export default Vue.extend({
   },
 
   data() {
+    const codeSnippetMaxHeight: Number = 104;
     const collapsed: Boolean = true;
+    const isSnippetCodeOverflow: Boolean = false;
+    const mounted: Boolean = false;
 
     return {
+      codeSnippetMaxHeight,
       collapsed,
-      maxSampleHeight,
+      isSnippetCodeOverflow,
+      mounted,
     };
   },
 
@@ -65,29 +100,41 @@ export default Vue.extend({
   },
 
   beforeMount() {
-    window.addEventListener('resize', this.resizeSampleContent);
+    window.addEventListener('resize', this.resizeSnippetContent);
   },
 
   beforeDestroy() {
-    window.removeEventListener('resize', this.resizeSampleContent);
+    window.removeEventListener('resize', this.resizeSnippetContent);
   },
 
   mounted() {
-    this.resizeSampleContent();
+    this.setSnippetContentSize();
+    this.resizeSnippetContent();
+    setTimeout(() => { this.mounted = true }, 100);
   },
 
   methods: {
+    setSnippetContentSize() {
+      if (!this.$refs.dummyCode || !this.$refs.snippet) return;
+
+      const codeSnippetHeight = (this.$refs.dummyCode as HTMLInputElement).offsetHeight;
+      this.codeSnippetMaxHeight = codeSnippetHeight;
+      this.isSnippetCodeOverflow = (this.$refs.snippet as HTMLInputElement).offsetHeight > codeSnippetHeight;
+    },
+
     toggleCollapse() {
       this.collapsed = !this.collapsed;
       this.$emit('toggle', this.collapsed);
-      this.resizeSampleContent();
+      this.resizeSnippetContent();
     },
 
-    resizeSampleContent() {
+    resizeSnippetContent() {
+      if (!this.$refs.snippet) return;
+
       if (this.collapsed) {
-        this.maxSampleHeight = maxSampleHeight;
+        this.codeSnippetMaxHeight = (this.$refs.dummyCode as HTMLInputElement).offsetHeight;
       } else {
-        this.maxSampleHeight = (this.$refs.sample as HTMLInputElement).offsetHeight;
+        this.codeSnippetMaxHeight = (this.$refs.snippet as HTMLInputElement).offsetHeight + (this.$refs.expandButton as HTMLInputElement).offsetHeight;
       }
     },
   },
