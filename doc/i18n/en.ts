@@ -39,6 +39,7 @@ module.exports = {
     orderedList: 'Ordered list',
     password: 'Password',
     placeholder: 'Placeholder',
+    position: 'Position',
     removable: 'Removable',
     rounded: 'Rounded',
     score: 'Score',
@@ -138,6 +139,10 @@ module.exports = {
 
       note: {
         title: 'Note',
+      },
+
+      popover: {
+        title: 'Popover',
       },
 
       progress: {

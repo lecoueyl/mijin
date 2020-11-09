@@ -70,10 +70,6 @@ import Vue from 'vue';
 export default Vue.extend({
   data() {
     return {
-      demo: {
-        default: 0,
-        disabled: 0,
-      },
       samples: {
         image: [
           `<BbAvatar

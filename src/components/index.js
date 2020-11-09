@@ -13,6 +13,7 @@ export { default as Link } from './link/Link';
 export { default as List } from './list/List';
 export { default as ListItem } from './list/ListItem';
 export { default as Note } from './note/Note';
+export { default as Popover } from './popover/Popover';
 export { default as Progress } from './progress/Progress';
 export { default as Radio } from './radio/Radio';
 export { default as Select } from './select/Select';

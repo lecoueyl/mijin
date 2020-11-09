@@ -92,6 +92,7 @@ export default Vue.extend({
           link: {},
           list: {},
           note: {},
+          popover: {},
           progress: {},
           radio: {},
           select: {},
