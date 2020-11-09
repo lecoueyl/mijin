@@ -2,8 +2,6 @@
   <div class="p-4 bg-gray-100 rounded-lg text-center">
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
       viewBox="0 0 24 24"
       stroke="currentColor"
       stroke-width="1.5"
@@ -13,7 +11,7 @@
       shape-rendering="geometricPrecision"
       :aria-labelledby="props.name"
       role="presentation"
-      class="inline-block"
+      class="inline-block h-5 w-5"
     >
       <g v-html="props.svg" />
     </svg>
