@@ -260,6 +260,8 @@ export default {
           replay: `<path d="M4 12C4 7.02944 8.02944 3 13 3C17.9706 3 22 7.02944 22 12C22 16.9706 17.9706 21 13 21C10.1578 21 7.62334 19.6825 5.97396 17.625"/>
   <path d="M11 8L17 12L11 16V8Z"/>
   <path d="M6.5 11.5L4 13.5L1.5 11.5"/>`,
+          rotateCcw: `<polyline points="1 4 1 10 7 10"/>
+  <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>`,
           scroll: `<polyline points="5 9 2 12 5 15"/>
   <polyline points="9 5 12 2 15 5"/>
   <polyline points="15 19 12 22 9 19"/>

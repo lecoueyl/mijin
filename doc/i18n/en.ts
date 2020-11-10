@@ -219,6 +219,22 @@ module.exports = {
         usernamePlaceholder: 'First and Last name',
         vueForm: 'vue-form',
       },
+
+      popover: {
+        title: 'Popover',
+
+        actionMenu: 'Action menu',
+        addToCalendar: 'Add to calendar',
+        copyLink: 'Copy link',
+        delete: 'Delete',
+        fullWidth: 'Full width',
+        lastEdit: 'Last edition by Leonard Lecouey',
+        openApp: 'Open in App',
+        share: 'Share',
+        smallText: 'Small text',
+        today: 'Today at 13:37',
+        undo: 'Undo',
+      },
     },
   },
 

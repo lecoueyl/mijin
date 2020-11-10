@@ -44,7 +44,12 @@
         ]"
       />
     </div>
-    <span class="pl-2"><slot /></span>
+    <span
+      v-if="$slots.default"
+      class="pl-2"
+    >
+      <slot />
+    </span>
   </label>
 </template>
 

@@ -2,10 +2,12 @@
   <Component
     :is="props.tag"
     :ref="data.ref"
-    class="px-2 py-1 block rounded hover:bg-gray-200 cursor-pointer transition-colors duration-100 ease-in-out"
+    class="px-2 py-1 block rounded cursor-pointer transition-colors duration-100 ease-in-out"
     :class="[
       {
-        'flex items-center': $slots.icon,
+        'flex items-center': $slots.action || $slots.icon,
+        'hover:bg-gray-200': props.color === 'base',
+        'hover:text-red-500 hover:bg-red-200': props.color === 'danger',
       },
       data.class,
       data.staticClass,
@@ -19,11 +21,19 @@
   >
     <span
       v-if="$slots.icon"
-      class="w-4 h-4 inline-block mr-1"
+      class="w-4 h-4 mr-2"
     >
       <slot name="icon" />
     </span>
-    <slot />
+    <span :class="{ 'flex-1': $slots.action || $slots.icon }">
+      <slot />
+    </span>
+    <span
+      v-if="$slots.action"
+      class="ml-1"
+    >
+      <slot name="action" />
+    </span>
   </Component>
 </template>
 
@@ -32,6 +42,15 @@ export default {
   name: 'UiPopoverItem',
 
   props: {
+    color: {
+      default: 'base',
+      type: String,
+      validator: (value) => [
+        'base',
+        'danger',
+      ].includes(value),
+    },
+
     tag: {
       default: 'div',
       type: String,

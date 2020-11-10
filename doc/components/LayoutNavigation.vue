@@ -106,6 +106,7 @@ export default Vue.extend({
 
         organisms: {
           form: {},
+          popover: {},
         },
       },
     };
