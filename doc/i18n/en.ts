@@ -227,6 +227,7 @@ module.exports = {
         addToCalendar: 'Add to calendar',
         copyLink: 'Copy link',
         delete: 'Delete',
+        edit: 'Edit',
         fullWidth: 'Full width',
         lastEdit: 'Last edition by Leonard Lecouey',
         openApp: 'Open in App',
