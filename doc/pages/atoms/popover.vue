@@ -7,13 +7,13 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbPopover>
+      <BbPopover align="left">
         <BbButton>
-          Menu
+          {{ $t('props.default') }}
         </BbButton>
 
         <template #content>
-          <div class="bg-background shadow rounded-lg p-24 w-10 h-10" />
+          <div class="bg-background shadow rounded-lg p-10" />
         </template>
       </BbPopover>
     </Sample>
@@ -23,19 +23,96 @@
       :snippet="samples.position"
     >
       <div class="grid gap-4 sm:grid-cols-4">
-        <BbPopover
+        <div
           v-for="position in ['top', 'right', 'bottom', 'left']"
           :key="position"
-          :position="position"
         >
-          <BbButton>
-            {{ position }}
-          </BbButton>
+          <BbPopover
+            :position="position"
+          >
+            <BbButton>
+              {{ position }}
+            </BbButton>
 
-          <template #content>
-            <div class="bg-background shadow rounded-lg p-24 w-10 h-10" />
-          </template>
-        </BbPopover>
+            <template #content>
+              <div class="bg-background shadow rounded-lg p-10" />
+            </template>
+          </BbPopover>
+        </div>
+      </div>
+    </Sample>
+
+    <Sample
+      :title="$t('props.align')"
+      :snippet="samples.position"
+    >
+      <div class="grid gap-4 sm:grid-cols-3">
+        <div
+          v-for="props in [
+            {
+              align: 'left',
+              position: 'bottom',
+            },
+            {
+              align: 'center',
+              position: 'bottom',
+            },
+            {
+              align: 'right',
+              position: 'bottom',
+            },
+            {
+              align: 'left',
+              position: 'top',
+            },
+            {
+              align: 'center',
+              position: 'top',
+            },
+            {
+              align: 'right',
+              position: 'top',
+            },
+            {
+              align: 'top',
+              position: 'left',
+            },
+            {
+              align: 'middle',
+              position: 'left',
+            },
+            {
+              align: 'bottom',
+              position: 'left',
+            },
+            {
+              align: 'top',
+              position: 'right',
+            },
+            {
+              align: 'middle',
+              position: 'right',
+            },
+            {
+              align: 'bottom',
+              position: 'right',
+            },
+          ]"
+          :key="`${props.position}-${props.align}`"
+        >
+          <BbPopover
+            :align="props.align"
+            :position="props.position"
+          >
+            <BbButton>
+              {{ props.position }} / {{ props.align }}
+            </BbButton>
+
+            <template #content>
+              <div class="bg-background shadow rounded-lg p-10" />
+            </template>
+          </BbPopover>
+        </div>
       </div>
     </Sample>
   </LayoutSample>
@@ -48,11 +125,16 @@ export default Vue.extend({
   data() {
     return {
       samples: {
-        defaulr: [
-          `<BbPopover
-  alt="image"
-  img="https://..."
-/>`,
+        default: [
+          `<BbPopover align="left">
+  <BbButton>
+    ${this.$t('props.default')}
+  </BbButton>
+
+  <template #content>
+    <div class="bg-background shadow rounded-lg p-10" />
+  </template>
+</BbPopover>`,
         ],
       },
     };

@@ -15,6 +15,7 @@ module.exports = {
   },
 
   props: {
+    align: 'Align',
     bordered: 'Bordered',
     circle: 'Circle',
     color: 'Color',
