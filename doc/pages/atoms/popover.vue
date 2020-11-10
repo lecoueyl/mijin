@@ -13,7 +13,14 @@
         </BbButton>
 
         <template #content>
-          <div class="bg-background shadow rounded-lg p-10" />
+          <BbPopoverContainer class="p-2 w-48">
+            <BbPopoverItem
+              v-for="(item, key) in $t('examples.list')"
+              :key="key"
+            >
+              {{ item }}
+            </BbPopoverItem>
+          </BbPopoverContainer>
         </template>
       </BbPopover>
     </Sample>
@@ -35,7 +42,14 @@
             </BbButton>
 
             <template #content>
-              <div class="bg-background shadow rounded-lg p-10" />
+              <BbPopoverContainer class="p-2 w-48">
+                <BbPopoverItem
+                  v-for="(item, key) in $t('examples.list')"
+                  :key="key"
+                >
+                  {{ item }}
+                </BbPopoverItem>
+              </BbPopoverContainer>
             </template>
           </BbPopover>
         </div>
@@ -109,11 +123,41 @@
             </BbButton>
 
             <template #content>
-              <div class="bg-background shadow rounded-lg p-10" />
+              <BbPopoverContainer class="p-2 w-48">
+                <BbPopoverItem
+                  v-for="(item, key) in $t('examples.list')"
+                  :key="key"
+                >
+                  {{ item }}
+                </BbPopoverItem>
+              </BbPopoverContainer>
             </template>
           </BbPopover>
         </div>
       </div>
+    </Sample>
+
+    <Sample
+      :title="$t('props.icon')"
+      :snippet="samples.icon"
+    >
+      <BbPopover align="left">
+        <BbButton>
+          {{ $t('props.default') }}
+        </BbButton>
+
+        <template #content>
+          <BbPopoverContainer class="p-2 w-48">
+            <BbPopoverItem>
+              <template #icon>
+                <bb-icon name="calendar" />
+              </template>
+
+              {{ $t('examples.list.1') }}
+            </BbPopoverItem>
+          </BbPopoverContainer>
+        </template>
+      </BbPopover>
     </Sample>
   </LayoutSample>
 </template>
