@@ -15,7 +15,10 @@
             {{ $t('sections.organisms.popover.edit') }}
           </BbButton>
 
-          <BbPopover align="right">
+          <BbPopover
+            ref="popover"
+            align="right"
+          >
             <BbButton group="last">
               <template #icon>
                 <bb-icon name="chevronDown" />
@@ -96,6 +99,7 @@
                 <BbPopoverItem
                   color="danger"
                   class="mx-1"
+                  @click="$refs.popover.close()"
                 >
                   <template #icon>
                     <bb-icon name="trash" />

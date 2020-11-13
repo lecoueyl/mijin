@@ -21,6 +21,7 @@ module.exports = {
     color: 'Color',
     default: 'Default',
     disabled: 'Disabled',
+    dismissible: 'Dismissible',
     expanded: 'Expanded',
     external: 'External',
     filled: 'Filled',
@@ -101,7 +102,7 @@ module.exports = {
         title: 'Collapse',
         events: {
           toggle: {
-            description: 'triggers when collapse is toggled',
+            description: 'Emitted when collapse is toggled',
           },
         },
         methods: {
@@ -144,6 +145,33 @@ module.exports = {
 
       popover: {
         title: 'Popover',
+        events: {
+          close: {
+            open: 'Emitted when popover is closed',
+          },
+          open: {
+            open: 'Emitted when popover is opened',
+          },
+          toggle: {
+            open: 'Emitted when popover is toggled',
+          },
+        },
+        methods: {
+          close: {
+            description: 'Close popover if open',
+          },
+          open: {
+            description: 'Open popover if close',
+          },
+          toggle: {
+            description: 'Toggle popover visibility',
+          },
+        },
+        slots: {
+          content: {
+            description: 'Popover content',
+          },
+        },
       },
 
       progress: {
@@ -179,7 +207,7 @@ module.exports = {
         title: 'Tag',
         events: {
           remove: {
-            description: 'triggers when remove button is triggered',
+            description: 'Emitted when remove button is triggered',
           },
         },
       },

@@ -29,23 +29,24 @@
 
           // position-top
           'bottom-full pb-2': position === 'top',
-          'translate-y-0': position === 'top' && isVisible,
-          'translate-y-1': position === 'top' && !isVisible,
+          'translate-y-0': position === 'top' && isOpen,
+          'translate-y-1': position === 'top' && !isOpen,
           // position-right
           'left-full pl-2': position === 'right',
-          'translate-x-0': position === 'right' && isVisible,
-          '-translate-x-1': position === 'right' && !isVisible,
+          'translate-x-0': position === 'right' && isOpen,
+          '-translate-x-1': position === 'right' && !isOpen,
           // position-bottom
           'top-full bottom-0 pt-2': position === 'bottom',
-          'translate-y-0': position === 'bottom' && isVisible,
-          '-translate-y-1': position === 'bottom' && !isVisible,
+          'translate-y-0': position === 'bottom' && isOpen,
+          '-translate-y-1': position === 'bottom' && !isOpen,
           // position-left
           'right-full pr-2': position === 'left',
-          'translate-x-0': position === 'left' && isVisible,
-          'translate-x-1': position === 'left' && !isVisible,
+          'translate-x-0': position === 'left' && isOpen,
+          'translate-x-1': position === 'left' && !isOpen,
         },
-        isVisible ? 'visible opacity-100' : 'invisible opacity-0'
+        isOpen ? 'visible opacity-100' : 'invisible opacity-0'
       ]"
+      @click="dismissible ? close() : null"
     >
       <slot name="content" />
     </div>
@@ -74,6 +75,11 @@ export default {
       ].includes(value),
     },
 
+    dismissible: {
+      type: Boolean,
+      default: false,
+    },
+
     position: {
       default: 'bottom',
       type: String,
@@ -97,20 +103,23 @@ export default {
   },
   data() {
     return {
-      isVisible: false,
+      isOpen: false,
     };
   },
   methods: {
     close() {
-      this.isVisible = false;
+      this.isOpen = false;
+      this.$emit('close');
     },
 
-    show() {
-      this.isVisible = true;
+    open() {
+      this.isOpen = true;
+      this.$emit('open');
     },
 
     toggle() {
-      this.isVisible = !this.isVisible;
+      this.isOpen = !this.isOpen;
+      this.$emit('toggle', this.isOpen);
     },
   },
 };

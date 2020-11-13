@@ -26,6 +26,31 @@
     </Sample>
 
     <Sample
+      :title="$t('props.dismissible')"
+      :snippet="samples.dismissible"
+    >
+      <BbPopover
+        align="left"
+        dismissible
+      >
+        <BbButton>
+          {{ $t('props.default') }}
+        </BbButton>
+
+        <template #content>
+          <BbPopoverContainer class="p-2 w-48">
+            <BbPopoverItem
+              v-for="(item, key) in $t('examples.list')"
+              :key="key"
+            >
+              {{ item }}
+            </BbPopoverItem>
+          </BbPopoverContainer>
+        </template>
+      </BbPopover>
+    </Sample>
+
+    <Sample
       :title="$t('props.position')"
       :snippet="samples.position"
     >
