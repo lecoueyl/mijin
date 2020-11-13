@@ -1,7 +1,7 @@
 <template>
   <LayoutSample
     :title="$t('sections.atoms.popover.title')"
-    components="Popover"
+    :components="['Popover', 'PopoverItem']"
   >
     <Sample
       :title="$t('props.default')"
@@ -34,7 +34,7 @@
         dismissible
       >
         <BbButton>
-          {{ $t('props.default') }}
+          {{ $t('props.dismissible') }}
         </BbButton>
 
         <template #content>
@@ -175,10 +175,26 @@
           <BbPopoverContainer class="p-2 w-48">
             <BbPopoverItem>
               <template #icon>
-                <bb-icon name="calendar" />
+                <bb-icon name="share" />
               </template>
 
               {{ $t('examples.list.1') }}
+            </BbPopoverItem>
+
+            <BbPopoverItem>
+              <template #icon>
+                <bb-icon name="calendar" />
+              </template>
+
+              {{ $t('examples.list.2') }}
+            </BbPopoverItem>
+
+            <BbPopoverItem>
+              <template #icon>
+                <bb-icon name="copy" />
+              </template>
+
+              {{ $t('examples.list.3') }}
             </BbPopoverItem>
           </BbPopoverContainer>
         </template>
@@ -201,7 +217,92 @@ export default Vue.extend({
   </BbButton>
 
   <template #content>
-    <div class="bg-background shadow rounded-lg p-10" />
+    <BbPopoverContainer class="p-2 w-48">
+      <BbPopoverItem>${this.$t('examples.list.1')}</BbPopoverItem>
+      <BbPopoverItem>${this.$t('examples.list.2')}</BbPopoverItem>
+      <BbPopoverItem>${this.$t('examples.list.3')}</BbPopoverItem>
+    </BbPopoverContainer>
+  </template>
+</BbPopover>`,
+        ],
+        dismissible: [
+          `<BbPopover
+  align="left"
+  dismissible
+>
+  <BbButton>
+    ${this.$t('props.dismissible')}
+  </BbButton>
+
+  <template #content>
+    <BbPopoverContainer class="p-2 w-48">
+      <BbPopoverItem>${this.$t('examples.list.1')}</BbPopoverItem>
+      <BbPopoverItem>${this.$t('examples.list.2')}</BbPopoverItem>
+      <BbPopoverItem>${this.$t('examples.list.3')}</BbPopoverItem>
+    </BbPopoverContainer>
+  </template>
+</BbPopover>`,
+        ],
+        position: [
+          `<BbPopover position="top">
+  <BbButton>
+    ${this.$t('props.position')}
+  </BbButton>
+
+  <template #content>
+    <BbPopoverContainer class="p-2 w-48">
+      <BbPopoverItem>${this.$t('examples.list.1')}</BbPopoverItem>
+      <BbPopoverItem>${this.$t('examples.list.2')}</BbPopoverItem>
+      <BbPopoverItem>${this.$t('examples.list.3')}</BbPopoverItem>
+    </BbPopoverContainer>
+  </template>
+</BbPopover>`,
+        ],
+        align: [
+          `<BbPopover
+  align="left"
+  position="bottom"
+>
+  <BbButton>
+    ${this.$t('props.align')}
+  </BbButton>
+
+  <template #content>
+    <BbPopoverContainer class="p-2 w-48">
+      <BbPopoverItem>${this.$t('examples.list.1')}</BbPopoverItem>
+      <BbPopoverItem>${this.$t('examples.list.2')}</BbPopoverItem>
+      <BbPopoverItem>${this.$t('examples.list.3')}</BbPopoverItem>
+    </BbPopoverContainer>
+  </template>
+</BbPopover>`,
+        ],
+        icon: [
+          `<BbPopover position="top">
+  <BbButton>
+    ${this.$t('props.icon')}
+  </BbButton>
+
+  <template #content>
+    <BbPopoverContainer class="p-2 w-48">
+      <BbPopoverItem>
+        <template #icon>
+          <bb-icon name="share" />
+        </template>
+        ${this.$t('examples.list.1')}
+      </BbPopoverItem>
+      <BbPopoverItem>
+        <template #icon>
+          <bb-icon name="calendar" />
+        </template>
+        ${this.$t('examples.list.2')}
+      </BbPopoverItem>
+      <BbPopoverItem>
+        <template #icon>
+          <bb-icon name="copy" />
+        </template>
+        ${this.$t('examples.list.3')}
+      </BbPopoverItem>
+    </BbPopoverContainer>
   </template>
 </BbPopover>`,
         ],

@@ -6,8 +6,8 @@
     :class="[
       {
         'flex items-center': $slots.action || $slots.icon,
-        'hover:bg-gray-200': props.color === 'base',
-        'hover:text-red-500 hover:bg-red-200': props.color === 'danger',
+        'hover:bg-gray-200': props.variant === 'base',
+        'hover:text-red-500 hover:bg-red-200': props.variant === 'danger',
       },
       data.class,
       data.staticClass,
@@ -42,7 +42,7 @@ export default {
   name: 'UiPopoverItem',
 
   props: {
-    color: {
+    variant: {
       default: 'base',
       type: String,
       validator: (value) => [

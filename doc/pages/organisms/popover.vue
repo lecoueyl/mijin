@@ -97,7 +97,7 @@
                 </BbPopoverItem>
 
                 <BbPopoverItem
-                  color="danger"
+                  variant="danger"
                   class="mx-1"
                   @click="$refs.popover.close()"
                 >

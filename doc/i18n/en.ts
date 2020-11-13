@@ -174,6 +174,18 @@ module.exports = {
         },
       },
 
+      popoverItem: {
+        title: 'Popover Item',
+        slots: {
+          action: {
+            description: 'Displayed on the right end side of the item',
+          },
+          icon: {
+            description: 'Displayed on the left side of the item',
+          },
+        },
+      },
+
       progress: {
         title: 'Progress',
       },
