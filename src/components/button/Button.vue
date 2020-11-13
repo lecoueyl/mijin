@@ -15,10 +15,10 @@
         'inline-flex items-center': $slots.icon || props.icon,
         'flex-row-reverse': props.iconRight,
         // size
-        'px-6 py-1': $slots.default && props.size === 'sm',
-        'px-6 py-2': $slots.default && props.size === 'base',
-        'px-16 py-4': $slots.default && props.size === 'lg',
-        'px-4 py-2': !$slots.default,
+        'px-3 py-1': $slots.default && props.size === 'sm',
+        'px-5 py-2': $slots.default && props.size === 'base',
+        'px-10 py-4': $slots.default && props.size === 'lg',
+        'px-3 py-2': !$slots.default,
         // group
         'rounded-lg': props.group === false,
         'rounded-l-lg': props.group === 'first',

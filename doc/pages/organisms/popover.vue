@@ -26,7 +26,7 @@
               <BbPopoverContainer class="py-2 w-64">
                 <BbPopoverItem
                   class="mx-1"
-                  @click.prevent="model.size = !model.size"
+                  @click.prevent="toggleSize()"
                 >
                   {{ $t('sections.organisms.popover.smallText') }}
                   <template #action>
@@ -160,6 +160,18 @@ export default Vue.extend({
         ],
       },
     };
+  },
+
+  methods: {
+    toggleSize() {
+      this.model.size = !this.model.size;
+      const { style } = document.documentElement;
+      if (this.model.size) {
+        style.fontSize = '0.9rem';
+      } else {
+        style.fontSize = '';
+      }
+    },
   },
 });
 </script>

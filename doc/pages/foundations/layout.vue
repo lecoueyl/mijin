@@ -1,6 +1,6 @@
 <template>
   <LayoutSample
-    :title="$t('sections.foundations.colors.title')"
+    :title="$t('sections.foundations.layout.title')"
   >
     <Sample
       :title="$t('props.container')"
