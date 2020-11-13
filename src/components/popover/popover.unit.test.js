@@ -1,6 +1,7 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
 import Popover from './Popover';
 
+// TODO: implement all tests
 describe('Popover', () => {
   enableAutoDestroy(afterEach);
 
