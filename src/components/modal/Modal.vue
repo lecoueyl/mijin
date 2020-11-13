@@ -1,17 +1,28 @@
 <template>
   <div
-    class="fixed z-10 inset-0 overflow-y-auto"
+    class="fixed z-10 inset-0 overflow-y-auto transition-all"
     :class="[
-      isOpen ? 'visible' : 'invisible opacity-0'
+      isOpen ? 'visible' : 'invisible ease-in duration-100'
     ]"
   >
     <div
-      class="fixed inset-0 bg-gray-500 opacity-75"
+      class="fixed inset-0 bg-gray-500 transition-opacity"
+      :class="[
+        isOpen ? 'ease-out duration-200 opacity-75' : 'ease-in duration-100 opacity-0',
+      ]"
       @click.self="close()"
     />
-    <div class="flex items-end sm:items-center justify-center min-h-screen p-4">
+
+    <div
+      class="flex items-end sm:items-center justify-center min-h-screen p-4"
+    >
       <div
         class="inline-block bg-background rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg p-4 sm:p-6"
+        :class="[
+          isOpen ?
+            'ease-out duration-200 opacity-100 translate-y-0 sm:scale-100'
+            : 'ease-in duration-100 opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95',
+        ]"
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-headline"
