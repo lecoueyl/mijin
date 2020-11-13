@@ -101,11 +101,13 @@ export default {
       ].includes(value),
     },
   },
+
   data() {
     return {
       isOpen: false,
     };
   },
+
   methods: {
     close() {
       this.isOpen = false;

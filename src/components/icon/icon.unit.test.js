@@ -17,7 +17,7 @@ describe('Icon', () => {
     expect(wrapper.attributes('role')).toBe('presentation');
     expect(wrapper.attributes('stroke')).toBe('currentColor');
     expect(wrapper.classes('h-3')).toBe(false);
-    expect(wrapper.classes('h-5')).toBe(true);
+    expect(wrapper.classes('h-4')).toBe(true);
     expect(wrapper.classes('h-6')).toBe(false);
   });
 
