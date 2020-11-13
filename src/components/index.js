@@ -12,6 +12,7 @@ export { default as Input } from './input/Input';
 export { default as Link } from './link/Link';
 export { default as List } from './list/List';
 export { default as ListItem } from './list/ListItem';
+export { default as Modal } from './modal/Modal';
 export { default as Note } from './note/Note';
 export { default as Popover } from './popover/Popover';
 export { default as PopoverContainer } from './popover/PopoverContainer';

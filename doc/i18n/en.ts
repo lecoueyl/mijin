@@ -139,6 +139,10 @@ module.exports = {
         title: 'List',
       },
 
+      modal: {
+        title: 'Modal',
+      },
+
       note: {
         title: 'Note',
       },

@@ -90,6 +90,7 @@ export default Vue.extend({
           input: {},
           link: {},
           list: {},
+          modal: {},
           note: {},
           popover: {},
           progress: {},

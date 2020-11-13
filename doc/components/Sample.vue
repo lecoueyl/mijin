@@ -9,7 +9,11 @@
       {{ title }}
     </BbHeadline>
 
-    <div class="p-4 bg-gray-100 rounded-t-lg">
+
+    <div
+      class="p-4 bg-gray-100"
+      :class="snippet.length > 0 ? 'rounded-t-lg' : 'rounded-lg'"
+    >
       <slot />
     </div>
 

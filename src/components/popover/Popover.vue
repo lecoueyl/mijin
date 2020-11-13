@@ -58,9 +58,11 @@ import ClickOutside from '../../directives/clickOutside';
 
 export default {
   name: 'UiPopover',
+
   directives: {
     ClickOutside,
   },
+
   props: {
     align: {
       type: String,
