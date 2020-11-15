@@ -51,15 +51,13 @@
       :title="$t('props.color')"
       :snippet="samples.color"
     >
-      <div class="flex items-center">
-        <BbAvatar
-          v-for="(color, index) in ['red', 'blue', 'green']"
-          :key="color"
-          :color="color"
-          :class="[{ 'ml-2': index !== 0 }]"
-          letter="BB"
-        />
-      </div>
+      <BbAvatar
+        v-for="(color, index) in ['red', 'blue', 'green']"
+        :key="color"
+        :color="color"
+        :class="[{ 'ml-2': index !== 0 }]"
+        letter="BB"
+      />
     </Sample>
   </LayoutSample>
 </template>

@@ -4,10 +4,28 @@
     components="Status"
   >
     <Sample
-      :title="$t('props.image')"
-      :snippet="samples.image"
+      :title="$t('props.default')"
+      :snippet="samples.default"
     >
-      <BbStatus />
+      <BbStatus
+        v-for="status in ['disabled', 'danger', 'error', 'valid', 'warning']"
+        :key="status"
+        :status="status"
+        class="ml-2"
+      />
+    </Sample>
+
+    <Sample
+      :title="$t('props.icon')"
+      :snippet="samples.icon"
+    >
+      <BbStatus
+        v-for="status in ['disabled', 'danger', 'error', 'valid', 'warning']"
+        :key="status"
+        :status="status"
+        variant="icon"
+        class="ml-2"
+      />
     </Sample>
   </LayoutSample>
 </template>

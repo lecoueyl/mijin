@@ -94,6 +94,10 @@ module.exports = {
         title: 'Button',
       },
 
+      chart: {
+        title: 'Chart',
+      },
+
       checkbox: {
         title: 'Checkbox',
       },
@@ -114,6 +118,11 @@ module.exports = {
           },
         },
       },
+
+      datepicker: {
+        title: 'Datepicker',
+      },
+
 
       divider: {
         title: 'Divider',
@@ -205,6 +214,11 @@ module.exports = {
 
       select: {
         title: 'Select',
+        events: {
+          select: {
+            description: 'Emitted when an option is  selected',
+          },
+        },
       },
 
       skeleton: {

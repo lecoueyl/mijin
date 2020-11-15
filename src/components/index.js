@@ -1,9 +1,11 @@
 export { default as Avatar } from './avatar/Avatar';
 export { default as Badge } from './badge/Badge';
 export { default as Button } from './button/Button';
+export { default as Chart } from './chart/Chart';
 export { default as Checkbox } from './checkbox/Checkbox';
 export { default as Collapse } from './collapse/Collapse';
 export { default as Container } from './container/Container';
+export { default as Datepicker } from './datepicker/Datepicker';
 export { default as Divider } from './divider/Divider';
 export { default as Grid } from './grid/Grid';
 export { default as Headline } from './headline/Headline';
