@@ -61,7 +61,7 @@
           :value="$t('examples.list.1')"
         >
           {{ $t('examples.list.1') }}
-          <template v-slot:summary>
+          <template #summary>
             <div class="pt-1 text-sm text-gray-700">
               {{ $t('examples.summary') }}
             </div>
@@ -76,7 +76,7 @@
           :value="$t('examples.list.2')"
         >
           {{ $t('examples.list.2') }}
-          <template v-slot:summary>
+          <template #summary>
             <div class="pt-1 text-sm text-gray-700">
               {{ $t('examples.summary') }}
             </div>
@@ -145,7 +145,7 @@ export default Vue.extend({
   value="${this.$t('examples.list.1')}"
 >
   ${this.$t('examples.list.1')}
-  <template v-slot:summary>
+  <template #summary>
     <div class="pt-1 text-sm text-gray-700">
       ${this.$t('examples.summary')}
     </div>

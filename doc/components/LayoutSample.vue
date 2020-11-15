@@ -117,6 +117,7 @@ export default Vue.extend({
       default: null,
       type: [Array, String],
     },
+
     title: {
       required: true,
       type: String,

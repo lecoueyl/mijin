@@ -37,7 +37,7 @@
           {{ option }}
         </option>
 
-        <template v-slot:label>
+        <template #label>
           {{ $t('examples.select.label') }}
         </template>
       </BbSelect>

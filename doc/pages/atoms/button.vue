@@ -39,21 +39,21 @@
       :snippet="samples.icon"
     >
       <BbButton>
-        <template v-slot:icon>
+        <template #icon>
           <bb-icon name="copy" />
         </template>
         {{ $t('props.icon') }}
       </BbButton>
 
       <BbButton icon-right>
-        <template v-slot:icon>
+        <template #icon>
           <bb-icon name="filter" />
         </template>
         {{ $t('props.icon') }}
       </BbButton>
 
       <BbButton>
-        <template v-slot:icon>
+        <template #icon>
           <bb-icon name="alertCircle" />
         </template>
       </BbButton>
@@ -102,7 +102,7 @@
         </BbButton>
 
         <BbButton group="last">
-          <template v-slot:icon>
+          <template #icon>
             <bb-icon name="calendar" />
           </template>
         </BbButton>
@@ -187,7 +187,7 @@ export default Vue.extend({
   </BbButton>
 
   <BbButton group="last">
-    <template v-slot:icon>
+    <template #icon>
       <bb-icon name="calendar" />
     </template>
   </BbButton>

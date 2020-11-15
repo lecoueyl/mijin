@@ -44,7 +44,7 @@
         class="sm:w-1/2"
         :placeholder="$t('examples.input.placeholder')"
       >
-        <template v-slot:icon>
+        <template #icon>
           <bb-icon name="user" />
         </template>
       </BbInput>
@@ -98,7 +98,7 @@ export default Vue.extend({
         ],
         icon: [
           `<BbInput>
-  <template v-slot:icon>
+  <template #icon>
     <bb-icon name="user" />
   </template>
 </BbInput>`,

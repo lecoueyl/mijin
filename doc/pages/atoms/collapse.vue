@@ -9,7 +9,7 @@
     >
       <BbCollapse>
         {{ $t('props.default') }}
-        <template v-slot:content>
+        <template #content>
           {{ $t('examples.sentence') }}
         </template>
       </BbCollapse>
@@ -21,7 +21,7 @@
     >
       <BbCollapse expanded>
         {{ $t('props.expanded') }}
-        <template v-slot:content>
+        <template #content>
           {{ $t('examples.sentence') }}
         </template>
       </BbCollapse>
@@ -33,7 +33,7 @@
     >
       <BbCollapse icon-left>
         {{ $t('props.iconPosition') }}
-        <template v-slot:content>
+        <template #content>
           {{ $t('examples.sentence') }}
         </template>
       </BbCollapse>
@@ -45,7 +45,7 @@
     >
       <BbCollapse disabled>
         {{ $t('props.disabled') }}
-        <template v-slot:content>
+        <template #content>
           {{ $t('examples.sentence') }}
         </template>
       </BbCollapse>
@@ -60,13 +60,13 @@
           {{ $t('props.summary') }}
         </BbHeadline>
 
-        <template v-slot:summary>
+        <template #summary>
           <div class="text-gray-700">
             {{ $t('examples.summary') }}
           </div>
         </template>
 
-        <template v-slot:content>
+        <template #content>
           <div class="pt-4">
             {{ $t('examples.sentence') }}
           </div>
@@ -85,25 +85,25 @@ export default Vue.extend({
       samples: {
         default: [`<BbCollapse>
   ${this.$t('props.default')}
-  <template v-slot:content>
+  <template #content>
     ${this.$t('examples.sentence')}
   </template>
 </BbCollapse>`],
         expanded: [`<BbCollapse expanded>
   ${this.$t('props.expanded')}
-  <template v-slot:content>
+  <template #content>
     ${this.$t('examples.sentence')}
   </template>
 </BbCollapse>`],
         icon: [`<BbCollapse icon-left>
   ${this.$t('props.iconPosition')}
-  <template v-slot:content>
+  <template #content>
     ${this.$t('examples.sentence')}
   </template>
 </BbCollapse>`],
         disabled: [`<BbCollapse disabled>
   ${this.$t('props.disabled')}
-  <template v-slot:content>
+  <template #content>
     ${this.$t('examples.sentence')}
   </template>
 </BbCollapse>`],
@@ -112,13 +112,13 @@ export default Vue.extend({
     ${this.$t('props.summary')}
   </BbHeadline>
 
-  <template v-slot:summary>
+  <template #summary>
     <div class="text-gray-700">
       ${this.$t('examples.summary')}
     </div>
   </template>
 
-  <template v-slot:content>
+  <template #content>
     <div class="pt-4">
       ${this.$t('examples.sentence')}
     </div>

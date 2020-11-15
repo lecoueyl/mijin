@@ -30,7 +30,7 @@
             {{ option }}
           </option>
 
-          <template v-slot:label>
+          <template #label>
             {{ $t('sections.organisms.form.department') }}
           </template>
         </BbSelect>
