@@ -9,7 +9,6 @@
       {{ title }}
     </BbHeadline>
 
-
     <div
       class="p-4 bg-gray-100"
       :class="snippet.length > 0 ? 'rounded-t-lg' : 'rounded-lg'"
@@ -114,7 +113,7 @@ export default Vue.extend({
   mounted() {
     this.setSnippetContentSize();
     this.resizeSnippetContent();
-    setTimeout(() => { this.mounted = true }, 100);
+    setTimeout(() => { this.mounted = true; }, 100);
   },
 
   methods: {

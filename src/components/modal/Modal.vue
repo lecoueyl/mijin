@@ -17,8 +17,13 @@
       class="flex items-end sm:items-center justify-center min-h-screen p-4"
     >
       <div
-        class="inline-block bg-background rounded-lg overflow-hidden shadow-xl transform transition-all sm:max-w-lg p-4 sm:p-6"
+        class="inline-block bg-background rounded-lg overflow-hidden shadow-xl transform transition-all p-4 sm:p-6"
         :class="[
+          {
+            'sm:max-w-lg': size === 'base',
+            'sm:max-w-3xl': size === 'lg',
+            'w-full': size === 'full',
+          },
           isOpen ?
             'ease-out duration-200 opacity-100 translate-y-0 sm:scale-100'
             : 'ease-in duration-100 opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95',
@@ -40,18 +45,18 @@ export default {
   props: {
     size: {
       type: String,
-      default: null,
+      default: 'base',
       validator: (value) => [
-        'xs',
         'base',
         'lg',
+        'full',
       ].includes(value),
     },
   },
 
   data() {
     return {
-      isOpen: true,
+      isOpen: false,
     };
   },
 

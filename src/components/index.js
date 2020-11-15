@@ -21,6 +21,7 @@ export { default as Progress } from './progress/Progress';
 export { default as Radio } from './radio/Radio';
 export { default as Select } from './select/Select';
 export { default as Skeleton } from './skeleton/Skeleton';
+export { default as Status } from './status/Status';
 export { default as Table } from './table/Table';
 export { default as TableBody } from './table/TableBody';
 export { default as TableCell } from './table/TableCell';

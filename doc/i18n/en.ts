@@ -211,6 +211,10 @@ module.exports = {
         title: 'Skeleton',
       },
 
+      status: {
+        title: 'Status',
+      },
+
       table: {
         title: 'Table',
       },

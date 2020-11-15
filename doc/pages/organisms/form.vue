@@ -46,7 +46,8 @@
               <BbLink
                 href="#"
                 color="foreground"
-                underline>
+                underline
+              >
                 {{ $t('sections.organisms.form.termsOfUse') }}
               </BbLink>
             </template>
@@ -55,7 +56,8 @@
               <BbLink
                 href="#"
                 color="foreground"
-                underline>
+                underline
+              >
                 {{ $t('sections.organisms.form.privacy') }}
               </BbLink>
             </template>
@@ -266,7 +268,7 @@ export default Vue.extend({
       name="password"
       type="password"
       required
-      pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+      pattern="(?=^.{8,}$)((?=.*d)|(?=.*W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
     >
       ${this.$t('sections.organisms.form.password')}
 
