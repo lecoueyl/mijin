@@ -27,10 +27,8 @@
       >
         <option
           v-if="placeholder"
-          selected
           disabled
           value=""
-          class="text-gray-600"
         >
           {{ placeholder }}
         </option>
@@ -122,6 +120,7 @@ export default {
         ...this.$listeners,
         // Ensure that the component works with v-model
         input(event) {
+          vm.$emit('input', event.target.value);
           vm.$emit('select', event.target.value);
         },
         focus: () => vm.$emit('focus'),

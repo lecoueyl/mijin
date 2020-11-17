@@ -4,24 +4,31 @@
   >
     <Sample
       :title="$t('sections.organisms.form.signUp')"
-      :snippet="samples.login"
+      :snippet="samples.signUp"
     >
       <form
         autocomplete="off"
         class="lg:w-1/2 lg:mx-auto grid gap-4"
       >
-        <BbInput :placeholder="$t('sections.organisms.form.usernamePlaceholder')">
+        <BbInput
+          v-model="model.signUp.username"
+          :placeholder="$t('sections.organisms.form.usernamePlaceholder')"
+        >
           {{ $t('sections.organisms.form.username') }}
         </BbInput>
 
         <BbInput
+          v-model="model.signUp.email"
           type="email"
           placeholder="email@address.com"
         >
           {{ $t('sections.organisms.form.email') }}
         </BbInput>
 
-        <BbSelect :placeholder="$t('sections.organisms.form.selectDepartment')">
+        <BbSelect
+          v-model="model.signUp.department"
+          :placeholder="$t('sections.organisms.form.selectDepartment')"
+        >
           <option
             v-for="(option, index) in $t('examples.list')"
             :key="index"
@@ -36,7 +43,7 @@
         </BbSelect>
 
         <BbCheckbox
-          v-model="model.default"
+          v-model="model.signUp.terms"
           name="checkbox"
         >
           <i18n
@@ -193,6 +200,12 @@ export default Vue.extend({
     return {
       vueFormState: {},
       model: {
+        signUp: {
+          username: '',
+          email: '',
+          department: '',
+          terms: false,
+        },
         signIn: {
           username: '',
           password: '',

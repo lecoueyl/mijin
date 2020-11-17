@@ -5,14 +5,14 @@
     class="inline-flex items-center justify-center rounded-full"
     :class="[
       {
-        [`h-6 w-6 text-${props.size}`]: props.size === 'sm',
-        'h-8 w-8': props.size === 'base',
-        [`h-12 w-12 text-${props.size}`]: props.size === 'lg',
-        [`h-20 w-20 text-${props.size}`]: props.size === 'xl',
+        'h-3 w-3': props.size === 'sm',
+        'h-5 w-5 p-1': props.size === 'base',
+        'h-10 w-10 p-2': props.size === 'lg',
+        'h-16 w-16 p-4': props.size === 'xl',
         'bg-gray-200 text-green-100': props.status === 'disabled',
-        'bg-red-500 text-red-100': ['danger', 'error'].includes(props.status),
-        'bg-green-500 text-green-100': props.status === 'valid',
-        'bg-orange-500 text-orange-100': props.status === 'warning',
+        'bg-red-100 text-red-600': ['danger', 'error'].includes(props.status),
+        'bg-green-100 text-green-600': props.status === 'valid',
+        'bg-orange-100 text-orange-600': props.status === 'warning',
       },
       data.class,
       data.staticClass,
@@ -35,11 +35,21 @@
       fill="none"
       shape-rendering="geometricPrecision"
       role="presentation"
-      class="inline-block h-5 w-5"
+      class="inline-block h-full w-full"
     >
+      <template v-if="['danger', 'warning'].includes(props.status)">
+        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+        <line x1="12" y1="9" x2="12" y2="13" />
+        <line x1="12" y1="17" x2="12.01" y2="17" />
+      </template>
+
+      <template v-if="props.status === 'error'">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </template>
+
       <template v-if="props.status === 'valid'">
-        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" />
-        <path d="M16 10L10.5 15L8 12.7273" />
+        <polyline points="20 6 9 17 4 12" />
       </template>
     </svg>
   </Component>
@@ -56,7 +66,7 @@ export default {
     },
 
     size: {
-      default: 'base',
+      default: 'lg',
       type: String,
       validator: (value) => [
         'sm',
