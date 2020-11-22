@@ -85,7 +85,7 @@ export default Vue.extend({
   ${this.$t('props.color')}
 </BbTag>
 `],
-        size: [`<BbTag size="small">
+        size: [`<BbTag size="sm">
   ${this.$t('props.size')}
 </BbTag>`],
       },

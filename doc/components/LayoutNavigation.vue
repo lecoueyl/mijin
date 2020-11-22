@@ -56,6 +56,12 @@
               @click.native="isOpen = false"
             >
               {{ $t(`sections.${sectionName}.${menuName}.title`) }}
+              <BbTag
+                v-if="menu.isBeta"
+                size="sm"
+              >
+                beta
+              </BbTag>
             </nuxt-link>
           </li>
         </ul>
@@ -82,10 +88,14 @@ export default Vue.extend({
           avatar: {},
           badge: {},
           button: {},
-          chart: {},
+          chart: {
+            isBeta: true,
+          },
           checkbox: {},
           collapse: {},
-          datepicker: {},
+          datepicker: {
+            isBeta: true,
+          },
           divider: {},
           headline: {},
           icon: {},

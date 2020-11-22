@@ -49,6 +49,7 @@ module.exports = {
     size: 'Size',
     summary: 'Summary',
     tag: 'Tag',
+    tooltip: 'Tooltip',
     truncate: 'Truncate',
     underline: 'Underline',
     variant: 'Variant',
@@ -122,7 +123,6 @@ module.exports = {
       datepicker: {
         title: 'Datepicker',
       },
-
 
       divider: {
         title: 'Divider',
