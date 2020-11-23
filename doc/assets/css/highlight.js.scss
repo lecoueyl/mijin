@@ -1,5 +1,5 @@
 .hljs {
-  @apply block bg-foreground text-gray-100 p-2 text-sm whitespace-pre-wrap;
+  @apply block bg-gray-900 text-gray-100 p-2 text-sm whitespace-pre-wrap font-mono;
 }
 
 .hljs-comment,
@@ -56,13 +56,13 @@
 }
 
 .hljs-formula {
-  // background: $solarized-formula;
+  @apply text-blue-500;
 }
 
 .hljs-emphasis {
-  font-style: italic;
+  @apply italic;
 }
 
 .hljs-strong {
-  font-weight: bold;
+  @apply font-bold;
 }
