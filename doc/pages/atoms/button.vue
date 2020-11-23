@@ -160,7 +160,7 @@ export default Vue.extend({
           `<BbButton
   tag="nuxt-link"
   to="/"
-  class="inline-block""
+  class="inline-block"
 >
   ${this.$t('props.link')}
 </BbButton>`,

@@ -42,11 +42,13 @@
           ref="snippet"
           :class="{ 'pb-4': isSnippetCodeOverflow }"
         >
-          <code
+          <pre
             v-for="(code, index) in snippet"
             :key="index"
+            v-highlightjs
             class="whitespace-pre-wrap text-sm text-gray-100"
-          >{{ code }}</code>
+          ><code class="vue">{{ code }}</code>
+          </pre>
         </div>
       </div>
 

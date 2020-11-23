@@ -1,0 +1,74 @@
+// Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+
+.hljs {
+  @apply block bg-gray-100 text-gray-100 p-2 text-sm whitespace-pre-wrap;
+}
+
+.hljs * {
+  // font-family: $iota-type-monospace !important;
+}
+
+.hljs-comment,
+.hljs-quote {
+  @apply text-gray-500;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-addition {
+  @apply text-primary-500;
+}
+
+.hljs-number,
+.hljs-string,
+.hljs-meta .hljs-meta-string,
+.hljs-literal,
+.hljs-doctag,
+.hljs-regexp {
+  @apply text-green-500;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  @apply text-purple-500;
+}
+
+.hljs-attribute,
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-class .hljs-title,
+.hljs-type {
+  @apply text-yellow-500;
+}
+
+.hljs-symbol,
+.hljs-bullet,
+.hljs-subst,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-link {
+  @apply text-orange-500;
+}
+
+.hljs-built_in,
+.hljs-deletion {
+  @apply text-red-500;
+}
+
+.hljs-formula {
+  // background: $solarized-formula;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}

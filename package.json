@@ -49,6 +49,7 @@
     "stylelint-scss": "3.18.0",
     "ts-jest": "26.4.4",
     "vue-form": "4.10.3",
+    "vue-highlightjs": "1.3.3",
     "vue-jest": "3.0.7"
   }
 }

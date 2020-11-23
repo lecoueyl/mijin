@@ -34,8 +34,9 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    '~plugins/blueberry',
+    '~/plugins/blueberry',
     '~/plugins/vue-form',
+    '~/plugins/vue-highlightjs',
   ],
   /*
   ** Auto import components
