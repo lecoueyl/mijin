@@ -1,12 +1,6 @@
 <template>
   <div>
-    <code v-highlightjs class="javascript">console.log('Hello World')</code>
-    <pre v-highlightjs>
-      <code class="javascript">// Static source code
-function(test) {
-    console.log(test)
-}</code>
-    </pre>
+    <highlightjs language="javascript" code="var x = 5;" />
     <p>
       Install package
     </p>

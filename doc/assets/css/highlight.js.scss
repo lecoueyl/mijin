@@ -1,11 +1,5 @@
-// Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
-
 .hljs {
-  @apply block bg-gray-100 text-gray-100 p-2 text-sm whitespace-pre-wrap;
-}
-
-.hljs * {
-  // font-family: $iota-type-monospace !important;
+  @apply block bg-foreground text-gray-100 p-2 text-sm whitespace-pre-wrap;
 }
 
 .hljs-comment,

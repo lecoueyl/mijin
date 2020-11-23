@@ -57,7 +57,7 @@ export default Vue.extend({
   data() {
     return {
       samples: {
-        default: [`<BbBadge hred="#">
+        default: [`<BbBadge href="#">
   1
 </BbBadge>`],
         color: [`<BbBadge

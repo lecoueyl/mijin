@@ -1,4 +1,4 @@
 import Vue from 'vue';
-import VueHighlightJS from 'vue-highlightjs';
+import hljs from 'highlight.js';
 
-Vue.use(VueHighlightJS);
+Vue.use(hljs.vuePlugin);
