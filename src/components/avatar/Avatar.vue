@@ -5,13 +5,20 @@
     class="inline-flex items-center justify-center overflow-hidden"
     :class="[
       {
-        [`h-6 w-6 text-${props.size}`]: props.size === 'sm',
+        // color
+        'bg-blue-500 text-blue-100': props.color === 'blue',
+        'bg-green-500 text-green-100': props.color === 'green',
+        'bg-primary-500 text-primary-100': props.color === 'primary',
+        'bg-red-500 text-red-100': props.color === 'red',
+        'bg-yellow-500 text-yellow-100': props.color === 'yellow',
+        // size
+        'h-6 w-6 text-sm': props.size === 'sm',
         'h-8 w-8': props.size === 'base',
-        [`h-12 w-12 text-${props.size}`]: props.size === 'lg',
-        [`h-20 w-20 text-${props.size}`]: props.size === 'xl',
+        'h-12 w-12 text-lg': props.size === 'lg',
+        'h-20 w-20 text-xl': props.size === 'xl',
+        // variant
         'rounded-full': props.variant === 'rounded',
         'rounded-md': props.variant === 'squared',
-        [`bg-${props.color}-500 text-${props.color}-100`]: props.color,
       },
       data.class,
       data.staticClass,
@@ -50,6 +57,13 @@ export default {
     color: {
       default: 'primary',
       type: String,
+      validator: (value) => [
+        'blue',
+        'green',
+        'primary',
+        'red',
+        'yellow',
+      ].includes(value),
     },
 
     img: {

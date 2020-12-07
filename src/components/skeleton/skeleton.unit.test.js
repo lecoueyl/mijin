@@ -33,16 +33,6 @@ describe('Skeleton', () => {
     expect(wrapper.element.tagName).toBe('SPAN');
   });
 
-  it('accepts color prop', async () => {
-    const wrapper = shallowMount(Skeleton, {
-      propsData: {
-        color: 'red-500',
-      },
-    });
-
-    expect(wrapper.classes('bg-red-500')).toBe(true);
-  });
-
   it('accepts rounded prop', async () => {
     const wrapper = shallowMount(Skeleton, {
       propsData: {

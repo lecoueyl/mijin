@@ -2,11 +2,8 @@
   <Component
     :is="props.tag"
     :ref="data.ref"
-    class="animate-pulse"
+    class="animate-pulse bg-gray-300"
     :class="[
-      {
-        [`bg-${props.color}`]: props.color,
-      },
       props.rounded ? 'rounded-full' : 'rounded-sm',
       data.class,
       data.staticClass,
@@ -27,11 +24,6 @@ export default {
   name: 'UiSkeleton',
 
   props: {
-    color: {
-      default: 'gray-300',
-      type: String,
-    },
-
     rounded: {
       default: false,
       type: Boolean,

@@ -11,78 +11,103 @@
 
       <slot />
 
-      <template v-if="componentsProps">
-        <BbHeadline
-          id="props"
-          :level="2"
-          :size="2"
-          class="pb-8"
-        >
-          {{ $t('common.props') }}
-        </BbHeadline>
-
-        <div
-          v-for="(props, name, index) in componentsProps"
-          :key="name"
+      <template v-if="componentsProperties">
+        <section
+          v-for="(component, propertyName) in componentsProperties"
+          :key="propertyName"
         >
           <BbHeadline
-            v-if="Object.keys(componentsProps).length > 1"
-            :class="{ 'pt-10': index > 0 }"
-            :level="3"
-            :size="4"
+            :id="propertyName"
+            :level="2"
+            :size="2"
             class="pb-8"
           >
-            {{ name }}
+            {{ $t(`common.${propertyName}`) }}
           </BbHeadline>
 
-          <BbTable>
-            <BbTableHead>
-              <BbTableTitle class="bg-background">
-                {{ $t('common.name') }}
-              </BbTableTitle>
+          <div
+            v-for="(properties, componentName, index) in component"
+            :key="componentName"
+          >
+            <BbHeadline
+              v-if="Object.keys(properties).length > 1"
+              :class="{ 'pt-10': index > 0 }"
+              :level="3"
+              :size="4"
+              class="pb-8"
+            >
+              {{ componentName }}
+            </BbHeadline>
 
-              <BbTableTitle class="bg-background">
-                {{ $t('common.type') }}
-              </BbTableTitle>
+            <BbTable>
+              <BbTableHead>
+                <BbTableTitle class="bg-background">
+                  {{ $t('common.name') }}
+                </BbTableTitle>
 
-              <BbTableTitle class="bg-background">
-                {{ $t('common.default') }}
-              </BbTableTitle>
+                <template v-if="propertyName === 'props'">
+                  <BbTableTitle class="bg-background">
+                    {{ $t('common.type') }}
+                  </BbTableTitle>
 
-              <BbTableTitle class="bg-background">
-                {{ $t('common.required') }}
-              </BbTableTitle>
-            </BbTableHead>
+                  <BbTableTitle class="bg-background">
+                    {{ $t('common.default') }}
+                  </BbTableTitle>
 
-            <BbTableBody>
-              <BbTableRow
-                v-for="prop in props"
-                :key="prop.name"
-              >
-                <BbTableCell>
-                  {{ prop.name }}
-                </BbTableCell>
+                  <BbTableTitle class="bg-background">
+                    {{ $t('common.required') }}
+                  </BbTableTitle>
+                </template>
 
-                <BbTableCell>
-                  <span
-                    v-for="type in prop.type"
-                    :key="type"
-                  >
-                    {{ type }}
-                  </span>
-                </BbTableCell>
+                <template v-else>
+                  <BbTableTitle class="bg-background">
+                    {{ $t('common.description') }}
+                  </BbTableTitle>
+                </template>
+              </BbTableHead>
 
-                <BbTableCell>
-                  {{ prop.default }}
-                </BbTableCell>
+              <BbTableBody>
+                <BbTableRow
+                  v-for="(prop, propName, propKey) in properties"
+                  :key="propKey"
+                >
+                  <template v-if="propertyName === 'props'">
+                    <BbTableCell>
+                      {{ prop.name }}
+                    </BbTableCell>
 
-                <BbTableCell>
-                  {{ prop.required || false }}
-                </BbTableCell>
-              </BbTableRow>
-            </BbTableBody>
-          </BbTable>
-        </div>
+                    <BbTableCell>
+                      <span
+                        v-for="type in prop.type"
+                        :key="type"
+                      >
+                        {{ type }}
+                      </span>
+                    </BbTableCell>
+
+                    <BbTableCell>
+                      {{ prop.default }}
+                    </BbTableCell>
+
+                    <BbTableCell>
+                      {{ prop.required || false }}
+                    </BbTableCell>
+                  </template>
+
+                  <template v-else>
+                    <BbTableCell>
+                      {{ propName }}
+                    </BbTableCell>
+
+                    <BbTableCell>
+                      {{ prop.description }}
+                    </BbTableCell>
+                  </template>
+                </BbTableRow>
+              </BbTableBody>
+            </BbTable>
+          </div>
+        </section>
       </template>
     </div>
 
@@ -132,6 +157,12 @@ export default Vue.extend({
     };
   },
 
+  head() {
+    return {
+      title: this.title,
+    };
+  },
+
   computed: {
     componentsProps() {
       if (!this.components) return null;
@@ -150,6 +181,38 @@ export default Vue.extend({
 
       return props;
     },
+
+    componentsProperties() {
+      if (!this.components) return null;
+
+      const components = Array.isArray(this.components) ? this.components : [this.components];
+      const properties = {
+        props: {},
+      };
+
+      components.forEach((component) => {
+        const i18nKey = `sections.atoms.${component.toLowerCase()}`;
+        const props = this.$root?.$options?.components[`Bb${component}`]?.options?.props;
+
+        if (props) {
+          const mappedProps = Object.keys(props).map((key) => ({
+            name: key,
+            required: props[key].required,
+            type: Array.isArray(props[key].type) ? props[key].type.map((type) => type.name) : [props[key].type.name],
+            default: props[key].default,
+          }));
+          properties.props[component] = mappedProps;
+        }
+
+        ['events', 'methods', 'slots'].forEach((property) => {
+          if (this.$te(`${i18nKey}.${property}`)) {
+            properties[property] = { [component]: this.$t(`${i18nKey}.${property}`) };
+          }
+        });
+      });
+
+      return properties;
+    },
   },
 
   mounted() {
@@ -157,12 +220,6 @@ export default Vue.extend({
       id: element.id,
       name: element?.textContent?.trim() || '',
     }));
-  },
-
-  head() {
-    return {
-      title: this.title,
-    };
   },
 });
 </script>

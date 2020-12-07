@@ -1,5 +1,5 @@
 .hljs {
-  @apply block bg-gray-900 text-gray-100 p-2 text-sm whitespace-pre-wrap font-mono;
+  @apply block bg-blue-900 text-blue-100 text-sm whitespace-pre-wrap font-mono;
 }
 
 .hljs-comment,
@@ -10,7 +10,7 @@
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-addition {
-  @apply text-primary-500;
+  @apply text-purple-400;
 }
 
 .hljs-number,
@@ -19,7 +19,7 @@
 .hljs-literal,
 .hljs-doctag,
 .hljs-regexp {
-  @apply text-green-500;
+  @apply text-green-400;
 }
 
 .hljs-title,
@@ -27,7 +27,7 @@
 .hljs-name,
 .hljs-selector-id,
 .hljs-selector-class {
-  @apply text-purple-500;
+  @apply text-teal-400;
 }
 
 .hljs-attribute,
@@ -36,7 +36,7 @@
 .hljs-template-variable,
 .hljs-class .hljs-title,
 .hljs-type {
-  @apply text-yellow-500;
+  @apply text-yellow-400;
 }
 
 .hljs-symbol,
@@ -47,16 +47,16 @@
 .hljs-selector-attr,
 .hljs-selector-pseudo,
 .hljs-link {
-  @apply text-orange-500;
+  @apply text-orange-400;
 }
 
 .hljs-built_in,
 .hljs-deletion {
-  @apply text-red-500;
+  @apply text-red-400;
 }
 
 .hljs-formula {
-  @apply text-blue-500;
+  @apply text-blue-400;
 }
 
 .hljs-emphasis {

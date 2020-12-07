@@ -1,11 +1,15 @@
 module.exports = {
   common: {
-    viewCode: 'View code',
+    default: 'Default',
+    description: 'Description',
+    events: 'Events',
+    methods: 'Methods',
     name: 'Name',
     props: 'Props',
-    type: 'Type',
-    default: 'Default',
     required: 'Required',
+    slots: 'Slots',
+    type: 'Type',
+    viewCode: 'View code',
   },
 
   error: {
@@ -160,13 +164,13 @@ module.exports = {
         title: 'Popover',
         events: {
           close: {
-            open: 'Emitted when popover is closed',
+            description: 'Emitted when popover is closed',
           },
           open: {
-            open: 'Emitted when popover is opened',
+            description: 'Emitted when popover is opened',
           },
           toggle: {
-            open: 'Emitted when popover is toggled',
+            description: 'Emitted when popover is toggled',
           },
         },
         methods: {

@@ -18,7 +18,7 @@
 
     <div
       v-if="snippet.length > 0"
-      class="bg-gray-900 rounded-b-lg overflow-y-hidden relative"
+      class="bg-blue-900 rounded-b-lg overflow-y-hidden relative"
       :class="{ 'transition-all duration-300 ease-in-out': mounted }"
       :style="{ maxHeight: codeSnippetMaxHeight + 'px' }"
     >
@@ -54,10 +54,10 @@
       <div
         v-if="isSnippetCodeOverflow"
         ref="expandButton"
-        class="absolute bottom-0 p-2 text-center w-full bg-gradient-to-t from-foreground"
+        class="absolute bottom-0 p-2 text-center w-full bg-gradient-to-t from-blue-900"
       >
         <button
-          class="bg-gray-800 text-gray-200 rounded-full px-2 py-1 text-sm leading-tight focus:outline-none"
+          class="bg-blue-800 text-blue-200 rounded-full px-2 py-1 text-sm leading-tight focus:outline-none"
           @click="toggleCollapse()"
         >
           Expand

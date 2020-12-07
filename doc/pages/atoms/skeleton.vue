@@ -19,18 +19,6 @@
         class="h-10 w-10"
       />
     </Sample>
-
-    <Sample
-      :title="$t('props.color')"
-      :snippet="samples.color"
-    >
-      <BbSkeleton
-        v-for="(color, index) in ['primary-500', 'red-300', 'yellow-500']"
-        :key="color"
-        :color="color"
-        :class="[{ 'mt-6': index !== 0 }]"
-      />
-    </Sample>
   </LayoutSample>
 </template>
 
@@ -46,11 +34,6 @@ export default Vue.extend({
   rounded
   class="h-10 w-10"
 />`],
-        color: [`<BbSkeleton color="primary-500" />
-
-<BbSkeleton color="red-300" />
-
-<BbSkeleton color="yellow-500" />`],
       },
     };
   },

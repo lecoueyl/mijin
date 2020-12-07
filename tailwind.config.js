@@ -2,7 +2,7 @@ import tailwindConf from './src/tailwind.config';
 
 tailwindConf.theme.extend.fontFamily = {
   sans: ['Inter', 'sans-serif'],
-  mono: ['Fira Code', 'monospace'],
+  mono: ['IBM Plex Mono', 'monospace'],
 };
 
 tailwindConf.purge = {
