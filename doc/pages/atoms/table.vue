@@ -45,7 +45,7 @@
 
     <Sample
       :title="$t('props.fixed')"
-      :snippet="samples.default"
+      :snippet="samples.fixed"
     >
       <BbTable fixed>
         <BbTableHead>

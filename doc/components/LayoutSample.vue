@@ -12,36 +12,45 @@
       <slot />
 
       <template v-if="componentsProperties">
+        <BbHeadline
+          id="api"
+          :level="2"
+          :size="2"
+          class="pb-8"
+        >
+          API
+        </BbHeadline>
+
         <section
-          v-for="(component, propertyName) in componentsProperties"
-          :key="propertyName"
+          v-for="(component, componentName) in componentsProperties"
+          :key="componentName"
         >
           <BbHeadline
-            :id="propertyName"
-            :level="2"
-            :size="2"
-            class="pb-8"
+            v-if="Object.keys(componentsProperties).length > 1"
+            :id="componentName"
+            :level="3"
+            class="pb-4"
           >
-            {{ $t(`common.${propertyName}`) }}
+            {{ componentName }}
           </BbHeadline>
 
           <div
-            v-for="(properties, componentName, index) in component"
-            :key="componentName"
+            v-for="(properties, propertyName) in component"
+            :key="propertyName"
           >
             <BbHeadline
-              v-if="Object.keys(properties).length > 1"
-              :class="{ 'pt-10': index > 0 }"
-              :level="3"
-              :size="4"
-              class="pb-8"
+              :level="4"
+              class="pb-8 text-gray-800"
             >
-              {{ componentName }}
+              {{ $t(`common.${propertyName}`) }}
             </BbHeadline>
 
-            <BbTable>
+            <BbTable
+              fixed
+              class="mb-8"
+            >
               <BbTableHead>
-                <BbTableTitle class="bg-background">
+                <BbTableTitle class="bg-background w-3/12">
                   {{ $t('common.name') }}
                 </BbTableTitle>
 
@@ -164,31 +173,11 @@ export default Vue.extend({
   },
 
   computed: {
-    componentsProps() {
-      if (!this.components) return null;
-
-      const components = Array.isArray(this.components) ? this.components : [this.components];
-      const props = {};
-      components.forEach((component) => {
-        const prop = this.$root?.$options?.components[`Bb${component}`]?.options?.props;
-        props[component] = Object.keys(prop).map((key) => ({
-          name: key,
-          required: prop[key].required,
-          type: Array.isArray(prop[key].type) ? prop[key].type.map((type) => type.name) : [prop[key].type.name],
-          default: prop[key].default,
-        }));
-      });
-
-      return props;
-    },
-
     componentsProperties() {
       if (!this.components) return null;
 
       const components = Array.isArray(this.components) ? this.components : [this.components];
-      const properties = {
-        props: {},
-      };
+      const properties = {};
 
       components.forEach((component) => {
         const i18nKey = `sections.atoms.${component.toLowerCase()}`;
@@ -201,12 +190,13 @@ export default Vue.extend({
             type: Array.isArray(props[key].type) ? props[key].type.map((type) => type.name) : [props[key].type.name],
             default: props[key].default,
           }));
-          properties.props[component] = mappedProps;
+          properties[component] = { props: mappedProps, ...properties[component] };
         }
 
         ['events', 'methods', 'slots'].forEach((property) => {
           if (this.$te(`${i18nKey}.${property}`)) {
-            properties[property] = { [component]: this.$t(`${i18nKey}.${property}`) };
+            properties[component] = { [property]: this.$t(`${i18nKey}.${property}`), ...properties[component] };
+            // properties[component] = { [property]: this.$t(`${i18nKey}.${property}`) };
           }
         });
       });

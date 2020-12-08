@@ -3,9 +3,6 @@
     :is="props.tag"
     :ref="data.ref"
     :class="[
-      {
-        [`border-${props.color}`]: props.color,
-      },
       data.class,
       data.staticClass,
     ]"
@@ -13,6 +10,7 @@
       data.style,
       data.staticStyle,
     ]"
+    class="border-gray-200"
     v-bind="data.attrs"
     v-on="listeners"
   />
@@ -23,11 +21,6 @@ export default {
   name: 'UiDivider',
 
   props: {
-    color: {
-      default: 'gray-200',
-      type: String,
-    },
-
     tag: {
       default: 'hr',
       type: String,

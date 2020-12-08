@@ -9,18 +9,6 @@
     >
       <BbDivider />
     </Sample>
-
-    <Sample
-      :title="$t('props.color')"
-      :snippet="samples.color"
-    >
-      <BbDivider
-        v-for="(color, index) in ['primary-500', 'red-300', 'yellow-500']"
-        :key="color"
-        :color="color"
-        :class="[{ 'mt-10': index !== 0 }]"
-      />
-    </Sample>
   </LayoutSample>
 </template>
 
@@ -32,11 +20,6 @@ export default Vue.extend({
     return {
       samples: {
         default: ['<BbDivider />'],
-        color: [`<BbDivider color="primary-500" />
-
-<BbDivider color="red-300" />
-
-<BbDivider color="yellow-500" />`],
       },
     };
   },

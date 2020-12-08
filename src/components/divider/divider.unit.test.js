@@ -32,17 +32,6 @@ describe('Divider', () => {
     expect(wrapper.element.tagName).toBe('SECTION');
   });
 
-  it('accepts color prop', async () => {
-    const wrapper = shallowMount(Divider, {
-      propsData: {
-        color: 'red-500',
-      },
-    });
-
-    expect(wrapper.classes('border-red-500')).toBe(true);
-    expect(wrapper.classes('border-gray-300')).toBe(false);
-  });
-
   it('should emit events', async () => {
     let called = 0;
     let event = null;
