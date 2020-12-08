@@ -2,17 +2,18 @@
   <Component
     :is="props.tag"
     :ref="data.ref"
-    class="flex border rounded-md p-2"
+    class="flex rounded-md p-2"
     :class="[
       {
-        'border-foreground': !props.filled && !props.variant,
-        'text-green-500 border-green-500': !props.filled && props.variant === 'success',
-        'text-red-500 border-red-500': !props.filled && props.variant === 'error',
-        'text-orange-500 border-orange-500': !props.filled && props.variant === 'warning',
-        'bg-background border-gray-300': props.filled && !props.variant,
-        'text-white bg-green-500 border-green-500': props.filled && props.variant === 'success',
-        'text-white bg-red-500 border-red-500': props.filled && props.variant === 'error',
-        'text-white bg-orange-500 border-orange-500': props.filled && props.variant === 'warning',
+        'border border-foreground': !props.filled && !props.variant,
+        'text-green-500 border border-green-500': !props.filled && props.variant === 'success',
+        'text-red-500 border border-red-500': !props.filled && props.variant === 'error',
+        'text-orange-500 border border-orange-500': !props.filled && props.variant === 'warning',
+        // filled
+        'bg-background': props.filled && !props.variant,
+        'text-white bg-green-500': props.filled && props.variant === 'success',
+        'text-white bg-red-500': props.filled && props.variant === 'error',
+        'text-orange-800 bg-orange-200': props.filled && props.variant === 'warning',
       },
       data.class,
       data.staticClass,

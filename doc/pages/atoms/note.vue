@@ -78,21 +78,21 @@ export default Vue.extend({
 
 <BbNote
   filled
-  variant="success
+  variant="success"
 >
   success
 </BbNote>
 
 <BbNote
   filled
-  variant="error
+  variant="error"
 >
   error
 </BbNote>
 
 <BbNote
   filled
-  variant="warning
+  variant="warning"
 >
   warning
 </BbNote>`,
