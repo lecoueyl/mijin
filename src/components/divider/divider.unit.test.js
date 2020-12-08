@@ -8,7 +8,7 @@ describe('Divider', () => {
     const wrapper = shallowMount(Divider);
 
     expect(wrapper.element.tagName).toBe('HR');
-    expect(wrapper.classes('border-gray-300')).toBe(true);
+    expect(wrapper.classes('border-gray-200')).toBe(true);
   });
 
   it('do not renders default slot content', async () => {

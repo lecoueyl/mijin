@@ -9,7 +9,7 @@ describe('Modal', () => {
     const wrapper = shallowMount(Modal);
 
     expect(wrapper.element.tagName).toBe('DIV');
-    expect(wrapper.classes('inline-block')).toBe(true);
+    expect(wrapper.classes('fixed')).toBe(true);
   });
 
   it('renders default slot content', async () => {

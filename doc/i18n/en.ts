@@ -5,6 +5,7 @@ module.exports = {
     events: 'Events',
     methods: 'Methods',
     name: 'Name',
+    properties: 'Properties',
     props: 'Props',
     required: 'Required',
     slots: 'Slots',

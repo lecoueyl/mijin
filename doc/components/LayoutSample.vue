@@ -18,7 +18,7 @@
           :size="2"
           class="pb-8"
         >
-          API
+          {{ $t('common.properties') }}
         </BbHeadline>
 
         <section
@@ -40,7 +40,7 @@
           >
             <BbHeadline
               :level="4"
-              class="pb-8 text-gray-800"
+              class="pb-4 text-gray-800"
             >
               {{ $t(`common.${propertyName}`) }}
             </BbHeadline>

@@ -8,7 +8,7 @@ describe('Avatar', () => {
     const wrapper = shallowMount(Avatar);
 
     expect(wrapper.element.tagName).toBe('SPAN');
-    expect(wrapper.classes('flex')).toBe(true);
+    expect(wrapper.classes('inline-flex')).toBe(true);
     expect(wrapper.classes('text-sm')).toBe(false);
     expect(wrapper.classes('rounded-md')).toBe(false);
   });

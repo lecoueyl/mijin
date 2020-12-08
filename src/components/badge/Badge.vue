@@ -7,7 +7,7 @@
       [
         {
           [`bg-${props.bgColor} text-${props.textColor}`]: props.variant === 'fill',
-          [`text-${props.bgColor} border border-${props.bgColor}`]: props.variant === 'outline',
+          [`text-${props.textColor} border border-${props.bgColor}`]: props.variant === 'outline',
           'text-sm px-2 py-px': props.size === 'sm',
           'px-2': props.size === 'base',
         },
@@ -31,7 +31,7 @@ export default {
 
   props: {
     bgColor: {
-      default: 'foreground',
+      default: 'gray-300',
       type: String,
     },
     size: {
@@ -49,7 +49,7 @@ export default {
     },
 
     textColor: {
-      default: 'background',
+      default: 'foreground',
       type: String,
     },
 
