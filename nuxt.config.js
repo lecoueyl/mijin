@@ -1,4 +1,4 @@
-import i18n from './doc/i18n';
+import i18n from './doc/locales';
 
 export default {
   srcDir: 'doc',

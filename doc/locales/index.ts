@@ -15,7 +15,7 @@ module.exports = {
     cookieKey: 'redirected',
     useCookie: true,
   },
-  langDir: 'i18n/',
+  langDir: 'locales/',
   parsePages: false,
   vueI18n: {
     fallbackLocale: 'en',
