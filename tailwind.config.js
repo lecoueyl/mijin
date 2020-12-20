@@ -1,4 +1,4 @@
-import tailwindConf from './src/tailwind.config';
+const tailwindConf = require('./src/tailwind.config');
 
 tailwindConf.theme.extend.fontFamily = {
   sans: ['Inter', 'sans-serif'],
