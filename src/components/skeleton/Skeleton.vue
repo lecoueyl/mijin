@@ -2,7 +2,7 @@
   <Component
     :is="props.tag"
     :ref="data.ref"
-    class="animate-pulse bg-gray-300"
+    class="animate-pulse bg-gray-300 dark:bg-gray-600"
     :class="[
       props.rounded ? 'rounded-full' : 'rounded-sm',
       data.class,

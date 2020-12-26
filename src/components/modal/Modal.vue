@@ -6,7 +6,7 @@
     ]"
   >
     <div
-      class="fixed inset-0 bg-gray-500 transition-opacity"
+      class="fixed inset-0 bg-gray-500 dark:bg-gray-600 transition-opacity"
       :class="[
         isOpen ? 'ease-out duration-200 opacity-75' : 'ease-in duration-100 opacity-0',
       ]"
@@ -17,7 +17,7 @@
       class="flex items-end sm:items-center justify-center min-h-screen p-4"
     >
       <div
-        class="inline-block bg-background rounded-lg overflow-hidden shadow-xl transform transition-all p-4 sm:p-6"
+        class="inline-block bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-xl transform transition-all p-4 sm:p-6"
         :class="[
           {
             'sm:max-w-lg': size === 'base',

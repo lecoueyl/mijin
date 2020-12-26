@@ -6,11 +6,11 @@
     :class="[
       {
         // color
-        'bg-blue-500 text-blue-100': props.color === 'blue',
-        'bg-green-500 text-green-100': props.color === 'green',
-        'bg-primary-500 text-primary-100': props.color === 'primary',
-        'bg-red-500 text-red-100': props.color === 'red',
-        'bg-yellow-500 text-yellow-100': props.color === 'yellow',
+        'bg-blue-500 text-blue-50': props.color === 'blue',
+        'bg-green-500 text-green-50': props.color === 'green',
+        'bg-primary-500 text-primary-50': props.color === 'primary',
+        'bg-red-500 text-red-50': props.color === 'red',
+        'bg-yellow-500 text-yellow-50': props.color === 'yellow',
         // size
         'h-6 w-6 text-sm': props.size === 'sm',
         'h-8 w-8': props.size === 'base',

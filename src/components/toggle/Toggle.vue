@@ -11,9 +11,9 @@
         {
           'w-6': size === 'sm',
           'w-10 p-1': size === 'base',
-          'bg-gray-300': disabled,
-          'bg-gray-400': disabled && checked,
-          'bg-gray-200': !disabled && !checked,
+          'bg-gray-300 dark:bg-gray-600': disabled && !checked,
+          'bg-gray-400 dark:bg-gray-400': disabled && checked,
+          'bg-gray-200 dark:bg-gray-600': !disabled && !checked,
           'bg-primary-200': !disabled && checked,
         }
       ]"
@@ -37,7 +37,7 @@
             'w-3 h-3': size === 'sm',
             'w-4 h-4': size === 'base',
             'translate-x-full': checked,
-            'bg-gray-200': disabled,
+            'bg-gray-200 dark:bg-gray-200': disabled,
             'bg-white': !disabled && !checked,
             'bg-primary-500': !disabled && checked,
           },

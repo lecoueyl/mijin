@@ -1,20 +1,26 @@
-const tailwindConf = require('./src/tailwind.config');
+const blueberry = require('./src/tailwind-preset');
 
-tailwindConf.theme.extend.fontFamily = {
-  sans: ['Inter', 'sans-serif'],
-  mono: ['IBM Plex Mono', 'monospace'],
-};
-
-tailwindConf.purge = {
-  enabled: process.env.NODE_ENV === 'production',
-  content: [
-    'doc/components/**/*.vue',
-    'doc/layouts/**/*.vue',
-    'doc/pages/**/*.vue',
-    'doc/plugins/**/*.js',
-    'src/components/**/*.vue',
-    'nuxt.config.js',
+module.exports = {
+  presets: [
+    blueberry,
   ],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        mono: ['IBM Plex Mono', 'monospace'],
+      },
+    },
+  },
+  purge: {
+    enabled: process.env.NODE_ENV === 'production',
+    content: [
+      'doc/components/**/*.vue',
+      'doc/layouts/**/*.vue',
+      'doc/pages/**/*.vue',
+      'doc/plugins/**/*.js',
+      'src/components/**/*.vue',
+      'nuxt.config.js',
+    ],
+  },
 };
-
-module.exports = tailwindConf;

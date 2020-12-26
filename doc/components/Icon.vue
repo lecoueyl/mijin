@@ -1,5 +1,5 @@
 <template functional>
-  <div class="p-4 bg-gray-100 rounded-lg text-center">
+  <div class="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg text-center">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
@@ -16,7 +16,7 @@
       <g v-html="props.svg" />
     </svg>
 
-    <h4 class="text-xs text-gray-800 pt-4">
+    <h4 class="text-xs text-gray-800 dark:text-gray-300 pt-4">
       {{ props.name }}
     </h4>
   </div>

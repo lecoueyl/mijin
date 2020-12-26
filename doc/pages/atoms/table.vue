@@ -9,15 +9,15 @@
     >
       <BbTable>
         <BbTableHead>
-          <BbTableTitle class="bg-gray-100">
+          <BbTableTitle class="bg-gray-100 dark:bg-gray-800">
             {{ $t('examples.table.header.1') }}
           </BbTableTitle>
 
-          <BbTableTitle class="bg-gray-100">
+          <BbTableTitle class="bg-gray-100 dark:bg-gray-800">
             {{ $t('examples.table.header.2') }}
           </BbTableTitle>
 
-          <BbTableTitle class="bg-gray-100">
+          <BbTableTitle class="bg-gray-100 dark:bg-gray-800">
             {{ $t('examples.table.header.3') }}
           </BbTableTitle>
         </BbTableHead>
@@ -49,17 +49,17 @@
     >
       <BbTable fixed>
         <BbTableHead>
-          <BbTableTitle class="bg-gray-100 w-2/12">
+          <BbTableTitle class="bg-gray-100 dark:bg-gray-800 w-2/12">
             {{ $t('examples.table.header.1') }}
           </BbTableTitle>
 
-          <BbTableTitle class="bg-gray-100">
+          <BbTableTitle class="bg-gray-100 dark:bg-gray-800">
             {{ $t('examples.table.header.2') }}
           </BbTableTitle>
 
           <BbTableTitle
             text-align="right"
-            class="bg-gray-100 w-1/12"
+            class="bg-gray-100 dark:bg-gray-800 w-1/12"
           >
             {{ $t('examples.table.header.3') }}
           </BbTableTitle>
@@ -92,17 +92,17 @@
     >
       <BbTable fixed>
         <BbTableHead>
-          <BbTableTitle class="bg-gray-100 w-2/12">
+          <BbTableTitle class="bg-gray-100 dark:bg-gray-800 w-2/12">
             {{ $t('examples.table.header.1') }}
           </BbTableTitle>
 
-          <BbTableTitle class="bg-gray-100">
+          <BbTableTitle class="bg-gray-100 dark:bg-gray-800">
             {{ $t('examples.table.header.2') }}
           </BbTableTitle>
 
           <BbTableTitle
             text-align="right"
-            class="bg-gray-100 w-1/12"
+            class="bg-gray-100 dark:bg-gray-800 w-1/12"
           >
             {{ $t('examples.table.header.3') }}
           </BbTableTitle>
@@ -141,13 +141,13 @@ export default Vue.extend({
         default: [
           `<BbTable>
   <BbTableHead>
-    <BbTableTitle class="bg-gray-100">
+    <BbTableTitle class="bg-gray-100 dark:bg-gray-800">
       ${this.$t('examples.table.header.1')}
     </BbTableTitle>
-    <BbTableTitle class="bg-gray-100">
+    <BbTableTitle class="bg-gray-100 dark:bg-gray-800">
       ${this.$t('examples.table.header.2')}
     </BbTableTitle>
-    <BbTableTitle class="bg-gray-100">
+    <BbTableTitle class="bg-gray-100 dark:bg-gray-800">
       ${this.$t('examples.table.header.3')}
     </BbTableTitle>
   </BbTableHead>

@@ -4,8 +4,11 @@
     :class="[
       {
         'sticky top-0': tableProps && tableProps.stickyHeader,
+        'text-left': textAlign === 'left',
+        'text-center': textAlign === 'center',
+        'text-right': textAlign === 'right',
+        'text-justify': textAlign === 'justify',
       },
-      `text-${textAlign}`,
     ]"
   >
     <slot />

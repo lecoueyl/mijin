@@ -56,12 +56,3 @@ module.exports = tailwindConf;"
     />
   </div>
 </template>
-
-<style lang="scss">
-.hljs {
-  display: block;
-  overflow-x: auto;
-
-  // @apply bg-blue-500 hover:bg-blue-700 text-white;
-}
-</style>

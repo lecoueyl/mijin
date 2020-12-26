@@ -2,9 +2,11 @@
   <Component
     :is="tag"
     :class="{
-      'clearfix': inline,
+      'divide-x flow-root': inline,
+      'divide-y divide-y-4': !inline,
       'list-decimal list-inside': tag === 'ol',
     }"
+    class="divide-gray-300 dark:divide-gray-600"
   >
     <slot />
   </Component>

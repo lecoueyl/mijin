@@ -33,9 +33,9 @@ import Vue from 'vue';
 export default Vue.extend({
   data() {
     return {
-      dataChartBar: '',
-      dataChartBarGroup: '',
-      dataChartMixed: '',
+      dataChartBar: {},
+      dataChartBarGroup: {},
+      dataChartMixed: {},
       samples: {
         default: [
           `<BbAvatar
@@ -95,8 +95,9 @@ export default Vue.extend({
       };
     },
 
-    updateChart(chart) {
+    updateChart(chart: string) {
       this.generateDatasets();
+      // @ts-ignore
       this.$refs[chart].rerender();
     },
   },

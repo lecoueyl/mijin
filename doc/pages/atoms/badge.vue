@@ -17,16 +17,15 @@
       :snippet="samples.color"
     >
       <BbBadge
-        v-for="(color, index) in [
-          { bg: 'primary-100', text: 'primary-500', value: '12'},
-          { bg: 'primary-500', text: 'white', value: '999'},
+        v-for="(item, index) in [
+          { color: 'primary', value: '12'},
+          { color: 'green', value: '999'},
         ]"
         :key="index"
-        :bg-color="color.bg"
-        :text-color="color.text"
+        :color="item.color"
         :class="[{ 'ml-2': index !== 0 }]"
       >
-        {{ color.value }}
+        {{ item.value }}
       </BbBadge>
     </Sample>
 
@@ -60,17 +59,11 @@ export default Vue.extend({
         default: [`<BbBadge href="#">
   1
 </BbBadge>`],
-        color: [`<BbBadge
-  bg-color="primary-100"
-  text-color="primary-500"
->
+        color: [`<BbBadge color="primary">
   12
 </BbBadge>
 
-<BbBadge
-  bg-color="primary-500"
-  text-color="white"
->
+<BbBadge color="green">
   999
 </BbBadge>
 `],

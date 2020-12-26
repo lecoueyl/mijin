@@ -25,10 +25,10 @@
           {
             'hover:border-primary-500': !disabled,
             'bg-primary-500 border-primary-500': checked && !disabled,
-            'bg-background border-gray-600': !checked && !disabled,
+            'bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700': !checked && !disabled,
             // disabled
-            'bg-gray-500 border-gray-600': checked && disabled,
-            'bg-gray-200 border-gray-300': !checked && disabled,
+            'bg-gray-500 border-gray-600 dark:border-gray-400': checked && disabled,
+            'bg-gray-200 border-gray-300 dark:border-gray-700': !checked && disabled,
           }
         ]"
       >

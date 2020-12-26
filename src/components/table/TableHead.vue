@@ -1,6 +1,6 @@
 <template>
   <thead class="align-bottom">
-    <tr class="text-sm text-gray-700">
+    <tr class="text-sm text-gray-700 dark:text-gray-400">
       <slot />
     </tr>
   </thead>

@@ -25,11 +25,11 @@
             </svg>
           </div>
           <div class="mt-3  sm:mt-0 sm:ml-4">
-            <h3 class="text-lg leading-6 font-medium text-gray-900 text-center sm:text-left">
+            <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-50 text-center sm:text-left">
               Deactivate account
             </h3>
 
-            <p class="pt-2 text-gray-800">
+            <p class="pt-2 text-gray-800 dark:text-gray-300">
               Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.
             </p>
           </div>
@@ -83,11 +83,11 @@
                 </svg>
               </div>
               <div class="mt-3  sm:mt-0 sm:ml-4">
-                <h3 class="text-lg leading-6 font-medium text-gray-900 text-center sm:text-left">
+                <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-50  text-center sm:text-left">
                   Activate account
                 </h3>
 
-                <p class="pt-2 text-gray-800">
+                <p class="pt-2 text-gray-800 dark:text-gray-300">
                   Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.
                 </p>
               </div>

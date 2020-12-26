@@ -36,13 +36,12 @@ describe('Badge', () => {
   it('accepts color prop', async () => {
     const wrapper = shallowMount(Badge, {
       propsData: {
-        bgColor: 'red-100',
-        textColor: 'red-500',
+        color: 'green',
       },
     });
 
-    expect(wrapper.classes('bg-red-100')).toBe(true);
-    expect(wrapper.classes('text-red-500')).toBe(true);
+    expect(wrapper.classes('bg-green-100')).toBe(true);
+    expect(wrapper.classes('text-green-900')).toBe(true);
   });
 
   it('should emit events', async () => {

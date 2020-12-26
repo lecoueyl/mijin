@@ -3,8 +3,19 @@
     class="last:pr-0"
     :class="[
       {
-        [`align-${verticalAlign}`]: verticalAlign,
-        [`text-${textAlign}`]: textAlign,
+        // text-align
+        'text-left': textAlign === 'left',
+        'text-center': textAlign === 'center',
+        'text-right': textAlign === 'right',
+        'text-justify': textAlign === 'justify',
+        // vertical-align
+        'align-baseline': verticalAlign === 'baseline',
+        'align-bottom': verticalAlign === 'bottom',
+        'align-middle': verticalAlign === 'middle',
+        'align-text-bottom': verticalAlign === 'text-bottom',
+        'align-text-top': verticalAlign === 'text-top',
+        'align-top': verticalAlign === 'top',
+        // truncate
         'truncate': truncate && tableProps.fixed,
       },
       tableProps && tableProps.density === 'tight' ? 'py-1 pr-2' : 'py-2 pr-4'

@@ -1,9 +1,9 @@
 <template>
-  <aside class="w-full md:max-w-xs bg-gray-100">
-    <div class="flex items-center p-4 md:p-10 fixed md:static top-0 w-full z-50 bg-gray-100">
+  <aside class="w-full md:max-w-xs bg-gray-50 dark:bg-gray-900">
+    <div class="flex items-center p-4 md:p-10 fixed md:static top-0 w-full z-50 bg-gray-50 dark:bg-gray-900">
       <button
-        class="bg-gray-200 hover:bg-gray-300 py-2 pl-2 pr-2 md:pr-4 rounded-full inline-flex items-center
-          transition-colors duration-200 ease-in-out font-medium"
+        class="text-gray-900 dark:text-gray-50 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 py-2 pl-2 pr-2 md:pr-4 rounded-full inline-flex items-center
+          transition-colors duration-200 ease-in-out font-medium focus:outline-none focus:ring-2 focus:ring-gray-500"
         @click="switchTheme()"
       >
         <!-- Icon from https://heroicons.com -->
@@ -29,7 +29,7 @@
     </div>
 
     <nav
-      class="pt-24 md:pt-6 md:pb-6 fixed md:static top-0 w-full md:block bg-gray-100 p-4 md:p-10 z-40 h-full md:h-auto overflow-y-scroll md:overflow-y-visible"
+      class="pt-24 md:pt-6 md:pb-6 fixed md:static top-0 w-full md:block bg-gray-50 dark:bg-gray-900 p-4 md:p-10 z-40 h-full md:h-auto overflow-y-scroll md:overflow-y-visible"
       :class="isOpen ? 'block': 'hidden'"
     >
       <section
@@ -37,7 +37,7 @@
         :key="sectionName"
       >
         <h1
-          class="pb-2 text-gray-600"
+          class="pb-2 text-gray-600 dark:text-gray-400"
           :class="{ 'pt-10': sectionIndex != 0 }"
         >
           {{ $t(`sections.${sectionName}.title`) }}
@@ -51,8 +51,9 @@
           >
             <nuxt-link
               :to="localePath(`${sectionName}-${menuName}`)"
-              class="hover:text-primary-500 transition-colors duration-200 ease-in-out px-4 py-1 block rounded"
-              active-class="text-primary-700 hover:text-primary-700  bg-primary-200"
+              class="text-gray-900 dark:text-gray-100 hover:text-primary-500 transition-colors duration-200 ease-in-out px-4 py-1 block rounded
+                focus:outline-none focus:ring-2 focus:ring-primary-500"
+              active-class="text-primary-700 dark:text-primary-700 hover:text-primary-700 bg-primary-200"
               @click.native="isOpen = false"
             >
               {{ $t(`sections.${sectionName}.${menuName}.title`) }}

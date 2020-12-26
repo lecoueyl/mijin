@@ -25,7 +25,7 @@
       {{ $t('sections.foundations.colors.shades') }}
     </BbHeadline>
 
-    <div class="bg-background p-3 rounded-full border border-gray-200">
+    <div class="bg-background p-3 rounded-full border-gray-200">
       background
     </div>
 
@@ -34,7 +34,7 @@
       :color="colors.gray"
     />
 
-    <div class="bg-foreground text-background p-3 rounded-full border border border-foreground">
+    <div class="bg-foreground text-background p-3 rounded-full border border-foreground">
       foreground
     </div>
 
@@ -47,11 +47,11 @@
       {{ $t('sections.foundations.colors.contrast') }}
     </BbHeadline>
 
-    <div class="bg-white text-black p-3 rounded-t-lg border border border-foreground">
+    <div class="bg-white text-black p-3 rounded-t-lg border border-foreground">
       white
     </div>
 
-    <div class="bg-black text-white p-3 rounded-b-lg border border border-foreground">
+    <div class="bg-black text-white p-3 rounded-b-lg border border-foreground">
       black
     </div>
 
@@ -65,7 +65,7 @@
     </BbHeadline>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       <div
-        v-for="name in ['blue', 'green', 'yellow', 'red']"
+        v-for="name in ['blue', 'green', 'yellow', 'red', 'indigo', 'purple', 'teal', 'pink']"
         :key="name"
       >
         <BbHeadline
@@ -87,16 +87,16 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import tailwindConfig from '../../../src/tailwind.config';
+import tailwindPreset from '../../../src/tailwind-preset';
 
 export default Vue.extend({
   data() {
     return {
-      colors: tailwindConfig.theme.extend.colors,
+      colors: tailwindPreset.theme.colors,
       shades: {
-        background: tailwindConfig.theme.extend.colors.background,
-        ...tailwindConfig.theme.extend.colors.gray,
-        foreground: tailwindConfig.theme.extend.colors.foreground,
+        // background: tailwindPreset.theme.extend.colors.background,
+        ...tailwindPreset.theme.colors.gray,
+        // foreground: tailwindPreset.theme.extend.colors.foreground,
       },
     };
   },

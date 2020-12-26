@@ -40,7 +40,7 @@
           >
             <BbHeadline
               :level="4"
-              class="pb-4 text-gray-800"
+              class="pb-4 text-gray-800 dark:text-gray-300"
             >
               {{ $t(`common.${propertyName}`) }}
             </BbHeadline>
@@ -132,7 +132,7 @@
         >
           <a
             :href="`#${anchor.id}`"
-            class="transition-colors duration-200 ease-in-out text-gray-700 hover:text-foreground"
+            class="transition-colors duration-200 ease-in-out text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-50"
           >
             {{ anchor.name }}
           </a>

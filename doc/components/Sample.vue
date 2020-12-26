@@ -4,13 +4,13 @@
       :id="id"
       :level="2"
       :size="4"
-      class="pb-8"
+      class="pb-8 text-gray-800 dark:text-gray-200"
     >
       {{ title }}
     </BbHeadline>
 
     <div
-      class="p-4 bg-gray-100"
+      class="p-4 bg-gray-100 dark:bg-gray-800"
       :class="snippet.length > 0 ? 'rounded-t-lg' : 'rounded-lg'"
     >
       <slot />

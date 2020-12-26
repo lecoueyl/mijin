@@ -3,9 +3,6 @@
     :class="[
       listProps && listProps.inline ? 'float-left first:pl-0 last:pr-0' : 'list-item first:pt-0 last:pb-0',
       {
-        // bordered
-        'border-b border-gray-200 last:border-0':listProps && listProps.bordered && !listProps.inline,
-        'border-l border-gray-200 last:border-0':listProps && listProps.bordered && listProps.inline,
         // gutter
         'py-1':listProps && !listProps.inline && listProps.gutter === 'base',
         'px-1':listProps && listProps.inline && listProps.gutter === 'base',

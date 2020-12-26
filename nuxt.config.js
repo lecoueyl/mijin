@@ -53,6 +53,9 @@ export default {
     '@nuxtjs/stylelint-module',
     '@nuxtjs/tailwindcss',
   ],
+  colorMode: {
+    classSuffix: '',
+  },
   tailwindcss: {
     configPath: '../tailwind.config.js',
   },

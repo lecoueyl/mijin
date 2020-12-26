@@ -2,7 +2,7 @@
   <label class="block">
     <p
       v-if="$slots.default"
-      class="text-gray-800 mb-1"
+      class="text-gray-800 dark:text-gray-200 mb-1"
     >
       <slot />
     </p>
@@ -21,11 +21,12 @@
 
       <input
         ref="input"
-        class="appearance-none block w-full text-gray-700 placeholder-gray-400 border border-gray-300 rounded-md leading-tight
-          focus:outline-none focus:border-primary-500 transition-colors duration-150 ease-in-out"
+        class="appearance-none block w-full text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-600 border border-gray-300 dark:border-gray-700
+          rounded-md leading-tight
+          focus:outline-none focus:border-primary-500 dark:focus:border-primary-500 transition-colors duration-150 ease-in-out"
         :class="[
           $slots.icon ? 'pl-8' : 'pl-2',
-          disabled ? 'bg-gray-100 cursor-not-allowed' : 'bg-background',
+          disabled ? 'bg-gray-200 dark:bg-gray-800 cursor-not-allowed' : 'bg-white dark:bg-gray-900',
           size === 'sm' ? 'text-sm py-1' : 'py-2',
           type === 'password' ? 'pr-8' : 'pr-2',
         ]"
@@ -52,7 +53,7 @@
         stroke-linejoin="round"
         stroke-linecap="round"
         fill="none"
-        class="text-gray-700 stroke-2 w-5 absolute my-auto mr-2 inset-y-0 right-0 cursor-pointer"
+        class="text-gray-700 dark:text-gray-300 stroke-2 w-5 absolute my-auto mr-2 inset-y-0 right-0 cursor-pointer"
         @click="togglePasswordVisibility()"
       >
         <template v-if="currentType === 'password'">

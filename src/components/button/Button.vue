@@ -6,9 +6,9 @@
     :class="[
       {
         // variant
-        'text-white border-primary-500 bg-primary-500 hover:border-primary-600 hover:bg-primary-600 focus:bg-primary-600':
+        'text-primary-50 border-primary-500 bg-primary-500 hover:border-primary-600 hover:bg-primary-600 focus:bg-primary-600':
           props.variant === 'primary' && !props.disabled,
-        'text-foreground border-gray-300 hover:border-foreground': props.variant === 'secondary' && !props.disabled,
+        'border-gray-300 hover:border-foreground': props.variant === 'secondary' && !props.disabled,
         // disabled
         'border-gray-300 bg-gray-200 text-gray-600 cursor-not-allowed': props.disabled,
         // icon

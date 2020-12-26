@@ -59,7 +59,7 @@ describe('Avatar', () => {
     });
 
     expect(wrapper.classes('bg-red-500')).toBe(true);
-    expect(wrapper.classes('text-red-100')).toBe(true);
+    expect(wrapper.classes('text-red-50')).toBe(true);
   });
 
   it('accepts letter prop', async () => {
