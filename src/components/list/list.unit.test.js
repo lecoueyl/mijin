@@ -8,7 +8,7 @@ describe('List', () => {
     const wrapper = shallowMount(List);
 
     expect(wrapper.element.tagName).toBe('UL');
-    expect(wrapper.classes('clearfix')).toBe(false);
+    expect(wrapper.classes('flow-root')).toBe(false);
     expect(wrapper.classes('list-decimal')).toBe(false);
   });
 
@@ -41,6 +41,6 @@ describe('List', () => {
       },
     });
 
-    expect(wrapper.classes('clearfix')).toBe(true);
+    expect(wrapper.classes('flow-root')).toBe(true);
   });
 });

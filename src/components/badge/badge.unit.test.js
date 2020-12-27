@@ -40,7 +40,7 @@ describe('Badge', () => {
       },
     });
 
-    expect(wrapper.classes('bg-green-100')).toBe(true);
+    expect(wrapper.classes('bg-green-200')).toBe(true);
     expect(wrapper.classes('text-green-900')).toBe(true);
   });
 

@@ -25,22 +25,6 @@ describe('List', () => {
     expect($listItem.classes('px-1')).toBe(false);
   });
 
-  it('receives bordered props from parent List', async () => {
-    const wrapper = mount({
-      template: `
-        <List bordered>
-          <ListItem />
-        </List>`,
-      components: {
-        List,
-        ListItem,
-      },
-    });
-
-    const $listItem = wrapper.findComponent(ListItem);
-    expect($listItem.classes('border-b')).toBe(true);
-  });
-
   it('receives inline props from parent List', async () => {
     const wrapper = mount({
       template: `
