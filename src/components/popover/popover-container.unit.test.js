@@ -8,7 +8,7 @@ describe('PopoverContainer', () => {
     const wrapper = shallowMount(PopoverContainer);
 
     expect(wrapper.element.tagName).toBe('DIV');
-    expect(wrapper.classes('bg-background')).toBe(true);
+    expect(wrapper.classes('bg-white')).toBe(true);
   });
 
   it('renders default slot content', async () => {

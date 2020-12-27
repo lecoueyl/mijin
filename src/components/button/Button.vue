@@ -8,9 +8,9 @@
         // variant
         'text-primary-50 border-primary-500 bg-primary-500 hover:border-primary-600 hover:bg-primary-600 focus:bg-primary-600':
           props.variant === 'primary' && !props.disabled,
-        'border-gray-300 hover:border-foreground': props.variant === 'secondary' && !props.disabled,
+        'border-gray-300 dark:border-gray-600 hover:border-gray-500 dark:hover:border-gray-400': props.variant === 'secondary' && !props.disabled,
         // disabled
-        'border-gray-300 bg-gray-200 text-gray-600 cursor-not-allowed': props.disabled,
+        'border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 cursor-not-allowed': props.disabled,
         // icon
         'inline-flex items-center': $slots.icon || props.icon,
         'flex-row-reverse': props.iconRight,

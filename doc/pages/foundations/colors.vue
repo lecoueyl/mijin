@@ -85,11 +85,6 @@ export default Vue.extend({
   data() {
     return {
       colors: tailwindPreset.theme.colors,
-      shades: {
-        // background: tailwindPreset.theme.extend.colors.background,
-        ...tailwindPreset.theme.colors.gray,
-        // foreground: tailwindPreset.theme.extend.colors.foreground,
-      },
     };
   },
 });

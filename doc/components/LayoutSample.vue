@@ -50,26 +50,26 @@
               class="mb-8"
             >
               <BbTableHead>
-                <BbTableTitle class="bg-background w-3/12">
+                <BbTableTitle class="bg-white dark:bg-gray-900 w-3/12">
                   {{ $t('common.name') }}
                 </BbTableTitle>
 
                 <template v-if="propertyName === 'props'">
-                  <BbTableTitle class="bg-background">
+                  <BbTableTitle class="bg-white dark:bg-gray-900">
                     {{ $t('common.type') }}
                   </BbTableTitle>
 
-                  <BbTableTitle class="bg-background">
+                  <BbTableTitle class="bg-white dark:bg-gray-900">
                     {{ $t('common.default') }}
                   </BbTableTitle>
 
-                  <BbTableTitle class="bg-background">
+                  <BbTableTitle class="bg-white dark:bg-gray-900">
                     {{ $t('common.required') }}
                   </BbTableTitle>
                 </template>
 
                 <template v-else>
-                  <BbTableTitle class="bg-background">
+                  <BbTableTitle class="bg-white dark:bg-gray-900">
                     {{ $t('common.description') }}
                   </BbTableTitle>
                 </template>

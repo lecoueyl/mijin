@@ -62,7 +62,7 @@
         >
           {{ $t('examples.list.1') }}
           <template #summary>
-            <div class="pt-1 text-sm text-gray-700">
+            <div class="pt-1 text-sm text-gray-700 dark:text-gray-400">
               {{ $t('examples.summary') }}
             </div>
           </template>
@@ -77,7 +77,7 @@
         >
           {{ $t('examples.list.2') }}
           <template #summary>
-            <div class="pt-1 text-sm text-gray-700">
+            <div class="pt-1 text-sm text-gray-700 dark:text-gray-400">
               {{ $t('examples.summary') }}
             </div>
           </template>

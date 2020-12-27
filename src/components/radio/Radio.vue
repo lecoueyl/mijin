@@ -1,7 +1,9 @@
 <template>
   <label
     class="inline-block cursor-pointer"
-    :class="{ 'rounded border border-gray-300 p-2 hover:border-primary-500 focus:outline-none focus:border-primary-500 transition-colors duration-150 ease-in-out': bordered }"
+    :class="{
+      'rounded border border-gray-300 dark:border-gray-700 p-2 hover:border-primary-500 focus:outline-none transition-colors duration-150 ease-in-out': bordered
+    }"
     :aria-checked="checked ? 'true' : 'false'"
     :aria-disabled="disabled ? 'true' : null"
     :tabindex="0"
@@ -26,10 +28,10 @@
           {
             'hover:border-primary-500': !disabled,
             'bg-primary-500 border-primary-500': checked && !disabled,
-            'bg-background border-gray-600': !checked && !disabled,
+            'bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700': !checked && !disabled,
             // disabled
-            'bg-gray-500 border-gray-600': checked && disabled,
-            'bg-gray-200 border-gray-300': !checked && disabled,
+            'bg-gray-500 border-gray-600 dark:border-gray-400': checked && disabled,
+            'bg-gray-200 border-gray-300 dark:border-gray-700': !checked && disabled,
           }
         ]"
       >
