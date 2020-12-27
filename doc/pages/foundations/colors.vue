@@ -22,21 +22,13 @@
       :size="3"
       class="pt-8 pb-8"
     >
-      {{ $t('sections.foundations.colors.shades') }}
+      {{ $t('sections.foundations.colors.gray') }}
     </BbHeadline>
-
-    <div class="bg-background p-3 rounded-full border-gray-200">
-      background
-    </div>
 
     <SampleColor
       name="gray"
       :color="colors.gray"
     />
-
-    <div class="bg-foreground text-background p-3 rounded-full border border-foreground">
-      foreground
-    </div>
 
     <BbHeadline
       id="contrast"
@@ -47,11 +39,11 @@
       {{ $t('sections.foundations.colors.contrast') }}
     </BbHeadline>
 
-    <div class="bg-white text-black p-3 rounded-t-lg border border-foreground">
+    <div class="bg-white text-black p-3 rounded-t-lg border-t border-r border-l border-gray-100">
       white
     </div>
 
-    <div class="bg-black text-white p-3 rounded-b-lg border border-foreground">
+    <div class="bg-black text-white p-3 rounded-b-lg border-r border-b border-l border-gray-100">
       black
     </div>
 

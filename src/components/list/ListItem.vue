@@ -1,7 +1,7 @@
 <template>
   <li
     :class="[
-      listProps && listProps.inline ? 'float-left first:pl-0 last:pr-0' : 'list-item first:pt-0 last:pb-0',
+      listProps && listProps.inline ? 'float-left' : 'list-item',
       {
         // gutter
         'py-1':listProps && !listProps.inline && listProps.gutter === 'base',

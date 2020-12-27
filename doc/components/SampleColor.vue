@@ -5,12 +5,12 @@
       :key="variation"
       class="p-3"
       :class="[
+        parseInt(variation, 10) < 500 ? 'text-gray-900' : 'text-gray-50',
         `bg-${name}-${variation}`,
         {
           'rounded-t-lg': index === 0,
           'rounded-b-lg': index === Object.keys(color).length - 1,
         },
-        textColor(variation),
       ]"
     >
       {{ name }}-{{ variation }}
@@ -31,15 +31,6 @@ export default Vue.extend({
     name: {
       required: true,
       type: String,
-    },
-  },
-
-  methods: {
-    textColor(variation: string) {
-      if (parseInt(variation, 10) < 500) {
-        return this.name === 'gray' ? 'text-foreground' : 'text-black';
-      }
-      return this.name === 'gray' ? 'text-background' : 'text-white';
     },
   },
 });

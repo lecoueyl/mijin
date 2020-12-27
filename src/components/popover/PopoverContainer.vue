@@ -2,7 +2,7 @@
   <Component
     :is="props.tag"
     :ref="data.ref"
-    class="bg-white dark:bg-gray-900 shadow-lg rounded-md border border-gray-300 dark:border-gray-800"
+    class="bg-white dark:bg-gray-900 shadow-lg rounded-md border border-gray-200 dark:border-gray-800"
     :class="[
       data.class,
       data.staticClass,

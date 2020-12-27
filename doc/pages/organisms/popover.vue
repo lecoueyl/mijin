@@ -109,7 +109,7 @@
 
                 <BbDivider class="my-2" />
 
-                <p class="px-4 py-2 text-gray-600 text-sm">
+                <p class="px-4 py-2 text-gray-600 dark:text-gray-400 text-sm">
                   {{ $t('sections.organisms.popover.lastEdit') }}
                   <br>
                   {{ $t('sections.organisms.popover.today') }}
