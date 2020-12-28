@@ -2,7 +2,9 @@
   <label
     class="inline-block cursor-pointer"
     :class="{
-      'rounded border border-gray-300 dark:border-gray-700 p-2 hover:border-primary-500 focus:outline-none transition-colors duration-150 ease-in-out': bordered
+      'rounded border border-gray-300 dark:border-gray-700 p-2 hover:border-primary-500 dark:hover:border-primary-500': bordered,
+      'focus:outline-none transition-colors duration-150 ease-in-out': bordered,
+      'border-primary-500 dark:border-primary-500': checked && !disabled,
     }"
     :aria-checked="checked ? 'true' : 'false'"
     :aria-disabled="disabled ? 'true' : null"

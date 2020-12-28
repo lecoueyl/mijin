@@ -5,15 +5,16 @@
     class="flex rounded-md p-2"
     :class="[
       {
-        'border border-foreground': !props.filled && !props.variant,
-        'text-green-500 border border-green-500': !props.filled && props.variant === 'success',
-        'text-red-500 border border-red-500': !props.filled && props.variant === 'error',
-        'text-orange-500 border border-orange-500': !props.filled && props.variant === 'warning',
+        'border': !props.filled,
+        'text-blue-500 border-blue-500': !props.filled && !props.variant,
+        'text-green-500 border-green-500': !props.filled && props.variant === 'success',
+        'text-red-500 border-red-500': !props.filled && props.variant === 'danger',
+        'text-orange-500 border-orange-500': !props.filled && props.variant === 'warning',
         // filled
-        'bg-background': props.filled && !props.variant,
-        'text-white bg-green-500': props.filled && props.variant === 'success',
-        'text-white bg-red-500': props.filled && props.variant === 'error',
-        'text-orange-800 bg-orange-200': props.filled && props.variant === 'warning',
+        'bg-blue-500 text-blue-50': props.filled && !props.variant,
+        'bg-green-500 text-green-50': props.filled && props.variant === 'success',
+        'bg-red-500 text-red-50': props.filled && props.variant === 'danger',
+        'bg-orange-500 text-orange-50': props.filled && props.variant === 'warning',
       },
       data.class,
       data.staticClass,
@@ -40,7 +41,7 @@
         <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" />
         <path d="M16 10L10.5 15L8 12.7273" />
       </template>
-      <template v-if="props.variant === 'error'">
+      <template v-if="props.variant === 'danger'">
         <path d="M7.86 2H16.14L22 7.86V16.14L16.14 22H7.86L2 16.14V7.86L7.86 2Z" />
         <path d="M9 9L15 15" />
         <path d="M15 9L9 15" />
@@ -80,8 +81,8 @@ export default {
       type: String,
       validator: (value) => [
         null,
+        'danger',
         'success',
-        'error',
         'warning',
       ].includes(value),
     },

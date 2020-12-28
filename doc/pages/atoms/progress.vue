@@ -16,13 +16,19 @@
     >
       <BbProgress
         :percentage="20"
-        color="red-500"
+        color="danger"
       />
 
       <BbProgress
         class="mt-4"
         :percentage="40"
-        color="orange-500"
+        color="warning"
+      />
+
+      <BbProgress
+        class="mt-4"
+        :percentage="100"
+        color="success"
       />
     </Sample>
 
@@ -66,12 +72,18 @@ export default Vue.extend({
         default: ['<BbProgress :percentage="50" />'],
         color: [`<BbProgress
   :percentage="20"
-  color="red-500"
+  color="danger"
 />
 
 <BbProgress
   :percentage="40"
-  color="orange-500"
+  color="warning"
+/>
+
+<BbProgress
+  class="mt-4"
+  :percentage="100"
+  color="success"
 />`],
         circle: [`<BbProgress
   :percentage="75"

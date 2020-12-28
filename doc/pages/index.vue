@@ -18,7 +18,7 @@
 
     <highlightjs
       language="bash"
-      class="p-4 my-4 rounded-lg bg-blue-900"
+      class="p-4 my-4 rounded-lg bg-gray-800"
       code="npm install tailwindcss/zephyr"
     />
 
@@ -27,32 +27,22 @@
       :size="4"
       class="pb-4"
     >
-      Import CSS
+      Import the tailwindcss preset
     </BbHeadline>
 
     <p>
-      Import CSS style in your main style file
-    </p>
-
-    <highlightjs
-      language="scss"
-      class="p-4 my-4 rounded-lg bg-blue-900"
-      code="@import '../../../src/main';"
-    />
-
-    <p>
-      Import tailwind configuration in your `tailwind.config.js`
+      Import tailwind preset in your `tailwind.config.js`
     </p>
     <highlightjs
       language="javascript"
-      class="p-4 rounded-lg bg-blue-900"
-      code="import tailwindConf from 'zephyr/tailwind.config';
+      class="p-4 rounded-lg bg-gray-800"
+      code="const blueberry = require('./src/tailwind-preset');
 
-tailwindConf.theme.extend.fontFamily = {
-  // add your custom configuration here
-};
-
-module.exports = tailwindConf;"
+module.exports = {
+  presets: [
+    blueberry,
+  ],
+};"
     />
   </div>
 </template>

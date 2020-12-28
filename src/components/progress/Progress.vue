@@ -2,45 +2,69 @@
   <Component :is="tag">
     <div
       v-if="variant === 'bar'"
-      class="rounded-lg bg-gray-200 overflow-hidden"
+      class="rounded-lg bg-gray-200 dark:bg-gray-700 overflow-hidden"
     >
       <div
         class="h-2 rounded-lg"
-        :class="`bg-${color}`"
+        :class="{
+          'bg-primary-500': color === 'primary',
+          'bg-green-500': color === 'success',
+          'bg-red-500': color === 'danger',
+          'bg-orange-500': color === 'warning',
+        }"
         :style="{
           width: `${percentage}%`,
         }"
       />
     </div>
 
-    <div
+    <svg
       v-if="variant === 'circle'"
-      :class="`text-${color}`"
+      class="transform -rotate-90"
+      viewBox="0 0 100 100"
     >
-      <svg
-        class="transform -rotate-90"
-        viewBox="0 0 100 100"
-      >
-        <circle
-          :style="{ strokeDasharray: `${circleProgress} 252` }"
-          stroke="currentColor"
-          stroke-linejoin="round"
-          stroke-linecap="round"
-          stroke-width="8"
-          fill="none"
-          cx="50"
-          cy="50"
-          r="40"
-        />
-      </svg>
-    </div>
+      <circle
+        class="text-gray-200 dark:text-gray-700"
+        stroke="currentColor"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-width="8"
+        fill="none"
+        cx="50"
+        cy="50"
+        r="40"
+      />
+      <circle
+        :class="{
+          'text-primary-500': color === 'primary',
+          'text-green-500': color === 'success',
+          'text-red-500': color === 'danger',
+          'text-orange-500': color === 'warning',
+        }"
+        :style="{ strokeDasharray: `${circleProgress} 252` }"
+        stroke="currentColor"
+        stroke-linejoin="round"
+        stroke-linecap="round"
+        stroke-width="8"
+        fill="none"
+        cx="50"
+        cy="50"
+        r="40"
+      />
+    </svg>
 
     <template v-if="variant === 'score'">
       <div
         v-for="index in scoreLength"
         :key="index"
         class="rounded-sm h-2 w-3 inline-block mr-1 last:mr-0"
-        :class="color && isScoreActive(index) ? `bg-${color}` : 'bg-gray-200'"
+        :class="{
+          'bg-gray-200 dark:bg-gray-700': !isScoreActive(index),
+          'bg-primary-500': isScoreActive(index) && color === 'primary',
+          'bg-green-500': isScoreActive(index) && color === 'success',
+          'bg-red-500': isScoreActive(index) && color === 'danger',
+          'bg-orange-500': isScoreActive(index) && color === 'warning',
+        }"
       />
     </template>
   </Component>
@@ -52,8 +76,14 @@ export default {
 
   props: {
     color: {
-      default: 'primary-500',
+      default: 'primary',
       type: String,
+      validator: (value) => [
+        'primary',
+        'danger',
+        'success',
+        'warning',
+      ].includes(value),
     },
 
     percentage: {

@@ -17,7 +17,7 @@
       :snippet="samples.variant"
     >
       <BbNote
-        v-for="variant in ['success', 'error', 'warning']"
+        v-for="variant in ['success', 'danger', 'warning']"
         :key="variant"
         :variant="variant"
         class="mb-8 last:mb-0"
@@ -31,7 +31,7 @@
       :snippet="samples.filled"
     >
       <BbNote
-        v-for="variant in [null, 'success', 'error', 'warning']"
+        v-for="variant in [null, 'success', 'danger', 'warning']"
         :key="`filled-${variant}`"
         :variant="variant"
         class="mb-8 last:mb-0"
@@ -63,8 +63,8 @@ export default Vue.extend({
   success
 </BbNote>
 
-<BbNote variant="error>
-  error
+<BbNote variant="danger>
+  danger
 </BbNote>
 
 <BbNote variant="warning>
@@ -85,9 +85,9 @@ export default Vue.extend({
 
 <BbNote
   filled
-  variant="error"
+  variant="danger"
 >
-  error
+  danger
 </BbNote>
 
 <BbNote

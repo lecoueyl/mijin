@@ -21,10 +21,6 @@ module.exports = {
       yellow: colors.amber,
     },
     extend: {
-      boxShadow: {
-        'border-b-gray-300': 'inset 0 -1px 0 0 theme("colors.gray.300")',
-        'border-b-gray-600': 'inset 0 -1px 0 0 theme("colors.gray.600")',
-      },
       inset: {
         '1/2': '50%',
         full: '100%',
