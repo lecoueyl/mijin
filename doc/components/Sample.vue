@@ -10,15 +10,15 @@
     </BbHeadline>
 
     <div
-      class="p-4 bg-gray-100 dark:bg-gray-800"
-      :class="snippet.length > 0 ? 'rounded-t-lg' : 'rounded-lg'"
+      class="p-4 border-t border-r border-l border-gray-100 dark:border-gray-800"
+      :class="snippet.length > 0 ? 'rounded-t-lg' : 'rounded-lg border-b'"
     >
       <slot />
     </div>
 
     <div
       v-if="snippet.length > 0"
-      class="bg-blue-900 rounded-b-lg overflow-y-hidden relative"
+      class="bg-gray-800 rounded-b-lg overflow-y-hidden relative"
       :class="{ 'transition-all duration-300 ease-in-out': mounted }"
       :style="{ maxHeight: codeSnippetMaxHeight + 'px' }"
     >
@@ -54,10 +54,10 @@
       <div
         v-if="isSnippetCodeOverflow"
         ref="expandButton"
-        class="absolute bottom-0 p-2 text-center w-full bg-gradient-to-t from-blue-900"
+        class="absolute bottom-0 p-2 text-center w-full bg-gradient-to-t from-gray-800"
       >
         <button
-          class="bg-blue-800 text-blue-200 rounded-full px-2 py-1 text-sm leading-tight focus:outline-none"
+          class="bg-gray-700 text-gray-100 rounded-full px-2 py-1 text-sm leading-tight focus:outline-none"
           @click="toggleCollapse()"
         >
           Expand

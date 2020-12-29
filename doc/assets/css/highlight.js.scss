@@ -1,5 +1,5 @@
 .hljs {
-  @apply block text-blue-100 text-sm whitespace-pre-wrap font-mono leading-snug;
+  @apply block text-gray-100 text-sm whitespace-pre-wrap font-mono leading-snug;
 }
 
 .hljs-comment,
@@ -10,7 +10,7 @@
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-addition {
-  @apply text-purple-400;
+  @apply text-teal-400;
 }
 
 .hljs-number,
@@ -27,7 +27,7 @@
 .hljs-name,
 .hljs-selector-id,
 .hljs-selector-class {
-  @apply text-teal-400;
+  @apply text-primary-400;
 }
 
 .hljs-attribute,
