@@ -1,5 +1,5 @@
 <template>
-  <div class="md:flex md:h-screen">
+  <div class="md:flex md:h-screen md:container mx-auto">
     <LayoutNavigation class="md:overflow-y-scroll" />
 
     <div class="md:flex-1 md:overflow-y-scroll">

@@ -1,6 +1,6 @@
 <template>
-  <aside class="w-full md:max-w-xs bg-gray-50 dark:bg-gray-900">
-    <div class="flex items-center p-4 md:p-10 fixed md:static top-0 w-full z-50 bg-gray-50 dark:bg-gray-900">
+  <aside class="w-full md:w-64 bg-white dark:bg-gray-900">
+    <div class="flex items-center p-4 md:py-10 fixed md:static top-0 w-full z-50 bg-white dark:bg-gray-900">
       <button
         class="text-gray-900 dark:text-gray-50 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 py-2 pl-2 pr-2 md:pr-4 rounded-full inline-flex items-center
           transition-colors duration-200 ease-in-out font-medium focus:outline-none focus:ring-2 focus:ring-gray-500"
@@ -29,7 +29,7 @@
     </div>
 
     <nav
-      class="pt-24 md:pt-6 md:pb-6 fixed md:static top-0 w-full md:block bg-gray-50 dark:bg-gray-900 p-4 md:p-10 z-40 h-full md:h-auto overflow-y-scroll md:overflow-y-visible"
+      class="fixed md:static top-0 w-full md:block bg-white dark:bg-gray-900 pt-24 p-4 md:py-10 z-40 h-full md:h-auto overflow-y-scroll md:overflow-y-visible"
       :class="isOpen ? 'block': 'hidden'"
     >
       <section
