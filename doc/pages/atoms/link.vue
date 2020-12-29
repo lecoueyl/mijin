@@ -77,39 +77,39 @@ export default Vue.extend({
     return {
       samples: {
         default: [`<BbLink hred="#">
-  {{ $t('examples.link') }}
+  ${this.$t('examples.link')}
 </BbLink>`],
         external: [`<BbLink
   href="#"
   external
 >
-  {{ $t('examples.link') }}
+  ${this.$t('examples.link')}
 </BbLink>`],
         color: [`<BbLink
   color="gray-700"
   color-hover="primary-500"
 >
-  {{ $t('examples.link') }}
+  ${this.$t('examples.link')}
 </BbLink>
 
 <BbLink
   color="red-500"
   color-hover="red-600"
 >
-  {{ $t('examples.link') }}
+  ${this.$t('examples.link')}
 </BbLink>
 `],
         tag: [`<BbLink
   tag="nuxt-link"
   to="/"
 >
-  {{ $t('examples.link') }}
+  ${this.$t('examples.link')}
 </BbLink>`],
         underline: [`<BbLink
   underline
   href="#""
 >
-  {{ $t('examples.link') }}
+  ${this.$t('examples.link')}
 </BbLink>`],
       },
     };
