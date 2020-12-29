@@ -1,8 +1,10 @@
 module.exports = {
   common: {
+    collapse: 'Collapse',
     default: 'Default',
     description: 'Description',
     events: 'Events',
+    expand: 'Expand',
     methods: 'Methods',
     name: 'Name',
     properties: 'Properties',

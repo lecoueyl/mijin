@@ -20,7 +20,7 @@
       v-if="snippet.length > 0"
       class="bg-gray-800 rounded-b-lg overflow-y-hidden relative"
       :class="{ 'transition-all duration-300 ease-in-out': mounted }"
-      :style="{ maxHeight: codeSnippetMaxHeight + 'px' }"
+      :style="[ isSnippetCodeOverflow ? { maxHeight: codeSnippetMaxHeight + 'px' } : {} ]"
     >
       <div
         ref="sample"
@@ -60,7 +60,12 @@
           class="bg-gray-700 text-gray-100 rounded-full px-2 py-1 text-sm leading-tight focus:outline-none"
           @click="toggleCollapse()"
         >
-          Expand
+          <template v-if="collapsed">
+            {{ $t('common.expand') }}
+          </template>
+          <template v-else>
+            {{ $t('common.collapse') }}
+          </template>
         </button>
       </div>
     </div>
@@ -112,18 +117,17 @@ export default Vue.extend({
   },
 
   mounted() {
-    this.setSnippetContentSize();
+    this.setSnippetContentHeight();
     this.resizeSnippetContent();
     setTimeout(() => { this.mounted = true; }, 100);
   },
 
   methods: {
-    setSnippetContentSize() {
+    setSnippetContentHeight() {
       if (!this.$refs.dummyCode || !this.$refs.snippet) return;
 
-      const codeSnippetHeight = (this.$refs.dummyCode as HTMLInputElement).offsetHeight;
-      this.codeSnippetMaxHeight = codeSnippetHeight;
-      this.isSnippetCodeOverflow = (this.$refs.snippet as HTMLInputElement).offsetHeight > codeSnippetHeight;
+      this.codeSnippetMaxHeight = (this.$refs.dummyCode as HTMLInputElement).offsetHeight;
+      this.isSnippetCodeOverflow = (this.$refs.snippet as HTMLInputElement).offsetHeight > this.codeSnippetMaxHeight;
     },
 
     toggleCollapse() {
