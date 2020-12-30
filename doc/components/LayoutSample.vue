@@ -133,6 +133,7 @@
           <a
             :href="`#${anchor.id}`"
             class="transition-colors duration-200 ease-in-out text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-50"
+            :class="{'text-primary-500 dark:text-primary-500': anchor.id === currentAnchor}"
           >
             {{ anchor.name }}
           </a>
@@ -160,9 +161,13 @@ export default Vue.extend({
 
   data() {
     const anchors = [];
+    const anchorObserver = null;
+    const currentAnchor = null;
 
     return {
       anchors,
+      anchorObserver,
+      currentAnchor,
     };
   },
 
@@ -196,7 +201,6 @@ export default Vue.extend({
         ['events', 'methods', 'slots'].forEach((property) => {
           if (this.$te(`${i18nKey}.${property}`)) {
             properties[component] = { [property]: this.$t(`${i18nKey}.${property}`), ...properties[component] };
-            // properties[component] = { [property]: this.$t(`${i18nKey}.${property}`) };
           }
         });
       });
@@ -206,10 +210,36 @@ export default Vue.extend({
   },
 
   mounted() {
-    document.querySelectorAll('h2').forEach((element) => this.anchors.push({
-      id: element.id,
-      name: element?.textContent?.trim() || '',
-    }));
+    this.setAnchorObserver();
+    this.setAnchors();
+  },
+
+  beforeDestroy() {
+    this.anchorObserver.disconnect();
+  },
+
+  methods: {
+    setAnchors() {
+      document.querySelectorAll('h2').forEach((element) => {
+        this.anchors.push({
+          id: element.id,
+          name: element?.textContent?.trim() || '',
+        });
+
+        this.anchorObserver.observe(element);
+      });
+    },
+
+    setAnchorObserver() {
+      this.anchorObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) this.currentAnchor = entry.target.id;
+        });
+      }, {
+        root: document.body,
+        threshold: 1,
+      });
+    },
   },
 });
 </script>
