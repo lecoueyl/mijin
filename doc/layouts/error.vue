@@ -5,7 +5,17 @@
     </h1>
 
     <p class="text-xl text-wash-900">
-      Page not found
+      {{ $t('error.notFound') }}
     </p>
   </main>
 </template>
+
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
+  head() {
+    return { title: this.$t('error.title') };
+  },
+});
+</script>

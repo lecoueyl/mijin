@@ -10,7 +10,7 @@
     </BbHeadline>
 
     <div
-      class="p-4 border-t border-r border-l border-gray-100 dark:border-gray-800"
+      class="p-4 sm:p-8 border-t border-r border-l border-gray-100 dark:border-gray-800"
       :class="snippet.length > 0 ? 'rounded-t-lg' : 'rounded-lg border-b'"
     >
       <slot />

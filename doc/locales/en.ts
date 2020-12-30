@@ -16,9 +16,8 @@ module.exports = {
   },
 
   error: {
-    title: 'Not found',
+    title: 'Page not found',
     notFound: 'Oh, could not find what you are looking for.',
-    occurred: 'Oups, an error occurred.',
   },
 
   props: {
