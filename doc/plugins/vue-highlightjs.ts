@@ -1,4 +1,7 @@
 import Vue from 'vue';
-import hljs from 'highlight.js';
+
+const hljs = require('highlight.js/lib/core');
+hljs.registerLanguage('javascript', require('highlight.js/lib/languages/javascript'));
+hljs.registerLanguage('html', require('highlight.js/lib/languages/xml'));
 
 Vue.use(hljs.vuePlugin);

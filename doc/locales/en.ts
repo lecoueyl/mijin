@@ -28,6 +28,7 @@ module.exports = {
     default: 'Default',
     disabled: 'Disabled',
     dismissible: 'Dismissible',
+    divided: 'Divided',
     expanded: 'Expanded',
     external: 'External',
     filled: 'Filled',
@@ -62,6 +63,15 @@ module.exports = {
   },
 
   sections: {
+    general: {
+      setup: {
+        title: 'Setup',
+      },
+      settings: {
+        title: 'Settings',
+      },
+    },
+
     foundations: {
       title: 'Foundations',
 

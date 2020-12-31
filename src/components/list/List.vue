@@ -2,8 +2,9 @@
   <Component
     :is="tag"
     :class="{
-      'divide-x flow-root': inline,
-      'divide-y divide-y-4': !inline,
+      'flow-root': inline,
+      'divide-x': inline && divided,
+      'divide-y': !inline && divided,
       'list-decimal list-inside': tag === 'ol',
     }"
     class="divide-gray-300 dark:divide-gray-600"
@@ -17,7 +18,7 @@ export default {
   name: 'UiList',
 
   props: {
-    bordered: {
+    divided: {
       default: false,
       type: Boolean,
     },

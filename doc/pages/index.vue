@@ -17,7 +17,6 @@
     </BbHeadline>
 
     <highlightjs
-      language="bash"
       class="p-4 my-4 rounded-lg bg-gray-800"
       code="npm install tailwindcss/zephyr"
     />

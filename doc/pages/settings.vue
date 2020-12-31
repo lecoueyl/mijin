@@ -1,0 +1,11 @@
+<template>
+  <div>
+    <BbHeadline
+      :level="2"
+      :size="3"
+      class="pb-8"
+    >
+      Nuxt
+    </BbHeadline>
+  </div>
+</template>

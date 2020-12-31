@@ -10,7 +10,7 @@
     <div class="relative">
       <span
         v-if="$slots.icon"
-        class="w-5 h-5 text-gray-500 absolute my-auto ml-2 inset-y-0 left-0"
+        class="flex items-center w-5 h-5 text-gray-500 absolute my-auto ml-2 inset-y-0 left-0"
         :class="[{
           'mr-1': $slots.default && !props.iconRight,
           'ml-1': $slots.default && props.iconRight,

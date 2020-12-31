@@ -70,7 +70,8 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
-    publicPath: '/assets/',
+    analyze: true,
     extractCSS: true,
+    publicPath: '/assets/',
   },
 };

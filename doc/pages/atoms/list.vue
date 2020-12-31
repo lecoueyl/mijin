@@ -21,10 +21,10 @@
     </Sample>
 
     <Sample
-      :title="$t('props.bordered')"
-      :snippet="samples.bordered"
+      :title="$t('props.divided')"
+      :snippet="samples.divided"
     >
-      <BbList bordered>
+      <BbList divided>
         <BbListItem>
           {{ $t('examples.list.1') }}
         </BbListItem>
@@ -110,8 +110,8 @@ export default Vue.extend({
   </BbListItem>
 </BbList>`,
         ],
-        bordered: [
-          `<BbList bordered>
+        divided: [
+          `<BbList divided>
   <BbListItem>
     ${this.$t('examples.list.1')}
   </BbListItem>
