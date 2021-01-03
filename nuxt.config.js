@@ -1,4 +1,4 @@
-import i18n from './doc/locales';
+import i18n from './doc/locales/index.ts';
 
 export default {
   srcDir: 'doc',

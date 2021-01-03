@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'UiIcon',
+  name: 'MijiIcon',
 
   props: {
     name: {

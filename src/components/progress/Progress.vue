@@ -72,7 +72,7 @@
 
 <script>
 export default {
-  name: 'UiProgress',
+  name: 'MijiProgress',
 
   props: {
     color: {

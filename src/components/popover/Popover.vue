@@ -57,7 +57,7 @@
 import ClickOutside from '../../directives/clickOutside';
 
 export default {
-  name: 'UiPopover',
+  name: 'MijiPopover',
 
   directives: {
     ClickOutside,

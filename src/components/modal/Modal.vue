@@ -40,7 +40,7 @@
 
 <script>
 export default {
-  name: 'UiModal',
+  name: 'MijiModal',
 
   props: {
     size: {

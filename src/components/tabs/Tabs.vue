@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'UiTabs',
+  name: 'MijiTabs',
 
   props: {
     tag: {

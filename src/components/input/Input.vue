@@ -80,7 +80,7 @@
 
 <script>
 export default {
-  name: 'UiInput',
+  name: 'MijiInput',
 
   props: {
     disabled: {

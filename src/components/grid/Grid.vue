@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: 'UiGrid',
+  name: 'MijiGrid',
 
   props: {
     cols: {

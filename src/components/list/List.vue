@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'UiList',
+  name: 'MijiList',
 
   props: {
     divided: {

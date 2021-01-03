@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'UiListItem',
+  name: 'MijiListItem',
 
   computed: {
     listProps() {
@@ -26,7 +26,7 @@ export default {
   },
 
   created() {
-    if (this.$parent.$options.name !== 'UiList' && process.env.NODE_ENV !== 'test') {
+    if (this.$parent.$options.name !== 'MijiList' && process.env.NODE_ENV !== 'test') {
       this.$destroy();
       throw new Error('ListItem must be wrap with List');
     }

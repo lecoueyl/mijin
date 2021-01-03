@@ -37,7 +37,7 @@
 
 <script>
 export default {
-  name: 'UiTextarea',
+  name: 'MijiTextarea',
 
   props: {
     disabled: {

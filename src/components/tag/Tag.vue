@@ -7,9 +7,9 @@
       [
         {
           // color
-          'bg-gray-300 text-gray-900': props.variant === 'fill' && props.color === 'gray',
-          'bg-primary-200 text-primary-900': props.variant === 'fill' && props.color === 'primary',
-          'bg-green-200 text-green-900': props.variant === 'fill' && props.color === 'green',
+          'bg-gray-300 text-gray-900': props.color === 'gray',
+          'bg-primary-200 text-primary-900': props.color === 'primary',
+          'bg-green-200 text-green-900': props.color === 'green',
           // size
           'text-sm px-2 py-1 leading-none': props.size === 'sm',
           'px-3 py-2 leading-none': props.size === 'base',
@@ -53,7 +53,7 @@
 
 <script>
 export default {
-  name: 'UiTag',
+  name: 'MijiTag',
 
   props: {
     color: {

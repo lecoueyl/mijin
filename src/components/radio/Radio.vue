@@ -59,7 +59,7 @@
 
 <script>
 export default {
-  name: 'UiRadio',
+  name: 'MijiRadio',
 
   model: {
     prop: 'options',

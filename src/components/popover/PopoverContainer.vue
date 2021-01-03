@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'UiPopoverContainer',
+  name: 'MijiPopoverContainer',
 
   props: {
     tag: {

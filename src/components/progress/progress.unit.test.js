@@ -34,7 +34,7 @@ describe('Progress', () => {
   it('accepts color prop', async () => {
     const wrapper = shallowMount(Progress, {
       propsData: {
-        color: 'red-500',
+        color: 'danger',
       },
     });
 

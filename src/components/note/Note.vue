@@ -63,7 +63,7 @@
 
 <script>
 export default {
-  name: 'UiNote',
+  name: 'MijiNote',
 
   props: {
     filled: {

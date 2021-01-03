@@ -9,7 +9,7 @@ describe('Tabs', () => {
 
     expect(wrapper.element.tagName).toBe('UL');
     expect(wrapper.classes('flex')).toBe(true);
-    expect(wrapper.classes('shadow-border-b')).toBe(true);
+    expect(wrapper.classes('border-b')).toBe(true);
   });
 
   it('renders default slot content', async () => {

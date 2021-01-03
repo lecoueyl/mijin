@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  name: 'UiHeadline',
+  name: 'MijiHeadline',
 
   props: {
     level: {

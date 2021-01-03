@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'UiSkeleton',
+  name: 'MijiSkeleton',
 
   props: {
     rounded: {

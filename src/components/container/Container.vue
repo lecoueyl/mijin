@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'UiContainer',
+  name: 'MijiContainer',
 
   props: {
     tag: {

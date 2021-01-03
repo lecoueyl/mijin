@@ -32,7 +32,7 @@
 
 <script>
 export default {
-  name: 'UiBadge',
+  name: 'MijiBadge',
 
   props: {
     color: {

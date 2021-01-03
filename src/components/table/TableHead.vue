@@ -8,10 +8,10 @@
 
 <script>
 export default {
-  name: 'UiTableHead',
+  name: 'MijiTableHead',
 
   created() {
-    if (this.$parent.$options.name !== 'UiTable' && process.env.NODE_ENV !== 'test') {
+    if (this.$parent.$options.name !== 'MijiTable' && process.env.NODE_ENV !== 'test') {
       this.$destroy();
       throw new Error('TableHead must be wrap with Table');
     }

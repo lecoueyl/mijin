@@ -54,7 +54,7 @@
 
 <script>
 export default {
-  name: 'UiCollapse',
+  name: 'MijiCollapse',
 
   props: {
     disabled: {

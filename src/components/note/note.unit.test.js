@@ -9,7 +9,7 @@ describe('Note', () => {
 
     expect(wrapper.element.tagName).toBe('DIV');
     expect(wrapper.classes('border')).toBe(true);
-    expect(wrapper.classes('bg-background')).toBe(false);
+    expect(wrapper.classes('bg-blue-500')).toBe(false);
   });
 
   it('renders default slot content', async () => {
@@ -35,7 +35,7 @@ describe('Note', () => {
 
   test.each([
     ['success', 'text-green-500'],
-    ['error', 'text-red-500'],
+    ['danger', 'text-red-500'],
     ['warning', 'text-orange-500'],
   ])(
     'with prop variant %p render class %p',
@@ -57,7 +57,8 @@ describe('Note', () => {
       },
     });
 
-    expect(wrapper.classes('bg-background')).toBe(true);
+    expect(wrapper.classes('border')).toBe(false);
+    expect(wrapper.classes('bg-blue-500')).toBe(true);
   });
 
   it('should emit events', async () => {

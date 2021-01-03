@@ -36,13 +36,12 @@ describe('Tag', () => {
   it('accepts color prop', async () => {
     const wrapper = shallowMount(Tag, {
       propsData: {
-        bgColor: 'red-100',
-        textColor: 'red-500',
+        color: 'green',
       },
     });
 
-    expect(wrapper.classes('bg-red-100')).toBe(true);
-    expect(wrapper.classes('text-red-500')).toBe(true);
+    expect(wrapper.classes('bg-green-200')).toBe(true);
+    expect(wrapper.classes('text-green-900')).toBe(true);
   });
 
   it('accepts removable prop', async () => {

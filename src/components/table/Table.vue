@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'UiTable',
+  name: 'MijiTable',
 
   props: {
     density: {

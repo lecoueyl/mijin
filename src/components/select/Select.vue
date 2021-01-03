@@ -64,7 +64,7 @@
 
 <script>
 export default {
-  name: 'UiSelect',
+  name: 'MijiSelect',
 
   props: {
     disabled: {

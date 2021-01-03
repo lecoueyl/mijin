@@ -47,7 +47,7 @@
 
 <script>
 export default {
-  name: 'UiLink',
+  name: 'MijiLink',
 
   props: {
     color: {
