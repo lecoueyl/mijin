@@ -6,11 +6,14 @@
     :class="
       [
         {
-          [`text-${props.textColor}`]: props.textColor,
+          // color
+          'bg-gray-300 text-gray-900': props.variant === 'fill' && props.color === 'gray',
+          'bg-primary-200 text-primary-900': props.variant === 'fill' && props.color === 'primary',
+          'bg-green-200 text-green-900': props.variant === 'fill' && props.color === 'green',
+          // size
           'text-sm px-2 py-1 leading-none': props.size === 'sm',
           'px-3 py-2 leading-none': props.size === 'base',
         },
-        `bg-${props.bgColor}`,
         data.class,
         data.staticClass,
       ]"
@@ -53,8 +56,8 @@ export default {
   name: 'UiTag',
 
   props: {
-    bgColor: {
-      default: 'gray-200',
+    color: {
+      default: 'gray',
       type: String,
     },
 
@@ -74,11 +77,6 @@ export default {
 
     tag: {
       default: 'span',
-      type: String,
-    },
-
-    textColor: {
-      default: null,
       type: String,
     },
   },

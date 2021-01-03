@@ -104,7 +104,7 @@
               :to="localePath(`${sectionName}-${menuName}`)"
               class="text-gray-900 dark:text-gray-100 hover:text-primary-500 dark:hover:text-primary-500 transition-colors duration-200 ease-in-out px-4 py-1 block rounded
                 focus:outline-none focus:ring-2 focus:ring-primary-500"
-              active-class="text-primary-700 dark:text-primary-50 bg-primary-200 dark:bg-primary-600 hover:text-primary-700 dark:hover:text-primary-50"
+              active-class="text-primary-700 dark:text-primary-700 bg-primary-200 hover:text-primary-700 dark:hover:text-primary-700"
               @click.native="isOpen = false"
             >
               {{ $t(`sections.${sectionName}.${menuName}.title`) }}

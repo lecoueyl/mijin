@@ -52,7 +52,7 @@ module.exports = {
           '@apply antialiased': {},
         },
         'html.dark': {
-          color: config('theme.colors.gray.50'),
+          color: config('theme.colors.white'),
           backgroundColor: config('theme.colors.gray.900'),
         },
       });
