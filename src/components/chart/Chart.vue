@@ -14,7 +14,7 @@ import { Bar } from 'vue-chartjs';
 import { tooltips } from './utils';
 
 export default {
-  name: 'BlueberryVueChartBar',
+  name: 'UiChartBar',
 
   extends: Bar,
 

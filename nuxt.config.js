@@ -34,7 +34,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    '~/plugins/blueberry',
+    '~/plugins/mijin',
     '~/plugins/vue-form',
     '~/plugins/vue-highlightjs',
   ],

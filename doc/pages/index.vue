@@ -35,11 +35,11 @@
     <highlightjs
       language="javascript"
       class="p-4 rounded-lg bg-gray-800"
-      code="const blueberry = require('./src/tailwind-preset');
+      code="const mijin = require('./src/tailwind-preset');
 
 module.exports = {
   presets: [
-    blueberry,
+    mijin,
   ],
 };"
     />
