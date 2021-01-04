@@ -7,7 +7,7 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbSelect
+      <MjSelect
         v-model="model.default"
         class="sm:w-1/2"
       >
@@ -18,14 +18,14 @@
         >
           {{ option }}
         </option>
-      </BbSelect>
+      </MjSelect>
     </Sample>
 
     <Sample
       :title="$t('props.label')"
       :snippet="samples.label"
     >
-      <BbSelect
+      <MjSelect
         v-model="model.label"
         class="sm:w-1/2"
       >
@@ -40,14 +40,14 @@
         <template #label>
           {{ $t('examples.select.label') }}
         </template>
-      </BbSelect>
+      </MjSelect>
     </Sample>
 
     <Sample
       :title="$t('props.placeholder')"
       :snippet="samples.placeholder"
     >
-      <BbSelect
+      <MjSelect
         v-model="model.placeholder"
         :placeholder="$t('examples.select.placeholder')"
         class="sm:w-1/2"
@@ -59,14 +59,14 @@
         >
           {{ option }}
         </option>
-      </BbSelect>
+      </MjSelect>
     </Sample>
 
     <Sample
       :title="$t('props.disabled')"
       :snippet="samples.disabled"
     >
-      <BbSelect
+      <MjSelect
         v-model="model.disabled"
         :placeholder="$t('examples.input.placeholder')"
         class="sm:w-1/2"
@@ -79,7 +79,7 @@
         >
           {{ option }}
         </option>
-      </BbSelect>
+      </MjSelect>
     </Sample>
   </LayoutSample>
 </template>
@@ -98,11 +98,11 @@ export default Vue.extend({
       },
       samples: {
         default: [
-          `<BbSelect class="w-1/2">
+          `<MjSelect class="w-1/2">
   <option value="${this.$t('examples.list.1')}">${this.$t('examples.list.1')}</option>
   <option value="${this.$t('examples.list.2')}">${this.$t('examples.list.2')}</option>
   <option value="${this.$t('examples.list.3')}">${this.$t('examples.list.3')}</option>
-</BbSelect>`,
+</MjSelect>`,
         ],
       },
     };

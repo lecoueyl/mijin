@@ -10,22 +10,22 @@
         autocomplete="off"
         class="lg:w-1/2 lg:mx-auto grid gap-4"
       >
-        <BbInput
+        <MjInput
           v-model="model.signUp.username"
           :placeholder="$t('sections.organisms.form.usernamePlaceholder')"
         >
           {{ $t('sections.organisms.form.username') }}
-        </BbInput>
+        </MjInput>
 
-        <BbInput
+        <MjInput
           v-model="model.signUp.email"
           type="email"
           placeholder="email@address.com"
         >
           {{ $t('sections.organisms.form.email') }}
-        </BbInput>
+        </MjInput>
 
-        <BbSelect
+        <MjSelect
           v-model="model.signUp.department"
           :placeholder="$t('sections.organisms.form.selectDepartment')"
         >
@@ -40,9 +40,9 @@
           <template #label>
             {{ $t('sections.organisms.form.department') }}
           </template>
-        </BbSelect>
+        </MjSelect>
 
-        <BbCheckbox
+        <MjCheckbox
           v-model="model.signUp.terms"
           name="checkbox"
         >
@@ -50,30 +50,30 @@
             path="sections.organisms.form.agreedToTerms"
           >
             <template #terms>
-              <BbLink
+              <MjLink
                 href="#"
                 color="foreground"
                 underline
               >
                 {{ $t('sections.organisms.form.termsOfUse') }}
-              </BbLink>
+              </MjLink>
             </template>
 
             <template #privacy>
-              <BbLink
+              <MjLink
                 href="#"
                 color="foreground"
                 underline
               >
                 {{ $t('sections.organisms.form.privacy') }}
-              </BbLink>
+              </MjLink>
             </template>
           </i18n>
-        </BbCheckbox>
+        </MjCheckbox>
 
-        <BbButton class="mt-4">
+        <MjButton class="mt-4">
           {{ $t('sections.organisms.form.signIn') }}
-        </BbButton>
+        </MjButton>
 
         <i18n
           path="sections.organisms.form.alreadyAUser"
@@ -81,9 +81,9 @@
           class="text-center"
         >
           <template #login>
-            <BbLink href="#">
+            <MjLink href="#">
               {{ $t('sections.organisms.form.login') }}
-            </BbLink>
+            </MjLink>
           </template>
         </i18n>
       </form>
@@ -94,28 +94,28 @@
       :snippet="samples.login"
     >
       <form class="lg:w-1/2 lg:mx-auto grid gap-4">
-        <BbInput v-model="model.signIn.username">
+        <MjInput v-model="model.signIn.username">
           {{ $t('sections.organisms.form.username') }}
-        </BbInput>
+        </MjInput>
 
-        <BbInput
+        <MjInput
           v-model="model.signIn.password"
           type="password"
         >
           {{ $t('sections.organisms.form.password') }}
-        </BbInput>
+        </MjInput>
 
         <div class="flex items-center mt-2">
           <div class="flex-1">
-            <BbLink href="#">
+            <MjLink href="#">
               {{ $t('sections.organisms.form.forgotPassword') }}
-            </BbLink>
+            </MjLink>
           </div>
 
           <div>
-            <BbButton class="ml-4">
+            <MjButton class="ml-4">
               {{ $t('sections.organisms.form.signIn') }}
-            </BbButton>
+            </MjButton>
           </div>
         </div>
       </form>
@@ -131,7 +131,7 @@
         @submit.prevent=""
       >
         <validate>
-          <BbInput
+          <MjInput
             v-model="model.vueForm.email"
             name="email"
             type="email"
@@ -152,11 +152,11 @@
                 </div>
               </field-messages>
             </template>
-          </BbInput>
+          </MjInput>
         </validate>
 
         <validate>
-          <BbInput
+          <MjInput
             v-model="model.vueForm.password"
             name="password"
             type="password"
@@ -178,15 +178,15 @@
                 </div>
               </field-messages>
             </template>
-          </BbInput>
+          </MjInput>
         </validate>
 
-        <BbButton
+        <MjButton
           class="mt-2"
           type="submit"
         >
           {{ $t('sections.organisms.form.signUp') }}
-        </BbButton>
+        </MjButton>
       </vue-form>
     </Sample>
   </LayoutSample>
@@ -218,28 +218,28 @@ export default Vue.extend({
       samples: {
         login: [
           `<form class="lg:w-1/2 lg:mx-auto grid gap-4">
-  <BbInput v-model="model.signIn.username">
+  <MjInput v-model="model.signIn.username">
     ${this.$t('sections.organisms.form.username')}
-  </BbInput>
+  </MjInput>
 
-  <BbInput
+  <MjInput
     v-model="model.signIn.password"
     type="password"
   >
     ${this.$t('sections.organisms.form.password')}
-  </BbInput>
+  </MjInput>
 
   <div class="flex items-center mt-2">
     <div class="flex-1">
-      <BbLink href="#">
+      <MjLink href="#">
         ${this.$t('sections.organisms.form.forgotPassword')}
-      </BbLink>
+      </MjLink>
     </div>
 
     <div>
-      <BbButton class="ml-4">
+      <MjButton class="ml-4">
         ${this.$t('sections.organisms.form.signIn')}
-      </BbButton>
+      </MjButton>
     </div>
   </div>
 </form>`,
@@ -251,7 +251,7 @@ export default Vue.extend({
   @submit.prevent=""
 >
   <validate>
-    <BbInput
+    <MjInput
       v-model="model.vueForm.email"
       name="email"
       type="email"
@@ -272,11 +272,11 @@ export default Vue.extend({
           </div>
         </field-messages>
       </template>
-    </BbInput>
+    </MjInput>
   </validate>
 
   <validate>
-    <BbInput
+    <MjInput
       v-model="model.vueForm.password"
       name="password"
       type="password"
@@ -298,15 +298,15 @@ export default Vue.extend({
           </div>
         </field-messages>
       </template>
-    </BbInput>
+    </MjInput>
   </validate>
 
-  <BbButton
+  <MjButton
     class="mt-2"
     type="submit"
   >
     ${this.$t('sections.organisms.form.signUp')}
-  </BbButton>
+  </MjButton>
 </vue-form>`,
         ],
       },

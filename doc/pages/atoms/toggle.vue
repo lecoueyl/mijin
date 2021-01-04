@@ -7,12 +7,12 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbToggle
+      <MjToggle
         v-model="model.default"
         name="Toggle"
       >
         {{ $t('props.default') }}
-      </BbToggle>
+      </MjToggle>
     </Sample>
 
     <Sample
@@ -20,20 +20,20 @@
       :snippet="samples.disabled"
     >
       <div class="flex">
-        <BbToggle
+        <MjToggle
           v-model="model.false"
           disabled
         >
           {{ $t('props.disabled') }}
-        </BbToggle>
+        </MjToggle>
 
-        <BbToggle
+        <MjToggle
           v-model="model.true"
           disabled
           class="ml-6"
         >
           {{ $t('props.disabled') }}
-        </BbToggle>
+        </MjToggle>
       </div>
     </Sample>
 
@@ -42,7 +42,7 @@
       :snippet="samples.size"
     >
       <div class="flex items-center">
-        <BbToggle
+        <MjToggle
           v-for="size in ['sm', 'base']"
           :key="size"
           v-model="model.size"
@@ -50,7 +50,7 @@
           class="mr-6"
         >
           <span :class="{'text-sm leading-loose' : size === 'sm'}">{{ size }}</span>
-        </BbToggle>
+        </MjToggle>
       </div>
     </Sample>
   </LayoutSample>
@@ -70,38 +70,38 @@ export default Vue.extend({
       },
       samples: {
         default: [
-          `<BbToggle
+          `<MjToggle
   v-model="value"
   name="Toggle"
 >
   Default
-</BbToggle>`,
+</MjToggle>`,
         ],
         disabled: [
-          `<BbToggle
+          `<MjToggle
   v-model="value"
   name="Toggle"
   disabled
 >
   Disabled
-</BbToggle>`,
+</MjToggle>`,
         ],
         size: [
-          `<BbToggle
+          `<MjToggle
   v-model="value"
   name="Toggle"
   size="sms
 >
   sm
-</BbToggle>
+</MjToggle>
 
-<BbToggle
+<MjToggle
   v-model="value"
   name="Toggle"
   size="base
 >
   base
-</BbToggle>`,
+</MjToggle>`,
         ],
       },
     };

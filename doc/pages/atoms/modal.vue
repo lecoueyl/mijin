@@ -7,11 +7,11 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbButton @click="$refs.default.open()">
+      <MjButton @click="$refs.default.open()">
         {{ $t('props.default') }}
-      </BbButton>
+      </MjButton>
 
-      <BbModal ref="default">
+      <MjModal ref="default">
         <div class="sm:flex sm:items-start">
           <div class="mx-auto flex-shrink-0 flex items-center justify-center h-12 w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
             <!-- Heroicon name: exclamation -->
@@ -36,21 +36,21 @@
         </div>
 
         <footer class="pt-8 flex justify-end">
-          <BbButton
+          <MjButton
             variant="secondary"
             @click="$refs.default.close()"
           >
             {{ $t('props.default') }}
-          </BbButton>
+          </MjButton>
 
-          <BbButton
+          <MjButton
             class="ml-2"
             @click="$refs.default.close()"
           >
             {{ $t('props.default') }}
-          </BbButton>
+          </MjButton>
         </footer>
-      </BbModal>
+      </MjModal>
     </Sample>
 
     <Sample
@@ -62,11 +62,11 @@
           :key="size"
           class="inline-block mr-4 last:mr-0"
         >
-          <BbButton @click="$refs[size][0].open()">
+          <MjButton @click="$refs[size][0].open()">
             {{ size }}
-          </BbButton>
+          </MjButton>
 
-          <BbModal
+          <MjModal
             :ref="size"
             :size="size"
           >
@@ -94,21 +94,21 @@
             </div>
 
             <footer class="pt-8 flex justify-end">
-              <BbButton
+              <MjButton
                 variant="secondary"
                 @click="$refs[size][0].close()"
               >
                 {{ $t('props.default') }}
-              </BbButton>
+              </MjButton>
 
-              <BbButton
+              <MjButton
                 class="ml-2"
                 @click="$refs[size][0].close()"
               >
                 {{ $t('props.default') }}
-              </BbButton>
+              </MjButton>
             </footer>
-          </BbModal>
+          </MjModal>
         </div>
       </template>
     </Sample>
@@ -123,48 +123,48 @@ export default Vue.extend({
     return {
       samples: {
         default: [
-          `<BbNote>
+          `<MjNote>
   ${this.$t('props.default')}
-</BbNote>`,
+</MjNote>`,
         ],
         variant: [
-          `<BbNote variant="success>
+          `<MjNote variant="success>
   success
-</BbNote>
+</MjNote>
 
-<BbNote variant="error>
+<MjNote variant="error>
   error
-</BbNote>
+</MjNote>
 
-<BbNote variant="warning>
+<MjNote variant="warning>
   warning
-</BbNote>`,
+</MjNote>`,
         ],
         filled: [
-          `<BbNote filled>
+          `<MjNote filled>
   ${this.$t('props.default')}
-</BbNote>
+</MjNote>
 
-<BbNote
+<MjNote
   filled
   variant="success
 >
   success
-</BbNote>
+</MjNote>
 
-<BbNote
+<MjNote
   filled
   variant="error
 >
   error
-</BbNote>
+</MjNote>
 
-<BbNote
+<MjNote
   filled
   variant="warning
 >
   warning
-</BbNote>`,
+</MjNote>`,
         ],
       },
     };

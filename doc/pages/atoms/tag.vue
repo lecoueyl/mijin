@@ -7,29 +7,29 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbTag>
+      <MjTag>
         {{ $t('props.default') }}
-      </BbTag>
+      </MjTag>
     </Sample>
 
     <Sample
       :title="$t('props.removable')"
       :snippet="samples.removable"
     >
-      <BbTag
+      <MjTag
         v-if="showTag"
         removable
         @remove="removeTag()"
       >
         {{ $t('props.removable') }}
-      </BbTag>
+      </MjTag>
     </Sample>
 
     <Sample
       :title="$t('props.color')"
       :snippet="samples.color"
     >
-      <BbTag
+      <MjTag
         v-for="(color, index) in [
           { bg: 'primary-100', text: 'primary-500'},
           { bg: 'primary-500', text: 'white'},
@@ -40,16 +40,16 @@
         :class="[{ 'ml-2': index !== 0 }]"
       >
         {{ $t('props.color') }}
-      </BbTag>
+      </MjTag>
     </Sample>
 
     <Sample
       :title="$t('props.size')"
       :snippet="samples.size"
     >
-      <BbTag size="sm">
+      <MjTag size="sm">
         {{ $t('props.size') }}
-      </BbTag>
+      </MjTag>
     </Sample>
   </LayoutSample>
 </template>
@@ -62,32 +62,32 @@ export default Vue.extend({
     return {
       showTag: true,
       samples: {
-        default: [`<BbTag hred="#">
+        default: [`<MjTag hred="#">
   ${this.$t('props.tag')}
-</BbTag>`],
-        removable: [`<BbTag
+</MjTag>`],
+        removable: [`<MjTag
   removable
   @remove="remove()"
 >
   ${this.$t('props.removable')}
-</BbTag>`],
-        color: [`<BbTag
+</MjTag>`],
+        color: [`<MjTag
   bg-color="primary-100"
   text-color="primary-500"
 >
   ${this.$t('props.color')}
-</BbTag>
+</MjTag>
 
-<BbTag
+<MjTag
   bg-color="primary-500"
   text-color="white"
 >
   ${this.$t('props.color')}
-</BbTag>
+</MjTag>
 `],
-        size: [`<BbTag size="sm">
+        size: [`<MjTag size="sm">
   ${this.$t('props.size')}
-</BbTag>`],
+</MjTag>`],
       },
     };
   },

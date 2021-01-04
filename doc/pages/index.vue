@@ -1,33 +1,33 @@
 <template>
   <div>
-    <BbHeadline
+    <MjHeadline
       :level="2"
       :size="3"
       class="pb-8"
     >
       Nuxt
-    </BbHeadline>
+    </MjHeadline>
 
-    <BbHeadline
+    <MjHeadline
       :level="3"
       :size="4"
       class="pb-4"
     >
       Install package
-    </BbHeadline>
+    </MjHeadline>
 
     <highlightjs
       class="p-4 my-4 rounded-lg bg-gray-800"
       code="npm install tailwindcss/zephyr"
     />
 
-    <BbHeadline
+    <MjHeadline
       :level="3"
       :size="4"
       class="pb-4"
     >
       Import the tailwindcss preset
-    </BbHeadline>
+    </MjHeadline>
 
     <p>
       Import tailwind preset in your `tailwind.config.js`

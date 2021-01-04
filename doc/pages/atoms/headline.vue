@@ -7,28 +7,28 @@
       :title="$t('props.size')"
       :snippet="samples.size"
     >
-      <BbHeadline
+      <MjHeadline
         v-for="index in 4"
         :key="index"
         :size="index"
         :class="{'pt-4': index !== 1 }"
       >
         Almost before we knew it, we had left the ground.
-      </BbHeadline>
+      </MjHeadline>
     </Sample>
 
     <Sample
       :title="$t('props.level')"
       :snippet="samples.level"
     >
-      <BbHeadline
+      <MjHeadline
         v-for="index in 4"
         :key="index"
         :level="index"
         :class="{ 'pt-4': index !== 1 }"
       >
         H{{ index }}
-      </BbHeadline>
+      </MjHeadline>
     </Sample>
   </LayoutSample>
 </template>
@@ -41,38 +41,38 @@ export default Vue.extend({
     return {
       samples: {
         size: [
-          `<BbHeadline size="1">
+          `<MjHeadline size="1">
   Size 1
-</BbButton>
+</MjButton>
 
-<BbHeadline size="2">
+<MjHeadline size="2">
   Size 2
-</BbButton>
+</MjButton>
 
-<BbHeadline size="3">
+<MjHeadline size="3">
   Size 3
-</BbButton>
+</MjButton>
 
-<BbHeadline size="4">
+<MjHeadline size="4">
   Size 4
-</BbButton>`,
+</MjButton>`,
         ],
         level: [
-          `<BbHeadline level="1">
+          `<MjHeadline level="1">
   H1
-</BbButton>
+</MjButton>
 
-<BbHeadline level="2">
+<MjHeadline level="2">
   H2
-</BbButton>
+</MjButton>
 
-<BbHeadline level="3">
+<MjHeadline level="3">
   H3
-</BbButton>
+</MjButton>
 
-<BbHeadline level="4">
+<MjHeadline level="4">
   H4
-</BbButton>`,
+</MjButton>`,
         ],
       },
     };

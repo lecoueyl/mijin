@@ -7,47 +7,47 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbPopover align="left">
-        <BbButton>
+      <MjPopover align="left">
+        <MjButton>
           {{ $t('props.default') }}
-        </BbButton>
+        </MjButton>
 
         <template #content>
-          <BbPopoverContainer class="p-2 w-48">
-            <BbPopoverItem
+          <MjPopoverContainer class="p-2 w-48">
+            <MjPopoverItem
               v-for="(item, key) in $t('examples.list')"
               :key="key"
             >
               {{ item }}
-            </BbPopoverItem>
-          </BbPopoverContainer>
+            </MjPopoverItem>
+          </MjPopoverContainer>
         </template>
-      </BbPopover>
+      </MjPopover>
     </Sample>
 
     <Sample
       :title="$t('props.dismissible')"
       :snippet="samples.dismissible"
     >
-      <BbPopover
+      <MjPopover
         align="left"
         dismissible
       >
-        <BbButton>
+        <MjButton>
           {{ $t('props.dismissible') }}
-        </BbButton>
+        </MjButton>
 
         <template #content>
-          <BbPopoverContainer class="p-2 w-48">
-            <BbPopoverItem
+          <MjPopoverContainer class="p-2 w-48">
+            <MjPopoverItem
               v-for="(item, key) in $t('examples.list')"
               :key="key"
             >
               {{ item }}
-            </BbPopoverItem>
-          </BbPopoverContainer>
+            </MjPopoverItem>
+          </MjPopoverContainer>
         </template>
-      </BbPopover>
+      </MjPopover>
     </Sample>
 
     <Sample
@@ -59,24 +59,24 @@
           v-for="position in ['top', 'right', 'bottom', 'left']"
           :key="position"
         >
-          <BbPopover
+          <MjPopover
             :position="position"
           >
-            <BbButton>
+            <MjButton>
               {{ position }}
-            </BbButton>
+            </MjButton>
 
             <template #content>
-              <BbPopoverContainer class="p-2 w-48">
-                <BbPopoverItem
+              <MjPopoverContainer class="p-2 w-48">
+                <MjPopoverItem
                   v-for="(item, key) in $t('examples.list')"
                   :key="key"
                 >
                   {{ item }}
-                </BbPopoverItem>
-              </BbPopoverContainer>
+                </MjPopoverItem>
+              </MjPopoverContainer>
             </template>
-          </BbPopover>
+          </MjPopover>
         </div>
       </div>
     </Sample>
@@ -139,25 +139,25 @@
           ]"
           :key="`${props.position}-${props.align}`"
         >
-          <BbPopover
+          <MjPopover
             :align="props.align"
             :position="props.position"
           >
-            <BbButton>
+            <MjButton>
               {{ props.position }} / {{ props.align }}
-            </BbButton>
+            </MjButton>
 
             <template #content>
-              <BbPopoverContainer class="p-2 w-48">
-                <BbPopoverItem
+              <MjPopoverContainer class="p-2 w-48">
+                <MjPopoverItem
                   v-for="(item, key) in $t('examples.list')"
                   :key="key"
                 >
                   {{ item }}
-                </BbPopoverItem>
-              </BbPopoverContainer>
+                </MjPopoverItem>
+              </MjPopoverContainer>
             </template>
-          </BbPopover>
+          </MjPopover>
         </div>
       </div>
     </Sample>
@@ -166,39 +166,39 @@
       :title="$t('props.icon')"
       :snippet="samples.icon"
     >
-      <BbPopover align="left">
-        <BbButton>
+      <MjPopover align="left">
+        <MjButton>
           {{ $t('props.default') }}
-        </BbButton>
+        </MjButton>
 
         <template #content>
-          <BbPopoverContainer class="p-2 w-48">
-            <BbPopoverItem>
+          <MjPopoverContainer class="p-2 w-48">
+            <MjPopoverItem>
               <template #icon>
-                <bb-icon name="share" />
+                <MjIcon name="share" />
               </template>
 
               {{ $t('examples.list.1') }}
-            </BbPopoverItem>
+            </MjPopoverItem>
 
-            <BbPopoverItem>
+            <MjPopoverItem>
               <template #icon>
-                <bb-icon name="calendar" />
+                <MjIcon name="calendar" />
               </template>
 
               {{ $t('examples.list.2') }}
-            </BbPopoverItem>
+            </MjPopoverItem>
 
-            <BbPopoverItem>
+            <MjPopoverItem>
               <template #icon>
-                <bb-icon name="copy" />
+                <MjIcon name="copy" />
               </template>
 
               {{ $t('examples.list.3') }}
-            </BbPopoverItem>
-          </BbPopoverContainer>
+            </MjPopoverItem>
+          </MjPopoverContainer>
         </template>
-      </BbPopover>
+      </MjPopover>
     </Sample>
   </LayoutSample>
 </template>
@@ -211,100 +211,100 @@ export default Vue.extend({
     return {
       samples: {
         default: [
-          `<BbPopover align="left">
-  <BbButton>
+          `<MjPopover align="left">
+  <MjButton>
     ${this.$t('props.default')}
-  </BbButton>
+  </MjButton>
 
   <template #content>
-    <BbPopoverContainer class="p-2 w-48">
-      <BbPopoverItem>${this.$t('examples.list.1')}</BbPopoverItem>
-      <BbPopoverItem>${this.$t('examples.list.2')}</BbPopoverItem>
-      <BbPopoverItem>${this.$t('examples.list.3')}</BbPopoverItem>
-    </BbPopoverContainer>
+    <MjPopoverContainer class="p-2 w-48">
+      <MjPopoverItem>${this.$t('examples.list.1')}</MjPopoverItem>
+      <MjPopoverItem>${this.$t('examples.list.2')}</MjPopoverItem>
+      <MjPopoverItem>${this.$t('examples.list.3')}</MjPopoverItem>
+    </MjPopoverContainer>
   </template>
-</BbPopover>`,
+</MjPopover>`,
         ],
         dismissible: [
-          `<BbPopover
+          `<MjPopover
   align="left"
   dismissible
 >
-  <BbButton>
+  <MjButton>
     ${this.$t('props.dismissible')}
-  </BbButton>
+  </MjButton>
 
   <template #content>
-    <BbPopoverContainer class="p-2 w-48">
-      <BbPopoverItem>${this.$t('examples.list.1')}</BbPopoverItem>
-      <BbPopoverItem>${this.$t('examples.list.2')}</BbPopoverItem>
-      <BbPopoverItem>${this.$t('examples.list.3')}</BbPopoverItem>
-    </BbPopoverContainer>
+    <MjPopoverContainer class="p-2 w-48">
+      <MjPopoverItem>${this.$t('examples.list.1')}</MjPopoverItem>
+      <MjPopoverItem>${this.$t('examples.list.2')}</MjPopoverItem>
+      <MjPopoverItem>${this.$t('examples.list.3')}</MjPopoverItem>
+    </MjPopoverContainer>
   </template>
-</BbPopover>`,
+</MjPopover>`,
         ],
         position: [
-          `<BbPopover position="top">
-  <BbButton>
+          `<MjPopover position="top">
+  <MjButton>
     ${this.$t('props.position')}
-  </BbButton>
+  </MjButton>
 
   <template #content>
-    <BbPopoverContainer class="p-2 w-48">
-      <BbPopoverItem>${this.$t('examples.list.1')}</BbPopoverItem>
-      <BbPopoverItem>${this.$t('examples.list.2')}</BbPopoverItem>
-      <BbPopoverItem>${this.$t('examples.list.3')}</BbPopoverItem>
-    </BbPopoverContainer>
+    <MjPopoverContainer class="p-2 w-48">
+      <MjPopoverItem>${this.$t('examples.list.1')}</MjPopoverItem>
+      <MjPopoverItem>${this.$t('examples.list.2')}</MjPopoverItem>
+      <MjPopoverItem>${this.$t('examples.list.3')}</MjPopoverItem>
+    </MjPopoverContainer>
   </template>
-</BbPopover>`,
+</MjPopover>`,
         ],
         align: [
-          `<BbPopover
+          `<MjPopover
   align="left"
   position="bottom"
 >
-  <BbButton>
+  <MjButton>
     ${this.$t('props.align')}
-  </BbButton>
+  </MjButton>
 
   <template #content>
-    <BbPopoverContainer class="p-2 w-48">
-      <BbPopoverItem>${this.$t('examples.list.1')}</BbPopoverItem>
-      <BbPopoverItem>${this.$t('examples.list.2')}</BbPopoverItem>
-      <BbPopoverItem>${this.$t('examples.list.3')}</BbPopoverItem>
-    </BbPopoverContainer>
+    <MjPopoverContainer class="p-2 w-48">
+      <MjPopoverItem>${this.$t('examples.list.1')}</MjPopoverItem>
+      <MjPopoverItem>${this.$t('examples.list.2')}</MjPopoverItem>
+      <MjPopoverItem>${this.$t('examples.list.3')}</MjPopoverItem>
+    </MjPopoverContainer>
   </template>
-</BbPopover>`,
+</MjPopover>`,
         ],
         icon: [
-          `<BbPopover position="top">
-  <BbButton>
+          `<MjPopover position="top">
+  <MjButton>
     ${this.$t('props.icon')}
-  </BbButton>
+  </MjButton>
 
   <template #content>
-    <BbPopoverContainer class="p-2 w-48">
-      <BbPopoverItem>
+    <MjPopoverContainer class="p-2 w-48">
+      <MjPopoverItem>
         <template #icon>
-          <bb-icon name="share" />
+          <MjIcon name="share" />
         </template>
         ${this.$t('examples.list.1')}
-      </BbPopoverItem>
-      <BbPopoverItem>
+      </MjPopoverItem>
+      <MjPopoverItem>
         <template #icon>
-          <bb-icon name="calendar" />
+          <MjIcon name="calendar" />
         </template>
         ${this.$t('examples.list.2')}
-      </BbPopoverItem>
-      <BbPopoverItem>
+      </MjPopoverItem>
+      <MjPopoverItem>
         <template #icon>
-          <bb-icon name="copy" />
+          <MjIcon name="copy" />
         </template>
         ${this.$t('examples.list.3')}
-      </BbPopoverItem>
-    </BbPopoverContainer>
+      </MjPopoverItem>
+    </MjPopoverContainer>
   </template>
-</BbPopover>`,
+</MjPopover>`,
         ],
       },
     };

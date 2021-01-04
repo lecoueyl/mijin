@@ -6,20 +6,20 @@
       :title="$t('props.container')"
       :snippet="samples.container"
     >
-      <BbContainer>
+      <MjContainer>
         <div class="py-10 bg-primary-500 rounded-md" />
-      </BbContainer>
+      </MjContainer>
     </Sample>
 
     <Sample
       :title="$t('props.grid')"
       :snippet="samples.grid"
     >
-      <BbGrid cols="3" gap="4">
+      <MjGrid cols="3" gap="4">
         <div class="py-10 bg-primary-500 rounded-md" />
         <div class="py-10 bg-primary-500 rounded-md" />
         <div class="py-10 bg-primary-500 rounded-md" />
-      </BbGrid>
+      </MjGrid>
     </Sample>
   </LayoutSample>
 </template>
@@ -32,16 +32,16 @@ export default Vue.extend({
     return {
       samples: {
         container: [
-          `<BbContainer>
+          `<MjContainer>
   <div class="py-10 bg-gray-300 rounded-md" />
-</BbContainer>`,
+</MjContainer>`,
         ],
         grid: [
-          `<BbGrid cols="3" gap="4">
+          `<MjGrid cols="3" gap="4">
   <div class="py-10 bg-gray-300 rounded-md" />
   <div class="py-10 bg-gray-300 rounded-md" />
   <div class="py-10 bg-gray-300 rounded-md" />
-</BbGrid>`,
+</MjGrid>`,
         ],
       },
     };

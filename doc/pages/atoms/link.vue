@@ -7,21 +7,21 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbLink href="#">
+      <MjLink href="#">
         {{ $t('examples.link') }}
-      </BbLink>
+      </MjLink>
     </Sample>
 
     <Sample
       :title="$t('props.external')"
       :snippet="samples.external"
     >
-      <BbLink
+      <MjLink
         external
         href="#"
       >
         {{ $t('examples.link') }}
-      </BbLink>
+      </MjLink>
     </Sample>
 
     <Sample
@@ -33,13 +33,13 @@
         :key="index"
         :class="[{ 'mt-6': index !== 0 }]"
       >
-        <BbLink
+        <MjLink
           :color="color[0]"
           :color-hover="color[1]"
           href="#"
         >
           {{ $t('examples.link') }}
-        </BbLink>
+        </MjLink>
       </div>
     </Sample>
 
@@ -47,24 +47,24 @@
       :title="$t('props.tag')"
       :snippet="samples.tag"
     >
-      <BbLink
+      <MjLink
         tag="nuxt-link"
         to="/"
       >
         {{ $t('examples.link') }}
-      </BbLink>
+      </MjLink>
     </Sample>
 
     <Sample
       :title="$t('props.underline')"
       :snippet="samples.underline"
     >
-      <BbLink
+      <MjLink
         href="#"
         underline
       >
         {{ $t('examples.link') }}
-      </BbLink>
+      </MjLink>
     </Sample>
   </LayoutSample>
 </template>
@@ -76,41 +76,41 @@ export default Vue.extend({
   data() {
     return {
       samples: {
-        default: [`<BbLink hred="#">
+        default: [`<MjLink hred="#">
   ${this.$t('examples.link')}
-</BbLink>`],
-        external: [`<BbLink
+</MjLink>`],
+        external: [`<MjLink
   href="#"
   external
 >
   ${this.$t('examples.link')}
-</BbLink>`],
-        color: [`<BbLink
+</MjLink>`],
+        color: [`<MjLink
   color="gray-700"
   color-hover="primary-500"
 >
   ${this.$t('examples.link')}
-</BbLink>
+</MjLink>
 
-<BbLink
+<MjLink
   color="red-500"
   color-hover="red-600"
 >
   ${this.$t('examples.link')}
-</BbLink>
+</MjLink>
 `],
-        tag: [`<BbLink
+        tag: [`<MjLink
   tag="nuxt-link"
   to="/"
 >
   ${this.$t('examples.link')}
-</BbLink>`],
-        underline: [`<BbLink
+</MjLink>`],
+        underline: [`<MjLink
   underline
   href="#""
 >
   ${this.$t('examples.link')}
-</BbLink>`],
+</MjLink>`],
       },
     };
   },

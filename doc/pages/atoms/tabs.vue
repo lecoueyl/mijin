@@ -7,32 +7,32 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbTabs>
-        <BbTabsItem
+      <MjTabs>
+        <MjTabsItem
           v-for="(item, key, index) in $t('examples.list')"
           :key="key"
           :selected="demo.default === index"
           @click="demo.default = index"
         >
           {{ item }}
-        </BbTabsItem>
-      </BbTabs>
+        </MjTabsItem>
+      </MjTabs>
     </Sample>
 
     <Sample
       :title="$t('props.disabled')"
       :snippet="samples.disabled"
     >
-      <BbTabs>
-        <BbTabsItem
+      <MjTabs>
+        <MjTabsItem
           v-for="(item, key, index) in $t('examples.list')"
           :key="key"
           :selected="demo.disabled === index"
           :disabled="key !== 1"
         >
           {{ item }}
-        </BbTabsItem>
-      </BbTabs>
+        </MjTabsItem>
+      </MjTabs>
     </Sample>
   </LayoutSample>
 </template>
@@ -49,30 +49,30 @@ export default Vue.extend({
       },
       samples: {
         default: [
-          `<BbTabs>
-  <BbTabsItem selected>
+          `<MjTabs>
+  <MjTabsItem selected>
     ${this.$t('examples.list.1')}
-  </BbTabsItem>
-  <BbTabsItem>
+  </MjTabsItem>
+  <MjTabsItem>
     ${this.$t('examples.list.2')}
-  </BbTabsItem>
-  <BbTabsItem>
+  </MjTabsItem>
+  <MjTabsItem>
     ${this.$t('examples.list.3')}
-  </BbTabsItem>
-</BbTabs>`,
+  </MjTabsItem>
+</MjTabs>`,
         ],
         disabled: [
-          `<BbTabs>
-  <BbTabsItem selected>
+          `<MjTabs>
+  <MjTabsItem selected>
     ${this.$t('examples.list.1')}
-  </BbTabsItem>
-  <BbTabsItem disabled>
+  </MjTabsItem>
+  <MjTabsItem disabled>
     ${this.$t('examples.list.2')}
-  </BbTabsItem>
-  <BbTabsItem disabled>
+  </MjTabsItem>
+  <MjTabsItem disabled>
     ${this.$t('examples.list.3')}
-  </BbTabsItem>
-</BbTabs>`,
+  </MjTabsItem>
+</MjTabs>`,
         ],
       },
     };

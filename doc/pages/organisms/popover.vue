@@ -11,112 +11,112 @@
           class="flex"
           role="group"
         >
-          <BbButton group="first">
+          <MjButton group="first">
             {{ $t('sections.organisms.popover.edit') }}
-          </BbButton>
+          </MjButton>
 
-          <BbPopover
+          <MjPopover
             ref="popover"
             align="right"
           >
-            <BbButton group="last">
+            <MjButton group="last">
               <template #icon>
-                <bb-icon name="chevronDown" />
+                <MjIcon name="chevronDown" />
               </template>
-            </BbButton>
+            </MjButton>
 
             <template #content>
-              <BbPopoverContainer class="py-2 w-64">
-                <BbPopoverItem
+              <MjPopoverContainer class="py-2 w-64">
+                <MjPopoverItem
                   class="mx-1"
                   @click.prevent="toggleSize()"
                 >
                   {{ $t('sections.organisms.popover.smallText') }}
                   <template #action>
-                    <BbToggle
+                    <MjToggle
                       v-model="model.size"
                       size="sm"
                     />
                   </template>
-                </BbPopoverItem>
+                </MjPopoverItem>
 
-                <BbPopoverItem
+                <MjPopoverItem
                   class="mx-1"
                   @click.prevent="model.width = !model.width"
                 >
                   {{ $t('sections.organisms.popover.fullWidth') }}
                   <template #action>
-                    <BbToggle
+                    <MjToggle
                       v-model="model.width"
                       size="sm"
                     />
                   </template>
-                </BbPopoverItem>
+                </MjPopoverItem>
 
-                <BbDivider class="my-2" />
+                <MjDivider class="my-2" />
 
-                <BbPopoverItem
+                <MjPopoverItem
                   tag="a"
                   href="#app"
                   class="mx-1"
                 >
                   <template #icon>
-                    <bb-icon name="smartphone" />
+                    <MjIcon name="smartphone" />
                   </template>
                   {{ $t('sections.organisms.popover.openApp') }}
-                </BbPopoverItem>
+                </MjPopoverItem>
 
-                <BbPopoverItem class="mx-1">
+                <MjPopoverItem class="mx-1">
                   <template #icon>
-                    <bb-icon name="calendar" />
+                    <MjIcon name="calendar" />
                   </template>
                   {{ $t('sections.organisms.popover.addToCalendar') }}
-                </BbPopoverItem>
+                </MjPopoverItem>
 
-                <BbPopoverItem class="mx-1">
+                <MjPopoverItem class="mx-1">
                   <template #icon>
-                    <bb-icon name="copy" />
+                    <MjIcon name="copy" />
                   </template>
                   {{ $t('sections.organisms.popover.copyLink') }}
-                </BbPopoverItem>
+                </MjPopoverItem>
 
-                <BbPopoverItem class="mx-1">
+                <MjPopoverItem class="mx-1">
                   <template #icon>
-                    <bb-icon name="share" />
+                    <MjIcon name="share" />
                   </template>
                   {{ $t('sections.organisms.popover.share') }}
-                </BbPopoverItem>
+                </MjPopoverItem>
 
-                <BbDivider class="my-2" />
+                <MjDivider class="my-2" />
 
-                <BbPopoverItem class="mx-1">
+                <MjPopoverItem class="mx-1">
                   <template #icon>
-                    <bb-icon name="rotateCcw" />
+                    <MjIcon name="rotateCcw" />
                   </template>
                   {{ $t('sections.organisms.popover.undo') }}
-                </BbPopoverItem>
+                </MjPopoverItem>
 
-                <BbPopoverItem
+                <MjPopoverItem
                   variant="danger"
                   class="mx-1"
                   @click="$refs.popover.close()"
                 >
                   <template #icon>
-                    <bb-icon name="trash" />
+                    <MjIcon name="trash" />
                   </template>
                   {{ $t('sections.organisms.popover.delete') }}
-                </BbPopoverItem>
+                </MjPopoverItem>
 
-                <BbDivider class="my-2" />
+                <MjDivider class="my-2" />
 
                 <p class="px-4 py-2 text-gray-600 dark:text-gray-400 text-sm">
                   {{ $t('sections.organisms.popover.lastEdit') }}
                   <br>
                   {{ $t('sections.organisms.popover.today') }}
                 </p>
-              </BbPopoverContainer>
+              </MjPopoverContainer>
             </template>
-          </BbPopover>
+          </MjPopover>
         </div>
       </div>
     </Sample>
@@ -136,28 +136,28 @@ export default Vue.extend({
       samples: {
         login: [
           `<form class="lg:w-1/2 lg:mx-auto grid gap-4">
-  <BbInput v-model="model.signIn.username">
+  <MjInput v-model="model.signIn.username">
     ${this.$t('sections.organisms.form.username')}
-  </BbInput>
+  </MjInput>
 
-  <BbInput
+  <MjInput
     v-model="model.signIn.password"
     type="password"
   >
     ${this.$t('sections.organisms.form.password')}
-  </BbInput>
+  </MjInput>
 
   <div class="flex items-center mt-2">
     <div class="flex-1">
-      <BbLink href="#">
+      <MjLink href="#">
         ${this.$t('sections.organisms.form.forgotPassword')}
-      </BbLink>
+      </MjLink>
     </div>
 
     <div>
-      <BbButton class="ml-4">
+      <MjButton class="ml-4">
         ${this.$t('sections.organisms.form.signIn')}
-      </BbButton>
+      </MjButton>
     </div>
   </div>
 </form>`,

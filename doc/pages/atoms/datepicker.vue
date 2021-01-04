@@ -7,7 +7,7 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbStatus
+      <MjStatus
         v-for="status in ['disabled', 'danger', 'error', 'valid', 'warning']"
         :key="status"
         :status="status"
@@ -25,7 +25,7 @@ export default Vue.extend({
     return {
       samples: {
         default: [
-          `<BbAvatar
+          `<MjAvatar
   alt="image"
   img="https://..."
 />`],

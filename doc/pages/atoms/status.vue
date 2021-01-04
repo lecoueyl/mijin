@@ -7,7 +7,7 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbStatus
+      <MjStatus
         v-for="status in ['disabled', 'danger', 'error', 'valid', 'warning']"
         :key="status"
         :status="status"
@@ -19,7 +19,7 @@
       :title="$t('props.icon')"
       :snippet="samples.icon"
     >
-      <BbStatus
+      <MjStatus
         v-for="status in ['disabled', 'danger', 'error', 'valid', 'warning']"
         :key="status"
         :status="status"
@@ -38,54 +38,54 @@ export default Vue.extend({
     return {
       samples: {
         image: [
-          `<BbAvatar
+          `<MjAvatar
   alt="image"
   img="https://..."
 />`,
         ],
         letter: [
-          '<BbAvatar letter="BB" />',
+          '<MjAvatar letter="BB" />',
         ],
         size: [
-          `<BbAvatar
+          `<MjAvatar
   size="sm"
   letter="BB"
 />
 
-<BbAvatar
+<MjAvatar
   size="base"
   letter="BB"
 />
 
-<BbAvatar
+<MjAvatar
   size="lg"
   letter="BB"
 />
 
-<BbAvatar
+<MjAvatar
   size="xl"
   letter="BB"
 />`,
         ],
         variant: [
-          `<BbAvatar
+          `<MjAvatar
   alt="image"
   img="https://..."
   variant="squared"
 />`,
         ],
         color: [
-          `<BbAvatar
+          `<MjAvatar
   color="red"
   letter="BB"
 />
 
-<BbAvatar
+<MjAvatar
   color="blue"
   letter="BB"
 />
 
-<BbAvatar
+<MjAvatar
   color="green"
   letter="BB"
 />`,

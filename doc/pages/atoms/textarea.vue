@@ -7,7 +7,7 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbTextarea
+      <MjTextarea
         class="sm:w-1/2"
         :placeholder="$t('examples.input.placeholder')"
       />
@@ -17,19 +17,19 @@
       :title="$t('props.label')"
       :snippet="samples.label"
     >
-      <BbTextarea
+      <MjTextarea
         class="sm:w-1/2"
         :placeholder="$t('examples.input.placeholder')"
       >
         {{ $t('examples.input.label') }}
-      </BbTextarea>
+      </MjTextarea>
     </Sample>
 
     <Sample
       :title="$t('props.disabled')"
       :snippet="samples.disabled"
     >
-      <BbTextarea
+      <MjTextarea
         class="sm:w-1/2"
         :value="$t('examples.input.label')"
         disabled
@@ -40,7 +40,7 @@
       :title="$t('props.size')"
       :snippet="samples.size"
     >
-      <BbTextarea
+      <MjTextarea
         class="sm:w-1/2"
         :placeholder="$t('examples.input.placeholder')"
         size="sm"
@@ -57,23 +57,23 @@ export default Vue.extend({
     return {
       samples: {
         default: [
-          `<BbTextarea placeholder="${this.$t('examples.input.placeholder')}" />`,
+          `<MjTextarea placeholder="${this.$t('examples.input.placeholder')}" />`,
         ],
         label: [
-          `<BbTextarea placeholder="${this.$t('examples.input.placeholder')}">
+          `<MjTextarea placeholder="${this.$t('examples.input.placeholder')}">
   ${this.$t('examples.input.label')}
-</BbTextarea>`,
+</MjTextarea>`,
         ],
         disabled: [
-          '<BbTextarea disabled />',
+          '<MjTextarea disabled />',
         ],
         size: [
-          `<BbTextarea
+          `<MjTextarea
   placeholder="${this.$t('examples.input.placeholder')}"
   size="sm"
 >
   ${this.$t('examples.input.label')}
-</BbTextarea>`,
+</MjTextarea>`,
         ],
       },
     };

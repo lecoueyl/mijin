@@ -7,126 +7,126 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbTable>
-        <BbTableHead>
-          <BbTableTitle class="bg-white dark:bg-gray-900">
+      <MjTable>
+        <MjTableHead>
+          <MjTableTitle class="bg-white dark:bg-gray-900">
             {{ $t('examples.table.header.1') }}
-          </BbTableTitle>
+          </MjTableTitle>
 
-          <BbTableTitle class="bg-white dark:bg-gray-900">
+          <MjTableTitle class="bg-white dark:bg-gray-900">
             {{ $t('examples.table.header.2') }}
-          </BbTableTitle>
+          </MjTableTitle>
 
-          <BbTableTitle class="bg-white dark:bg-gray-900">
+          <MjTableTitle class="bg-white dark:bg-gray-900">
             {{ $t('examples.table.header.3') }}
-          </BbTableTitle>
-        </BbTableHead>
+          </MjTableTitle>
+        </MjTableHead>
 
-        <BbTableBody>
-          <BbTableRow
+        <MjTableBody>
+          <MjTableRow
             v-for="(item, key) in $t('examples.table.row')"
             :key="key"
           >
-            <BbTableCell>
+            <MjTableCell>
               {{ item[1] }}
-            </BbTableCell>
+            </MjTableCell>
 
-            <BbTableCell>
+            <MjTableCell>
               {{ item[2] }}
-            </BbTableCell>
+            </MjTableCell>
 
-            <BbTableCell text-align="right">
+            <MjTableCell text-align="right">
               {{ item[3] }}
-            </BbTableCell>
-          </BbTableRow>
-        </BbTableBody>
-      </BbTable>
+            </MjTableCell>
+          </MjTableRow>
+        </MjTableBody>
+      </MjTable>
     </Sample>
 
     <Sample
       :title="$t('props.fixed')"
       :snippet="samples.fixed"
     >
-      <BbTable fixed>
-        <BbTableHead>
-          <BbTableTitle class="bg-white dark:bg-gray-900 w-2/12">
+      <MjTable fixed>
+        <MjTableHead>
+          <MjTableTitle class="bg-white dark:bg-gray-900 w-2/12">
             {{ $t('examples.table.header.1') }}
-          </BbTableTitle>
+          </MjTableTitle>
 
-          <BbTableTitle class="bg-white dark:bg-gray-900">
+          <MjTableTitle class="bg-white dark:bg-gray-900">
             {{ $t('examples.table.header.2') }}
-          </BbTableTitle>
+          </MjTableTitle>
 
-          <BbTableTitle
+          <MjTableTitle
             text-align="right"
             class="bg-white dark:bg-gray-900 w-1/12"
           >
             {{ $t('examples.table.header.3') }}
-          </BbTableTitle>
-        </BbTableHead>
+          </MjTableTitle>
+        </MjTableHead>
 
-        <BbTableBody>
-          <BbTableRow
+        <MjTableBody>
+          <MjTableRow
             v-for="(item, key) in $t('examples.table.row')"
             :key="key"
           >
-            <BbTableCell>
+            <MjTableCell>
               {{ item[1] }}
-            </BbTableCell>
+            </MjTableCell>
 
-            <BbTableCell>
+            <MjTableCell>
               {{ item[2] }}
-            </BbTableCell>
+            </MjTableCell>
 
-            <BbTableCell text-align="right">
+            <MjTableCell text-align="right">
               {{ item[3] }}
-            </BbTableCell>
-          </BbTableRow>
-        </BbTableBody>
-      </BbTable>
+            </MjTableCell>
+          </MjTableRow>
+        </MjTableBody>
+      </MjTable>
     </Sample>
 
     <Sample
       :title="$t('props.truncate')"
       :snippet="samples.default"
     >
-      <BbTable fixed>
-        <BbTableHead>
-          <BbTableTitle class="bg-white dark:bg-gray-900 w-2/12">
+      <MjTable fixed>
+        <MjTableHead>
+          <MjTableTitle class="bg-white dark:bg-gray-900 w-2/12">
             {{ $t('examples.table.header.1') }}
-          </BbTableTitle>
+          </MjTableTitle>
 
-          <BbTableTitle class="bg-white dark:bg-gray-900">
+          <MjTableTitle class="bg-white dark:bg-gray-900">
             {{ $t('examples.table.header.2') }}
-          </BbTableTitle>
+          </MjTableTitle>
 
-          <BbTableTitle
+          <MjTableTitle
             text-align="right"
             class="bg-white dark:bg-gray-900 w-1/12"
           >
             {{ $t('examples.table.header.3') }}
-          </BbTableTitle>
-        </BbTableHead>
+          </MjTableTitle>
+        </MjTableHead>
 
-        <BbTableBody>
-          <BbTableRow
+        <MjTableBody>
+          <MjTableRow
             v-for="(item, key) in $t('examples.table.row')"
             :key="key"
           >
-            <BbTableCell>
+            <MjTableCell>
               {{ item[1] }}
-            </BbTableCell>
+            </MjTableCell>
 
-            <BbTableCell truncate>
+            <MjTableCell truncate>
               {{ item[2] }}
-            </BbTableCell>
+            </MjTableCell>
 
-            <BbTableCell text-align="right">
+            <MjTableCell text-align="right">
               {{ item[3] }}
-            </BbTableCell>
-          </BbTableRow>
-        </BbTableBody>
-      </BbTable>
+            </MjTableCell>
+          </MjTableRow>
+        </MjTableBody>
+      </MjTable>
     </Sample>
   </LayoutSample>
 </template>
@@ -139,43 +139,43 @@ export default Vue.extend({
     return {
       samples: {
         default: [
-          `<BbTable>
-  <BbTableHead>
-    <BbTableTitle class="bg-white dark:bg-gray-900">
+          `<MjTable>
+  <MjTableHead>
+    <MjTableTitle class="bg-white dark:bg-gray-900">
       ${this.$t('examples.table.header.1')}
-    </BbTableTitle>
-    <BbTableTitle class="bg-white dark:bg-gray-900">
+    </MjTableTitle>
+    <MjTableTitle class="bg-white dark:bg-gray-900">
       ${this.$t('examples.table.header.2')}
-    </BbTableTitle>
-    <BbTableTitle class="bg-white dark:bg-gray-900">
+    </MjTableTitle>
+    <MjTableTitle class="bg-white dark:bg-gray-900">
       ${this.$t('examples.table.header.3')}
-    </BbTableTitle>
-  </BbTableHead>
+    </MjTableTitle>
+  </MjTableHead>
   <TableBody>
-    <BbTableRow>
-      <BbTableCell>
+    <MjTableRow>
+      <MjTableCell>
         ${this.$t('examples.table.row.1.1')}
-      </BbTableCell>
-      <BbTableCell>
+      </MjTableCell>
+      <MjTableCell>
         ${this.$t('examples.table.row.1.2')}
-      </BbTableCell>
-      <BbTableCell>
+      </MjTableCell>
+      <MjTableCell>
         ${this.$t('examples.table.row.1.3')}
-      </BbTableCell>
-    </BbTableRow>
-    <BbTableRow>
-      <BbTableCell>
+      </MjTableCell>
+    </MjTableRow>
+    <MjTableRow>
+      <MjTableCell>
         ${this.$t('examples.table.row.2.1')}
-      </BbTableCell>
-      <BbTableCell>
+      </MjTableCell>
+      <MjTableCell>
         ${this.$t('examples.table.row.2.2')}
-      </BbTableCell>
-      <BbTableCell>
+      </MjTableCell>
+      <MjTableCell>
         ${this.$t('examples.table.row.2.3')}
-      </BbTableCell>
-    </BbTableRow>
+      </MjTableCell>
+    </MjTableRow>
   </TableBody>
-</BbTable>`,
+</MjTable>`,
         ],
       },
     };

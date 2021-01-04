@@ -7,38 +7,38 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbRadio
+      <MjRadio
         v-model="model.default"
         name="radio"
         :value="$t('examples.list.1')"
       >
         {{ $t('examples.list.1') }}
-      </BbRadio>
+      </MjRadio>
 
-      <BbRadio
+      <MjRadio
         v-model="model.default"
         class="ml-4"
         name="radio"
         :value="$t('examples.list.2')"
       >
         {{ $t('examples.list.2') }}
-      </BbRadio>
+      </MjRadio>
     </Sample>
 
     <Sample
       :title="$t('props.disabled')"
       :snippet="samples.disabled"
     >
-      <BbRadio
+      <MjRadio
         v-model="model.disabled"
         name="disabled"
         disabled
         :value="$t('examples.list.1')"
       >
         {{ $t('examples.list.1') }}
-      </BbRadio>
+      </MjRadio>
 
-      <BbRadio
+      <MjRadio
         v-model="model.disabled"
         class="ml-4"
         name="disabled"
@@ -46,7 +46,7 @@
         :value="$t('examples.list.2')"
       >
         {{ $t('examples.list.2') }}
-      </BbRadio>
+      </MjRadio>
     </Sample>
 
     <Sample
@@ -54,7 +54,7 @@
       :snippet="samples.bordered"
     >
       <div class="grid grid-cols-2 gap-4">
-        <BbRadio
+        <MjRadio
           v-model="model.bordered"
           name="bordered"
           bordered
@@ -66,9 +66,9 @@
               {{ $t('examples.summary') }}
             </div>
           </template>
-        </BbRadio>
+        </MjRadio>
 
-        <BbRadio
+        <MjRadio
           v-model="model.bordered"
           class="ml-4"
           name="bordered"
@@ -81,7 +81,7 @@
               {{ $t('examples.summary') }}
             </div>
           </template>
-        </BbRadio>
+        </MjRadio>
       </div>
     </Sample>
   </LayoutSample>
@@ -100,34 +100,34 @@ export default Vue.extend({
       },
       samples: {
         default: [
-          `<BbRadio
+          `<MjRadio
   v-model="radio"
   name="radio"
   value="${this.$t('examples.list.1')}"
 >
   ${this.$t('examples.list.1')}
-</BbRadio>
+</MjRadio>
 
-<BbRadio
+<MjRadio
   v-model="radio"
   class="ml-4"
   name="radio"
   value="${this.$t('examples.list.2')}"
 >
   ${this.$t('examples.list.2')}
-</BbRadio>`,
+</MjRadio>`,
         ],
         disabled: [
-          `<BbRadio
+          `<MjRadio
   v-model="radio"
   name="radio"
   disabled
   value="${this.$t('examples.list.1')}"
 >
   ${this.$t('examples.list.1')}
-</BbRadio>
+</MjRadio>
 
-<BbRadio
+<MjRadio
   v-model="radio"
   class="ml-4"
   name="radio"
@@ -135,10 +135,10 @@ export default Vue.extend({
   value="${this.$t('examples.list.2')}"
 >
   ${this.$t('examples.list.2')}
-</BbRadio>`,
+</MjRadio>`,
         ],
         bordered: [
-          `<BbRadio
+          `<MjRadio
   v-model="radio"
   name="radio"
   bordered
@@ -150,7 +150,7 @@ export default Vue.extend({
       ${this.$t('examples.summary')}
     </div>
   </template>
-</BbRadio>`,
+</MjRadio>`,
         ],
       },
     };

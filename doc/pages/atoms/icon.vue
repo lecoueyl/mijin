@@ -7,7 +7,7 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbIcon name="user" />
+      <MjIcon name="user" />
     </Sample>
 
     <Sample
@@ -15,7 +15,7 @@
       :snippet="samples.size"
     >
       <div class="flex items-center">
-        <BbIcon
+        <MjIcon
           v-for="(size, index) in ['sm', 'lg']"
           :key="size"
           :size="size"
@@ -29,7 +29,7 @@
       :title="$t('props.variant')"
       :snippet="samples.variant"
     >
-      <BbIcon
+      <MjIcon
         name="play"
         variant="glyph"
       />
@@ -44,20 +44,20 @@ export default Vue.extend({
   data() {
     return {
       samples: {
-        default: ['<BbIcon name="user" />'],
+        default: ['<MjIcon name="user" />'],
         size: [
-          `<BbIcon
+          `<MjIcon
   name="mail"
   size="sm"
 />
 
-<BbIcon
+<MjIcon
   name="mail"
   size="lg"
 />`,
         ],
         variant: [
-          `<BbIcon
+          `<MjIcon
   name="play"
   variant="glyph"
 />`,

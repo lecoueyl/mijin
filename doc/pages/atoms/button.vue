@@ -7,82 +7,82 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbButton>
+      <MjButton>
         {{ $t('props.default') }}
-      </BbButton>
+      </MjButton>
     </Sample>
 
     <Sample
       :title="$t('props.secondary')"
       :snippet="samples.secondary"
     >
-      <BbButton
+      <MjButton
         variant="secondary"
       >
         {{ $t('props.secondary') }}
-      </BbButton>
+      </MjButton>
     </Sample>
 
     <Sample
       :title="$t('props.disabled')"
       :snippet="samples.disabled"
     >
-      <BbButton
+      <MjButton
         disabled
       >
         {{ $t('props.disabled') }}
-      </BbButton>
+      </MjButton>
     </Sample>
 
     <Sample
       :title="$t('props.icon')"
       :snippet="samples.icon"
     >
-      <BbButton>
+      <MjButton>
         <template #icon>
-          <bb-icon name="copy" />
+          <MjIcon name="copy" />
         </template>
         {{ $t('props.icon') }}
-      </BbButton>
+      </MjButton>
 
-      <BbButton icon-right>
+      <MjButton icon-right>
         <template #icon>
-          <bb-icon name="filter" />
+          <MjIcon name="filter" />
         </template>
         {{ $t('props.icon') }}
-      </BbButton>
+      </MjButton>
 
-      <BbButton>
+      <MjButton>
         <template #icon>
-          <bb-icon name="alertCircle" />
+          <MjIcon name="alertCircle" />
         </template>
-      </BbButton>
+      </MjButton>
     </Sample>
 
     <Sample
       :title="$t('props.link')"
       :snippet="samples.link"
     >
-      <BbButton
+      <MjButton
         tag="nuxt-link"
         :to="localePath('/')"
         class="inline-block"
       >
         {{ $t('props.link') }}
-      </BbButton>
+      </MjButton>
     </Sample>
 
     <Sample
       :title="$t('props.size')"
       :snippet="samples.size"
     >
-      <BbButton size="sm">
+      <MjButton size="sm">
         {{ $t('props.size') }}
-      </BbButton>
+      </MjButton>
 
-      <BbButton size="lg">
+      <MjButton size="lg">
         {{ $t('props.size') }}
-      </BbButton>
+      </MjButton>
     </Sample>
 
     <Sample
@@ -93,19 +93,19 @@
         class="flex"
         role="group"
       >
-        <BbButton group="first">
+        <MjButton group="first">
           {{ $t('props.group') }}
-        </BbButton>
+        </MjButton>
 
-        <BbButton group>
+        <MjButton group>
           {{ $t('props.group') }}
-        </BbButton>
+        </MjButton>
 
-        <BbButton group="last">
+        <MjButton group="last">
           <template #icon>
-            <bb-icon name="calendar" />
+            <MjIcon name="calendar" />
           </template>
-        </BbButton>
+        </MjButton>
       </div>
     </Sample>
 
@@ -113,9 +113,9 @@
       :title="$t('props.loading')"
       :snippet="samples.loading"
     >
-      <BbButton loading>
+      <MjButton loading>
         {{ $t('props.loading') }}
-      </BbButton>
+      </MjButton>
     </Sample>
   </LayoutSample>
 </template>
@@ -128,75 +128,75 @@ export default Vue.extend({
     return {
       samples: {
         default: [
-          `<BbButton>
+          `<MjButton>
   ${this.$t('props.default')}
-</BbButton>`,
+</MjButton>`,
         ],
         secondary: [
-          `<BbButton variant="secondary">
+          `<MjButton variant="secondary">
   ${this.$t('props.secondary')}
-</BbButton>`,
+</MjButton>`,
         ],
         disabled: [
-          `<BbButton disabled>
+          `<MjButton disabled>
   ${this.$t('props.disabled')}
-</BbButton>`,
+</MjButton>`,
         ],
         icon: [
-          `<BbButton icon="test">
+          `<MjButton icon="test">
   ${this.$t('props.icon')}
-</BbButton>
+</MjButton>
 
-<BbButton
+<MjButton
   icon="test"
   icon-right
 >
   ${this.$t('props.icon')}
-</BbButton>
+</MjButton>
 
-<BbButton icon="test" />`,
+<MjButton icon="test" />`,
         ],
         link: [
-          `<BbButton
+          `<MjButton
   tag="nuxt-link"
   to="/"
   class="inline-block"
 >
   ${this.$t('props.link')}
-</BbButton>`,
+</MjButton>`,
         ],
         size: [
-          `<BbButton size="sm">
+          `<MjButton size="sm">
   ${this.$t('props.size')}
-</BbButton>
+</MjButton>
 
-<BbButton size="lg">
+<MjButton size="lg">
   ${this.$t('props.size')}
-</BbButton>`,
+</MjButton>`,
         ],
         group: [`<div
   class="flex"
   role="group"
 >
-  <BbButton group="first">
+  <MjButton group="first">
     ${this.$t('props.group')}
-  </BbButton>
+  </MjButton>
 
-  <BbButton group>
+  <MjButton group>
     ${this.$t('props.group')}
-  </BbButton>
+  </MjButton>
 
-  <BbButton group="last">
+  <MjButton group="last">
     <template #icon>
-      <bb-icon name="calendar" />
+      <MjIcon name="calendar" />
     </template>
-  </BbButton>
+  </MjButton>
 </div>`,
         ],
         loading: [
-          `<BbButton loading>
+          `<MjButton loading>
   ${this.$t('props.loading')}
-</BbButton>`,
+</MjButton>`,
         ],
       },
     };

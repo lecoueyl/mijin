@@ -7,7 +7,7 @@
       :title="$t('props.image')"
       :snippet="samples.image"
     >
-      <BbAvatar
+      <MjAvatar
         alt="image"
         img="https://images.unsplash.com/photo-1576502200916-3808e07386a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&q=60"
       />
@@ -17,7 +17,7 @@
       :title="$t('props.letter')"
       :snippet="samples.letter"
     >
-      <BbAvatar
+      <MjAvatar
         letter="BB"
       />
     </Sample>
@@ -27,7 +27,7 @@
       :snippet="samples.size"
     >
       <div class="flex items-center">
-        <BbAvatar
+        <MjAvatar
           v-for="(size, index) in ['sm', 'base', 'lg', 'xl']"
           :key="size"
           :size="size"
@@ -41,7 +41,7 @@
       :title="$t('props.variant')"
       :snippet="samples.variant"
     >
-      <BbAvatar
+      <MjAvatar
         variant="squared"
         letter="BB"
       />
@@ -51,7 +51,7 @@
       :title="$t('props.color')"
       :snippet="samples.color"
     >
-      <BbAvatar
+      <MjAvatar
         v-for="(color, index) in ['red', 'blue', 'green']"
         :key="color"
         :color="color"
@@ -70,54 +70,54 @@ export default Vue.extend({
     return {
       samples: {
         image: [
-          `<BbAvatar
+          `<MjAvatar
   alt="image"
   img="https://..."
 />`,
         ],
         letter: [
-          '<BbAvatar letter="BB" />',
+          '<MjAvatar letter="BB" />',
         ],
         size: [
-          `<BbAvatar
+          `<MjAvatar
   size="sm"
   letter="BB"
 />
 
-<BbAvatar
+<MjAvatar
   size="base"
   letter="BB"
 />
 
-<BbAvatar
+<MjAvatar
   size="lg"
   letter="BB"
 />
 
-<BbAvatar
+<MjAvatar
   size="xl"
   letter="BB"
 />`,
         ],
         variant: [
-          `<BbAvatar
+          `<MjAvatar
   alt="image"
   img="https://..."
   variant="squared"
 />`,
         ],
         color: [
-          `<BbAvatar
+          `<MjAvatar
   color="red"
   letter="BB"
 />
 
-<BbAvatar
+<MjAvatar
   color="blue"
   letter="BB"
 />
 
-<BbAvatar
+<MjAvatar
   color="green"
   letter="BB"
 />`,

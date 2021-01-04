@@ -7,14 +7,14 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbSkeleton />
+      <MjSkeleton />
     </Sample>
 
     <Sample
       :title="$t('props.rounded')"
       :snippet="samples.rounded"
     >
-      <BbSkeleton
+      <MjSkeleton
         rounded
         class="h-10 w-10"
       />
@@ -29,8 +29,8 @@ export default Vue.extend({
   data() {
     return {
       samples: {
-        default: ['<BbSkeleton />'],
-        rounded: [`<BbSkeleton
+        default: ['<MjSkeleton />'],
+        rounded: [`<MjSkeleton
   rounded
   class="h-10 w-10"
 />`],

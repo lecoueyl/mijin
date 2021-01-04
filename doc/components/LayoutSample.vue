@@ -1,120 +1,120 @@
 <template>
   <div class="flex">
     <div class="flex-1">
-      <BbHeadline
+      <MjHeadline
         :level="1"
         :size="2"
         class="pb-8"
       >
         {{ title }}
-      </BbHeadline>
+      </MjHeadline>
 
       <slot />
 
       <template v-if="componentsProperties">
-        <BbHeadline
+        <MjHeadline
           id="api"
           :level="2"
           :size="2"
           class="pb-8"
         >
           {{ $t('common.properties') }}
-        </BbHeadline>
+        </MjHeadline>
 
         <section
           v-for="(component, componentName) in componentsProperties"
           :key="componentName"
         >
-          <BbHeadline
+          <MjHeadline
             v-if="Object.keys(componentsProperties).length > 1"
             :id="componentName"
             :level="3"
             class="pb-4"
           >
             {{ componentName }}
-          </BbHeadline>
+          </MjHeadline>
 
           <div
             v-for="(properties, propertyName) in component"
             :key="propertyName"
           >
-            <BbHeadline
+            <MjHeadline
               :level="4"
               class="pb-4 text-gray-800 dark:text-gray-300"
             >
               {{ $t(`common.${propertyName}`) }}
-            </BbHeadline>
+            </MjHeadline>
 
-            <BbTable
+            <MjTable
               fixed
               class="mb-8"
             >
-              <BbTableHead>
-                <BbTableTitle class="bg-white dark:bg-gray-900 w-3/12">
+              <MjTableHead>
+                <MjTableTitle class="bg-white dark:bg-gray-900 w-3/12">
                   {{ $t('common.name') }}
-                </BbTableTitle>
+                </MjTableTitle>
 
                 <template v-if="propertyName === 'props'">
-                  <BbTableTitle class="bg-white dark:bg-gray-900">
+                  <MjTableTitle class="bg-white dark:bg-gray-900">
                     {{ $t('common.type') }}
-                  </BbTableTitle>
+                  </MjTableTitle>
 
-                  <BbTableTitle class="bg-white dark:bg-gray-900">
+                  <MjTableTitle class="bg-white dark:bg-gray-900">
                     {{ $t('common.default') }}
-                  </BbTableTitle>
+                  </MjTableTitle>
 
-                  <BbTableTitle class="bg-white dark:bg-gray-900">
+                  <MjTableTitle class="bg-white dark:bg-gray-900">
                     {{ $t('common.required') }}
-                  </BbTableTitle>
+                  </MjTableTitle>
                 </template>
 
                 <template v-else>
-                  <BbTableTitle class="bg-white dark:bg-gray-900">
+                  <MjTableTitle class="bg-white dark:bg-gray-900">
                     {{ $t('common.description') }}
-                  </BbTableTitle>
+                  </MjTableTitle>
                 </template>
-              </BbTableHead>
+              </MjTableHead>
 
-              <BbTableBody>
-                <BbTableRow
+              <MjTableBody>
+                <MjTableRow
                   v-for="(prop, propName, propKey) in properties"
                   :key="propKey"
                 >
                   <template v-if="propertyName === 'props'">
-                    <BbTableCell>
+                    <MjTableCell>
                       {{ prop.name }}
-                    </BbTableCell>
+                    </MjTableCell>
 
-                    <BbTableCell>
+                    <MjTableCell>
                       <span
                         v-for="type in prop.type"
                         :key="type"
                       >
                         {{ type }}
                       </span>
-                    </BbTableCell>
+                    </MjTableCell>
 
-                    <BbTableCell>
+                    <MjTableCell>
                       {{ prop.default }}
-                    </BbTableCell>
+                    </MjTableCell>
 
-                    <BbTableCell>
+                    <MjTableCell>
                       {{ prop.required || false }}
-                    </BbTableCell>
+                    </MjTableCell>
                   </template>
 
                   <template v-else>
-                    <BbTableCell>
+                    <MjTableCell>
                       {{ propName }}
-                    </BbTableCell>
+                    </MjTableCell>
 
-                    <BbTableCell>
+                    <MjTableCell>
                       {{ prop.description }}
-                    </BbTableCell>
+                    </MjTableCell>
                   </template>
-                </BbTableRow>
-              </BbTableBody>
-            </BbTable>
+                </MjTableRow>
+              </MjTableBody>
+            </MjTable>
           </div>
         </section>
       </template>
@@ -186,7 +186,7 @@ export default Vue.extend({
 
       components.forEach((component) => {
         const i18nKey = `sections.atoms.${component.toLowerCase()}`;
-        const props = this.$root?.$options?.components[`Bb${component}`]?.options?.props;
+        const props = this.$root?.$options?.components[`Mj${component}`]?.options?.props;
 
         if (props) {
           const mappedProps = Object.keys(props).map((key) => ({

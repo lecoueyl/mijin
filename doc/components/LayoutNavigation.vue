@@ -28,15 +28,15 @@
       </div>
     </div>
 
-    <BbInput
+    <MjInput
       type="search"
       placeholder="Filter"
       class="mx-4"
     >
       <template #icon>
-        <bb-icon name="search" />
+        <MjIcon name="search" />
       </template>
-    </BbInput>
+    </MjInput>
 
     <nav
       class="fixed md:static top-0 w-full md:block bg-white dark:bg-gray-900 pt-24 p-4 md:py-10 z-40 h-full md:h-auto overflow-y-scroll md:overflow-y-visible"
@@ -108,12 +108,12 @@
               @click.native="isOpen = false"
             >
               {{ $t(`sections.${sectionName}.${menuName}.title`) }}
-              <BbTag
+              <MjTag
                 v-if="menu.isBeta"
                 size="sm"
               >
                 beta
-              </BbTag>
+              </MjTag>
             </nuxt-link>
           </li>
         </ul>

@@ -19,7 +19,7 @@ import Vue from 'vue';
 export default Vue.extend({
   computed: {
     icons() {
-      return this.$root?.$options?.components.BbIcon?.options?.data()?.icons || [];
+      return this.$root?.$options?.components.MjIcon?.options?.data()?.icons || [];
     },
   },
 });

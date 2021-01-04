@@ -1,13 +1,13 @@
 <template>
   <section class="pb-10">
-    <BbHeadline
+    <MjHeadline
       :id="id"
       :level="2"
       :size="4"
       class="pb-8 text-gray-800 dark:text-gray-200"
     >
       {{ title }}
-    </BbHeadline>
+    </MjHeadline>
 
     <div
       class="p-4 sm:p-8 border-t border-r border-l border-gray-100 dark:border-gray-800"

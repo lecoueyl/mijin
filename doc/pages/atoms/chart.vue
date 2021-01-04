@@ -3,7 +3,7 @@
     :title="$t('sections.atoms.chart.title')"
     components="Chart"
   >
-    <BbNote
+    <MjNote
       filled
       variant="warning"
       class="mb-8"
@@ -11,13 +11,13 @@
       Chart component requires the following packaes:
       <br>
       npm install vue-chartjs chart.js --save
-    </BbNote>
+    </MjNote>
 
     <Sample
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbChart
+      <MjChart
         v-if="dataChartBar"
         ref="chart"
         :data="dataChartBar"
@@ -38,7 +38,7 @@ export default Vue.extend({
       dataChartMixed: {},
       samples: {
         default: [
-          `<BbAvatar
+          `<MjAvatar
   alt="image"
   img="https://..."
 />`],

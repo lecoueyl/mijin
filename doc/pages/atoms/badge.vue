@@ -7,16 +7,16 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbBadge>
+      <MjBadge>
         1
-      </BbBadge>
+      </MjBadge>
     </Sample>
 
     <Sample
       :title="$t('props.color')"
       :snippet="samples.color"
     >
-      <BbBadge
+      <MjBadge
         v-for="(item, index) in [
           { color: 'primary', value: '12'},
           { color: 'green', value: '999'},
@@ -26,25 +26,25 @@
         :class="[{ 'ml-2': index !== 0 }]"
       >
         {{ item.value }}
-      </BbBadge>
+      </MjBadge>
     </Sample>
 
     <Sample
       :title="$t('props.variant')"
       :snippet="samples.variant"
     >
-      <BbBadge variant="outline">
+      <MjBadge variant="outline">
         42
-      </BbBadge>
+      </MjBadge>
     </Sample>
 
     <Sample
       :title="$t('props.size')"
       :snippet="samples.size"
     >
-      <BbBadge size="sm">
+      <MjBadge size="sm">
         {{ $t('props.size') }}
-      </BbBadge>
+      </MjBadge>
     </Sample>
   </LayoutSample>
 </template>
@@ -56,23 +56,23 @@ export default Vue.extend({
   data() {
     return {
       samples: {
-        default: [`<BbBadge href="#">
+        default: [`<MjBadge href="#">
   1
-</BbBadge>`],
-        color: [`<BbBadge color="primary">
+</MjBadge>`],
+        color: [`<MjBadge color="primary">
   12
-</BbBadge>
+</MjBadge>
 
-<BbBadge color="green">
+<MjBadge color="green">
   999
-</BbBadge>
+</MjBadge>
 `],
-        variant: [`<BbBadge variant="outline">
+        variant: [`<MjBadge variant="outline">
   42
-</BbBadge>`],
-        size: [`<BbBadge size="small">
+</MjBadge>`],
+        size: [`<MjBadge size="small">
   ${this.$t('props.size')}
-</BbBadge>`],
+</MjBadge>`],
       },
     };
   },

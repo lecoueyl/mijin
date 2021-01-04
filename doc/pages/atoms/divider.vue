@@ -7,7 +7,7 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbDivider />
+      <MjDivider />
     </Sample>
   </LayoutSample>
 </template>
@@ -19,7 +19,7 @@ export default Vue.extend({
   data() {
     return {
       samples: {
-        default: ['<BbDivider />'],
+        default: ['<MjDivider />'],
       },
     };
   },

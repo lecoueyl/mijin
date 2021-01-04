@@ -7,30 +7,30 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbNote>
+      <MjNote>
         {{ $t('props.default') }}
-      </BbNote>
+      </MjNote>
     </Sample>
 
     <Sample
       :title="$t('props.variant')"
       :snippet="samples.variant"
     >
-      <BbNote
+      <MjNote
         v-for="variant in ['success', 'danger', 'warning']"
         :key="variant"
         :variant="variant"
         class="mb-8 last:mb-0"
       >
         {{ variant }}
-      </BbNote>
+      </MjNote>
     </Sample>
 
     <Sample
       :title="$t('props.filled')"
       :snippet="samples.filled"
     >
-      <BbNote
+      <MjNote
         v-for="variant in [null, 'success', 'danger', 'warning']"
         :key="`filled-${variant}`"
         :variant="variant"
@@ -41,7 +41,7 @@
           {{ $t('props.default') }}
         </template>
         {{ variant }}
-      </BbNote>
+      </MjNote>
     </Sample>
   </LayoutSample>
 </template>
@@ -54,48 +54,48 @@ export default Vue.extend({
     return {
       samples: {
         default: [
-          `<BbNote>
+          `<MjNote>
   ${this.$t('props.default')}
-</BbNote>`,
+</MjNote>`,
         ],
         variant: [
-          `<BbNote variant="success>
+          `<MjNote variant="success>
   success
-</BbNote>
+</MjNote>
 
-<BbNote variant="danger>
+<MjNote variant="danger>
   danger
-</BbNote>
+</MjNote>
 
-<BbNote variant="warning>
+<MjNote variant="warning>
   warning
-</BbNote>`,
+</MjNote>`,
         ],
         filled: [
-          `<BbNote filled>
+          `<MjNote filled>
   ${this.$t('props.default')}
-</BbNote>
+</MjNote>
 
-<BbNote
+<MjNote
   filled
   variant="success"
 >
   success
-</BbNote>
+</MjNote>
 
-<BbNote
+<MjNote
   filled
   variant="danger"
 >
   danger
-</BbNote>
+</MjNote>
 
-<BbNote
+<MjNote
   filled
   variant="warning"
 >
   warning
-</BbNote>`,
+</MjNote>`,
         ],
       },
     };

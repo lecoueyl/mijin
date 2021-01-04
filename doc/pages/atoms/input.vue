@@ -7,7 +7,7 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbInput
+      <MjInput
         class="sm:w-1/2"
         :placeholder="$t('examples.input.placeholder')"
       />
@@ -17,19 +17,19 @@
       :title="$t('props.label')"
       :snippet="samples.label"
     >
-      <BbInput
+      <MjInput
         class="sm:w-1/2"
         :placeholder="$t('examples.input.placeholder')"
       >
         {{ $t('examples.input.label') }}
-      </BbInput>
+      </MjInput>
     </Sample>
 
     <Sample
       :title="$t('props.password')"
       :snippet="samples.password"
     >
-      <BbInput
+      <MjInput
         v-model="model.password"
         type="password"
         class="sm:w-1/2"
@@ -40,21 +40,21 @@
       :title="$t('props.icon')"
       :snippet="samples.icon"
     >
-      <BbInput
+      <MjInput
         class="sm:w-1/2"
         :placeholder="$t('examples.input.placeholder')"
       >
         <template #icon>
-          <bb-icon name="user" />
+          <MjIcon name="user" />
         </template>
-      </BbInput>
+      </MjInput>
     </Sample>
 
     <Sample
       :title="$t('props.disabled')"
       :snippet="samples.disabled"
     >
-      <BbInput
+      <MjInput
         class="sm:w-1/2"
         :value="$t('examples.input.label')"
         disabled
@@ -65,7 +65,7 @@
       :title="$t('props.size')"
       :snippet="samples.size"
     >
-      <BbInput
+      <MjInput
         class="sm:w-1/2"
         :placeholder="$t('examples.input.placeholder')"
         size="sm"
@@ -86,33 +86,33 @@ export default Vue.extend({
 
       samples: {
         default: [
-          `<BbInput placeholder="${this.$t('examples.input.placeholder')}" />`,
+          `<MjInput placeholder="${this.$t('examples.input.placeholder')}" />`,
         ],
         label: [
-          `<BbInput placeholder="${this.$t('examples.input.placeholder')}">
+          `<MjInput placeholder="${this.$t('examples.input.placeholder')}">
   ${this.$t('examples.input.label')}
-</BbInput>`,
+</MjInput>`,
         ],
         password: [
-          '<BbInput type="password />',
+          '<MjInput type="password />',
         ],
         icon: [
-          `<BbInput>
+          `<MjInput>
   <template #icon>
-    <bb-icon name="user" />
+    <MjIcon name="user" />
   </template>
-</BbInput>`,
+</MjInput>`,
         ],
         disabled: [
-          '<BbInput disabled />',
+          '<MjInput disabled />',
         ],
         size: [
-          `<BbInput
+          `<MjInput
   placeholder="${this.$t('examples.input.placeholder')}"
   size="sm"
 >
   ${this.$t('examples.input.label')}
-</BbInput>`,
+</MjInput>`,
         ],
       },
     };

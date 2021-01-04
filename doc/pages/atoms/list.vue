@@ -7,85 +7,85 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbList>
-        <BbListItem>
+      <MjList>
+        <MjListItem>
           {{ $t('examples.list.1') }}
-        </BbListItem>
-        <BbListItem>
+        </MjListItem>
+        <MjListItem>
           {{ $t('examples.list.2') }}
-        </BbListItem>
-        <BbListItem>
+        </MjListItem>
+        <MjListItem>
           {{ $t('examples.list.3') }}
-        </BbListItem>
-      </BbList>
+        </MjListItem>
+      </MjList>
     </Sample>
 
     <Sample
       :title="$t('props.divided')"
       :snippet="samples.divided"
     >
-      <BbList divided>
-        <BbListItem>
+      <MjList divided>
+        <MjListItem>
           {{ $t('examples.list.1') }}
-        </BbListItem>
-        <BbListItem>
+        </MjListItem>
+        <MjListItem>
           {{ $t('examples.list.2') }}
-        </BbListItem>
-        <BbListItem>
+        </MjListItem>
+        <MjListItem>
           {{ $t('examples.list.3') }}
-        </BbListItem>
-      </BbList>
+        </MjListItem>
+      </MjList>
     </Sample>
 
     <Sample
       :title="$t('props.inline')"
       :snippet="samples.inline"
     >
-      <BbList inline>
-        <BbListItem>
+      <MjList inline>
+        <MjListItem>
           {{ $t('examples.list.1') }}
-        </BbListItem>
-        <BbListItem>
+        </MjListItem>
+        <MjListItem>
           {{ $t('examples.list.2') }}
-        </BbListItem>
-        <BbListItem>
+        </MjListItem>
+        <MjListItem>
           {{ $t('examples.list.3') }}
-        </BbListItem>
-      </BbList>
+        </MjListItem>
+      </MjList>
     </Sample>
 
     <Sample
       :title="$t('props.gutter')"
       :snippet="samples.gutter"
     >
-      <BbList gutter="lg">
-        <BbListItem>
+      <MjList gutter="lg">
+        <MjListItem>
           {{ $t('examples.list.1') }}
-        </BbListItem>
-        <BbListItem>
+        </MjListItem>
+        <MjListItem>
           {{ $t('examples.list.2') }}
-        </BbListItem>
-        <BbListItem>
+        </MjListItem>
+        <MjListItem>
           {{ $t('examples.list.3') }}
-        </BbListItem>
-      </BbList>
+        </MjListItem>
+      </MjList>
     </Sample>
 
     <Sample
       :title="$t('props.orderedList')"
       :snippet="samples.ol"
     >
-      <BbList tag="ol">
-        <BbListItem>
+      <MjList tag="ol">
+        <MjListItem>
           {{ $t('examples.list.1') }}
-        </BbListItem>
-        <BbListItem>
+        </MjListItem>
+        <MjListItem>
           {{ $t('examples.list.2') }}
-        </BbListItem>
-        <BbListItem>
+        </MjListItem>
+        <MjListItem>
           {{ $t('examples.list.3') }}
-        </BbListItem>
-      </BbList>
+        </MjListItem>
+      </MjList>
     </Sample>
   </LayoutSample>
 </template>
@@ -98,69 +98,69 @@ export default Vue.extend({
     return {
       samples: {
         default: [
-          `<BbList>
-  <BbListItem>
+          `<MjList>
+  <MjListItem>
     ${this.$t('examples.list.1')}
-  </BbListItem>
-  <BbListItem>
+  </MjListItem>
+  <MjListItem>
     ${this.$t('examples.list.2')}
-  </BbListItem>
-  <BbListItem>
+  </MjListItem>
+  <MjListItem>
     ${this.$t('examples.list.3')}
-  </BbListItem>
-</BbList>`,
+  </MjListItem>
+</MjList>`,
         ],
         divided: [
-          `<BbList divided>
-  <BbListItem>
+          `<MjList divided>
+  <MjListItem>
     ${this.$t('examples.list.1')}
-  </BbListItem>
-  <BbListItem>
+  </MjListItem>
+  <MjListItem>
     ${this.$t('examples.list.2')}
-  </BbListItem>
-  <BbListItem>
+  </MjListItem>
+  <MjListItem>
     ${this.$t('examples.list.3')}
-  </BbListItem>
-</BbList>`,
+  </MjListItem>
+</MjList>`,
         ],
         inline: [
-          `<BbList inline>
-  <BbListItem>
+          `<MjList inline>
+  <MjListItem>
     ${this.$t('examples.list.1')}
-  </BbListItem>
-  <BbListItem>
+  </MjListItem>
+  <MjListItem>
     ${this.$t('examples.list.2')}
-  </BbListItem>
-  <BbListItem>
+  </MjListItem>
+  <MjListItem>
     ${this.$t('examples.list.3')}
-  </BbListItem>
-</BbList>`,
+  </MjListItem>
+</MjList>`,
         ],
         gutter: [
-          `<BbList gutter="lg">
-  <BbListItem>
+          `<MjList gutter="lg">
+  <MjListItem>
     ${this.$t('examples.list.1')}
-  </BbListItem>
-  <BbListItem>
+  </MjListItem>
+  <MjListItem>
     ${this.$t('examples.list.2')}
-  </BbListItem>
-  <BbListItem>
+  </MjListItem>
+  <MjListItem>
     ${this.$t('examples.list.3')}
-  </BbListItem>
-</BbList>`,
+  </MjListItem>
+</MjList>`,
         ],
         ol: [
-          `<BbList tag="ol">
-  <BbListItem>
+          `<MjList tag="ol">
+  <MjListItem>
     ${this.$t('examples.list.1')}
-  </BbListItem>
-  <BbListItem>
+  </MjListItem>
+  <MjListItem>
     ${this.$t('examples.list.2')}
-  </BbListItem>
-  <BbListItem>
+  </MjListItem>
+  <MjListItem>
     ${this.$t('examples.list.3')}
-  </BbListItem>
-</BbList>`,
+  </MjListItem>
+</MjList>`,
         ],
       },
     };

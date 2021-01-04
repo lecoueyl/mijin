@@ -7,25 +7,25 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbProgress :percentage="50" />
+      <MjProgress :percentage="50" />
     </Sample>
 
     <Sample
       :title="$t('props.color')"
       :snippet="samples.color"
     >
-      <BbProgress
+      <MjProgress
         :percentage="20"
         color="danger"
       />
 
-      <BbProgress
+      <MjProgress
         class="mt-4"
         :percentage="40"
         color="warning"
       />
 
-      <BbProgress
+      <MjProgress
         class="mt-4"
         :percentage="100"
         color="success"
@@ -36,7 +36,7 @@
       :title="$t('props.circle')"
       :snippet="samples.circle"
     >
-      <BbProgress
+      <MjProgress
         class="w-24"
         :percentage="75"
         variant="circle"
@@ -47,12 +47,12 @@
       :title="$t('props.score')"
       :snippet="samples.score"
     >
-      <BbProgress
+      <MjProgress
         :percentage="50"
         variant="score"
       />
 
-      <BbProgress
+      <MjProgress
         class="mt-4"
         :percentage="50"
         :score-length="5"
@@ -69,32 +69,32 @@ export default Vue.extend({
   data() {
     return {
       samples: {
-        default: ['<BbProgress :percentage="50" />'],
-        color: [`<BbProgress
+        default: ['<MjProgress :percentage="50" />'],
+        color: [`<MjProgress
   :percentage="20"
   color="danger"
 />
 
-<BbProgress
+<MjProgress
   :percentage="40"
   color="warning"
 />
 
-<BbProgress
+<MjProgress
   class="mt-4"
   :percentage="100"
   color="success"
 />`],
-        circle: [`<BbProgress
+        circle: [`<MjProgress
   :percentage="75"
   variant="75"
 />`],
-        score: [`<BbProgress
+        score: [`<MjProgress
   :percentage="50"
   variant="score"
 />
 
-<BbProgress
+<MjProgress
   :percentage="50"
   :score-length="5"
   variant="score"

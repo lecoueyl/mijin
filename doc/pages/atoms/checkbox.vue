@@ -7,54 +7,54 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbCheckbox
+      <MjCheckbox
         v-model="model.default"
         name="checkbox"
       >
         {{ $t('props.default') }}
-      </BbCheckbox>
+      </MjCheckbox>
     </Sample>
 
     <Sample
       :title="$t('props.multiple')"
       :snippet="samples.array"
     >
-      <BbCheckbox
+      <MjCheckbox
         v-model="model.array"
         name="checkbox"
         :value="1"
       >
         1
-      </BbCheckbox>
+      </MjCheckbox>
 
-      <BbCheckbox
+      <MjCheckbox
         v-model="model.array"
         name="checkbox"
         :value="2"
         class="ml-6"
       >
         2
-      </BbCheckbox>
+      </MjCheckbox>
     </Sample>
 
     <Sample
       :title="$t('props.disabled')"
       :snippet="samples.disabled"
     >
-      <BbCheckbox
+      <MjCheckbox
         v-model="model.false"
         disabled
       >
         {{ $t('props.disabled') }}
-      </BbCheckbox>
+      </MjCheckbox>
 
-      <BbCheckbox
+      <MjCheckbox
         v-model="model.true"
         disabled
         class="ml-6"
       >
         {{ $t('props.disabled') }}
-      </BbCheckbox>
+      </MjCheckbox>
     </Sample>
   </LayoutSample>
 </template>
@@ -73,38 +73,38 @@ export default Vue.extend({
       },
       samples: {
         default: [
-          `<BbCheckbox
+          `<MjCheckbox
   v-model="value"
   name="checkbox"
 >
   Default
-</BbCheckbox>`,
+</MjCheckbox>`,
         ],
         array: [
-          `<BbCheckbox
+          `<MjCheckbox
   v-model="value"
   name="checkbox"
   :value="1"
 >
   1
-</BbCheckbox>
+</MjCheckbox>
 
-<BbCheckbox
+<MjCheckbox
   v-model="value"
   name="checkbox"
   :value="2"
 >
   2
-</BbCheckbox>`,
+</MjCheckbox>`,
         ],
         disabled: [
-          `<BbCheckbox
+          `<MjCheckbox
   v-model="value"
   name="checkbox"
   disabled
 >
   Disabled
-</BbCheckbox>`,
+</MjCheckbox>`,
         ],
       },
     };

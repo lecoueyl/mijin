@@ -7,58 +7,58 @@
       :title="$t('props.default')"
       :snippet="samples.default"
     >
-      <BbCollapse>
+      <MjCollapse>
         {{ $t('props.default') }}
         <template #content>
           {{ $t('examples.sentence') }}
         </template>
-      </BbCollapse>
+      </MjCollapse>
     </Sample>
 
     <Sample
       :title="$t('props.expanded')"
       :snippet="samples.expanded"
     >
-      <BbCollapse expanded>
+      <MjCollapse expanded>
         {{ $t('props.expanded') }}
         <template #content>
           {{ $t('examples.sentence') }}
         </template>
-      </BbCollapse>
+      </MjCollapse>
     </Sample>
 
     <Sample
       :title="$t('props.iconPosition')"
       :snippet="samples.icon"
     >
-      <BbCollapse icon-left>
+      <MjCollapse icon-left>
         {{ $t('props.iconPosition') }}
         <template #content>
           {{ $t('examples.sentence') }}
         </template>
-      </BbCollapse>
+      </MjCollapse>
     </Sample>
 
     <Sample
       :title="$t('props.disabled')"
       :snippet="samples.disabled"
     >
-      <BbCollapse disabled>
+      <MjCollapse disabled>
         {{ $t('props.disabled') }}
         <template #content>
           {{ $t('examples.sentence') }}
         </template>
-      </BbCollapse>
+      </MjCollapse>
     </Sample>
 
     <Sample
       :title="$t('props.summary')"
       :snippet="samples.summary"
     >
-      <BbCollapse class="pb-4 border-b border-gray-400">
-        <BbHeadline :level="3">
+      <MjCollapse class="pb-4 border-b border-gray-400">
+        <MjHeadline :level="3">
           {{ $t('props.summary') }}
-        </BbHeadline>
+        </MjHeadline>
 
         <template #summary>
           <div class="text-gray-700">
@@ -71,7 +71,7 @@
             {{ $t('examples.sentence') }}
           </div>
         </template>
-      </BbCollapse>
+      </MjCollapse>
     </Sample>
   </LayoutSample>
 </template>
@@ -83,34 +83,34 @@ export default Vue.extend({
   data() {
     return {
       samples: {
-        default: [`<BbCollapse>
+        default: [`<MjCollapse>
   ${this.$t('props.default')}
   <template #content>
     ${this.$t('examples.sentence')}
   </template>
-</BbCollapse>`],
-        expanded: [`<BbCollapse expanded>
+</MjCollapse>`],
+        expanded: [`<MjCollapse expanded>
   ${this.$t('props.expanded')}
   <template #content>
     ${this.$t('examples.sentence')}
   </template>
-</BbCollapse>`],
-        icon: [`<BbCollapse icon-left>
+</MjCollapse>`],
+        icon: [`<MjCollapse icon-left>
   ${this.$t('props.iconPosition')}
   <template #content>
     ${this.$t('examples.sentence')}
   </template>
-</BbCollapse>`],
-        disabled: [`<BbCollapse disabled>
+</MjCollapse>`],
+        disabled: [`<MjCollapse disabled>
   ${this.$t('props.disabled')}
   <template #content>
     ${this.$t('examples.sentence')}
   </template>
-</BbCollapse>`],
-        summary: [`<BbCollapse class="pb-4 border-b border-gray-400">
-  <BbHeadline :level="2">
+</MjCollapse>`],
+        summary: [`<MjCollapse class="pb-4 border-b border-gray-400">
+  <MjHeadline :level="2">
     ${this.$t('props.summary')}
-  </BbHeadline>
+  </MjHeadline>
 
   <template #summary>
     <div class="text-gray-700">
@@ -123,7 +123,7 @@ export default Vue.extend({
       ${this.$t('examples.sentence')}
     </div>
   </template>
-</BbCollapse>`],
+</MjCollapse>`],
       },
     };
   },

@@ -1,8 +1,10 @@
 import * as components from './components';
 
-const install = (Vue) => {
+const install = (Vue, config = {}) => {
   Object.entries(components).forEach(([name, component]) => {
-    Vue.component(`Bb${name}`, component);
+    const prefix = config.prefix ? config.prefix : 'Mj';
+
+    Vue.component(`${prefix}${name}`, component);
   });
 };
 
