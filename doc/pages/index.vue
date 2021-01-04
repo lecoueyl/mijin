@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <LayoutSample title="Setup">
     <MjHeadline
       :level="2"
       :size="3"
       class="pb-8"
     >
-      Nuxt
+      Installation
     </MjHeadline>
 
     <MjHeadline
@@ -18,7 +18,7 @@
 
     <highlightjs
       class="p-4 my-4 rounded-lg bg-gray-800"
-      code="npm install tailwindcss/zephyr"
+      code="npm install mijin"
     />
 
     <MjHeadline
@@ -43,5 +43,5 @@ module.exports = {
   ],
 };"
     />
-  </div>
+  </LayoutSample>
 </template>

@@ -120,10 +120,7 @@
       </template>
     </div>
 
-    <nav
-      v-if="anchors.length > 0"
-      class="w-1/4 pl-10 pt-10 sticky top-0 self-start text-sm hidden xl:block"
-    >
+    <nav class="w-1/4 pl-10 pt-10 sticky top-0 self-start text-sm hidden xl:block">
       <ul>
         <li
           v-for="(anchor, anchorIndex) in anchors"
