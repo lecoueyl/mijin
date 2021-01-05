@@ -1,41 +1,35 @@
-const { resolve } = require('path');
-
 module.exports = {
   root: true,
   env: {
-    browser: true,
     node: true,
   },
   extends: [
-    '@nuxtjs/eslint-config-typescript',
-    'airbnb-base',
-    'plugin:nuxt/recommended',
+    'plugin:vue/recommended',
+    '@vue/airbnb',
   ],
-  // add your custom rules here
+  parserOptions: {
+    parser: 'babel-eslint',
+  },
   rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'import/extensions': ['error', 'always', {
       js: 'never',
-      svg: 'never',
       vue: 'never',
     }],
     'import/no-extraneous-dependencies': 0,
     'max-len': ['error', { code: 180 }],
     'vue/no-v-html': 0,
   },
-  settings: {
-    'import/resolver': {
-      node: {
-        extensions: ['.js', '.ts', '.vue'],
-        alias: {
-          '~': resolve(__dirname, 'doc'),
-        },
-      },
-      nuxt: {
-        extensions: ['.js', 'ts', '.vue'],
-        alias: {
-          '~': resolve(__dirname, 'doc'),
-        },
+  overrides: [
+    {
+      files: [
+        '**/__tests__/*.{j,t}s?(x)',
+        '**/tests/unit/**/*.spec.{j,t}s?(x)',
+      ],
+      env: {
+        jest: true,
       },
     },
-  },
+  ],
 };

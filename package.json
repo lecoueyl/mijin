@@ -1,60 +1,29 @@
 {
   "name": "mijin",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt-ts",
-    "build": "nuxt-ts build",
-    "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate",
-    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
-    "lint": "npm run lint:js && npm run lint:style",
-    "test": "jest"
-  },
-  "config": {
-    "nuxt": {
-      "host": "0.0.0.0"
-    }
+    "build": "vue-cli-service build src/index.js --target lib --name mijin",
+    "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "2.0.0",
-    "nuxt": "2.14.12",
-    "nuxt-i18n": "6.16.0"
+    "chart.js": "2.9.4",
+    "vue-chartjs": "3.5.1"
   },
   "devDependencies": {
-    "@nuxt/types": "2.14.12",
-    "@nuxt/typescript-build": "2.0.3",
-    "@nuxtjs/color-mode": "2.0.2",
-    "@nuxtjs/eslint-config": "5.0.0",
-    "@nuxtjs/eslint-config-typescript": "5.0.0",
-    "@nuxtjs/eslint-module": "3.0.2",
-    "@nuxtjs/stylelint-module": "4.0.0",
-    "@nuxtjs/tailwindcss": "3.4.2",
+    "@vue/cli-plugin-babel": "4.5.9",
+    "@vue/cli-plugin-eslint": "4.5.9",
+    "@vue/cli-plugin-unit-jest": "4.5.9",
+    "@vue/cli-service": "4.5.9",
+    "@vue/eslint-config-airbnb": "5.3.0",
     "@vue/test-utils": "1.1.2",
-    "autoprefixer": "9.8.6",
-    "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "10.1.0",
-    "babel-jest": "26.6.3",
-    "chart.js": "2.9.4",
-    "eslint": "7.17.0",
-    "eslint-config-airbnb-base": "14.2.1",
-    "eslint-import-resolver-nuxt": "1.0.1",
-    "eslint-plugin-nuxt": "2.0.0",
-    "highlight.js": "10.5.0",
+    "core-js": "3.8.2",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-vue": "7.4.0",
     "jest": "26.6.3",
-    "node-sass": "5.0.0",
-    "postcss": "7.0.35",
-    "sass-loader": "10.1.0",
-    "stylelint": "13.8.0",
-    "stylelint-config-rational-order": "0.1.2",
-    "stylelint-config-standard": "20.0.0",
-    "stylelint-order": "4.1.0",
-    "stylelint-scss": "3.18.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2",
-    "ts-jest": "26.4.4",
-    "vue-chartjs": "^3.5.1",
-    "vue-form": "4.10.3",
-    "vue-jest": "3.0.7"
+    "tailwindcss": "2.0.2",
+    "vue": "2.6.12",
+    "vue-template-compiler": "2.6.12"
   }
 }
