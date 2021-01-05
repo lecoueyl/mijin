@@ -48,6 +48,21 @@ describe('Input', () => {
     expect($input.attributes('disabled')).toBeDefined();
   });
 
+  it('toggle password visibility', async () => {
+    const wrapper = shallowMount(Input, {
+      propsData: {
+        type: 'password',
+      },
+    });
+
+    const $togglePassword = wrapper.find('svg');
+    expect(wrapper.vm.currentType).toBe('password');
+    await $togglePassword.trigger('click');
+    expect(wrapper.vm.currentType).toBe('text');
+    await $togglePassword.trigger('click');
+    expect(wrapper.vm.currentType).toBe('password');
+  });
+
   it('should emit events', async () => {
     let called = 0;
     let event = null;
@@ -65,6 +80,10 @@ describe('Input', () => {
           event = e;
           called += 1;
         },
+        input: (e) => {
+          event = e;
+          called += 1;
+        },
       },
     });
     const $input = wrapper.find('input');
@@ -76,11 +95,17 @@ describe('Input', () => {
     expect(called).toBe(1);
     expect(event).toBeInstanceOf(MouseEvent);
 
-    await $input.element.dispatchEvent(new Event('focus'));
+    await $input.trigger('blur');
     expect(called).toBe(2);
+    expect(event).toBeInstanceOf(FocusEvent);
 
-    await $input.element.dispatchEvent(new Event('blur'));
+    await $input.trigger('focus');
     expect(called).toBe(3);
+    expect(event).toBeInstanceOf(FocusEvent);
+
+    await $input.setValue('foobar');
+    expect(called).toBe(4);
+    expect(event).toBe('foobar');
   });
 
   it('should not emit click event when clicked and disabled', async () => {

@@ -46,6 +46,17 @@ describe('Checkbox', () => {
     expect(wrapper.attributes('aria-disabled')).toBe('true');
   });
 
+  it('supports Array option', () => {
+    const wrapper = shallowMount(Checkbox, {
+      propsData: {
+        options: ['a', 'b'],
+      },
+    });
+
+    expect(wrapper.vm.checked).toBe(false);
+  });
+
+
   it('should emit events', async () => {
     const wrapper = shallowMount(Checkbox);
 

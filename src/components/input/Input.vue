@@ -164,11 +164,9 @@ export default {
         // Add listeners from parent
         ...this.$listeners,
         // Ensure that the component works with v-model
-        input(event) {
-          this.$emit('input', event.target.value);
-        },
-        focus: () => this.$emit('focus'),
-        blur: () => this.$emit('blur'),
+        blur: (event) => this.$emit('blur', event),
+        focus: (event) => this.$emit('focus', event),
+        input: (event) => this.$emit('input', event.target.value),
       };
     },
   },
