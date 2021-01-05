@@ -41,10 +41,21 @@
         class="stroke-2 w-4 h-4 ml-1 cursor-pointer hover:text-gray-700 transition-colors duration-150 ease-in-out"
         v-on="listeners.remove ? { click: listeners.remove } : null"
       >
-        <line x1="18" y1="6" x2="6" y2="18" />
-        <line x1="6" y1="6" x2="18" y2="18" />
+        <line
+          x1="18"
+          y1="6"
+          x2="6"
+          y2="18"
+        />
+        <line
+          x1="6"
+          y1="6"
+          x2="18"
+          y2="18"
+        />
       </svg>
     </span>
+
     <template v-else>
       <slot />
     </template>
