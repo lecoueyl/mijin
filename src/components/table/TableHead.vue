@@ -11,7 +11,7 @@ export default {
   name: 'MijiTableHead',
 
   created() {
-    if (this.$parent.$options.name !== 'MijiTable' && process.env.NODE_ENV !== 'test') {
+    if (this.$parent.$options.name !== 'MijiTable') {
       this.$destroy();
       throw new Error('TableHead must be wrap with Table');
     }

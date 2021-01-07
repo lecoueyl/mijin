@@ -1,18 +1,42 @@
-import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
+import { enableAutoDestroy, mount, shallowMount } from '@vue/test-utils';
+import Table from './Table';
 import TableBody from './TableBody';
 
 describe('TableBody', () => {
   enableAutoDestroy(afterEach);
 
   it('has default structure', async () => {
-    const wrapper = shallowMount(TableBody);
-    expect(wrapper.element.tagName).toBe('TBODY');
+    const wrapper = mount({
+      template: `
+        <Table>
+          <TableBody />
+        </Table>`,
+      components: {
+        Table,
+        TableBody,
+      },
+    });
+
+    const $tableBody = wrapper.findComponent(TableBody);
+    expect($tableBody.element.tagName).toBe('TBODY');
+  });
+
+  it('checks parent presence', async () => {
+    spyOn(console, 'error');
+    expect(() => shallowMount(TableBody)).toThrowError();
   });
 
   it('renders default slot content', async () => {
-    const wrapper = shallowMount(TableBody, {
-      slots: {
-        default: '<span>foobar</span>',
+    const wrapper = mount({
+      template: `
+        <Table>
+          <TableBody>
+            <span>foobar</span>
+          </TableBody>
+        </Table>`,
+      components: {
+        Table,
+        TableBody,
       },
     });
 

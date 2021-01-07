@@ -26,7 +26,7 @@ export default {
   },
 
   created() {
-    if (this.$parent.$options.name !== 'MijiList' && process.env.NODE_ENV !== 'test') {
+    if (this.$parent.$options.name !== 'MijiList') {
       this.$destroy();
       throw new Error('ListItem must be wrap with List');
     }

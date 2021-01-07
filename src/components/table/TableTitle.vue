@@ -39,7 +39,7 @@ export default {
   },
 
   created() {
-    if (this.$parent.$options.name !== 'MijiTableHead' && process.env.NODE_ENV !== 'test') {
+    if (this.$parent.$options.name !== 'MijiTableHead') {
       this.$destroy();
       throw new Error('TableTitle must be wrap with TableHead');
     }

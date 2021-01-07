@@ -69,16 +69,14 @@ export default {
   },
 
   created() {
-    if (process.env.NODE_ENV !== 'test') {
-      if (this.$parent.$options.name !== 'MijiTableRow') {
-        this.$destroy();
-        throw new Error('TableCell must be wrap with TableRow');
-      }
+    if (this.$parent.$options.name !== 'MijiTableRow') {
+      this.$destroy();
+      throw new Error('TableCell must be wrap with TableRow');
+    }
 
-      if (this.truncate && !this.tableProps.fixed) {
-        // eslint-disable-next-line no-console
-        console.warn('Table must have "fixed" property set to true when using TableCell "truncate" property');
-      }
+    if (this.truncate && !this.tableProps.fixed) {
+      // eslint-disable-next-line no-console
+      console.warn('Table must have "fixed" property set to true when using TableCell "truncate" property');
     }
   },
 };

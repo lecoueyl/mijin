@@ -1,4 +1,4 @@
-import { enableAutoDestroy, mount } from '@vue/test-utils';
+import { enableAutoDestroy, shallowMount, mount } from '@vue/test-utils';
 import List from './List';
 import ListItem from './ListItem';
 
@@ -23,6 +23,11 @@ describe('List', () => {
     expect($listItem.classes('float-left')).toBe(false);
     expect($listItem.classes('py-1')).toBe(true);
     expect($listItem.classes('px-1')).toBe(false);
+  });
+
+  it('checks parent presence', async () => {
+    spyOn(console, 'error');
+    expect(() => shallowMount(ListItem)).toThrowError();
   });
 
   it('receives inline props from parent List', async () => {
