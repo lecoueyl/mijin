@@ -57,6 +57,7 @@ describe('Popover', () => {
   });
 
   it('can be dismissible', async () => {
+    // without dismissible props
     let wrapper = shallowMount(Popover);
     let $container = wrapper.find('.absolute');
 
@@ -66,6 +67,7 @@ describe('Popover', () => {
     await $container.trigger('click');
     expect(wrapper.vm.isOpen).toBe(true);
 
+    // with dismissible props
     wrapper = shallowMount(Popover, {
       propsData: {
         dismissible: true,
