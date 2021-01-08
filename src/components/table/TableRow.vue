@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'MijiTableRow',
+  name: 'MijinTableRow',
 
   props: {
     clickable: {

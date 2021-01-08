@@ -70,11 +70,13 @@ describe('Select', () => {
     expect(called).toBe(0);
     expect(event).toEqual(null);
 
-    await $select.element.dispatchEvent(new Event('focus'));
+    await $select.trigger('blur');
     expect(called).toBe(1);
+    expect(event).toBeInstanceOf(FocusEvent);
 
-    await $select.element.dispatchEvent(new Event('blur'));
+    await $select.trigger('focus');
     expect(called).toBe(2);
+    expect(event).toBeInstanceOf(FocusEvent);
   });
 
   it('should not emit click event when clicked and disabled', async () => {

@@ -27,7 +27,7 @@
 
 <script>
 export default {
-  name: 'MijiTableCell',
+  name: 'MijinTableCell',
 
   props: {
     textAlign: {
@@ -69,7 +69,7 @@ export default {
   },
 
   created() {
-    if (this.$parent.$options.name !== 'MijiTableRow') {
+    if (this.$parent.$options.name !== 'MijinTableRow') {
       this.$destroy();
       throw new Error('TableCell must be wrap with TableRow');
     }

@@ -89,7 +89,7 @@
 
 <script>
 export default {
-  name: 'MijiInput',
+  name: 'MijinInput',
 
   props: {
     disabled: {

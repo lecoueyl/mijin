@@ -8,10 +8,10 @@
 
 <script>
 export default {
-  name: 'MijiTableHead',
+  name: 'MijinTableHead',
 
   created() {
-    if (this.$parent.$options.name !== 'MijiTable') {
+    if (this.$parent.$options.name !== 'MijinTable') {
       this.$destroy();
       throw new Error('TableHead must be wrap with Table');
     }

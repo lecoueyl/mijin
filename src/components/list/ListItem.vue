@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'MijiListItem',
+  name: 'MijinListItem',
 
   computed: {
     listProps() {
@@ -26,7 +26,7 @@ export default {
   },
 
   created() {
-    if (this.$parent.$options.name !== 'MijiList') {
+    if (this.$parent.$options.name !== 'MijinList') {
       this.$destroy();
       throw new Error('ListItem must be wrap with List');
     }

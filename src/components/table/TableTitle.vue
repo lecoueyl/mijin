@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'MijiTableTitle',
+  name: 'MijinTableTitle',
 
   props: {
     textAlign: {
@@ -39,7 +39,7 @@ export default {
   },
 
   created() {
-    if (this.$parent.$options.name !== 'MijiTableHead') {
+    if (this.$parent.$options.name !== 'MijinTableHead') {
       this.$destroy();
       throw new Error('TableTitle must be wrap with TableHead');
     }

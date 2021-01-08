@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  name: 'MijiTabs',
+  name: 'MijinTabs',
 
   props: {
     disabled: {

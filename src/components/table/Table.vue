@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'MijiTable',
+  name: 'MijinTable',
 
   props: {
     density: {

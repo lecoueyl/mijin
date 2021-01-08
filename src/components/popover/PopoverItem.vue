@@ -39,7 +39,7 @@
 
 <script>
 export default {
-  name: 'MijiPopoverItem',
+  name: 'MijinPopoverItem',
 
   props: {
     variant: {

@@ -90,7 +90,7 @@
 
 <script>
 export default {
-  name: 'MijiNote',
+  name: 'MijinNote',
 
   props: {
     filled: {

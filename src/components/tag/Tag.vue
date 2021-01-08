@@ -64,7 +64,7 @@
 
 <script>
 export default {
-  name: 'MijiTag',
+  name: 'MijinTag',
 
   props: {
     color: {

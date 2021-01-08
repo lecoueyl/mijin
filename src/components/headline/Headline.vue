@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  name: 'MijiHeadline',
+  name: 'MijinHeadline',
 
   props: {
     level: {

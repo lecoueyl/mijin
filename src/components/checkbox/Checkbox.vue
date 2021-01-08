@@ -47,7 +47,7 @@
 
 <script>
 export default {
-  name: 'MijiCheckbox',
+  name: 'MijinCheckbox',
 
   model: {
     prop: 'options',

@@ -14,7 +14,7 @@ import { Bar } from 'vue-chartjs';
 import { tooltips } from './utils';
 
 export default {
-  name: 'MijiChartBar',
+  name: 'MijinChartBar',
 
   extends: Bar,
 

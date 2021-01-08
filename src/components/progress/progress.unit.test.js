@@ -49,4 +49,14 @@ describe('Progress', () => {
     });
     expect(wrapper.find('svg').exists()).toBe(true);
   });
+
+  it('accepts score variant prop', async () => {
+    const wrapper = shallowMount(Progress, {
+      propsData: {
+        percentage: 50,
+        variant: 'score',
+      },
+    });
+    expect(wrapper.find('.rounded-sm').exists()).toBe(true);
+  });
 });

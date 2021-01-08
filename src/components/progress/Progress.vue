@@ -72,7 +72,7 @@
 
 <script>
 export default {
-  name: 'MijiProgress',
+  name: 'MijinProgress',
 
   props: {
     color: {
@@ -108,8 +108,8 @@ export default {
       default: 'bar',
       validator: (value) => [
         'bar',
-        'score',
         'circle',
+        'score',
       ].includes(value),
     },
   },

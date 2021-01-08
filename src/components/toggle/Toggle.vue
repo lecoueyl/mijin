@@ -55,7 +55,7 @@
 
 <script>
 export default {
-  name: 'MijiToggle',
+  name: 'MijinToggle',
 
   model: {
     prop: 'option',

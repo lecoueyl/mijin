@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: 'MijiDivider',
+  name: 'MijinDivider',
 
   props: {
     tag: {

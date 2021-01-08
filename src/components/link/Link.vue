@@ -52,7 +52,7 @@
 
 <script>
 export default {
-  name: 'MijiLink',
+  name: 'MijinLink',
 
   props: {
     color: {

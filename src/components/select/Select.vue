@@ -64,7 +64,7 @@
 
 <script>
 export default {
-  name: 'MijiSelect',
+  name: 'MijinSelect',
 
   props: {
     disabled: {
@@ -120,12 +120,12 @@ export default {
         // Add listeners from parent
         ...this.$listeners,
         // Ensure that the component works with v-model
+        blur: (event) => this.$emit('blur', event),
+        focus: (event) => this.$emit('focus', event),
         input(event) {
           this.$emit('input', event.target.value);
           this.$emit('select', event.target.value);
         },
-        focus: () => this.$emit('focus'),
-        blur: () => this.$emit('blur'),
       };
     },
   },

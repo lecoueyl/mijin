@@ -46,7 +46,7 @@
 
 <script>
 export default {
-  name: 'MijiAvatar',
+  name: 'MijinAvatar',
 
   props: {
     alt: {

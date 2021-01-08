@@ -57,7 +57,7 @@
 
 <script>
 export default {
-  name: 'MijiButton',
+  name: 'MijinButton',
 
   props: {
     disabled: {

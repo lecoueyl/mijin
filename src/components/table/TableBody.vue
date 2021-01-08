@@ -6,10 +6,10 @@
 
 <script>
 export default {
-  name: 'MijiTableBody',
+  name: 'MijinTableBody',
 
   created() {
-    if (this.$parent.$options.name !== 'MijiTable') {
+    if (this.$parent.$options.name !== 'MijinTable') {
       this.$destroy();
       throw new Error('TableBody must be wrap with Table');
     }

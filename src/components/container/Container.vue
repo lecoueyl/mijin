@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'MijiContainer',
+  name: 'MijinContainer',
 
   props: {
     tag: {

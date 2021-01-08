@@ -43,7 +43,7 @@ describe('Textarea', () => {
       },
     });
 
-    const $textarea = wrapper.find('Textarea');
+    const $textarea = wrapper.find('textarea');
     expect($textarea.attributes('disabled')).toBeDefined();
   });
 
@@ -56,26 +56,32 @@ describe('Textarea', () => {
           event = e;
           called += 1;
         },
-        click: (e) => {
+        focus: (e) => {
           event = e;
           called += 1;
         },
-        focus: (e) => {
+        input: (e) => {
           event = e;
           called += 1;
         },
       },
     });
-    const $textarea = wrapper.find('Textarea');
+    const $textarea = wrapper.find('textarea');
 
     expect(called).toBe(0);
     expect(event).toEqual(null);
 
-    await $textarea.element.dispatchEvent(new Event('focus'));
+    await $textarea.trigger('blur');
     expect(called).toBe(1);
+    expect(event).toBeInstanceOf(FocusEvent);
 
-    await $textarea.element.dispatchEvent(new Event('blur'));
+    await $textarea.trigger('focus');
     expect(called).toBe(2);
+    expect(event).toBeInstanceOf(FocusEvent);
+
+    await $textarea.setValue('foobar');
+    expect(called).toBe(3);
+    expect(event).toBe('foobar');
   });
 
   it('should not emit click event when clicked and disabled', async () => {

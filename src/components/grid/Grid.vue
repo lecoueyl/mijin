@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: 'MijiGrid',
+  name: 'MijinGrid',
 
   props: {
     cols: {

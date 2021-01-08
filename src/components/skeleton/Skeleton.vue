@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'MijiSkeleton',
+  name: 'MijinSkeleton',
 
   props: {
     rounded: {
