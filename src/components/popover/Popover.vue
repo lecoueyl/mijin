@@ -92,16 +92,6 @@ export default {
         'left',
       ].includes(value),
     },
-
-    size: {
-      type: String,
-      default: null,
-      validator: (value) => [
-        'xs',
-        'base',
-        'lg',
-      ].includes(value),
-    },
   },
 
   data() {
