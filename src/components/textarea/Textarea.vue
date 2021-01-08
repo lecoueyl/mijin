@@ -82,13 +82,14 @@ export default {
 
   computed: {
     listeners() {
+      const vm = this;
       return {
         // Add listeners from parent
         ...this.$listeners,
         // Ensure that the component works with v-model
-        blur: (event) => this.$emit('blur', event),
-        focus: (event) => this.$emit('focus', event),
-        input: (event) => this.$emit('input', event.target.value),
+        blur: (event) => vm.$emit('blur', event),
+        focus: (event) => vm.$emit('focus', event),
+        input: (event) => vm.$emit('input', event.target.value),
       };
     },
   },

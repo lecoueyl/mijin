@@ -1,4 +1,4 @@
-import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
+import { enableAutoDestroy, mount, shallowMount } from '@vue/test-utils';
 import Select from './Select';
 
 describe('Select', () => {
@@ -47,36 +47,34 @@ describe('Select', () => {
   });
 
   it('should emit events', async () => {
-    let called = 0;
-    let event = null;
-    const wrapper = shallowMount(Select, {
-      listeners: {
-        blur: (e) => {
-          event = e;
-          called += 1;
-        },
-        click: (e) => {
-          event = e;
-          called += 1;
-        },
-        focus: (e) => {
-          event = e;
-          called += 1;
-        },
+    const wrapper = mount({
+      data() {
+        return {
+          counter: 0,
+        };
+      },
+      template: `
+      <Select
+        @blur="counter += 1"
+        @focus="counter += 1"
+        @select="counter += 1"
+      />`,
+      components: {
+        Select,
       },
     });
-    const $select = wrapper.find('Select');
 
-    expect(called).toBe(0);
-    expect(event).toEqual(null);
+    const $select = wrapper.find('select');
+    expect(wrapper.vm.counter).toBe(0);
 
     await $select.trigger('blur');
-    expect(called).toBe(1);
-    expect(event).toBeInstanceOf(FocusEvent);
+    expect(wrapper.vm.counter).toBe(1);
 
     await $select.trigger('focus');
-    expect(called).toBe(2);
-    expect(event).toBeInstanceOf(FocusEvent);
+    expect(wrapper.vm.counter).toBe(2);
+
+    await $select.trigger('input');
+    expect(wrapper.vm.counter).toBe(3);
   });
 
   it('should not emit click event when clicked and disabled', async () => {
