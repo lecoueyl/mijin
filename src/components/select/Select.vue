@@ -72,18 +72,6 @@ export default {
       type: Boolean,
     },
 
-    group: {
-      default: false,
-      type: [String, Boolean],
-      validator: (value) => [
-        false,
-        true,
-        '',
-        'first',
-        'last',
-      ].includes(value),
-    },
-
     name: {
       type: String,
       default: null,
