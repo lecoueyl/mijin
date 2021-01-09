@@ -5,7 +5,7 @@ export { default as Chart } from './chart/Chart';
 export { default as Checkbox } from './checkbox/Checkbox';
 export { default as Collapse } from './collapse/Collapse';
 export { default as Row } from './row/Row';
-export { default as RowColumn } from './row/RowColumn';
+export { default as RowItem } from './row/RowItem';
 export { default as Container } from './container/Container';
 export { default as Datepicker } from './datepicker/Datepicker';
 export { default as Divider } from './divider/Divider';

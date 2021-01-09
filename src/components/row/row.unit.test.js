@@ -8,7 +8,7 @@ describe('Row', () => {
     const wrapper = shallowMount(Row);
 
     expect(wrapper.element.tagName).toBe('DIV');
-    expect(wrapper.classes('flew')).toBe(true);
+    expect(wrapper.classes('flex')).toBe(true);
   });
 
   it('renders default slot content', async () => {
@@ -32,13 +32,15 @@ describe('Row', () => {
     expect(wrapper.element.tagName).toBe('SECTION');
   });
 
-  it('accepts cols and gap props', async () => {
+  it('accepts props', async () => {
     const wrapper = shallowMount(Row, {
       propsData: {
-        gutter: 'sm',
+        align: 'center',
+        gutter: 'base',
       },
     });
 
-    expect(wrapper.classes('sm:Row-cols-2')).toBe(true);
+    expect(wrapper.classes('items-center')).toBe(true);
+    expect(wrapper.classes('-mx-2')).toBe(true);
   });
 });
