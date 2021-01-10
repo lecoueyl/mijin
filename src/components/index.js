@@ -37,3 +37,6 @@ export { default as TabsItem } from './tabs/TabsItem';
 export { default as Tag } from './tag/Tag';
 export { default as Textarea } from './textarea/Textarea';
 export { default as Toggle } from './toggle/Toggle';
+export { default as TransitionFade } from './transitions/Fade';
+export { default as TransitionFadeX } from './transitions/FadeX';
+export { default as TransitionFadeY } from './transitions/FadeY';
