@@ -8,13 +8,22 @@
     leave-class="transform translate-y-0 opacity-100"
     leave-to-class="transform translate-y-2 opacity-0"
     move-class="ease-in-out duration-150"
-    class="fixed bottom-0 right-0 p-4 z-10 space-y-2"
+    class="fixed right-0 p-4 z-10 space-y-2"
+    :class="{
+      // align
+      'left-0': align === 'left',
+      'right-0': align === 'right',
+      // position
+      'bottom-0': position === 'bottom',
+      'top-0': position === 'top',
+    }"
   >
     <li
       v-for="(event, key) in events"
       :key="key"
-      class="rounded px-4 py-2 cursor-pointer shadow-lg"
+      class="rounded px-4 py-2 cursor-pointer shadow-lg max-w-sm"
       :class="{
+        // type
         'bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900': !event.type || (event.type && !['success', 'danger', 'warning'].includes(event.type)),
         'bg-green-500 text-green-50': event.type && event.type === 'success',
         'bg-red-500 text-red-50': event.type && event.type === 'danger',
@@ -30,6 +39,26 @@
 <script>
 export default {
   name: 'MijinToast',
+
+  props: {
+    align: {
+      type: String,
+      default: 'right',
+      validator: (value) => [
+        'left',
+        'right',
+      ].includes(value),
+    },
+
+    position: {
+      default: 'bottom',
+      type: String,
+      validator: (value) => [
+        'bottom',
+        'top',
+      ].includes(value),
+    },
+  },
 
   data() {
     return {

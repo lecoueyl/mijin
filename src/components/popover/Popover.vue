@@ -86,10 +86,10 @@ export default {
       default: 'bottom',
       type: String,
       validator: (value) => [
-        'top',
-        'right',
         'bottom',
         'left',
+        'right',
+        'top',
       ].includes(value),
     },
   },
