@@ -23,10 +23,6 @@
     "build:tailwind": "rm -f dist/tailwind-preset.js && rollup --config rollup.config.js",
     "test:unit": "vue-cli-service test:unit"
   },
-  "dependencies": {
-    "chart.js": "2.9.4",
-    "vue-chartjs": "3.5.1"
-  },
   "devDependencies": {
     "@rollup/plugin-commonjs": "17.0.0",
     "@rollup/plugin-node-resolve": "11.0.1",
