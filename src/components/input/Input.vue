@@ -53,7 +53,7 @@
         stroke-linejoin="round"
         stroke-linecap="round"
         fill="none"
-        class="text-gray-700 dark:text-gray-300 stroke-2 w-5 absolute my-auto mr-2 inset-y-0 right-0 cursor-pointer"
+        class="text-gray-700 dark:text-gray-300 stroke-2 w-4 h-4 absolute my-auto mr-2 inset-y-0 right-0 cursor-pointer"
         @click="togglePasswordVisibility()"
       >
         <template v-if="currentType === 'password'">

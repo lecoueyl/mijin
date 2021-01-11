@@ -8,7 +8,7 @@
     leave-class="transform translate-y-0 opacity-100"
     leave-to-class="transform translate-y-2 opacity-0"
     move-class="ease-in-out duration-150"
-    class="fixed right-0 p-4 z-10 space-y-2"
+    class="fixed p-4 z-10 space-y-2"
     :class="{
       // align
       'left-0': align === 'left',
@@ -19,8 +19,8 @@
     }"
   >
     <li
-      v-for="(event, key) in events"
-      :key="key"
+      v-for="event in events"
+      :key="event.id"
       class="rounded px-4 py-2 cursor-pointer shadow-lg w-72"
       :class="{
         // type
@@ -57,6 +57,11 @@ export default {
         'bottom',
         'top',
       ].includes(value),
+    },
+
+    timeout: {
+      type: Number,
+      default: 3500,
     },
   },
 
@@ -102,7 +107,7 @@ export default {
         () => {
           this.remove(event);
         },
-        3000,
+        this.timeout,
       );
     },
   },
