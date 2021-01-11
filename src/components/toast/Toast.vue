@@ -21,13 +21,13 @@
     <li
       v-for="(event, key) in events"
       :key="key"
-      class="rounded px-4 py-2 cursor-pointer shadow-lg max-w-sm"
+      class="rounded px-4 py-2 cursor-pointer shadow-lg w-72"
       :class="{
         // type
-        'bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900': !event.type || (event.type && !['success', 'danger', 'warning'].includes(event.type)),
+        'bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900': !event.type || (event.type && !['success', 'error', 'warn'].includes(event.type)),
         'bg-green-500 text-green-50': event.type && event.type === 'success',
-        'bg-red-500 text-red-50': event.type && event.type === 'danger',
-        'bg-orange-500 text-orange-50': event.type && event.type === 'warning',
+        'bg-red-500 text-red-50': event.type && event.type === 'error',
+        'bg-orange-500 text-orange-50': event.type && event.type === 'warn',
       }"
       @click="remove(event)"
     >
@@ -67,10 +67,30 @@ export default {
   },
 
   methods: {
-    add(event) {
-      const newEvent = { id: Date.now(), ...event };
-      this.events.push(newEvent);
-      this.setTimer(newEvent);
+    log(content) {
+      this.add(content);
+    },
+
+    success(content) {
+      this.add(content, 'success');
+    },
+
+    warn(content) {
+      this.add(content, 'warn');
+    },
+
+    error(content) {
+      this.add(content, 'error');
+    },
+
+    add(content, type = null) {
+      const event = {
+        id: Date.now(),
+        content,
+        type,
+      };
+      this.events.push(event);
+      this.setTimer(event);
     },
 
     remove(event) {
