@@ -10,6 +10,12 @@
     "vue",
     "component"
   ],
+  "contributors": [
+    "Leonard Lecouey <leonard.lecouey@gmail.com>"
+  ],
+  "files": [
+    "dist/*.js"
+  ],
   "scripts": {
     "build": "vue-cli-service build src/index.js --target lib --name mijin",
     "bla": "vue-cli-service build src/tailwind-preset.js --target wc --name tailwind-preset",
