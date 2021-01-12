@@ -20,7 +20,7 @@
   "scripts": {
     "build": "npm run build:vue && npm run build:tailwind",
     "build:vue": "vue-cli-service build src/index.js --target lib --name mijin",
-    "build:tailwind": "rm -f dist/tailwind-preset.js && rollup --config rollup.config.js",
+    "build:tailwind": "rimraf dist/tailwind-preset.js && rollup --config rollup.config.js",
     "test:unit": "vue-cli-service test:unit"
   },
   "devDependencies": {
@@ -35,6 +35,7 @@
     "babel-eslint": "10.1.0",
     "eslint-plugin-import": "2.22.1",
     "eslint-plugin-vue": "7.4.1",
+    "rimraf": "2.7.1",
     "rollup": "2.36.1",
     "tailwindcss": "2.0.2",
     "vue": "2.6.12",
