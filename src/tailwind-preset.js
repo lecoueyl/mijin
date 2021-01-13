@@ -29,8 +29,8 @@ module.exports = {
     },
   },
   variants: {
-    opacity: ['responsive', 'hover', 'focus', 'group-hover'],
-    padding: ['responsive', 'first', 'last'],
+    // use by src/components/table/TableCell.vue
+    padding: ['responsive', 'last'],
   },
   plugins: [
     ({ addBase, config }) => {

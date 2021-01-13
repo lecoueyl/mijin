@@ -3,6 +3,9 @@
     class="last:pr-0"
     :class="[
       {
+        // density
+        'py-1 pr-2': tableProps.density === 'tight',
+        'py-2 pr-4': tableProps.density === 'normal',
         // text-align
         'text-left': textAlign === 'left',
         'text-center': textAlign === 'center',
@@ -18,7 +21,6 @@
         // truncate
         'truncate': truncate && tableProps.fixed,
       },
-      tableProps && tableProps.density === 'tight' ? 'py-1 pr-2' : 'py-2 pr-4'
     ]"
   >
     <slot />
