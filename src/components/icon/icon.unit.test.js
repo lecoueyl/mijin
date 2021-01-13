@@ -16,9 +16,6 @@ describe('Icon', () => {
     expect(wrapper.attributes('fill')).toBe('none');
     expect(wrapper.attributes('role')).toBe('presentation');
     expect(wrapper.attributes('stroke')).toBe('currentColor');
-    expect(wrapper.classes('h-3')).toBe(false);
-    expect(wrapper.classes('h-4')).toBe(true);
-    expect(wrapper.classes('h-6')).toBe(false);
   });
 
   it('do not renders default slot content', async () => {
@@ -51,16 +48,4 @@ describe('Icon', () => {
       expect(wrapper.classes(expected)).toBe(true);
     },
   );
-
-  it('accepts variant prop', async () => {
-    const wrapper = shallowMount(Icon, {
-      propsData: {
-        name: 'user',
-        variant: 'glyph',
-      },
-    });
-
-    expect(wrapper.attributes('fill')).toBe('currentColor');
-    expect(wrapper.attributes('stroke')).toBe('none');
-  });
 });
