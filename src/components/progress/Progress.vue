@@ -53,11 +53,14 @@
       />
     </svg>
 
-    <template v-if="variant === 'score'">
+    <div
+      v-if="variant === 'score'"
+      class="space-x-1 inline-block"
+    >
       <div
         v-for="index in scoreLength"
         :key="index"
-        class="rounded-sm h-2 w-3 inline-block mr-1 last:mr-0"
+        class="rounded-sm h-2 w-3 inline-block"
         :class="{
           'bg-gray-200 dark:bg-gray-700': !isScoreActive(index),
           'bg-primary-500': isScoreActive(index) && color === 'primary',
@@ -66,7 +69,7 @@
           'bg-orange-500': isScoreActive(index) && color === 'warning',
         }"
       />
-    </template>
+    </div>
   </Component>
 </template>
 
