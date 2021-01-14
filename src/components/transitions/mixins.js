@@ -11,6 +11,16 @@ export default {
       default: 'span',
       type: String,
     },
+
+    mode: {
+      default: null,
+      type: String,
+      validator: (value) => [
+        null,
+        'in-out',
+        'out-in',
+      ].includes(value),
+    },
   },
 
   computed: {

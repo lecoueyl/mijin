@@ -1,6 +1,7 @@
 <template>
   <Component
     :is="transitionType"
+    :mode="mode"
     :tag="tag"
     enter-active-class="transition-opacity ease-in duration-200"
     leave-active-class="transition-opacity ease-out duration-200"
