@@ -27,6 +27,7 @@
     v-on="listeners"
   >
     <svg
+      v-if="!$slots.icon"
       width="24"
       height="24"
       viewBox="0 0 24 24"
@@ -35,7 +36,7 @@
       stroke-linecap="round"
       fill="none"
       role="presentation"
-      class="flex-shrink-0 stroke-2 w-4 h-4 mt-1 mr-2"
+      class="flex-none stroke-2 w-4 h-4 mt-1 mr-2"
     >
       <template v-if="props.variant === 'success'">
         <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" />
@@ -84,6 +85,14 @@
         />
       </template>
     </svg>
+
+    <div
+      v-if="$slots.icon"
+      class="flex-none pr-2"
+    >
+      <slot name="icon" />
+    </div>
+
     <slot />
   </Component>
 </template>
