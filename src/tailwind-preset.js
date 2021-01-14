@@ -1,26 +1,36 @@
 const colors = require('tailwindcss/colors');
+const { borderRadius } = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  darkMode: 'class',
   theme: {
     colors: {
+      primary: colors.violet,
+      success: colors.green,
+      warning: colors.orange,
+      danger: colors.red,
+
       transparent: 'transparent',
       current: 'currentColor',
+
       black: '#000',
       white: '#fff',
+
       blue: colors.lightBlue,
       gray: colors.gray,
       green: colors.green,
       indigo: colors.indigo,
       orange: colors.orange,
       pink: colors.pink,
-      primary: colors.violet,
       purple: colors.purple,
       red: colors.rose,
       teal: colors.teal,
       yellow: colors.amber,
     },
     extend: {
+      borderRadius: {
+        button: borderRadius.lg,
+        form: borderRadius.md,
+      },
       // use by src/components/popover/Popover.vue
       inset: {
         '1/2': '50%',
@@ -38,7 +48,6 @@ module.exports = {
         html: {
           color: config('theme.colors.gray.900'),
           backgroundColor: config('theme.colors.white'),
-          '@apply antialiased': {},
         },
         'html.dark': {
           color: config('theme.colors.white'),

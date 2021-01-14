@@ -9,7 +9,7 @@
 
     <div class="relative">
       <select
-        class="block appearance-none w-full border border-gray-300 dark:border-gray-700 pr-8 rounded-md leading-tight
+        class="block appearance-none w-full border border-gray-300 dark:border-gray-700 pr-8 rounded-form leading-tight
           focus:outline-none focus:border-primary-500 dark:focus:border-primary-500 transition-colors duration-150 ease-in-out"
         :class="[
           disabled

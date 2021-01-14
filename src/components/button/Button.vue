@@ -20,9 +20,9 @@
         'px-10 py-4': $slots.default && props.size === 'lg',
         'px-3 py-2': !$slots.default,
         // group
-        'rounded-lg': props.group === false,
-        'rounded-l-lg': props.group === 'first',
-        'rounded-r-lg': props.group === 'last',
+        'rounded-button': props.group === false,
+        'rounded-l-button': props.group === 'first',
+        'rounded-r-button': props.group === 'last',
         // loading
         'animate-pulse cursor-wait': props.loading
       },

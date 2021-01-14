@@ -22,7 +22,7 @@
       <input
         ref="input"
         class="appearance-none block w-full text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-600 border border-gray-300 dark:border-gray-700
-          rounded-md leading-tight
+          rounded-form leading-tight
           focus:outline-none focus:border-primary-500 dark:focus:border-primary-500 transition-colors duration-150 ease-in-out"
         :class="[
           $slots.icon ? 'pl-8' : 'pl-2',
