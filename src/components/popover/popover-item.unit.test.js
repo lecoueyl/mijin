@@ -40,7 +40,7 @@ describe('PopoverItem', () => {
       },
     });
 
-    expect(wrapper.classes('hover:text-red-500')).toBe(true);
+    expect(wrapper.classes('hover:text-danger-500')).toBe(true);
   });
 
   it('should emit events', async () => {

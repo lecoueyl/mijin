@@ -8,9 +8,9 @@
         class="h-2 rounded-lg"
         :class="{
           'bg-primary-500': color === 'primary',
-          'bg-green-500': color === 'success',
-          'bg-red-500': color === 'danger',
-          'bg-orange-500': color === 'warning',
+          'bg-success-500': color === 'success',
+          'bg-danger-500': color === 'danger',
+          'bg-warning-500': color === 'warning',
         }"
         :style="{
           width: `${percentage}%`,
@@ -37,9 +37,9 @@
       <circle
         :class="{
           'text-primary-500': color === 'primary',
-          'text-green-500': color === 'success',
-          'text-red-500': color === 'danger',
-          'text-orange-500': color === 'warning',
+          'text-success-500': color === 'success',
+          'text-danger-500': color === 'danger',
+          'text-warning-500': color === 'warning',
         }"
         :style="{ strokeDasharray: `${circleProgress} 252` }"
         stroke="currentColor"
@@ -64,9 +64,9 @@
         :class="{
           'bg-gray-200 dark:bg-gray-700': !isScoreActive(index),
           'bg-primary-500': isScoreActive(index) && color === 'primary',
-          'bg-green-500': isScoreActive(index) && color === 'success',
-          'bg-red-500': isScoreActive(index) && color === 'danger',
-          'bg-orange-500': isScoreActive(index) && color === 'warning',
+          'bg-success-500': isScoreActive(index) && color === 'success',
+          'bg-danger-500': isScoreActive(index) && color === 'danger',
+          'bg-warning-500': isScoreActive(index) && color === 'warning',
         }"
       />
     </div>

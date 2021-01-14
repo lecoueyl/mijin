@@ -80,7 +80,7 @@
 
     <p
       v-if="$slots.error"
-      class="text-sm text-red-500 mt-1"
+      class="text-sm text-danger-500 mt-1"
     >
       <slot name="error" />
     </p>

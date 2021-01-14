@@ -58,8 +58,8 @@ describe('Avatar', () => {
       },
     });
 
-    expect(wrapper.classes('bg-red-500')).toBe(true);
-    expect(wrapper.classes('text-red-50')).toBe(true);
+    expect(wrapper.classes('bg-blue-500')).toBe(true);
+    expect(wrapper.classes('text-blue-50')).toBe(true);
   });
 
   it('accepts letter prop', async () => {

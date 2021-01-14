@@ -9,7 +9,7 @@
           // color
           'bg-gray-300 text-gray-900': props.color === 'gray',
           'bg-primary-200 text-primary-900': props.color === 'primary',
-          'bg-green-200 text-green-900': props.color === 'green',
+          'bg-blue-200 text-blue-900': props.color === 'blue',
           // size
           'text-sm px-2 py-1 leading-none': props.size === 'sm',
           'px-3 py-2 leading-none': props.size === 'base',

@@ -9,7 +9,7 @@
           // fill
           'bg-gray-300 text-gray-900': props.variant === 'fill' && props.color === 'gray',
           'bg-primary-200 text-primary-900': props.variant === 'fill' && props.color === 'primary',
-          'bg-green-200 text-green-900': props.variant === 'fill' && props.color === 'green',
+          'bg-blue-200 text-blue-900': props.variant === 'fill' && props.color === 'blue',
           // outline
           'text-gray-900 dark:text-gray-100 border border-gray-300 dark:border-gray-700': props.variant === 'outline' && props.color === 'gray',
           // size

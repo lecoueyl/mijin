@@ -7,7 +7,7 @@
       {
         'flex items-center': $slots.action || $slots.icon,
         'hover:bg-gray-100 dark:hover:bg-gray-800': props.variant === 'base',
-        'hover:text-red-500 hover:bg-red-200': props.variant === 'danger',
+        'hover:text-danger-500 hover:bg-danger-200': props.variant === 'danger',
       },
       data.class,
       data.staticClass,

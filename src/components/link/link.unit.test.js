@@ -37,13 +37,13 @@ describe('Link', () => {
   it('accepts color prop', async () => {
     const wrapper = shallowMount(Link, {
       propsData: {
-        color: 'red-500',
-        colorHover: 'red-600',
+        color: 'blue-500',
+        colorHover: 'blue-600',
       },
     });
 
-    expect(wrapper.classes('text-red-500')).toBe(true);
-    expect(wrapper.classes('hover:text-red-600')).toBe(true);
+    expect(wrapper.classes('text-blue-500')).toBe(true);
+    expect(wrapper.classes('hover:text-blue-600')).toBe(true);
   });
 
   it('accepts external prop', async () => {

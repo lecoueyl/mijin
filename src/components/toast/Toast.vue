@@ -25,9 +25,9 @@
       :class="{
         // type
         'bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900': !event.type || (event.type && !['success', 'error', 'warn'].includes(event.type)),
-        'bg-green-500 text-green-50': event.type && event.type === 'success',
-        'bg-red-500 text-red-50': event.type && event.type === 'error',
-        'bg-orange-500 text-orange-50': event.type && event.type === 'warn',
+        'bg-success-500 text-success-50': event.type && event.type === 'success',
+        'bg-danger-500 text-danger-50': event.type && event.type === 'error',
+        'bg-warning-500 text-warning-50': event.type && event.type === 'warn',
       }"
       @click="remove(event)"
     >

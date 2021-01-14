@@ -38,7 +38,7 @@ describe('Progress', () => {
       },
     });
 
-    expect(wrapper.find('.bg-red-500').exists()).toBe(true);
+    expect(wrapper.find('.bg-danger-500').exists()).toBe(true);
   });
 
   it('accepts circle variant prop', async () => {

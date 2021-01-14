@@ -34,9 +34,9 @@ describe('Note', () => {
   });
 
   test.each([
-    ['success', 'text-green-500'],
-    ['danger', 'text-red-500'],
-    ['warning', 'text-orange-500'],
+    ['success', 'text-success-500'],
+    ['danger', 'text-danger-500'],
+    ['warning', 'text-warning-500'],
   ])(
     'with prop variant %p render class %p',
     (variant, expected) => {
