@@ -3,6 +3,7 @@
     <img alt="amplication-logo" height="70" alt="Amplication Logo" src="https://amplication.com/assets/amplication-logo-purple.svg"/>
   </a>
 </p>
+
 <p align="center">
     <a href="https://mijin.design/docs">📖 Documentation</a>
 </p>
@@ -15,17 +16,18 @@ Amplication is an open‑source development tool. It helps professional Node.js 
 - 🌗 Support dark and light mode
 - 🕵️ No dependencies
 
-## [Getting Started](https://mijin.design/docs/getting-started)
+## Getting Started
 
 Install package:
-```
+
+```bash
 # Using npm
-npm install --save-dev @nuxtjs/tailwindcss
+npm install --save-dev mijin
 # Using yarn
-yarn add --dev @nuxtjs/tailwindcss
+yarn add --dev mijin
 ```
 
-Add mijin Tailwind CSS presets to your `tailwindcss.config.js` file:
+Add mijin Tailwind CSS presets to your `tailwindcss.config.js` file
 
 ```javascript
 const mijin = require('mijin/tailwind-preset.js');
@@ -50,7 +52,7 @@ Vue.use(Mijin)
 
 ### nuxtjs
 
-Add `mijin.js` file to your `/plugins` directory
+Add `mijin.js` file to your `plugins` directory
 
 ```javascript
 import Vue from 'vue';
@@ -69,7 +71,7 @@ Load the plugin from `nuxt.config.js`
 ```
 
 [📖 &nbsp;Read more](https://mijin.design/docs/getting-started)
-# Support
+## Support
 
 ### Create a bug report
 
