@@ -1,9 +1,9 @@
 <template>
   <label
-    class="inline-block cursor-pointer"
+    class="inline-block cursor-pointer focus:outline-none"
     :class="{
       'rounded border border-gray-300 dark:border-gray-700 p-2 hover:border-primary-500 dark:hover:border-primary-500': bordered,
-      'focus:outline-none transition-colors duration-150 ease-in-out': bordered,
+      'transition-colors duration-150 ease-in-out': bordered,
       'border-primary-500 dark:border-primary-500': checked && !disabled,
     }"
     :aria-checked="checked ? 'true' : 'false'"

@@ -21,14 +21,21 @@
 
       <input
         ref="input"
-        class="appearance-none block w-full text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-600 border border-gray-300 dark:border-gray-700
-          rounded-form leading-tight
+        class="appearance-none block w-full text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-600 border rounded-form leading-tight
           focus:outline-none focus:border-primary-500 dark:focus:border-primary-500 transition-colors duration-150 ease-in-out"
         :class="[
           $slots.icon ? 'pl-8' : 'pl-2',
           disabled ? 'bg-gray-200 dark:bg-gray-800 cursor-not-allowed' : 'bg-white dark:bg-gray-900',
-          size === 'sm' ? 'text-sm py-1' : 'py-2',
           type === 'password' ? 'pr-8' : 'pr-2',
+          {
+            // size
+            'text-sm py-1': size === 'sm',
+            'py-2': size === 'base',
+            // status
+            'border-gray-300 dark:border-gray-700': !status,
+            'border-danger-500': status === 'error',
+            'border-success-500': status === 'success',
+          }
         ]"
         :disabled="disabled"
         :max="max"
@@ -84,6 +91,13 @@
     >
       <slot name="error" />
     </p>
+
+    <p
+      v-if="$slots.success"
+      class="text-sm text-success-500 mt-1"
+    >
+      <slot name="success" />
+    </p>
   </label>
 </template>
 
@@ -138,6 +152,16 @@ export default {
       validator: (value) => [
         'sm',
         'base',
+      ].includes(value),
+    },
+
+    status: {
+      default: null,
+      type: String,
+      validator: (value) => [
+        null,
+        'error',
+        'success',
       ].includes(value),
     },
 

@@ -1,6 +1,6 @@
 <template>
   <label
-    class="inline-block"
+    class="inline-block focus:outline-none"
     :aria-checked="checked ? 'true' : 'false'"
     :aria-disabled="disabled ? 'true' : null"
     :tabindex="0"

@@ -4,9 +4,14 @@
     :ref="data.ref"
     class="transition-colors duration-150 ease-in-out inline-block"
     :class="[
-      props.color ? `text-${props.color}` : 'text-primary-500',
-      props.colorHover ? `hover:text-${props.colorHover}` : 'hover:text-primary-600',
       {
+        // color
+        'hover:text-gray-600 dark:hover:text-gray-300': props.color === 'gray',
+        'text-primary-500 hover:text-primary-700': props.color === 'primary',
+        'text-danger-500 hover:text-danger-700': props.color === 'danger',
+        'text-warning-500 hover:text-warning-700': props.color === 'warning',
+        'text-success-500 hover:text-success-700': props.color === 'success',
+        // underline
         'underline': props.underline,
       },
       data.class,
@@ -56,23 +61,26 @@ export default {
 
   props: {
     color: {
-      default: null,
+      default: 'primary',
       type: String,
-    },
-
-    colorHover: {
-      default: null,
-      type: String,
+      validator: (value) => [
+        'danger',
+        'gray',
+        'success',
+        'warning',
+      ].includes(value),
     },
 
     external: {
       default: false,
       type: Boolean,
     },
+
     tag: {
       default: 'a',
       type: String,
     },
+
     underline: {
       default: false,
       type: Boolean,
