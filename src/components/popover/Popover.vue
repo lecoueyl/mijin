@@ -11,7 +11,7 @@
     </div>
 
     <div
-      class="fixed w-full sm:w-auto bottom-0 left-0 right-0 sm:p-0 sm:absolute transform transition-all duration-150 z-40"
+      class="fixed w-full sm:w-auto bottom-0 left-0 right-0 sm:p-0 sm:absolute transform transition-all z-40"
       :class="[
         {
           // align-left
@@ -33,18 +33,18 @@
           'sm:translate-y-1': position === 'top' && !isOpen,
           // position-right
           'sm:left-full sm:pl-2': position === 'right',
-          'sm:translate-x-0': position === 'right' && isOpen,
-          'sm:-translate-x-1': position === 'right' && !isOpen,
+          'sm:translate-x-0 sm:translate-y-0': position === 'right' && isOpen,
+          'sm:-translate-x-1 sm:translate-y-0': position === 'right' && !isOpen,
           // position-bottom
           'sm:top-full sm:bottom-0 sm:pt-2': position === 'bottom',
           'sm:translate-y-0': position === 'bottom' && isOpen,
           'sm:-translate-y-1': position === 'bottom' && !isOpen,
           // position-left
           'sm:right-full sm:left-auto sm:pr-2': position === 'left',
-          'sm:translate-x-0 sm:left-auto sm:right-auto': position === 'left' && isOpen,
-          'sm:translate-x-1 sm:left-auto sm:right-auto': position === 'left' && !isOpen,
+          'sm:translate-x-0 sm:translate-y-0 sm:left-auto sm:right-auto': position === 'left' && isOpen,
+          'sm:translate-x-1 sm:translate-y-0 sm:left-auto sm:right-auto': position === 'left' && !isOpen,
         },
-        isOpen ? 'visible opacity-100 ease-in' : 'invisible opacity-0 ease-out'
+        isOpen ? 'visible opacity-100 translate-y-0 ease-out duration-150' : 'invisible opacity-0 translate-y-full ease-in duration-100'
       ]"
       @click="dismissible ? close() : null"
     >
