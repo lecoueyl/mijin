@@ -1,18 +1,7 @@
-<template functional>
+<template>
   <Component
-    :is="props.tag"
-    :ref="data.ref"
-    class="bg-white dark:bg-gray-900 shadow-lg rounded-md border border-gray-200 dark:border-gray-800"
-    :class="[
-      data.class,
-      data.staticClass,
-    ]"
-    :style="[
-      data.style,
-      data.staticStyle,
-    ]"
-    v-bind="data.attrs"
-    v-on="listeners"
+    :is="tag"
+    class="bg-white dark:bg-gray-900 shadow-lg sm:rounded-md border-t sm:border border-gray-200 dark:border-gray-800 w-full"
   >
     <slot />
   </Component>
@@ -27,6 +16,13 @@ export default {
       default: 'div',
       type: String,
     },
+  },
+
+  created() {
+    if (this.$parent.$options.name !== 'MijinPopover') {
+      this.$destroy();
+      throw new Error('PopoverContainer must be wrap with Popover');
+    }
   },
 };
 </script>

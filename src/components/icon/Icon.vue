@@ -5,7 +5,7 @@
     :class="{
       'h-3 w-3': size === 'sm',
       'h-4 w-4': size === 'base',
-      'h-6 w-6': size === 'lg',
+      'h-5 w-5': size === 'lg',
     }"
     fill="none"
     stroke="currentColor"

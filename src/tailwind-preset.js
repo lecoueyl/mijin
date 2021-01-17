@@ -31,11 +31,6 @@ module.exports = {
         button: borderRadius.lg,
         form: borderRadius.md,
       },
-      // use by src/components/popover/Popover.vue
-      inset: {
-        '1/2': '50%',
-        full: '100%',
-      },
     },
   },
   variants: {
