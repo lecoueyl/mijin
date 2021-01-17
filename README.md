@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://mijin.design" target="_blank">
-    <img alt="amplication-logo" height="70" alt="Amplication Logo" src="https://amplication.com/assets/amplication-logo-purple.svg"/>
+    <img alt="mijin-logo" height="70" alt="Amplication Logo" src="./.github/mijin-logo.svg"/>
   </a>
 </p>
 

@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "17.0.0",
-    "@rollup/plugin-node-resolve": "11.0.1",
+    "@rollup/plugin-node-resolve": "11.1.0",
     "@vue/cli-plugin-babel": "4.5.10",
     "@vue/cli-plugin-eslint": "4.5.10",
     "@vue/cli-plugin-unit-jest": "4.5.10",
@@ -37,7 +37,7 @@
     "eslint-plugin-vue": "7.4.1",
     "feather-icons": "4.28.0",
     "rimraf": "3.0.2",
-    "rollup": "2.36.1",
+    "rollup": "2.36.2",
     "tailwindcss": "2.0.2",
     "vue": "2.6.12",
     "vue-template-compiler": "2.6.12"
