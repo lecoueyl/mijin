@@ -120,4 +120,18 @@ describe('Toast', () => {
     await $toastItem.trigger('click');
     expect(wrapper.find('li').exists()).toBe(false);
   });
+
+  it('accepts timeout props', async () => {
+    const wrapper = shallowMount(Toast, {
+      propsData: {
+        timeout: 1,
+        remove: jest.fn(),
+      },
+    });
+
+    jest.spyOn(wrapper.vm, 'remove');
+    await wrapper.vm.setTimer('foobar');
+    await new Promise((r) => setTimeout(r, 1));
+    expect(wrapper.vm.remove).toBeCalled();
+  });
 });
