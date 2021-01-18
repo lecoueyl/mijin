@@ -10,6 +10,8 @@ describe('PopoverItem', () => {
     expect(wrapper.element.tagName).toBe('DIV');
     expect(wrapper.classes('block')).toBe(true);
     expect(wrapper.classes('flex')).toBe(false);
+    expect(wrapper.classes('cursor-pointer')).toBe(true);
+    expect(wrapper.classes('opacity-70')).toBe(false);
   });
 
   it('renders default slot content', async () => {
@@ -41,6 +43,16 @@ describe('PopoverItem', () => {
     });
 
     expect(wrapper.classes('hover:text-danger-500')).toBe(true);
+  });
+
+  it('accepts disabled property', () => {
+    const wrapper = shallowMount(PopoverItem, {
+      propsData: {
+        disabled: true,
+      },
+    });
+
+    expect(wrapper.classes('opacity-70')).toBe(true);
   });
 
   it('should emit events', async () => {
