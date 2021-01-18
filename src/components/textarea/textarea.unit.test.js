@@ -43,8 +43,8 @@ describe('Textarea', () => {
       },
     });
 
-    const $textarea = wrapper.find('input');
-    expect($textarea.classes('border-danger-500')).toBe(false);
+    const $textarea = wrapper.find('textarea');
+    expect($textarea.classes('border-danger-500')).toBe(true);
   });
 
 

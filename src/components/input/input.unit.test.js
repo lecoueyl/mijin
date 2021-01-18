@@ -45,7 +45,7 @@ describe('Input', () => {
     });
 
     const $input = wrapper.find('input');
-    expect($input.classes('border-danger-500')).toBe(false);
+    expect($input.classes('border-danger-500')).toBe(true);
   });
 
   it('has attribute disabled when disabled set', () => {

@@ -65,4 +65,59 @@ describe('Toast', () => {
       expect(wrapper.classes(expected)).toBe(true);
     },
   );
+
+  it('trigger log message', async () => {
+    const wrapper = shallowMount(Toast);
+    const message = 'foobar';
+
+    await wrapper.vm.log(message);
+    const $toastItem = wrapper.find('li');
+    expect($toastItem.exists()).toBe(true);
+    expect($toastItem.classes('bg-gray-900')).toBe(true);
+    expect($toastItem.text()).toBe(message);
+  });
+
+  it('trigger success message', async () => {
+    const wrapper = shallowMount(Toast);
+    const message = 'foobar';
+
+    await wrapper.vm.success(message);
+    const $toastItem = wrapper.find('li');
+    expect($toastItem.exists()).toBe(true);
+    expect($toastItem.classes('bg-success-500')).toBe(true);
+    expect($toastItem.text()).toBe(message);
+  });
+
+  it('trigger warn message', async () => {
+    const wrapper = shallowMount(Toast);
+    const message = 'foobar';
+
+    await wrapper.vm.warn(message);
+    const $toastItem = wrapper.find('li');
+    expect($toastItem.exists()).toBe(true);
+    expect($toastItem.classes('bg-warning-500')).toBe(true);
+    expect($toastItem.text()).toBe(message);
+  });
+
+  it('trigger error message', async () => {
+    const wrapper = shallowMount(Toast);
+    const message = 'foobar';
+
+    await wrapper.vm.error(message);
+    const $toastItem = wrapper.find('li');
+    expect($toastItem.exists()).toBe(true);
+    expect($toastItem.classes('bg-danger-500')).toBe(true);
+    expect($toastItem.text()).toBe(message);
+  });
+
+  it('remove message on click', async () => {
+    const wrapper = shallowMount(Toast);
+    await wrapper.vm.log('foobar');
+
+    const $toastItem = wrapper.find('li');
+    expect($toastItem.exists()).toBe(true);
+
+    await $toastItem.trigger('click');
+    expect(wrapper.find('li').exists()).toBe(false);
+  });
 });
