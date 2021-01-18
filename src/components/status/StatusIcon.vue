@@ -5,13 +5,14 @@
     class="inline-flex items-center justify-center rounded-full"
     :class="[
       {
-        'h-3 w-3': props.size === 'sm',
-        'h-5 w-5 p-1': props.size === 'base',
+        // size
+        'h-6 w-6 p-1': props.size === 'base',
         'h-10 w-10 p-2': props.size === 'lg',
         'h-16 w-16 p-4': props.size === 'xl',
-        'bg-gray-200 text-success-100': props.status === 'disabled',
+
+        // status
         'bg-danger-100 text-danger-600': ['danger', 'error'].includes(props.status),
-        'bg-success-100 text-success-600': props.status === 'valid',
+        'bg-success-100 text-success-600': props.status === 'success',
         'bg-warning-100 text-warning-600': props.status === 'warning',
       },
       data.class,
@@ -25,7 +26,6 @@
     v-on="listeners"
   >
     <svg
-      v-if="props.variant === 'icon'"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -68,7 +68,7 @@
         />
       </template>
 
-      <template v-if="props.status === 'valid'">
+      <template v-if="props.status === 'success'">
         <polyline points="20 6 9 17 4 12" />
       </template>
     </svg>
@@ -77,19 +77,13 @@
 
 <script>
 export default {
-  name: 'MijinAvatar',
+  name: 'MijinStatusIcon',
 
   props: {
-    number: {
-      default: null,
-      type: String,
-    },
-
     size: {
-      default: 'lg',
+      default: 'base',
       type: String,
       validator: (value) => [
-        'sm',
         'base',
         'lg',
         'xl',
@@ -97,13 +91,12 @@ export default {
     },
 
     status: {
-      default: 'valid',
+      default: 'success',
       type: String,
       validator: (value) => [
         'danger',
-        'disabled',
         'error',
-        'valid',
+        'success',
         'warning',
       ].includes(value),
     },
@@ -111,16 +104,6 @@ export default {
     tag: {
       default: 'span',
       type: String,
-    },
-
-    variant: {
-      default: 'step',
-      type: String,
-      validator: (value) => [
-        'step',
-        'status',
-        'icon',
-      ].includes(value),
     },
   },
 };

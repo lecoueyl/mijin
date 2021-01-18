@@ -131,7 +131,7 @@ describe('Toast', () => {
 
     jest.spyOn(wrapper.vm, 'remove');
     await wrapper.vm.setTimer('foobar');
-    await new Promise((r) => setTimeout(r, 1));
+    await new Promise((done) => setTimeout(done, 1));
     expect(wrapper.vm.remove).toBeCalled();
   });
 });
