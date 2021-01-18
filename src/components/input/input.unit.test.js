@@ -37,6 +37,17 @@ describe('Input', () => {
     expect(wrapper.element.tagName).toBe('LABEL');
   });
 
+  it('accepts status props', () => {
+    const wrapper = shallowMount(Input, {
+      propsData: {
+        status: 'error',
+      },
+    });
+
+    const $input = wrapper.find('input');
+    expect($input.classes('border-danger-500')).toBe(false);
+  });
+
   it('has attribute disabled when disabled set', () => {
     const wrapper = shallowMount(Input, {
       propsData: {

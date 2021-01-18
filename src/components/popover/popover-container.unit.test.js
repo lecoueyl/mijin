@@ -1,20 +1,43 @@
-import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
+import { enableAutoDestroy, shallowMount, mount } from '@vue/test-utils';
+import Popover from './Popover';
 import PopoverContainer from './PopoverContainer';
 
 describe('PopoverContainer', () => {
   enableAutoDestroy(afterEach);
 
   it('has default structure', async () => {
-    const wrapper = shallowMount(PopoverContainer);
+    const wrapper = mount({
+      template: `
+        <Popover>
+          <PopoverContainer />
+        </Popover>`,
+      components: {
+        Popover,
+        PopoverContainer,
+      },
+    });
 
-    expect(wrapper.element.tagName).toBe('DIV');
-    expect(wrapper.classes('bg-white')).toBe(true);
+    const $popoverContainer = wrapper.findComponent(PopoverContainer);
+    expect($popoverContainer.element.tagName).toBe('DIV');
+    expect($popoverContainer.classes('bg-white')).toBe(true);
+  });
+
+  it('checks parent presence', async () => {
+    spyOn(console, 'error');
+    expect(() => shallowMount(PopoverContainer)).toThrowError();
   });
 
   it('renders default slot content', async () => {
-    const wrapper = shallowMount(PopoverContainer, {
-      slots: {
-        default: '<span>foobar</span>',
+    const wrapper = mount({
+      template: `
+        <Popover>
+          <PopoverContainer>
+            <span>foobar</span>
+          </PopoverContainer>
+        </Popover>`,
+      components: {
+        Popover,
+        PopoverContainer,
       },
     });
 
@@ -23,48 +46,18 @@ describe('PopoverContainer', () => {
   });
 
   it('renders custom root element', async () => {
-    const wrapper = shallowMount(PopoverContainer, {
-      propsData: {
-        tag: 'section',
+    const wrapper = mount({
+      template: `
+        <Popover>
+          <PopoverContainer tag="section" />
+        </Popover>`,
+      components: {
+        Popover,
+        PopoverContainer,
       },
     });
 
-    expect(wrapper.element.tagName).toBe('SECTION');
-  });
-
-  it('should emit events', async () => {
-    let called = 0;
-    let event = null;
-    const wrapper = shallowMount(PopoverContainer, {
-      listeners: {
-        blur: (e) => {
-          event = e;
-          called += 1;
-        },
-        click: (e) => {
-          event = e;
-          called += 1;
-        },
-        focus: (e) => {
-          event = e;
-          called += 1;
-        },
-      },
-    });
-
-    expect(called).toBe(0);
-    expect(event).toEqual(null);
-
-    await wrapper.trigger('click');
-    expect(called).toBe(1);
-    expect(event).toBeInstanceOf(MouseEvent);
-
-    await wrapper.element.dispatchEvent(new Event('focus'));
-    expect(called).toBe(2);
-    expect(event).toBeInstanceOf(Event);
-
-    await wrapper.element.dispatchEvent(new Event('blur'));
-    expect(called).toBe(3);
-    expect(event).toBeInstanceOf(Event);
+    const $popoverContainer = wrapper.findComponent(PopoverContainer);
+    expect($popoverContainer.element.tagName).toBe('SECTION');
   });
 });

@@ -36,6 +36,18 @@ describe('Textarea', () => {
     expect(wrapper.element.tagName).toBe('LABEL');
   });
 
+  it('accepts status props', () => {
+    const wrapper = shallowMount(Textarea, {
+      propsData: {
+        status: 'error',
+      },
+    });
+
+    const $textarea = wrapper.find('input');
+    expect($textarea.classes('border-danger-500')).toBe(false);
+  });
+
+
   it('has attribute disabled when disabled set', () => {
     const wrapper = shallowMount(Textarea, {
       propsData: {

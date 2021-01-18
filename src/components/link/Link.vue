@@ -66,6 +66,7 @@ export default {
       validator: (value) => [
         'danger',
         'gray',
+        'primary',
         'success',
         'warning',
       ].includes(value),

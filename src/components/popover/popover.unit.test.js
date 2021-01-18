@@ -1,7 +1,6 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
 import Popover from './Popover';
 
-// TODO: implement all tests
 describe('Popover', () => {
   enableAutoDestroy(afterEach);
 
@@ -35,7 +34,7 @@ describe('Popover', () => {
 
   it('open, close and toggle modal', async () => {
     const wrapper = shallowMount(Popover);
-    const $container = wrapper.find('.absolute');
+    const $container = wrapper.find('.fixed');
 
     await wrapper.vm.open();
     expect(wrapper.vm.isOpen).toBe(true);
@@ -59,7 +58,7 @@ describe('Popover', () => {
   it('can be dismissible', async () => {
     // without dismissible props
     let wrapper = shallowMount(Popover);
-    let $container = wrapper.find('.absolute');
+    let $container = wrapper.find('.fixed');
 
     await wrapper.vm.open();
     expect(wrapper.vm.isOpen).toBe(true);
@@ -73,7 +72,7 @@ describe('Popover', () => {
         dismissible: true,
       },
     });
-    $container = wrapper.find('.absolute');
+    $container = wrapper.find('.fixed');
 
     await wrapper.vm.open();
     expect(wrapper.vm.isOpen).toBe(true);

@@ -54,7 +54,7 @@ describe('Avatar', () => {
   it('accepts color prop', async () => {
     const wrapper = shallowMount(Avatar, {
       propsData: {
-        color: 'red',
+        color: 'blue',
       },
     });
 

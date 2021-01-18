@@ -10,10 +10,17 @@ describe('TableCell', () => {
   it('has default structure', async () => {
     const wrapper = mount({
       template: `
-        <TableRow>
-          <TableCell />
-        </TableRow>`,
+        <Table>
+          <TableBody>
+            <TableRow>
+              <TableCell />
+            </TableRow>
+          </TableBody>
+        </Table>
+        `,
       components: {
+        Table,
+        TableBody,
         TableRow,
         TableCell,
       },
@@ -31,12 +38,19 @@ describe('TableCell', () => {
   it('renders default slot content', async () => {
     const wrapper = mount({
       template: `
-        <TableRow>
-          <TableCell>
-            <span>foobar</span>
-          </TableCell>
-        </TableRow>`,
+        <Table>
+          <TableBody>
+            <TableRow>
+              <TableCell>
+                <span>foobar</span>
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      `,
       components: {
+        Table,
+        TableBody,
         TableRow,
         TableCell,
       },
@@ -59,7 +73,8 @@ describe('TableCell', () => {
               />
             </TableRow>
           </TableBody>
-        </Table>`,
+        </Table>
+      `,
       components: {
         Table,
         TableBody,
@@ -76,7 +91,7 @@ describe('TableCell', () => {
 
   it('requires fixed property with truncate prop', async () => {
     const consoleSpy = spyOn(console, 'warn');
-    const wrapper = mount({
+    mount({
       template: `
         <Table>
           <TableBody>

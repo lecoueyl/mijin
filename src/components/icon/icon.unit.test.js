@@ -34,7 +34,7 @@ describe('Icon', () => {
 
   test.each([
     ['sm', 'h-3'],
-    ['lg', 'h-6'],
+    ['lg', 'h-5'],
   ])(
     'with prop size %p render class %p',
     (size, expected) => {
