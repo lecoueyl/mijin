@@ -13,17 +13,23 @@
 </template>
 
 <script>
+const validator = {
+  density: [
+    'tight',
+    'normal',
+  ],
+};
+
 export default {
   name: 'MijinTable',
+
+  validator,
 
   props: {
     density: {
       default: 'normal',
       type: String,
-      validator: (value) => [
-        'tight',
-        'normal',
-      ].includes(value),
+      validator: (value) => validator.density.includes(value),
     },
 
     fixed: {

@@ -25,17 +25,27 @@
 </template>
 
 <script>
+const validator = {
+  level: [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+  ],
+};
+
 export default {
   name: 'MijinHeadline',
+
+  validator,
 
   props: {
     level: {
       default: 1,
       type: [Number, String],
-      validator(value) {
-        const headlines = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'];
-        return headlines.includes(`h${value}`);
-      },
+      validator: (value) => validator.level.includes(value),
     },
 
     size: {

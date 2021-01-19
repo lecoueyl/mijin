@@ -34,8 +34,21 @@
 </template>
 
 <script>
+const validator = {
+  size: [
+    'sm',
+    'base',
+  ],
+  variant: [
+    'outline',
+    'fill',
+  ],
+};
+
 export default {
   name: 'MijinBadge',
+
+  validator,
 
   props: {
     color: {
@@ -46,10 +59,7 @@ export default {
     size: {
       default: 'base',
       type: String,
-      validator: (value) => [
-        'sm',
-        'base',
-      ].includes(value),
+      validator: (value) => validator.size.includes(value),
     },
 
     tag: {
@@ -60,10 +70,7 @@ export default {
     variant: {
       default: 'fill',
       type: String,
-      validator: (value) => [
-        'outline',
-        'fill',
-      ].includes(value),
+      validator: (value) => validator.variant.includes(value),
     },
   },
 };

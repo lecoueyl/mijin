@@ -63,8 +63,17 @@
 </template>
 
 <script>
+const validator = {
+  size: [
+    'sm',
+    'base',
+  ],
+};
+
 export default {
   name: 'MijinTag',
+
+  validator,
 
   props: {
     color: {
@@ -80,10 +89,7 @@ export default {
     size: {
       default: 'base',
       type: String,
-      validator: (value) => [
-        'sm',
-        'base',
-      ].includes(value),
+      validator: (value) => validator.size.includes(value),
     },
 
     tag: {

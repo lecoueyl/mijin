@@ -44,8 +44,19 @@
 </template>
 
 <script>
+const validator = {
+  status: [
+    'primary',
+    'danger',
+    'success',
+    'warning',
+  ],
+};
+
 export default {
   name: 'MijinStatusDot',
+
+  validator,
 
   props: {
     animate: {
@@ -56,12 +67,7 @@ export default {
     status: {
       default: 'primary',
       type: String,
-      validator: (value) => [
-        'primary',
-        'danger',
-        'success',
-        'warning',
-      ].includes(value),
+      validator: (value) => validator.status.includes(value),
     },
 
     tag: {

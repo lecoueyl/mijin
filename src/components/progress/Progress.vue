@@ -74,19 +74,30 @@
 </template>
 
 <script>
+const validator = {
+  color: [
+    'primary',
+    'danger',
+    'success',
+    'warning',
+  ],
+  variant: [
+    'bar',
+    'circle',
+    'score',
+  ],
+};
+
 export default {
   name: 'MijinProgress',
+
+  validator,
 
   props: {
     color: {
       default: 'primary',
       type: String,
-      validator: (value) => [
-        'primary',
-        'danger',
-        'success',
-        'warning',
-      ].includes(value),
+      validator: (value) => validator.color.includes(value),
     },
 
     percentage: {
@@ -109,11 +120,7 @@ export default {
     variant: {
       type: String,
       default: 'bar',
-      validator: (value) => [
-        'bar',
-        'circle',
-        'score',
-      ].includes(value),
+      validator: (value) => validator.variant.includes(value),
     },
   },
 

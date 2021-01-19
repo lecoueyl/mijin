@@ -22,32 +22,39 @@
 </template>
 
 <script>
+const validator = {
+  align: [
+    null,
+    'baseline',
+    'center',
+    'end',
+    'start',
+    'stretch',
+  ],
+  gutter: [
+    null,
+    'base',
+    'm',
+    'lg',
+  ],
+};
+
 export default {
   name: 'MijinRow',
+
+  validator,
 
   props: {
     align: {
       type: String,
       default: null,
-      validator: (value) => [
-        null,
-        'baseline',
-        'center',
-        'end',
-        'start',
-        'stretch',
-      ].includes(value),
+      validator: (value) => validator.align.includes(value),
     },
 
     gutter: {
       default: null,
       type: String,
-      validator: (value) => [
-        null,
-        'base',
-        'm',
-        'lg',
-      ].includes(value),
+      validator: (value) => validator.gutter.includes(value),
     },
 
     tag: {

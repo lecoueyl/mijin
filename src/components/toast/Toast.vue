@@ -37,26 +37,33 @@
 </template>
 
 <script>
+const validator = {
+  align: [
+    'left',
+    'right',
+  ],
+  position: [
+    'bottom',
+    'top',
+  ],
+};
+
 export default {
   name: 'MijinToast',
+
+  validator,
 
   props: {
     align: {
       type: String,
       default: 'right',
-      validator: (value) => [
-        'left',
-        'right',
-      ].includes(value),
+      validator: (value) => validator.align.includes(value),
     },
 
     position: {
       default: 'bottom',
       type: String,
-      validator: (value) => [
-        'bottom',
-        'top',
-      ].includes(value),
+      validator: (value) => validator.position.includes(value),
     },
 
     timeout: {

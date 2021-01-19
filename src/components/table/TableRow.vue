@@ -19,8 +19,21 @@
 </template>
 
 <script>
+const validator = {
+  verticalAlign: [
+    'baseline',
+    'bottom',
+    'middle',
+    'text-bottom',
+    'text-top',
+    'top',
+  ],
+};
+
 export default {
   name: 'MijinTableRow',
+
+  validator,
 
   props: {
     clickable: {
@@ -31,14 +44,7 @@ export default {
     verticalAlign: {
       default: 'top',
       type: String,
-      validator: (value) => [
-        'baseline',
-        'bottom',
-        'middle',
-        'text-bottom',
-        'text-top',
-        'top',
-      ].includes(value),
+      validator: (value) => validator.verticalAlign.includes(value),
     },
   },
 };

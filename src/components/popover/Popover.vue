@@ -56,8 +56,27 @@
 <script>
 import ClickOutside from '../../directives/clickOutside';
 
+const validator = {
+  align: [
+    'bottom',
+    'center',
+    'left',
+    'middle',
+    'right',
+    'top',
+  ],
+  position: [
+    'bottom',
+    'left',
+    'right',
+    'top',
+  ],
+};
+
 export default {
   name: 'MijinPopover',
+
+  validator,
 
   directives: {
     ClickOutside,
@@ -67,14 +86,7 @@ export default {
     align: {
       type: String,
       default: 'center',
-      validator: (value) => [
-        'bottom',
-        'center',
-        'left',
-        'middle',
-        'right',
-        'top',
-      ].includes(value),
+      validator: (value) => validator.align.includes(value),
     },
 
     dismissible: {
@@ -85,12 +97,7 @@ export default {
     position: {
       default: 'bottom',
       type: String,
-      validator: (value) => [
-        'bottom',
-        'left',
-        'right',
-        'top',
-      ].includes(value),
+      validator: (value) => validator.position.includes(value),
     },
   },
 

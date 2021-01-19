@@ -28,20 +28,35 @@
 </template>
 
 <script>
+const validator = {
+  textAlign: [
+    null,
+    'left',
+    'center',
+    'right',
+    'justify',
+  ],
+  verticalAlign: [
+    null,
+    'baseline',
+    'bottom',
+    'middle',
+    'text-bottom',
+    'text-top',
+    'top',
+  ],
+};
+
 export default {
   name: 'MijinTableCell',
+
+  validator,
 
   props: {
     textAlign: {
       default: null,
       type: String,
-      validator: (value) => [
-        null,
-        'left',
-        'center',
-        'right',
-        'justify',
-      ].includes(value),
+      validator: (value) => validator.textAlign.includes(value),
     },
 
     truncate: {
@@ -52,15 +67,7 @@ export default {
     verticalAlign: {
       default: null,
       type: String,
-      validator: (value) => [
-        null,
-        'baseline',
-        'bottom',
-        'middle',
-        'text-bottom',
-        'text-top',
-        'top',
-      ].includes(value),
+      validator: (value) => validator.verticalAlign.includes(value),
     },
   },
 

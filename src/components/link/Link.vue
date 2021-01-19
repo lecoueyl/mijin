@@ -56,20 +56,26 @@
 </template>
 
 <script>
+const validator = {
+  color: [
+    'danger',
+    'gray',
+    'primary',
+    'success',
+    'warning',
+  ],
+};
+
 export default {
   name: 'MijinLink',
+
+  validator,
 
   props: {
     color: {
       default: 'primary',
       type: String,
-      validator: (value) => [
-        'danger',
-        'gray',
-        'primary',
-        'success',
-        'warning',
-      ].includes(value),
+      validator: (value) => validator.color.includes(value),
     },
 
     external: {

@@ -76,29 +76,36 @@
 </template>
 
 <script>
+const validator = {
+  size: [
+    'base',
+    'lg',
+    'xl',
+  ],
+  status: [
+    'danger',
+    'error',
+    'success',
+    'warning',
+  ],
+};
+
 export default {
   name: 'MijinStatusIcon',
+
+  validator,
 
   props: {
     size: {
       default: 'base',
       type: String,
-      validator: (value) => [
-        'base',
-        'lg',
-        'xl',
-      ].includes(value),
+      validator: (value) => validator.size.includes(value),
     },
 
     status: {
       default: 'success',
       type: String,
-      validator: (value) => [
-        'danger',
-        'error',
-        'success',
-        'warning',
-      ].includes(value),
+      validator: (value) => validator.status.includes(value),
     },
 
     tag: {

@@ -6,12 +6,12 @@
     :class="[
       {
         'border': !props.filled,
-        'text-blue-500 border-blue-500': !props.filled && !props.variant,
+        'text-blue-500 border-blue-500': !props.filled && props.variant === 'info',
         'text-success-500 border-success-500': !props.filled && props.variant === 'success',
         'text-danger-500 border-danger-500': !props.filled && props.variant === 'danger',
         'text-warning-500 border-warning-500': !props.filled && props.variant === 'warning',
         // filled
-        'bg-blue-500 text-blue-50': props.filled && !props.variant,
+        'bg-blue-500 text-blue-50': props.filled && props.variant === 'info',
         'bg-success-500 text-success-50': props.filled && props.variant === 'success',
         'bg-danger-500 text-danger-50': props.filled && props.variant === 'danger',
         'bg-warning-500 text-warning-50': props.filled && props.variant === 'warning',
@@ -38,6 +38,26 @@
       role="presentation"
       class="flex-none stroke-2 w-4 h-4 mt-1 mr-2"
     >
+      <template v-if="props.variant === 'info'">
+        <circle
+          cx="12"
+          cy="12"
+          r="10"
+        />
+        <line
+          x1="12"
+          y1="8"
+          x2="12"
+          y2="12"
+        />
+        <line
+          x1="12"
+          y1="16"
+          x2="12"
+          y2="16"
+        />
+      </template>
+
       <template v-if="props.variant === 'success'">
         <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" />
         <path d="M16 10L10.5 15L8 12.7273" />
@@ -64,26 +84,6 @@
           y2="17"
         />
       </template>
-
-      <template v-if="!props.variant">
-        <circle
-          cx="12"
-          cy="12"
-          r="10"
-        />
-        <line
-          x1="12"
-          y1="8"
-          x2="12"
-          y2="12"
-        />
-        <line
-          x1="12"
-          y1="16"
-          x2="12"
-          y2="16"
-        />
-      </template>
     </svg>
 
     <div
@@ -98,8 +98,19 @@
 </template>
 
 <script>
+const validator = {
+  variant: [
+    'info',
+    'danger',
+    'success',
+    'warning',
+  ],
+};
+
 export default {
   name: 'MijinNote',
+
+  validator,
 
   props: {
     filled: {
@@ -113,14 +124,9 @@ export default {
     },
 
     variant: {
-      default: null,
+      default: 'info',
       type: String,
-      validator: (value) => [
-        null,
-        'danger',
-        'success',
-        'warning',
-      ].includes(value),
+      validator: (value) => validator.variant.includes(value),
     },
   },
 };

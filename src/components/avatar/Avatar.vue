@@ -45,8 +45,30 @@
 </template>
 
 <script>
+const validator = {
+  color: [
+    'blue',
+    'green',
+    'primary',
+    'red',
+    'yellow',
+  ],
+  size: [
+    'sm',
+    'base',
+    'lg',
+    'xl',
+  ],
+  variant: [
+    'rounded',
+    'squared',
+  ],
+};
+
 export default {
   name: 'MijinAvatar',
+
+  validator,
 
   props: {
     alt: {
@@ -57,13 +79,7 @@ export default {
     color: {
       default: 'primary',
       type: String,
-      validator: (value) => [
-        'blue',
-        'green',
-        'primary',
-        'red',
-        'yellow',
-      ].includes(value),
+      validator: (value) => validator.color.includes(value),
     },
 
     img: {
@@ -79,12 +95,7 @@ export default {
     size: {
       default: 'base',
       type: String,
-      validator: (value) => [
-        'sm',
-        'base',
-        'lg',
-        'xl',
-      ].includes(value),
+      validator: (value) => validator.size.includes(value),
     },
 
     tag: {
@@ -95,10 +106,7 @@ export default {
     variant: {
       default: 'rounded',
       type: String,
-      validator: (value) => [
-        'rounded',
-        'squared',
-      ].includes(value),
+      validator: (value) => validator.variant.includes(value),
     },
   },
 };

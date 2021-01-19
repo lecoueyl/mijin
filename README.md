@@ -32,7 +32,7 @@ npm install --save-dev mijin
 yarn add --dev mijin
 ```
 
-2. Add mijin Tailwind CSS presets file `tailwind-preset.js` to your Tailwind CSS configuration file `tailwindcss.config.js`
+2. Add mijin Tailwind CSS preset `tailwind-preset.js` to your Tailwind CSS configuration file `tailwindcss.config.js`
 
 ```javascript
 const mijin = require('mijin/tailwind-preset.js');

@@ -22,8 +22,18 @@
 <script>
 import featherIcons from 'feather-icons/dist/icons.json';
 
+const validator = {
+  size: [
+    'sm',
+    'base',
+    'lg',
+  ],
+};
+
 export default {
   name: 'MijinIcon',
+
+  validator,
 
   props: {
     name: {
@@ -34,11 +44,7 @@ export default {
     size: {
       default: 'base',
       type: String,
-      validator: (value) => [
-        'sm',
-        'base',
-        'lg',
-      ].includes(value),
+      validator: (value) => validator.size.includes(value),
     },
   },
 

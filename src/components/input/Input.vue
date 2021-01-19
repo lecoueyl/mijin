@@ -102,8 +102,22 @@
 </template>
 
 <script>
+const validator = {
+  size: [
+    'sm',
+    'base',
+  ],
+  status: [
+    null,
+    'error',
+    'success',
+  ],
+};
+
 export default {
   name: 'MijinInput',
+
+  validator,
 
   props: {
     disabled: {
@@ -149,20 +163,13 @@ export default {
     size: {
       default: 'base',
       type: String,
-      validator: (value) => [
-        'sm',
-        'base',
-      ].includes(value),
+      validator: (value) => validator.size.includes(value),
     },
 
     status: {
       default: null,
       type: String,
-      validator: (value) => [
-        null,
-        'error',
-        'success',
-      ].includes(value),
+      validator: (value) => validator.status.includes(value),
     },
 
     type: {

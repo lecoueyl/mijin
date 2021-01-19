@@ -16,19 +16,26 @@
 </template>
 
 <script>
+const validator = {
+  textAlign: [
+    null,
+    'left',
+    'center',
+    'right',
+    'justify',
+  ],
+};
+
 export default {
   name: 'MijinTableTitle',
+
+  validator,
 
   props: {
     textAlign: {
       default: 'left',
       type: String,
-      validator: (value) => [
-        'left',
-        'center',
-        'right',
-        'justify',
-      ].includes(value),
+      validator: (value) => validator.textAlign.includes(value),
     },
   },
 

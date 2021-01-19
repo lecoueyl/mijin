@@ -63,8 +63,17 @@
 </template>
 
 <script>
+const validator = {
+  size: [
+    'sm',
+    'base',
+  ],
+};
+
 export default {
   name: 'MijinSelect',
+
+  validator,
 
   props: {
     disabled: {
@@ -90,10 +99,7 @@ export default {
     size: {
       default: 'base',
       type: String,
-      validator: (value) => [
-        'sm',
-        'base',
-      ].includes(value),
+      validator: (value) => validator.size.includes(value),
     },
 
     value: {

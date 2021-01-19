@@ -39,18 +39,24 @@
 </template>
 
 <script>
+const validator = {
+  size: [
+    'base',
+    'lg',
+    'full',
+  ],
+};
+
 export default {
   name: 'MijinModal',
+
+  validator,
 
   props: {
     size: {
       type: String,
       default: 'base',
-      validator: (value) => [
-        'base',
-        'lg',
-        'full',
-      ].includes(value),
+      validator: (value) => validator.size.includes(value),
     },
   },
 

@@ -56,8 +56,29 @@
 </template>
 
 <script>
+const validator = {
+  group: [
+    false,
+    true,
+    '',
+    'first',
+    'last',
+  ],
+  size: [
+    'sm',
+    'base',
+    'lg',
+  ],
+  variant: [
+    'primary',
+    'secondary',
+  ],
+};
+
 export default {
   name: 'MijinButton',
+
+  validator,
 
   props: {
     disabled: {
@@ -68,13 +89,7 @@ export default {
     group: {
       default: false,
       type: [String, Boolean],
-      validator: (value) => [
-        false,
-        true,
-        '',
-        'first',
-        'last',
-      ].includes(value),
+      validator: (value) => validator.group.includes(value),
     },
 
     icon: {
@@ -95,11 +110,7 @@ export default {
     size: {
       default: 'base',
       type: String,
-      validator: (value) => [
-        'sm',
-        'base',
-        'lg',
-      ].includes(value),
+      validator: (value) => validator.size.includes(value),
     },
 
     tag: {
@@ -115,10 +126,7 @@ export default {
     variant: {
       default: 'primary',
       type: String,
-      validator: (value) => [
-        'primary',
-        'secondary',
-      ].includes(value),
+      validator: (value) => validator.variant.includes(value),
     },
   },
 };

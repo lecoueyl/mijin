@@ -54,8 +54,17 @@
 </template>
 
 <script>
+const validator = {
+  size: [
+    'sm',
+    'base',
+  ],
+};
+
 export default {
   name: 'MijinToggle',
+
+  validator,
 
   model: {
     prop: 'option',
@@ -91,10 +100,7 @@ export default {
     size: {
       default: 'base',
       type: String,
-      validator: (value) => [
-        'sm',
-        'base',
-      ].includes(value),
+      validator: (value) => validator.size.includes(value),
     },
   },
 

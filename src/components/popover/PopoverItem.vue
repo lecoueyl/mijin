@@ -40,8 +40,17 @@
 </template>
 
 <script>
+const validator = {
+  variant: [
+    'base',
+    'danger',
+  ],
+};
+
 export default {
   name: 'MijinPopoverItem',
+
+  validator,
 
   props: {
     disabled: {
@@ -52,10 +61,7 @@ export default {
     variant: {
       default: 'base',
       type: String,
-      validator: (value) => [
-        'base',
-        'danger',
-      ].includes(value),
+      validator: (value) => validator.variant.includes(value),
     },
 
     tag: {

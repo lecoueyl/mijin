@@ -14,8 +14,17 @@
 </template>
 
 <script>
+const validator = {
+  gutter: [
+    'base',
+    'lg',
+  ],
+};
+
 export default {
   name: 'MijinList',
+
+  validator,
 
   props: {
     divided: {
@@ -26,10 +35,7 @@ export default {
     gutter: {
       default: 'base',
       type: String,
-      validator: (value) => [
-        'base',
-        'lg',
-      ].includes(value),
+      validator: (value) => validator.gutter.includes(value),
     },
 
     inline: {
