@@ -23,7 +23,8 @@ If you would like to implement a new feature, please submit an issue with a prop
 If you want to help out with a code contribution, our project uses the following stack:
 
 - [Vue.js](https://vuejs.org)
-- [tailwindcss](https://tailwindcss.com)
+- [Nuxt.js](https://nuxtjs.org)
+- [Tailwind CSS](https://tailwindcss.com)
 
 ## <a name="submit-pr"></a> How do I make a contribution?
 
