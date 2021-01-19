@@ -8,7 +8,7 @@
     leave-class="transform translate-y-0 opacity-100"
     leave-to-class="transform translate-y-2 opacity-0"
     move-class="ease-in-out duration-150"
-    class="fixed p-4 z-10 space-y-2"
+    class="fixed p-4 z-40 space-y-2"
     :class="{
       // align
       'left-0': align === 'left',

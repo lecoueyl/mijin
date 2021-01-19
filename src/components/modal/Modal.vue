@@ -1,6 +1,6 @@
 <template>
   <div
-    class="fixed z-10 inset-0 overflow-y-auto transition-all"
+    class="fixed z-30 inset-0 overflow-y-auto transition-all"
     :class="[
       isOpen ? 'visible' : 'invisible ease-in duration-100'
     ]"
