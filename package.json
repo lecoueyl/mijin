@@ -37,7 +37,7 @@
     "eslint-plugin-vue": "7.4.1",
     "feather-icons": "4.28.0",
     "rimraf": "3.0.2",
-    "rollup": "2.36.2",
+    "rollup": "2.37.0",
     "tailwindcss": "2.0.2",
     "vue": "2.6.12",
     "vue-template-compiler": "2.6.12"

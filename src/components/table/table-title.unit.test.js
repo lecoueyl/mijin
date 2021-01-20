@@ -23,6 +23,7 @@ describe('TableTitle', () => {
 
     const $tableTitle = wrapper.findComponent(TableTitle);
     expect($tableTitle.element.tagName).toBe('TH');
+    expect($tableTitle.find('svg').exists()).toBe(false);
   });
 
   it('checks parent presence', async () => {
@@ -57,7 +58,10 @@ describe('TableTitle', () => {
       template: `
       <Table stickyHeader>
         <TableHead>
-          <TableTitle textAlign="center" />
+          <TableTitle
+            textAlign="center"
+            sort="asc"
+          />
         </TableHead>
       </Table>`,
       components: {
@@ -67,8 +71,9 @@ describe('TableTitle', () => {
       },
     });
 
-    const $TableTitle = wrapper.findComponent(TableTitle);
-    expect($TableTitle.classes('text-center')).toBe(true);
-    expect($TableTitle.classes('sticky')).toBe(true);
+    const $tableTitle = wrapper.findComponent(TableTitle);
+    expect($tableTitle.classes('text-center')).toBe(true);
+    expect($tableTitle.classes('sticky')).toBe(true);
+    expect($tableTitle.find('svg').exists()).toBe(true);
   });
 });
