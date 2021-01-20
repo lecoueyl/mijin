@@ -1,9 +1,9 @@
 import { enableAutoDestroy, mount, shallowMount } from '@vue/test-utils';
 import Table from './Table';
 import TableHead from './TableHead';
-import TableTitle from './TableTitle';
+import TableHeader from './TableHeader';
 
-describe('TableTitle', () => {
+describe('TableHeader', () => {
   enableAutoDestroy(afterEach);
 
   it('has default structure', async () => {
@@ -11,24 +11,24 @@ describe('TableTitle', () => {
       template: `
         <Table>
           <TableHead>
-            <TableTitle />
+            <TableHeader />
           </TableHead>
         </Table>`,
       components: {
         Table,
         TableHead,
-        TableTitle,
+        TableHeader,
       },
     });
 
-    const $tableTitle = wrapper.findComponent(TableTitle);
+    const $tableTitle = wrapper.findComponent(TableHeader);
     expect($tableTitle.element.tagName).toBe('TH');
     expect($tableTitle.find('svg').exists()).toBe(false);
   });
 
   it('checks parent presence', async () => {
     spyOn(console, 'error');
-    expect(() => shallowMount(TableTitle)).toThrowError();
+    expect(() => shallowMount(TableHeader)).toThrowError();
   });
 
   it('renders default slot content', async () => {
@@ -36,15 +36,15 @@ describe('TableTitle', () => {
       template: `
         <Table>
           <TableHead>
-            <TableTitle>
+            <TableHeader>
               <span>foobar</span>
-            </TableTitle>
+            </TableHeader>
           </TableHead>
         </Table>`,
       components: {
         Table,
         TableHead,
-        TableTitle,
+        TableHeader,
       },
     });
 
@@ -58,7 +58,7 @@ describe('TableTitle', () => {
       template: `
       <Table stickyHeader>
         <TableHead>
-          <TableTitle
+          <TableHeader
             textAlign="center"
             sort="asc"
           />
@@ -67,11 +67,11 @@ describe('TableTitle', () => {
       components: {
         Table,
         TableHead,
-        TableTitle,
+        TableHeader,
       },
     });
 
-    const $tableTitle = wrapper.findComponent(TableTitle);
+    const $tableTitle = wrapper.findComponent(TableHeader);
     expect($tableTitle.classes('text-center')).toBe(true);
     expect($tableTitle.classes('sticky')).toBe(true);
     expect($tableTitle.find('svg').exists()).toBe(true);

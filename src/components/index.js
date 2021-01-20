@@ -30,7 +30,7 @@ export { default as TableBody } from './table/TableBody';
 export { default as TableCell } from './table/TableCell';
 export { default as TableHead } from './table/TableHead';
 export { default as TableRow } from './table/TableRow';
-export { default as TableTitle } from './table/TableTitle';
+export { default as TableHeader } from './table/TableHeader';
 export { default as Tabs } from './tabs/Tabs';
 export { default as TabsItem } from './tabs/TabsItem';
 export { default as Tag } from './tag/Tag';

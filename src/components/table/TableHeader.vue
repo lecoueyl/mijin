@@ -14,6 +14,7 @@
         'text-justify': textAlign === 'justify',
       },
     ]"
+    v-on="$listeners"
   >
     <div
       v-if="sort"
@@ -79,7 +80,7 @@ const validator = {
 };
 
 export default {
-  name: 'MijinTableTitle',
+  name: 'MijinTableHeader',
 
   validator,
 
@@ -106,7 +107,7 @@ export default {
   created() {
     if (this.$parent.$options.name !== 'MijinTableHead') {
       this.$destroy();
-      throw new Error('TableTitle must be wrap with TableHead');
+      throw new Error('TableHeader must be wrap with TableHead');
     }
   },
 };
