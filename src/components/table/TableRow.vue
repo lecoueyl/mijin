@@ -13,6 +13,7 @@
         'align-top': verticalAlign === 'top',
       },
     ]"
+    v-on="$listeners"
   >
     <slot />
   </tr>

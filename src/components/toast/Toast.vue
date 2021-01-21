@@ -8,7 +8,7 @@
     leave-class="transform translate-y-0 opacity-100"
     leave-to-class="transform translate-y-2 opacity-0"
     move-class="ease-in-out duration-150"
-    class="fixed p-4 z-40 space-y-2"
+    class="fixed p-4 z-40 space-y-2 w-full sm:w-96"
     :class="{
       // align
       'left-0': align === 'left',
@@ -21,10 +21,10 @@
     <li
       v-for="event in events"
       :key="event.id"
-      class="rounded px-4 py-2 cursor-pointer shadow-lg w-72"
+      class="rounded px-4 py-2 cursor-pointer shadow-lg w-full"
       :class="{
         // type
-        'bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900': !event.type || (event.type && !['success', 'error', 'warn'].includes(event.type)),
+        'bg-white dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-100 dark:border-gray-800': !event.type || (event.type && !['success', 'error', 'warn'].includes(event.type)),
         'bg-success-500 text-success-50': event.type && event.type === 'success',
         'bg-danger-500 text-danger-50': event.type && event.type === 'error',
         'bg-warning-500 text-warning-50': event.type && event.type === 'warn',

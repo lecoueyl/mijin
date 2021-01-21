@@ -7,9 +7,15 @@
       {
         // color
         'bg-blue-500 text-blue-50': props.color === 'blue',
+        'bg-gray-500 text-gray-50': props.color === 'gray',
         'bg-green-500 text-green-50': props.color === 'green',
+        'bg-indigo-500 text-indigo-50': props.color === 'indigo',
+        'bg-orange-500 text-orange-50': props.color === 'orange',
+        'bg-pink-500 text-pink-50': props.color === 'pink',
         'bg-primary-500 text-primary-50': props.color === 'primary',
+        'bg-purple-500 text-purple-50': props.color === 'purple',
         'bg-red-500 text-red-50': props.color === 'red',
+        'bg-teal-500 text-teal-50': props.color === 'teal',
         'bg-yellow-500 text-yellow-50': props.color === 'yellow',
         // size
         'h-6 w-6 text-sm': props.size === 'sm',
@@ -48,9 +54,15 @@
 const validator = {
   color: [
     'blue',
+    'gray',
     'green',
+    'indigo',
+    'orange',
+    'pink',
     'primary',
+    'purple',
     'red',
+    'teal',
     'yellow',
   ],
   size: [
