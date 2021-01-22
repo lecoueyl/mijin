@@ -73,7 +73,7 @@ describe('Toast', () => {
     await wrapper.vm.log(message);
     const $toastItem = wrapper.find('li');
     expect($toastItem.exists()).toBe(true);
-    expect($toastItem.classes('bg-gray-900')).toBe(true);
+    expect($toastItem.classes('bg-white')).toBe(true);
     expect($toastItem.text()).toBe(message);
   });
 

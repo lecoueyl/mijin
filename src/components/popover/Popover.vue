@@ -1,14 +1,21 @@
 <template>
   <div
-    v-click-outside="close"
     class="inline-block relative"
   >
     <div
       class="inline-block"
-      @click="toggle"
+      @click="toggle()"
     >
       <slot />
     </div>
+
+    <div
+      class="fixed inset-0 opacity-0 z-40"
+      :class="[
+        isOpen ? 'visible' : 'invisible',
+      ]"
+      @click.self="close()"
+    />
 
     <div
       class="fixed w-full sm:w-auto bottom-0 left-0 right-0 sm:p-0 sm:absolute transform transition-all z-40"
@@ -54,8 +61,6 @@
 </template>
 
 <script>
-import ClickOutside from '../../directives/clickOutside';
-
 const validator = {
   align: [
     'bottom',
@@ -77,10 +82,6 @@ export default {
   name: 'MijinPopover',
 
   validator,
-
-  directives: {
-    ClickOutside,
-  },
 
   props: {
     align: {
