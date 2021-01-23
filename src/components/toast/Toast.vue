@@ -1,13 +1,13 @@
 <template>
   <transition-group
     tag="ul"
-    enter-active-class="transition ease-in duration-150"
-    leave-active-class="transition ease-out duration-150"
+    enter-active-class="transition ease-in ease-out-mijin duration-500"
+    leave-active-class="transition ease-out ease-out-mijin duration-500"
     enter-class="transform translate-y-2 opacity-0"
     enter-to-class="transform translate-y-0 opacity-100"
     leave-class="transform translate-y-0 opacity-100"
     leave-to-class="transform translate-y-2 opacity-0"
-    move-class="ease-in-out duration-150"
+    move-class="ease-in-out duration-200"
     class="fixed p-4 z-40 space-y-2 w-full sm:w-96"
     :class="{
       // align

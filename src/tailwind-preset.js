@@ -31,6 +31,11 @@ module.exports = {
         button: borderRadius.lg,
         form: borderRadius.md,
       },
+      transitionTimingFunction: {
+        'in-mijin': 'cubic-bezier(0.7, 0, 0.84, 0)',
+        'out-mijin': 'cubic-bezier(0.16, 1, 0.3, 1)',
+        'in-out-mijin': 'cubic-bezier(0.87, 0, 0.13, 1)',
+      },
     },
   },
   variants: {
