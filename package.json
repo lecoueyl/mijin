@@ -1,9 +1,10 @@
 {
   "name": "mijin",
-  "homepage": "https://www.mijin.design",
+  "homepage": "https://github.com/lecoueyl/mijin",
   "description": "tailwindcss UI components for Vue.js",
-  "version": "0.1.0",
+  "version": "0.0.0-development",
   "author": "Leonard Lecouey <leonard.lecouey@gmail.com>",
+  "private": true,
   "main": "dist/mijin.umd.js",
   "module": "dist/mijin.umd.js",
   "unpkg": "dist/mijin.umd.js",
@@ -21,25 +22,34 @@
     "build": "npm run build:vue && npm run build:tailwind",
     "build:vue": "vue-cli-service build src/index.js --target lib --name mijin",
     "build:tailwind": "rimraf dist/tailwind-preset.js && rollup --config rollup.config.js",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "semantic-release": "semantic-release"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "17.0.0",
-    "@rollup/plugin-node-resolve": "11.1.0",
-    "@vue/cli-plugin-babel": "4.5.11",
-    "@vue/cli-plugin-eslint": "4.5.11",
-    "@vue/cli-plugin-unit-jest": "4.5.11",
-    "@vue/cli-service": "4.5.11",
-    "@vue/eslint-config-airbnb": "5.3.0",
-    "@vue/test-utils": "1.1.2",
-    "babel-eslint": "10.1.0",
-    "eslint-plugin-import": "2.22.1",
-    "eslint-plugin-vue": "7.5.0",
-    "feather-icons": "4.28.0",
-    "rimraf": "3.0.2",
-    "rollup": "2.38.0",
-    "tailwindcss": "2.0.2",
-    "vue": "2.6.12",
-    "vue-template-compiler": "2.6.12"
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.1.0",
+    "@vue/cli-plugin-babel": "^4.5.11",
+    "@vue/cli-plugin-eslint": "^4.5.11",
+    "@vue/cli-plugin-unit-jest": "^4.5.11",
+    "@vue/cli-service": "^4.5.11",
+    "@vue/eslint-config-airbnb": "^5.3.0",
+    "@vue/test-utils": "^1.1.2",
+    "babel-eslint": "^10.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-vue": "^7.5.0",
+    "feather-icons": "^4.28.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.38.0",
+    "semantic-release": "^17.3.7",
+    "tailwindcss": "^2.0.2",
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lecoueyl/mijin.git"
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }
