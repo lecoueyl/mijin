@@ -1,11 +1,11 @@
 <p align="center">
-  <img alt="mijin-logo" height="70" alt="mijin logo" src="./.github/mijin-logo.svg"/>
+  <img alt="mijin-logo" height="70" alt="mijin logo" src="https://raw.githubusercontent.com/lecoueyl/mijin/main/.github/mijin-logo.svg?token=AB7Q7DQJU4LBLT3O2FWRWATAB2X7Q"/>
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/vue"><img src="https://img.shields.io/npm/v/vue.svg?sanitize=true" alt="Version"></a>
-  <a href="https://www.npmjs.com/package/vue"><img src="https://img.shields.io/npm/l/vue.svg?sanitize=true" alt="License"></a>
-  <a href="https://codecov.io/github/vuejs/vue?branch=dev"><img src="https://img.shields.io/codecov/c/github/vuejs/vue/dev.svg?sanitize=true" alt="Coverage Status"></a>
+  <a href="https://www.npmjs.com/package/mijin"><img src="https://img.shields.io/npm/v/mijin.svg?sanitize=true" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/mijin"><img src="https://img.shields.io/npm/l/vue.svg?sanitize=true" alt="License"></a>
+  <a href="https://codecov.io/github/lecoueyl/mijin?branch=dev"><img src="https://img.shields.io/codecov/c/github/lecoueyl/mijin/dev.svg?sanitize=true" alt="Coverage Status"></a>
   <img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="semantic-release"></a>
 </p>
 
