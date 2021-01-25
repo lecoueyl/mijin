@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="mijin-logo" height="70" alt="mijin logo" src="https://raw.githubusercontent.com/lecoueyl/mijin/main/.github/mijin-logo.svg?token=AB7Q7DQJU4LBLT3O2FWRWATAB2X7Q"/>
+  <img alt="mijin-logo" height="70" alt="mijin logo" src="https://user-images.githubusercontent.com/8327054/105704502-3ff65f80-5f52-11eb-8862-57ea49668516.png"/>
 </p>
 
 <p align="center">
