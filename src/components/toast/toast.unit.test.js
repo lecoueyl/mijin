@@ -7,7 +7,7 @@ describe('Toast', () => {
   it('has default structure', async () => {
     const wrapper = shallowMount(Toast);
 
-    expect(wrapper.element.tagName).toBe('TRANSITION-GROUP-STUB');
+    expect(wrapper.element.tagName).toBe('DIV');
     expect(wrapper.classes('fixed')).toBe(true);
     expect(wrapper.classes('left-0')).toBe(false);
     expect(wrapper.classes('top-0')).toBe(false);
@@ -27,11 +27,11 @@ describe('Toast', () => {
   it('renders custom root element', async () => {
     const wrapper = shallowMount(Toast, {
       propsData: {
-        tag: 'div',
+        tag: 'span',
       },
     });
 
-    expect(wrapper.element.tagName).not.toBe('DIV');
+    expect(wrapper.element.tagName).not.toBe('SPAN');
   });
 
   test.each([

@@ -34,7 +34,7 @@ describe('Popover', () => {
 
   it('open, close and toggle modal', async () => {
     const wrapper = shallowMount(Popover);
-    const $container = wrapper.find('.fixed');
+    const $container = wrapper.find('.w-full');
 
     await wrapper.vm.open();
     expect(wrapper.vm.isOpen).toBe(true);
@@ -58,7 +58,7 @@ describe('Popover', () => {
   it('can be dismissible', async () => {
     // without dismissible props
     let wrapper = shallowMount(Popover);
-    let $container = wrapper.find('.fixed');
+    let $container = wrapper.find('.w-full');
 
     await wrapper.vm.open();
     expect(wrapper.vm.isOpen).toBe(true);
@@ -72,7 +72,7 @@ describe('Popover', () => {
         dismissible: true,
       },
     });
-    $container = wrapper.find('.fixed');
+    $container = wrapper.find('.w-full');
 
     await wrapper.vm.open();
     expect(wrapper.vm.isOpen).toBe(true);
