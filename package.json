@@ -12,7 +12,7 @@
   "keywords": [
     "tailwindcss",
     "vue",
-    "component"
+    "components"
   ],
   "files": [
     "dist/*.js"
