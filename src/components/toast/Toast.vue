@@ -27,7 +27,8 @@
         class="rounded px-4 py-2 cursor-pointer shadow-lg w-full"
         :class="{
           // type
-          'bg-white dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-100 dark:border-gray-800': !event.type || (event.type && !['success', 'error', 'warn'].includes(event.type)),
+          'bg-white dark:bg-gray-900 text-gray-900 dark:text-white border border-gray-100 dark:border-gray-800':
+            !event.type || (event.type && !['success', 'error', 'warn'].includes(event.type)),
           'bg-success-500 text-success-50': event.type && event.type === 'success',
           'bg-danger-500 text-danger-50': event.type && event.type === 'error',
           'bg-warning-500 text-warning-50': event.type && event.type === 'warn',
