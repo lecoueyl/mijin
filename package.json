@@ -2,7 +2,7 @@
   "name": "mijin",
   "homepage": "https://github.com/lecoueyl/mijin",
   "description": "tailwindcss UI components for Vue.js",
-  "version": "0.0.0-development",
+  "version": "0.1.0",
   "author": "Leonard Lecouey <leonard.lecouey@gmail.com>",
   "main": "dist/mijin.umd.js",
   "module": "dist/mijin.umd.js",
@@ -57,5 +57,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/lecoueyl/mijin.git"
+  },
+  "dependencies": {
+    "mijin": "^1.0.0"
   }
 }
