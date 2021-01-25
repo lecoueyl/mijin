@@ -25,6 +25,7 @@
     "build": "npm run build:vue && npm run build:tailwind",
     "build:vue": "vue-cli-service build src/index.js --target lib --name mijin",
     "build:tailwind": "rimraf dist/tailwind-preset.js && rollup --config rollup.config.js",
+    "test": "npm run test:unit",
     "test:unit": "vue-cli-service test:unit",
     "semantic-release": "semantic-release"
   },
