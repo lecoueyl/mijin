@@ -36,7 +36,7 @@ yarn add --dev mijin
 2. Add mijin Tailwind CSS preset `tailwind-preset.js` to your Tailwind CSS configuration file `tailwindcss.config.js`
 
 ```javascript
-const mijin = require('mijin/tailwind-preset.js');
+const mijin = require('mijin/dist/tailwind-preset.js');
 
 module.exports = {
   presets: [
@@ -54,6 +54,16 @@ import Vue from 'vue'
 import Mijin from 'mijin'
 
 Vue.use(Mijin)
+
+// or
+import {
+  Button
+  Input,
+  // ...
+} from 'mijin'
+
+Vue.component('MjButton', Button)
+Vue.component('MjInput', Select)
 ```
 
 ### Nuxt.js

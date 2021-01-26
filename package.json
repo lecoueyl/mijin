@@ -4,7 +4,7 @@
   "description": "Tailwind CSS UI components for Vue.js",
   "version": "1.0.0",
   "author": "Leonard Lecouey <leonard.lecouey@gmail.com>",
-  "main": "dist/mijin.umd.js",
+  "main": "dist/mijin.common.js",
   "module": "dist/mijin.umd.js",
   "unpkg": "dist/mijin.umd.js",
   "jsdelivr": "dist/mijin.umd.js",
