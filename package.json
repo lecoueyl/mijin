@@ -66,8 +66,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/lecoueyl/mijin.git"
-  },
-  "dependencies": {
-    "mijin": "^1.0.0"
   }
 }
