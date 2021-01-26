@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/lecoueyl/mijin/compare/v1.0.2...v1.0.3) (2021-01-26)
+
+
+### Bug Fixes
+
+* **lint:** add global lint command ([e8f0a28](https://github.com/lecoueyl/mijin/commit/e8f0a284a41420a252ca12c67ac2c27574b98c6e))
+* **package:** add src/tailwind-preset.js to package files ([c5c93f5](https://github.com/lecoueyl/mijin/commit/c5c93f509fac9f0ebc0e082ad24af2bba5cfa80d))
+* **package:** remove [secure] dependencies ([1ef64c2](https://github.com/lecoueyl/mijin/commit/1ef64c2ba56740bef5e72a35ef00eb376cc75744))
+
 ## [1.0.2](https://github.com/lecoueyl/mijin/compare/v1.0.1...v1.0.2) (2021-01-26)
 
 
