@@ -13,7 +13,7 @@
 
 > [Tailwind CSS](https://tailwindcss.com) UI components build for [Vue.js](https://vuejs.org) / [Nuxt.js](https://nuxtjs.org)
 
-- 📖 Documentation
+<!-- - [📖 Documentation](https://mijin.design/docs/getting-started) -->
 
 ## Features
 
@@ -24,12 +24,14 @@
 
 ## Getting Started
 
+You need [Tailwind CSS](https://tailwindcss.com) **version 2.0+**.
+
 1. Add `mijin` dependency to your project
 
 ```bash
-# Using npm
+# using npm
 npm install --save-dev mijin
-# Using yarn
+# using yarn
 yarn add --dev mijin
 ```
 
@@ -86,7 +88,7 @@ Load the plugin from `nuxt.config.js`
 ...
 ```
 
-[📖 &nbsp;Read more](https://mijin.design/docs/getting-started)
+<!-- [📖 &nbsp;Read more](https://mijin.design/docs/getting-started) -->
 ## Support
 
 ### Create a bug report
