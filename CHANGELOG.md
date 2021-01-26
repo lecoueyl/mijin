@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/lecoueyl/mijin/compare/v1.0.1...v1.0.2) (2021-01-26)
+
+
+### Bug Fixes
+
+* **release:** update semantic-release npm publish ([f84cb86](https://github.com/lecoueyl/mijin/commit/f84cb869a503f75a9671a926db3ef891b5bf8685))
+
 ## [1.0.1](https://github.com/lecoueyl/mijin/compare/v1.0.0...v1.0.1) (2021-01-26)
 
 
