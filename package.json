@@ -21,6 +21,7 @@
   ],
   "files": [
     "dist/*.js",
+    "src/tailwind-preset.js",
     "src/**/*.vue"
   ],
   "private": false,
