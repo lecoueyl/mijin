@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/lecoueyl/mijin/compare/v1.0.0...v1.0.1) (2021-01-26)
+
+
+### Bug Fixes
+
+* **readme:** update links ([a825587](https://github.com/lecoueyl/mijin/commit/a82558783efa972efd35d332579973a45ce9add0))
+
 # 1.0.0 (2021-01-25)
 
 
