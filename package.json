@@ -12,10 +12,16 @@
   "keywords": [
     "tailwindcss",
     "vue",
-    "components"
+    "nuxt",
+    "components",
+    "ui framework",
+    "component framework",
+    "ui library",
+    "component library"
   ],
   "files": [
-    "dist/*.js"
+    "dist/*.js",
+    "src/**/*.vue"
   ],
   "private": false,
   "scripts": {
@@ -23,7 +29,7 @@
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable",
     "build": "npm run build:vue && npm run build:tailwind",
-    "build:vue": "vue-cli-service build src/index.js --target lib --name mijin",
+    "build:vue": "vue-cli-service build src/index.js --target lib --name mijin && rm ./dist/demo.html",
     "build:tailwind": "rimraf dist/tailwind-preset.js && rollup --config rollup.config.js",
     "test": "npm run test:unit",
     "test:unit": "vue-cli-service test:unit",
