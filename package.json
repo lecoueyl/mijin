@@ -20,9 +20,8 @@
     "component library"
   ],
   "files": [
-    "dist/*.js",
-    "src/tailwind-preset.js",
-    "src/**/*.vue"
+    "dist",
+    "src"
   ],
   "private": false,
   "scripts": {
@@ -32,6 +31,7 @@
     "build": "npm run build:vue && npm run build:tailwind",
     "build:vue": "vue-cli-service build src/index.js --target lib --name mijin && rm ./dist/demo.html",
     "build:tailwind": "rimraf dist/tailwind-preset.js && rollup --config rollup.config.js",
+    "lint": "vue-cli-service lint",
     "test": "npm run test:unit",
     "test:unit": "vue-cli-service test:unit",
     "semantic-release": "semantic-release"

@@ -10,7 +10,7 @@ module.exports = {
     }],
     ['@semantic-release/git', {
       assets: ['package.json', 'package-lock.json', 'CHANGELOG.md'],
-      message: 'chore(release): ${nextRelease.version} [skip ci]',
+      message: 'chore(release): ${nextRelease.version} [skip ci]', // eslint-disable-line no-template-curly-in-string
     }],
   ],
 };

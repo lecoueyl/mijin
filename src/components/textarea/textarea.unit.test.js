@@ -47,7 +47,6 @@ describe('Textarea', () => {
     expect($textarea.classes('border-danger-500')).toBe(true);
   });
 
-
   it('has attribute disabled when disabled set', () => {
     const wrapper = shallowMount(Textarea, {
       propsData: {

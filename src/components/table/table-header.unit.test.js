@@ -48,7 +48,6 @@ describe('TableHeader', () => {
       },
     });
 
-
     expect(wrapper.find('span').exists()).toBe(true);
     expect(wrapper.text()).toBe('foobar');
   });
