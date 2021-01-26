@@ -86,7 +86,7 @@ describe('Link', () => {
     });
 
     expect(called).toBe(0);
-    expect(event) .toEqual(null);
+    expect(event).toEqual(null);
 
     await wrapper.trigger('click');
     expect(called).toBe(1);

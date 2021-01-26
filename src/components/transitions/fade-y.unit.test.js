@@ -40,5 +40,4 @@ describe('FadeY', () => {
 
     expect(wrapper.element.tagName).toBe('TRANSITION-GROUP-STUB');
   });
-
 });

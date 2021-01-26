@@ -29,6 +29,7 @@ module.exports = {
         '**/src/**/*.test.{j,t}s?(x)',
       ],
       env: {
+        jasmine: true,
         jest: true,
       },
     },

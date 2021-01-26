@@ -56,7 +56,6 @@ describe('Checkbox', () => {
     expect(wrapper.vm.checked).toBe(false);
   });
 
-
   it('should emit events', async () => {
     const wrapper = shallowMount(Checkbox);
 
