@@ -1,7 +1,7 @@
 {
   "name": "mijin",
   "homepage": "https://github.com/lecoueyl/mijin",
-  "description": "Tailwind CSS UI components for Vue.js",
+  "description": "Tailwind CSS UI components for Vue.js and Nuxt.js",
   "version": "1.0.3",
   "author": "Leonard Lecouey <leonard.lecouey@gmail.com>",
   "main": "dist/mijin.common.js",
