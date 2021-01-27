@@ -24,20 +24,21 @@
 
 ## Getting Started
 
-You need [Tailwind CSS](https://tailwindcss.com) **version 2.0+**.
+> [tailwindcss](https://tailwindcss.com) version >= 2.0 must be already present in your application
 
 1. Add `mijin` dependency to your project
 
 ```bash
 # using npm
-npm install --save-dev mijin
+npm install mijin --save-dev
 # using yarn
-yarn add --dev mijin
+yarn add mijin --dev
 ```
 
-2. Add mijin Tailwind CSS preset `tailwind-preset.js` to your Tailwind CSS configuration file `tailwindcss.config.js`
+2. Add mijin Tailwind CSS preset `tailwind-preset.js` to your Tailwind CSS configuration file `tailwind.config.js`
 
 ```javascript
+// tailwind.config.js
 const mijin = require('mijin/dist/tailwind-preset.js');
 
 module.exports = {
@@ -73,6 +74,7 @@ Vue.component('MjInput', Select)
 Add `mijin.js` file to your `plugins` directory
 
 ```javascript
+// plugins.mijin.js
 import Vue from 'vue';
 
 Vue.use(Mijin)
@@ -81,9 +83,10 @@ Vue.use(Mijin)
 Load the plugin from `nuxt.config.js`
 
 ```javascript
+// nuxt.config.js
 ...
   plugins: [
-    '~/plugins/mijin',
+    '~/plugins/mijin.js',
   ],
 ...
 ```
