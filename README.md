@@ -42,9 +42,16 @@ yarn add mijin --dev
 const mijin = require('mijin/dist/tailwind-preset.js');
 
 module.exports = {
+  // load mijin presets
   presets: [
     mijin,
   ],
+  // allow PurgeCSS to analyze mijin components
+  purge: {
+    content: [
+      'node_modules/mijin/src/components/**/*.vue',
+    ],
+  },
 };
 ```
 
