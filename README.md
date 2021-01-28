@@ -101,13 +101,13 @@ Load the plugin from `nuxt.config.js`
 <!-- [📖 &nbsp;Read more](https://mijin.design/docs/getting-started) -->
 ## Support
 
-### Create a bug report
+### Bug report
 
 If you see an error message or run into an issue, please create a bug report, this effort is valued and it will help everybody.
 
 [**Create bug report**](https://github.com/lecoueyl/mijin/issues/new?assignees=&labels=bug&template=bug_report.md&title=)
 
-### Submit a feature request
+### Feature request
 
 If you're missing a component or want to add a new feature, please submit a request.
 If a similar feature request already exists, don't forget to leave a "+1". Adding some information about the feature will be embraced warmly.
