@@ -11,12 +11,6 @@ module.exports = {
     parser: 'babel-eslint',
   },
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'import/extensions': ['error', 'always', {
-      js: 'never',
-      vue: 'never',
-    }],
     'import/no-extraneous-dependencies': 0,
     'max-len': ['error', { code: 180 }],
     'vue/no-v-html': 0,
