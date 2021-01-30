@@ -2,7 +2,7 @@
   <Component
     :is="props.tag"
     :ref="data.ref"
-    class="transition-colors duration-150 ease-in-out inline-block"
+    class="transition-colors duration-150 ease-in-out"
     :class="[
       {
         // color
