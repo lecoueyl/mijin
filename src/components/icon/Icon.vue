@@ -1,6 +1,6 @@
 <template>
   <svg
-    class="stroke-2"
+    class="stroke-2 inline-block"
     :class="{
       'h-3 w-3': size === 'sm',
       'h-4 w-4': size === 'base',
