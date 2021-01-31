@@ -12,9 +12,7 @@ describe('Icon', () => {
     });
 
     expect(wrapper.element.tagName).toBe('svg');
-    expect(wrapper.attributes('aria-labelledby')).toBe('user');
     expect(wrapper.attributes('fill')).toBe('none');
-    expect(wrapper.attributes('role')).toBe('presentation');
     expect(wrapper.attributes('stroke')).toBe('currentColor');
   });
 
