@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Textarea from './Textarea';
+import Textarea from './Textarea.vue';
 
 describe('Textarea', () => {
   enableAutoDestroy(afterEach);

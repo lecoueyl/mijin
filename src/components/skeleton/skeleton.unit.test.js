@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Skeleton from './Skeleton';
+import Skeleton from './Skeleton.vue';
 
 describe('Skeleton', () => {
   enableAutoDestroy(afterEach);

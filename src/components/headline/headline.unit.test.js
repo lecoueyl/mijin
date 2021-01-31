@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Headline from './Headline';
+import Headline from './Headline.vue';
 
 describe('Headline', () => {
   enableAutoDestroy(afterEach);

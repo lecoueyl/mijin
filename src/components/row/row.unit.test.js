@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Row from './Row';
+import Row from './Row.vue';
 
 describe('Row', () => {
   enableAutoDestroy(afterEach);

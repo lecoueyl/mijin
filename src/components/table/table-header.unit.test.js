@@ -1,7 +1,7 @@
 import { enableAutoDestroy, mount, shallowMount } from '@vue/test-utils';
-import Table from './Table';
-import TableHead from './TableHead';
-import TableHeader from './TableHeader';
+import Table from './Table.vue';
+import TableHead from './TableHead.vue';
+import TableHeader from './TableHeader.vue';
 
 describe('TableHeader', () => {
   enableAutoDestroy(afterEach);

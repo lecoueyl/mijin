@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Container from './Container';
+import Container from './Container.vue';
 
 describe('Container', () => {
   enableAutoDestroy(afterEach);

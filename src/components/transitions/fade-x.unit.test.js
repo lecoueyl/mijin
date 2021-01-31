@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import FadeX from './FadeX';
+import FadeX from './FadeX.vue';
 
 describe('FadeX', () => {
   enableAutoDestroy(afterEach);

@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Icon from './Icon';
+import Icon from './Icon.vue';
 
 describe('Icon', () => {
   enableAutoDestroy(afterEach);

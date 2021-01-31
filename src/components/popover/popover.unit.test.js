@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Popover from './Popover';
+import Popover from './Popover.vue';
 
 describe('Popover', () => {
   enableAutoDestroy(afterEach);

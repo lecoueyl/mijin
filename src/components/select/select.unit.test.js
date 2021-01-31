@@ -1,5 +1,5 @@
 import { enableAutoDestroy, mount, shallowMount } from '@vue/test-utils';
-import Select from './Select';
+import Select from './Select.vue';
 
 describe('Select', () => {
   enableAutoDestroy(afterEach);

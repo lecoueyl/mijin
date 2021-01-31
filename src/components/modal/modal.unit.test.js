@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Modal from './Modal';
+import Modal from './Modal.vue';
 
 describe('Modal', () => {
   enableAutoDestroy(afterEach);

@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import StatusIcon from './StatusIcon';
+import StatusIcon from './StatusIcon.vue';
 
 describe('StatusIcon', () => {
   enableAutoDestroy(afterEach);

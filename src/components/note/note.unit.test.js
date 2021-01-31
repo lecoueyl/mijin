@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Note from './Note';
+import Note from './Note.vue';
 
 describe('Note', () => {
   enableAutoDestroy(afterEach);

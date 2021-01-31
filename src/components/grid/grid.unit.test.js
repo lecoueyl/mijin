@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Grid from './Grid';
+import Grid from './Grid.vue';
 
 describe('Grid', () => {
   enableAutoDestroy(afterEach);

@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Badge from './Badge';
+import Badge from './Badge.vue';
 
 describe('Badge', () => {
   enableAutoDestroy(afterEach);

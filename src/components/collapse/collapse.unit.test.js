@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Collapse from './Collapse';
+import Collapse from './Collapse.vue';
 
 describe('Collapse', () => {
   enableAutoDestroy(afterEach);

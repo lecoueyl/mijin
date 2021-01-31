@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import TableRow from './TableRow';
+import TableRow from './TableRow.vue';
 
 describe('TableRow', () => {
   enableAutoDestroy(afterEach);

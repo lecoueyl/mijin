@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Progress from './Progress';
+import Progress from './Progress.vue';
 
 describe('Progress', () => {
   enableAutoDestroy(afterEach);
