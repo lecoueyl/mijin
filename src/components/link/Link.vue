@@ -26,7 +26,7 @@
   >
     <span
       v-if="props.external"
-      class="flex items-center"
+      class="inline-flex items-center"
     >
       <slot />
       <svg
