@@ -13,7 +13,7 @@
 
 > [Tailwind CSS](https://tailwindcss.com) UI components build for [Vue.js](https://vuejs.org) / [Nuxt.js](https://nuxtjs.org)
 
-<!-- - [📖 Documentation](https://mijin.design/docs/getting-started) -->
+- [📖 Documentation](https://lecoueyl.github.io/mijin.web/docs)
 
 ## Features
 
@@ -24,26 +24,34 @@
 
 ## Getting Started
 
-You need [Tailwind CSS](https://tailwindcss.com) **version 2.0+**.
+> [tailwindcss](https://tailwindcss.com) version >= 2.0 must be already present in your application
 
 1. Add `mijin` dependency to your project
 
 ```bash
 # using npm
-npm install --save-dev mijin
+npm install mijin --save-dev
 # using yarn
-yarn add --dev mijin
+yarn add mijin --dev
 ```
 
-2. Add mijin Tailwind CSS preset `tailwind-preset.js` to your Tailwind CSS configuration file `tailwindcss.config.js`
+2. Add mijin Tailwind CSS preset `tailwind-preset.js` to your Tailwind CSS configuration file `tailwind.config.js`
 
 ```javascript
+// tailwind.config.js
 const mijin = require('mijin/dist/tailwind-preset.js');
 
 module.exports = {
+  // load mijin presets
   presets: [
     mijin,
   ],
+  // allow PurgeCSS to analyze mijin components
+  purge: {
+    content: [
+      'node_modules/mijin/src/components/**/*.vue',
+    ],
+  },
 };
 ```
 
@@ -73,6 +81,7 @@ Vue.component('MjInput', Select)
 Add `mijin.js` file to your `plugins` directory
 
 ```javascript
+// plugins.mijin.js
 import Vue from 'vue';
 
 Vue.use(Mijin)
@@ -81,23 +90,24 @@ Vue.use(Mijin)
 Load the plugin from `nuxt.config.js`
 
 ```javascript
+// nuxt.config.js
 ...
   plugins: [
-    '~/plugins/mijin',
+    '~/plugins/mijin.js',
   ],
 ...
 ```
 
-<!-- [📖 &nbsp;Read more](https://mijin.design/docs/getting-started) -->
+[📖 &nbsp;Read more](https://lecoueyl.github.io/mijin.web/docs/general/getting-started/)
 ## Support
 
-### Create a bug report
+### Bug report
 
 If you see an error message or run into an issue, please create a bug report, this effort is valued and it will help everybody.
 
 [**Create bug report**](https://github.com/lecoueyl/mijin/issues/new?assignees=&labels=bug&template=bug_report.md&title=)
 
-### Submit a feature request
+### Feature request
 
 If you're missing a component or want to add a new feature, please submit a request.
 If a similar feature request already exists, don't forget to leave a "+1". Adding some information about the feature will be embraced warmly.

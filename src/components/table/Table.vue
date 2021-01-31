@@ -3,6 +3,7 @@
     class="w-full"
     :class="[
       {
+        'overflow-x-scroll sm:overflow-x-auto whitespace-wrap sm:whitespace-normal block sm:table': scrollable,
         'relative': stickyHeader,
         'table-fixed': fixed,
       }
@@ -33,6 +34,11 @@ export default {
     },
 
     fixed: {
+      default: false,
+      type: Boolean,
+    },
+
+    scrollable: {
       default: false,
       type: Boolean,
     },

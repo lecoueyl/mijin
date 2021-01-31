@@ -10,12 +10,12 @@ jobs:
   test:
     name: Release
 
-    runs-on: ${{ matrix.os }}
-
     strategy:
       matrix:
         os: [ubuntu-latest]
         node: [14]
+
+    runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout

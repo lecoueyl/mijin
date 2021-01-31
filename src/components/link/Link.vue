@@ -2,7 +2,7 @@
   <Component
     :is="props.tag"
     :ref="data.ref"
-    class="transition-colors duration-150 ease-in-out inline-block"
+    class="transition-colors duration-150 ease-in-out"
     :class="[
       {
         // color
@@ -26,7 +26,7 @@
   >
     <span
       v-if="props.external"
-      class="flex items-center"
+      class="inline-flex items-center"
     >
       <slot />
       <svg

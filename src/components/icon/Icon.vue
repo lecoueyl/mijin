@@ -1,7 +1,6 @@
 <template>
   <svg
-    :aria-labelledby="name"
-    class="stroke-2"
+    class="stroke-2 inline-block"
     :class="{
       'h-3 w-3': size === 'sm',
       'h-4 w-4': size === 'base',
@@ -10,7 +9,6 @@
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"
-    role="presentation"
     stroke-linecap="round"
     stroke-linejoin="round"
     xmlns="http://www.w3.org/2000/svg"
