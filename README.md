@@ -13,7 +13,7 @@
 
 > [Tailwind CSS](https://tailwindcss.com) UI components build for [Vue.js](https://vuejs.org) / [Nuxt.js](https://nuxtjs.org)
 
-<!-- - [📖 Documentation](https://mijin.design/docs/getting-started) -->
+- [📖 Documentation](https://lecoueyl.github.io/mijin.web/docs)
 
 ## Features
 
@@ -98,7 +98,7 @@ Load the plugin from `nuxt.config.js`
 ...
 ```
 
-<!-- [📖 &nbsp;Read more](https://mijin.design/docs/getting-started) -->
+[📖 &nbsp;Read more](https://lecoueyl.github.io/mijin.web/docs/general/getting-started/)
 ## Support
 
 ### Bug report
