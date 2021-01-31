@@ -1,3 +1,14 @@
+## [1.0.4](https://github.com/lecoueyl/mijin/compare/v1.0.3...v1.0.4) (2021-01-31)
+
+
+### Bug Fixes
+
+* **icon:** remove aria-labelledby ([34f14f8](https://github.com/lecoueyl/mijin/commit/34f14f8157cb33e7fd2884a2ae03c9fa3b6c1e9b))
+* **icon and table:** icon is inline-block by default ([bc108bf](https://github.com/lecoueyl/mijin/commit/bc108bf259c5b2ae71b844354a25004db19f8caf))
+* **link:** remove inline-block class ([85580c2](https://github.com/lecoueyl/mijin/commit/85580c2e011f4409049eb8f3b667fe5f4a3785d9))
+* **link:** use inline-flex for link external ([dc8799e](https://github.com/lecoueyl/mijin/commit/dc8799e1f3793dc34503818a482a18b4eb19e890))
+* **transition:** improve move-class timing duration ([3ed6da1](https://github.com/lecoueyl/mijin/commit/3ed6da154e41934aea9ed4eb20ffa3815f3a21b6))
+
 ## [1.0.3](https://github.com/lecoueyl/mijin/compare/v1.0.2...v1.0.3) (2021-01-26)
 
 
