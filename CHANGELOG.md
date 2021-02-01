@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/lecoueyl/mijin/compare/v1.0.4...v1.0.5) (2021-02-01)
+
+
+### Bug Fixes
+
+* **table:** use scrollable by default ([c747673](https://github.com/lecoueyl/mijin/commit/c747673e11b2b62390d9f750a0207c5f6136be9c))
+
 ## [1.0.4](https://github.com/lecoueyl/mijin/compare/v1.0.3...v1.0.4) (2021-01-31)
 
 
