@@ -42,9 +42,9 @@
     >{{ props.letter }}</span>
 
     <img
-      v-if="props.img"
+      v-if="props.src"
       :alt="props.alt"
-      :src="props.img"
+      :src="props.src"
       class="h-full w-full"
     >
   </Component>
@@ -94,11 +94,6 @@ export default {
       validator: (value) => validator.color.includes(value),
     },
 
-    img: {
-      default: null,
-      type: String,
-    },
-
     letter: {
       default: null,
       type: String,
@@ -108,6 +103,11 @@ export default {
       default: 'base',
       type: String,
       validator: (value) => validator.size.includes(value),
+    },
+
+    src: {
+      default: null,
+      type: String,
     },
 
     tag: {
