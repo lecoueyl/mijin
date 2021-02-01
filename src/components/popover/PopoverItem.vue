@@ -23,7 +23,7 @@
   >
     <span
       v-if="$slots.prefix"
-      class="mr-2"
+      class="inline-flex items-center mr-2"
     >
       <slot name="prefix" />
     </span>
@@ -32,7 +32,7 @@
     </span>
     <span
       v-if="$slots.suffix"
-      class="ml-1"
+      class="inline-flex items-center ml-1"
     >
       <slot name="suffix" />
     </span>
