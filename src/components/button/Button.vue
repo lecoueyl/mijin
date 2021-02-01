@@ -42,7 +42,7 @@
   >
     <span
       v-if="$slots.icon"
-      class="w-4 h-4 inline-block"
+      class="w-4 h-4 inline-flex items-center"
       :class="[{
         'mr-1': $slots.default && !props.iconRight,
         'ml-1': $slots.default && props.iconRight,

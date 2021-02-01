@@ -73,11 +73,11 @@ describe('Avatar', () => {
     expect(wrapper.text()).toBe('BB');
   });
 
-  it('accepts alt and img props', async () => {
+  it('accepts alt and src props', async () => {
     const wrapper = shallowMount(Avatar, {
       propsData: {
         alt: 'foobar',
-        img: '//foobar.com',
+        src: '//foobar.com',
       },
     });
 
