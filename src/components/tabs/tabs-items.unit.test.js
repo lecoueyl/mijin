@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import TabsItem from './TabsItem';
+import TabsItem from './TabsItem.vue';
 
 describe('TabsItem', () => {
   enableAutoDestroy(afterEach);

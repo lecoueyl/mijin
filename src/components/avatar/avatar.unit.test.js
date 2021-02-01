@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Avatar from './Avatar';
+import Avatar from './Avatar.vue';
 
 describe('Avatar', () => {
   enableAutoDestroy(afterEach);

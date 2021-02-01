@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Link from './Link';
+import Link from './Link.vue';
 
 describe('Link', () => {
   enableAutoDestroy(afterEach);

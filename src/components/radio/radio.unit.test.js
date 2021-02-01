@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Radio from './Radio';
+import Radio from './Radio.vue';
 
 describe('Radio', () => {
   enableAutoDestroy(afterEach);

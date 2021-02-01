@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import FadeY from './FadeY';
+import FadeY from './FadeY.vue';
 
 describe('FadeY', () => {
   enableAutoDestroy(afterEach);

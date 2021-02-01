@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Tag from './Tag';
+import Tag from './Tag.vue';
 
 describe('Tag', () => {
   enableAutoDestroy(afterEach);

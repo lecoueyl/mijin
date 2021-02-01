@@ -1,6 +1,6 @@
 import { enableAutoDestroy, shallowMount, mount } from '@vue/test-utils';
-import List from './List';
-import ListItem from './ListItem';
+import List from './List.vue';
+import ListItem from './ListItem.vue';
 
 describe('List', () => {
   enableAutoDestroy(afterEach);

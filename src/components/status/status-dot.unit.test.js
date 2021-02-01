@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import StatusDot from './StatusDot';
+import StatusDot from './StatusDot.vue';
 
 describe('StatusDot', () => {
   enableAutoDestroy(afterEach);

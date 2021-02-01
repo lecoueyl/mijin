@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Toast from './Toast';
+import Toast from './Toast.vue';
 
 describe('Toast', () => {
   enableAutoDestroy(afterEach);

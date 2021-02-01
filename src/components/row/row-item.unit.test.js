@@ -1,6 +1,6 @@
 import { enableAutoDestroy, shallowMount, mount } from '@vue/test-utils';
-import Row from './Row';
-import RowItem from './RowItem';
+import Row from './Row.vue';
+import RowItem from './RowItem.vue';
 
 describe('RowItem', () => {
   enableAutoDestroy(afterEach);

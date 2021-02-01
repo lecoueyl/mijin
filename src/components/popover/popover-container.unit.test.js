@@ -1,6 +1,6 @@
 import { enableAutoDestroy, shallowMount, mount } from '@vue/test-utils';
-import Popover from './Popover';
-import PopoverContainer from './PopoverContainer';
+import Popover from './Popover.vue';
+import PopoverContainer from './PopoverContainer.vue';
 
 describe('PopoverContainer', () => {
   enableAutoDestroy(afterEach);

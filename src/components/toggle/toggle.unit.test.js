@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Toggle from './Toggle';
+import Toggle from './Toggle.vue';
 
 describe('Toggle', () => {
   enableAutoDestroy(afterEach);

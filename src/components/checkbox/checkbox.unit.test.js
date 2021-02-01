@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Checkbox from './Checkbox';
+import Checkbox from './Checkbox.vue';
 
 describe('Checkbox', () => {
   enableAutoDestroy(afterEach);

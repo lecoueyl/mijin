@@ -1,5 +1,5 @@
 import { enableAutoDestroy, shallowMount } from '@vue/test-utils';
-import Divider from './Divider';
+import Divider from './Divider.vue';
 
 describe('Divider', () => {
   enableAutoDestroy(afterEach);
