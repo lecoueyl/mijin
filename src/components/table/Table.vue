@@ -39,7 +39,7 @@ export default {
     },
 
     scrollable: {
-      default: false,
+      default: true,
       type: Boolean,
     },
 
