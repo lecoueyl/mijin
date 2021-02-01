@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/lecoueyl/mijin/compare/v1.0.5...v1.0.6) (2021-02-01)
+
+
+### Bug Fixes
+
+* **icon:** align icon for button and popover-item ([10c4a4b](https://github.com/lecoueyl/mijin/commit/10c4a4b6fa7ca18e0d48bbbf9a0fc6b276b7071c))
+
 ## [1.0.5](https://github.com/lecoueyl/mijin/compare/v1.0.4...v1.0.5) (2021-02-01)
 
 
