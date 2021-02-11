@@ -12,8 +12,8 @@
   >
     <transition-group
       tag="ul"
-      enter-active-class="transition ease-in ease-out-mijin duration-500"
-      leave-active-class="transition ease-out ease-out-mijin duration-500"
+      enter-active-class="transition ease-out-mijin duration-500"
+      leave-active-class="transition ease-out-mijin duration-500"
       enter-class="transform translate-y-2 opacity-0"
       enter-to-class="transform translate-y-0 opacity-100"
       leave-class="transform translate-y-0 opacity-100"
