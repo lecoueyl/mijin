@@ -71,7 +71,7 @@ describe('Toast', () => {
     const message = 'foobar';
 
     await wrapper.vm.log(message);
-    const $toastItem = wrapper.find('li');
+    const $toastItem = wrapper.find('li > div');
     expect($toastItem.exists()).toBe(true);
     expect($toastItem.classes('bg-white')).toBe(true);
     expect($toastItem.text()).toBe(message);
@@ -82,7 +82,7 @@ describe('Toast', () => {
     const message = 'foobar';
 
     await wrapper.vm.success(message);
-    const $toastItem = wrapper.find('li');
+    const $toastItem = wrapper.find('li > div');
     expect($toastItem.exists()).toBe(true);
     expect($toastItem.classes('bg-success-500')).toBe(true);
     expect($toastItem.text()).toBe(message);
@@ -93,7 +93,7 @@ describe('Toast', () => {
     const message = 'foobar';
 
     await wrapper.vm.warn(message);
-    const $toastItem = wrapper.find('li');
+    const $toastItem = wrapper.find('li > div');
     expect($toastItem.exists()).toBe(true);
     expect($toastItem.classes('bg-warning-500')).toBe(true);
     expect($toastItem.text()).toBe(message);
@@ -104,7 +104,7 @@ describe('Toast', () => {
     const message = 'foobar';
 
     await wrapper.vm.error(message);
-    const $toastItem = wrapper.find('li');
+    const $toastItem = wrapper.find('li > div');
     expect($toastItem.exists()).toBe(true);
     expect($toastItem.classes('bg-danger-500')).toBe(true);
     expect($toastItem.text()).toBe(message);
@@ -114,11 +114,11 @@ describe('Toast', () => {
     const wrapper = shallowMount(Toast);
     await wrapper.vm.log('foobar');
 
-    const $toastItem = wrapper.find('li');
+    const $toastItem = wrapper.find('li > div');
     expect($toastItem.exists()).toBe(true);
 
     await $toastItem.trigger('click');
-    expect(wrapper.find('li').exists()).toBe(false);
+    expect(wrapper.find('li > div').exists()).toBe(false);
   });
 
   it('accepts timeout props', async () => {
