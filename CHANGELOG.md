@@ -1,3 +1,11 @@
+## [1.0.7](https://github.com/lecoueyl/mijin/compare/v1.0.6...v1.0.7) (2021-02-21)
+
+
+### Bug Fixes
+
+* **toast:** remove container padding to avoid ghost element ([8a2b822](https://github.com/lecoueyl/mijin/commit/8a2b82254cca42ac116dbaaaa72ad975c087cc28))
+* **toast:** remove extra easing class ([99048d8](https://github.com/lecoueyl/mijin/commit/99048d8cf45afb369310d0a31ff9f1ce4e5b6053))
+
 ## [1.0.6](https://github.com/lecoueyl/mijin/compare/v1.0.5...v1.0.6) (2021-02-01)
 
 
