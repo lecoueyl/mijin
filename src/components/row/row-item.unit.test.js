@@ -17,7 +17,7 @@ describe('RowItem', () => {
       },
     });
 
-    const $listItem = wrapper.findcomponent(RowItem);
+    const $listItem = wrapper.findComponent(RowItem);
     expect($listItem.element.tagName).toBe('DIV');
     expect($listItem.classes('flex-none')).toBe(true);
     expect($listItem.classes('flex-grow')).toBe(false);
@@ -68,7 +68,7 @@ describe('RowItem', () => {
       },
     });
 
-    const $listItem = wrapper.findcomponent(RowItem);
+    const $listItem = wrapper.findComponent(RowItem);
     expect($listItem.classes('px-8')).toBe(true);
   });
 
@@ -84,7 +84,7 @@ describe('RowItem', () => {
       },
     });
 
-    const $listItem = wrapper.findcomponent(RowItem);
+    const $listItem = wrapper.findComponent(RowItem);
     expect($listItem.classes('flex-none')).toBe(false);
     expect($listItem.classes('flex-grow')).toBe(true);
   });

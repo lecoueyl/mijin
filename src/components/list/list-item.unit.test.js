@@ -17,7 +17,7 @@ describe('List', () => {
       },
     });
 
-    const $listItem = wrapper.findcomponent(ListItem);
+    const $listItem = wrapper.findComponent(ListItem);
     expect($listItem.element.tagName).toBe('LI');
     expect($listItem.classes('list-item')).toBe(true);
     expect($listItem.classes('float-left')).toBe(false);
@@ -42,7 +42,7 @@ describe('List', () => {
       },
     });
 
-    const $listItem = wrapper.findcomponent(ListItem);
+    const $listItem = wrapper.findComponent(ListItem);
     expect($listItem.classes('float-left')).toBe(true);
     expect($listItem.classes('py-1')).toBe(false);
     expect($listItem.classes('px-1')).toBe(true);
@@ -60,7 +60,7 @@ describe('List', () => {
       },
     });
 
-    const $listItem = wrapper.findcomponent(ListItem);
+    const $listItem = wrapper.findComponent(ListItem);
     expect($listItem.classes('py-1')).toBe(false);
     expect($listItem.classes('py-2')).toBe(true);
   });

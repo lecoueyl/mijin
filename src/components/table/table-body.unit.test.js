@@ -17,7 +17,7 @@ describe('TableBody', () => {
       },
     });
 
-    const $tableBody = wrapper.findcomponent(TableBody);
+    const $tableBody = wrapper.findComponent(TableBody);
     expect($tableBody.element.tagName).toBe('TBODY');
   });
 

@@ -21,7 +21,7 @@ describe('TableHeader', () => {
       },
     });
 
-    const $tableTitle = wrapper.findcomponent(TableHeader);
+    const $tableTitle = wrapper.findComponent(TableHeader);
     expect($tableTitle.element.tagName).toBe('TH');
     expect($tableTitle.find('svg').exists()).toBe(false);
   });
@@ -70,7 +70,7 @@ describe('TableHeader', () => {
       },
     });
 
-    const $tableTitle = wrapper.findcomponent(TableHeader);
+    const $tableTitle = wrapper.findComponent(TableHeader);
     expect($tableTitle.classes('text-center')).toBe(true);
     expect($tableTitle.classes('sticky')).toBe(true);
     expect($tableTitle.find('svg').exists()).toBe(true);
