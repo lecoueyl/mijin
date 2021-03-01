@@ -1,5 +1,5 @@
 <template functional>
-  <Component
+  <component
     :is="props.tag"
     :ref="data.ref"
     class="relative leading-tight font-medium border transition-colors duration-150 cursor-pointer focus:outline-none"
@@ -52,7 +52,7 @@
     </span>
     <slot />
     <span v-if="!$slots.default">&#8203;</span>
-  </Component>
+  </component>
 </template>
 
 <script>

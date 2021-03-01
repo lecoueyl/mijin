@@ -1,5 +1,5 @@
 <template functional>
-  <Component
+  <component
     :is="props.tag"
     :ref="data.ref"
     class="inline-block relative h-3 w-3"
@@ -40,7 +40,7 @@
         },
       ]"
     />
-  </Component>
+  </component>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <Component
+  <component
     :is="tag"
     :class="{
       'flow-root': inline,
@@ -10,7 +10,7 @@
     class="divide-gray-300 dark:divide-gray-600"
   >
     <slot />
-  </Component>
+  </component>
 </template>
 
 <script>

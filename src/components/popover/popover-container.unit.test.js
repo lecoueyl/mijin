@@ -17,7 +17,7 @@ describe('PopoverContainer', () => {
       },
     });
 
-    const $popoverContainer = wrapper.findComponent(PopoverContainer);
+    const $popoverContainer = wrapper.findcomponent(PopoverContainer);
     expect($popoverContainer.element.tagName).toBe('DIV');
     expect($popoverContainer.classes('bg-white')).toBe(true);
   });
@@ -57,7 +57,7 @@ describe('PopoverContainer', () => {
       },
     });
 
-    const $popoverContainer = wrapper.findComponent(PopoverContainer);
+    const $popoverContainer = wrapper.findcomponent(PopoverContainer);
     expect($popoverContainer.element.tagName).toBe('SECTION');
   });
 });

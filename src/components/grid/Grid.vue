@@ -1,5 +1,5 @@
 <template functional>
-  <Component
+  <component
     :is="props.tag"
     :ref="data.ref"
     class="grid"
@@ -19,7 +19,7 @@
     v-on="listeners"
   >
     <slot />
-  </Component>
+  </component>
 </template>
 
 <script>

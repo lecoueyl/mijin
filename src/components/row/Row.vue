@@ -1,5 +1,5 @@
 <template>
-  <Component
+  <component
     :is="tag"
     class="flex flex-wrap"
     :class="[
@@ -18,7 +18,7 @@
     ]"
   >
     <slot />
-  </Component>
+  </component>
 </template>
 
 <script>

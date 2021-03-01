@@ -26,7 +26,7 @@ describe('TableCell', () => {
       },
     });
 
-    const $tableBody = wrapper.findComponent(TableCell);
+    const $tableBody = wrapper.findcomponent(TableCell);
     expect($tableBody.element.tagName).toBe('TD');
   });
 
@@ -83,7 +83,7 @@ describe('TableCell', () => {
       },
     });
 
-    const $tableBody = wrapper.findComponent(TableCell);
+    const $tableBody = wrapper.findcomponent(TableCell);
     expect($tableBody.classes('text-center')).toBe(true);
     expect($tableBody.classes('truncate')).toBe(true);
     expect($tableBody.classes('align-bottom')).toBe(true);

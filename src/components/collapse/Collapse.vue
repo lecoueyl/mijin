@@ -1,5 +1,5 @@
 <template>
-  <Component
+  <component
     :is="tag"
     :aria-disabled="disabled"
     :aria-expanded="collapsed ? 'false' : 'true'"
@@ -49,7 +49,7 @@
         <slot name="content" />
       </div>
     </div>
-  </Component>
+  </component>
 </template>
 
 <script>

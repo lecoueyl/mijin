@@ -1,5 +1,5 @@
 <template>
-  <Component
+  <component
     :is="transitionType"
     :mode="mode"
     :tag="tag"
@@ -19,7 +19,7 @@
     ]"
   >
     <slot />
-  </Component>
+  </component>
 </template>
 
 <script>

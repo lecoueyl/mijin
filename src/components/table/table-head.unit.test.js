@@ -17,7 +17,7 @@ describe('TableHead', () => {
       },
     });
 
-    const $tableHead = wrapper.findComponent(TableHead);
+    const $tableHead = wrapper.findcomponent(TableHead);
     expect($tableHead.element.tagName).toBe('THEAD');
   });
 
