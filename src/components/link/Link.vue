@@ -1,5 +1,5 @@
 <template functional>
-  <Component
+  <component
     :is="props.tag"
     :ref="data.ref"
     class="transition-colors duration-150 ease-in-out"
@@ -52,7 +52,7 @@
     <template v-else>
       <slot />
     </template>
-  </Component>
+  </component>
 </template>
 
 <script>

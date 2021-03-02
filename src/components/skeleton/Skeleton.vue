@@ -1,5 +1,5 @@
 <template functional>
-  <Component
+  <component
     :is="props.tag"
     :ref="data.ref"
     class="animate-pulse bg-gray-300 dark:bg-gray-600"
@@ -16,7 +16,7 @@
     v-on="listeners"
   >
     &#8203;
-  </Component>
+  </component>
 </template>
 
 <script>

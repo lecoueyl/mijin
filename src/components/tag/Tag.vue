@@ -1,5 +1,5 @@
 <template functional>
-  <Component
+  <component
     :is="props.tag"
     :ref="data.ref"
     class="rounded-full inline-block"
@@ -67,7 +67,7 @@
     <template v-else>
       <slot />
     </template>
-  </Component>
+  </component>
 </template>
 
 <script>

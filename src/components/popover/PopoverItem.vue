@@ -1,5 +1,5 @@
 <template functional>
-  <Component
+  <component
     :is="props.tag"
     :ref="data.ref"
     class="px-2 py-1 block rounded transition-colors duration-100 ease-in-out"
@@ -36,7 +36,7 @@
     >
       <slot name="suffix" />
     </span>
-  </Component>
+  </component>
 </template>
 
 <script>

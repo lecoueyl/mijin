@@ -11,7 +11,7 @@
 
 # mijin
 
-> [Tailwind CSS](https://tailwindcss.com) UI components build for [Vue.js](https://vuejs.org) / [Nuxt.js](https://nuxtjs.org)
+> [Tailwind CSS](https://tailwindcss.com) UI components build for [Vue.js](https://vuejs.org) 2.x / [Nuxt.js](https://nuxtjs.org) 2.x
 
 - [📖 Documentation](https://lecoueyl.github.io/mijin.web/docs)
 

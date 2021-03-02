@@ -1,5 +1,5 @@
 <template>
-  <Component :is="tag">
+  <component :is="tag">
     <div
       v-if="variant === 'bar'"
       class="rounded-lg bg-gray-200 dark:bg-gray-700 overflow-hidden"
@@ -70,7 +70,7 @@
         }"
       />
     </div>
-  </Component>
+  </component>
 </template>
 
 <script>

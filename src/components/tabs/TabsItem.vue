@@ -1,5 +1,5 @@
 <template functional>
-  <Component
+  <component
     :is="props.tag"
     :ref="data.ref"
     class="pb-2 transition-colors duration-150 ease-in-out"
@@ -24,7 +24,7 @@
     v-on="listeners"
   >
     <slot />
-  </Component>
+  </component>
 </template>
 
 <script>

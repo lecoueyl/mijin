@@ -1,5 +1,5 @@
 <template functional>
-  <Component
+  <component
     :is="props.tag"
     :ref="data.ref"
     class="flex rounded-md p-2"
@@ -94,7 +94,7 @@
     </div>
 
     <slot />
-  </Component>
+  </component>
 </template>
 
 <script>

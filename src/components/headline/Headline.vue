@@ -1,5 +1,5 @@
 <template functional>
-  <Component
+  <component
     :is="props.tag || `h${props.level}`"
     :ref="data.ref"
     class="leading-tight"
@@ -21,7 +21,7 @@
     v-on="listeners"
   >
     <slot />
-  </Component>
+  </component>
 </template>
 
 <script>

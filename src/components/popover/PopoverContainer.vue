@@ -1,10 +1,10 @@
 <template>
-  <Component
+  <component
     :is="tag"
     class="bg-white dark:bg-gray-900 shadow-lg sm:rounded-md border-t sm:border border-gray-200 dark:border-gray-800 w-full"
   >
     <slot />
-  </Component>
+  </component>
 </template>
 
 <script>

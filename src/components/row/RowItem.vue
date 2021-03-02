@@ -1,5 +1,5 @@
 <template>
-  <Component
+  <component
     :is="tag"
     :class="[
       grow ? 'flex-grow' : 'flex-none',
@@ -12,7 +12,7 @@
     ]"
   >
     <slot />
-  </Component>
+  </component>
 </template>
 
 <script>

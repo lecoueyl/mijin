@@ -1,5 +1,5 @@
 <template functional>
-  <Component
+  <component
     :is="props.tag"
     :ref="data.ref"
     class="inline-flex items-center justify-center rounded-full"
@@ -72,7 +72,7 @@
         <polyline points="20 6 9 17 4 12" />
       </template>
     </svg>
-  </Component>
+  </component>
 </template>
 
 <script>

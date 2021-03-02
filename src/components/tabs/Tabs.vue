@@ -1,5 +1,5 @@
 <template functional>
-  <Component
+  <component
     :is="props.tag"
     :ref="data.ref"
     class="flex border-b border-gray-300 dark:border-gray-600 space-x-4"
@@ -15,7 +15,7 @@
     v-on="listeners"
   >
     <slot />
-  </Component>
+  </component>
 </template>
 
 <script>
