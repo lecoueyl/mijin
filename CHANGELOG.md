@@ -1,3 +1,10 @@
+## [1.0.8](https://github.com/lecoueyl/mijin/compare/v1.0.7...v1.0.8) (2021-03-02)
+
+
+### Bug Fixes
+
+* **components:** don't use capitalized component tag name ([8ef0d68](https://github.com/lecoueyl/mijin/commit/8ef0d68a7ed715779befb42f3db5ec3abf1119aa))
+
 ## [1.0.7](https://github.com/lecoueyl/mijin/compare/v1.0.6...v1.0.7) (2021-02-21)
 
 
