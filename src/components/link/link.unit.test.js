@@ -11,6 +11,8 @@ describe('Link', () => {
     expect(wrapper.classes('text-primary-500')).toBe(true);
     expect(wrapper.find('svg').exists()).toBe(false);
     expect(wrapper.classes('underline')).toBe(false);
+    expect(wrapper.attributes('target')).not.toBeDefined();
+    expect(wrapper.attributes('rel')).not.toBeDefined();
   });
 
   it('renders default slot content', async () => {
@@ -53,6 +55,8 @@ describe('Link', () => {
     });
 
     expect(wrapper.find('svg').exists()).toBe(true);
+    expect(wrapper.attributes('target')).toEqual('_blank');
+    expect(wrapper.attributes('rel')).toEqual('noopener');
   });
 
   it('accepts underline prop', async () => {
