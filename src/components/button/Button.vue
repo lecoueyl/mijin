@@ -2,15 +2,20 @@
   <component
     :is="props.tag"
     :ref="data.ref"
-    class="relative leading-tight font-medium border transition-colors duration-150 cursor-pointer focus:outline-none"
     :class="[
+      'relative leading-tight font-medium border transition-colors duration-150 focus:outline-none',
       {
+        // busy
+        'animate-pulse': props.busy,
         // variant
         'text-primary-50 border-primary-500 bg-primary-500 hover:border-primary-600 hover:bg-primary-600 focus:bg-primary-600':
           props.variant === 'primary' && !props.disabled,
         'border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500': props.variant === 'secondary' && !props.disabled,
         // disabled
         'border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 cursor-not-allowed': props.disabled,
+        // loading
+        'cursor-wait': props.loading || props.busy,
+        'cursor-pointer ': !props.loading || !props.busy,
         // icon
         'inline-flex items-center': $slots.icon || props.icon,
         'flex-row-reverse': props.iconRight,
@@ -23,8 +28,6 @@
         'rounded-button': props.group === false,
         'rounded-l-button': props.group === 'first',
         'rounded-r-button': props.group === 'last',
-        // loading
-        'animate-pulse cursor-wait': props.loading
       },
       data.class,
       data.staticClass,
@@ -40,18 +43,32 @@
     v-bind="data.attrs"
     v-on="listeners"
   >
-    <span
-      v-if="$slots.icon"
-      class="w-4 h-4 inline-flex items-center"
-      :class="[{
-        'mr-1': $slots.default && !props.iconRight,
-        'ml-1': $slots.default && props.iconRight,
-      }]"
+    <div
+      v-if="props.loading"
+      class="absolute inset-0 flex items-center justify-center w-full"
     >
-      <slot name="icon" />
+      &#8203;
+      <div class="rounded-full h-2 w-2 mx-1 bg-current animate-pulse" />
+      <div class="rounded-full h-2 w-2 mx-1 bg-current animate-pulse animation-delay-300" />
+      <div class="rounded-full h-2 w-2 mx-1 bg-current animate-pulse animation-delay-600" />
+      &#8203;
+    </div>
+    <span
+      :class="{ 'opacity-0': props.loading }"
+    >
+      <span
+        v-if="$slots.icon"
+        class="w-4 h-4 inline-flex items-center"
+        :class="[{
+          'mr-1': $slots.default && !props.iconRight,
+          'ml-1': $slots.default && props.iconRight,
+        }]"
+      >
+        <slot name="icon" />
+      </span>
+      <slot />
+      <span v-if="!$slots.default">&#8203;</span>
     </span>
-    <slot />
-    <span v-if="!$slots.default">&#8203;</span>
   </component>
 </template>
 
@@ -81,6 +98,11 @@ export default {
   validator,
 
   props: {
+    busy: {
+      default: false,
+      type: Boolean,
+    },
+
     disabled: {
       default: false,
       type: Boolean,
