@@ -53,22 +53,25 @@
       <div class="rounded-full h-2 w-2 mx-1 bg-current animate-pulse animation-delay-600" />
       &#8203;
     </div>
+
     <span
-      :class="{ 'opacity-0': props.loading }"
-    >
-      <span
-        v-if="$slots.icon"
-        class="w-4 h-4 inline-flex items-center"
-        :class="[{
+      v-if="$slots.icon"
+      class=""
+      :class="[
+        'w-4 h-4 inline-flex items-center',
+        {
+          'opacity-0': props.loading,
           'mr-1': $slots.default && !props.iconRight,
           'ml-1': $slots.default && props.iconRight,
-        }]"
-      >
-        <slot name="icon" />
-      </span>
-      <slot />
-      <span v-if="!$slots.default">&#8203;</span>
+        }
+      ]"
+    >
+      <slot name="icon" />
     </span>
+    <span :class="{ 'opacity-0': props.loading }">
+      <slot />
+    </span>
+    <span v-if="!$slots.default">&#8203;</span>
   </component>
 </template>
 
