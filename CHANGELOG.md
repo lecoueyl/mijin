@@ -1,3 +1,20 @@
+# [1.1.0](https://github.com/lecoueyl/mijin/compare/v1.0.8...v1.1.0) (2021-04-15)
+
+
+### Bug Fixes
+
+* **button:** add active state class ([809be64](https://github.com/lecoueyl/mijin/commit/809be642d43705803fa1ffced24d87eb0b950b1d))
+* **button:** align icon position when using loading prop ([5f60504](https://github.com/lecoueyl/mijin/commit/5f605041b68f2782170218475b60e4a500cc0941))
+* **modal:** fix modal position on small devices ([313d300](https://github.com/lecoueyl/mijin/commit/313d300802c10506825697a7e89d82e96da76927))
+
+
+### Features
+
+* **button:** add color prop for default variant ([6543d78](https://github.com/lecoueyl/mijin/commit/6543d7867073b97e1196d615dcd01a16f0baba9b))
+* **button:** improve loading state and add busy prop ([e9c7b11](https://github.com/lecoueyl/mijin/commit/e9c7b11ad55eda6a7ca2f15475c1f34f32919519))
+* **link:** add target _blank and rel noopener with external property ([1425952](https://github.com/lecoueyl/mijin/commit/14259529f997d7d38ee74330f14891a3f07d7c95))
+* **popover:** add background opacity for mobile devices ([aaf8de1](https://github.com/lecoueyl/mijin/commit/aaf8de15a37e217ed62e5430ee9525fef2f6845d))
+
 ## [1.0.8](https://github.com/lecoueyl/mijin/compare/v1.0.7...v1.0.8) (2021-03-02)
 
 
