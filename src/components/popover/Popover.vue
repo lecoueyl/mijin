@@ -10,7 +10,7 @@
     </div>
 
     <div
-      class="fixed inset-0 opacity-0 z-40"
+      class="fixed inset-0 bg-gray-500 dark:bg-gray-600 opacity-25 sm:opacity-0 z-40"
       :class="[
         isOpen ? 'visible' : 'invisible',
       ]"
