@@ -14,7 +14,7 @@
     />
 
     <div
-      class="flex items-end sm:items-center justify-center min-h-screen p-4"
+      class="flex items-end sm:items-center justify-center min-h-full p-2"
     >
       <div
         class="inline-block bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-xl transform transition-all p-4 sm:p-6"

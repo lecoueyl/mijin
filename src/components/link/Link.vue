@@ -2,8 +2,8 @@
   <component
     :is="props.tag"
     :ref="data.ref"
-    class="transition-colors duration-150 ease-in-out"
     :class="[
+      'transition-colors duration-150 ease-in-out',
       {
         // color
         'hover:text-gray-600 dark:hover:text-gray-300': props.color === 'gray',
@@ -21,6 +21,8 @@
       data.style,
       data.staticStyle,
     ]"
+    :target="props.external && !props.target ? '_blank' : props.target"
+    :rel="props.external && !props.rel ? 'noopener' : props.rel"
     v-bind="data.attrs"
     v-on="listeners"
   >
@@ -81,6 +83,16 @@ export default {
     external: {
       default: false,
       type: Boolean,
+    },
+
+    rel: {
+      default: null,
+      type: String,
+    },
+
+    target: {
+      default: null,
+      type: String,
     },
 
     tag: {

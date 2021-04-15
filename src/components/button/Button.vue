@@ -2,20 +2,30 @@
   <component
     :is="props.tag"
     :ref="data.ref"
-    class="relative leading-tight font-medium border transition-colors duration-150 cursor-pointer focus:outline-none"
     :class="[
+      'relative leading-tight font-medium border transition-colors duration-150 focus:outline-none shadow-sm',
       {
+        // busy
+        'animate-pulse': props.busy,
         // variant
-        'text-primary-50 border-primary-500 bg-primary-500 hover:border-primary-600 hover:bg-primary-600 focus:bg-primary-600':
-          props.variant === 'primary' && !props.disabled,
-        'border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500': props.variant === 'secondary' && !props.disabled,
+        'text-white border-primary-500 bg-primary-500 hover:border-primary-600 hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700':
+          props.variant === 'primary' && props.color === 'primary' && !props.disabled,
+        'text-white border-danger-500 bg-danger-500 hover:border-danger-600 hover:bg-danger-600 focus:bg-danger-600 active:bg-danger-700':
+          props.variant === 'primary' && props.color === 'danger' && !props.disabled,
+        'text-white border-warning-500 bg-warning-500 hover:border-warning-600 hover:bg-warning-600 focus:bg-warning-600 active:bg-warning-700':
+          props.variant === 'primary' && props.color === 'warning' && !props.disabled,
+        'border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 active:border-gray-500 dark:active:border-gray-300':
+          props.variant === 'secondary' && !props.disabled,
         // disabled
         'border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 cursor-not-allowed': props.disabled,
+        // loading
+        'cursor-wait': props.loading || props.busy,
+        'cursor-pointer ': !props.loading || !props.busy,
         // icon
         'inline-flex items-center': $slots.icon || props.icon,
         'flex-row-reverse': props.iconRight,
         // size
-        'px-3 py-1': $slots.default && props.size === 'sm',
+        'px-4 py-1': $slots.default && props.size === 'sm',
         'px-5 py-2': $slots.default && props.size === 'base',
         'px-10 py-4': $slots.default && props.size === 'lg',
         'px-3 py-2': !$slots.default,
@@ -23,8 +33,6 @@
         'rounded-button': props.group === false,
         'rounded-l-button': props.group === 'first',
         'rounded-r-button': props.group === 'last',
-        // loading
-        'animate-pulse cursor-wait': props.loading
       },
       data.class,
       data.staticClass,
@@ -40,23 +48,45 @@
     v-bind="data.attrs"
     v-on="listeners"
   >
+    <div
+      v-if="props.loading"
+      class="absolute inset-0 flex items-center justify-center w-full"
+    >
+      &#8203;
+      <div class="rounded-full h-2 w-2 mx-1 bg-current animate-pulse" />
+      <div class="rounded-full h-2 w-2 mx-1 bg-current animate-pulse animation-delay-300" />
+      <div class="rounded-full h-2 w-2 mx-1 bg-current animate-pulse animation-delay-600" />
+      &#8203;
+    </div>
+
     <span
       v-if="$slots.icon"
-      class="w-4 h-4 inline-flex items-center"
-      :class="[{
-        'mr-1': $slots.default && !props.iconRight,
-        'ml-1': $slots.default && props.iconRight,
-      }]"
+      class=""
+      :class="[
+        'w-4 h-4 inline-flex items-center',
+        {
+          'opacity-0': props.loading,
+          'mr-1': $slots.default && !props.iconRight,
+          'ml-1': $slots.default && props.iconRight,
+        }
+      ]"
     >
       <slot name="icon" />
     </span>
-    <slot />
+    <span :class="{ 'opacity-0': props.loading }">
+      <slot />
+    </span>
     <span v-if="!$slots.default">&#8203;</span>
   </component>
 </template>
 
 <script>
 const validator = {
+  color: [
+    'danger',
+    'primary',
+    'warning',
+  ],
   group: [
     false,
     true,
@@ -81,6 +111,17 @@ export default {
   validator,
 
   props: {
+    busy: {
+      default: false,
+      type: Boolean,
+    },
+
+    color: {
+      default: 'primary',
+      type: String,
+      validator: (value) => validator.color.includes(value),
+    },
+
     disabled: {
       default: false,
       type: Boolean,
