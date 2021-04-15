@@ -3,14 +3,14 @@
     :is="props.tag"
     :ref="data.ref"
     :class="[
-      'relative leading-tight font-medium border transition-colors duration-150 focus:outline-none',
+      'relative leading-tight font-medium border transition-colors duration-150 focus:outline-none shadow-sm',
       {
         // busy
         'animate-pulse': props.busy,
         // variant
-        'text-primary-50 border-primary-500 bg-primary-500 hover:border-primary-600 hover:bg-primary-600 focus:bg-primary-600':
+        'text-white border-primary-500 bg-primary-500 hover:border-primary-600 hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700':
           props.variant === 'primary' && !props.disabled,
-        'border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500': props.variant === 'secondary' && !props.disabled,
+        'border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 active:border-gray-500 dark:active:border-gray-300': props.variant === 'secondary' && !props.disabled,
         // disabled
         'border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 cursor-not-allowed': props.disabled,
         // loading
@@ -20,7 +20,7 @@
         'inline-flex items-center': $slots.icon || props.icon,
         'flex-row-reverse': props.iconRight,
         // size
-        'px-3 py-1': $slots.default && props.size === 'sm',
+        'px-4 py-1': $slots.default && props.size === 'sm',
         'px-5 py-2': $slots.default && props.size === 'base',
         'px-10 py-4': $slots.default && props.size === 'lg',
         'px-3 py-2': !$slots.default,
