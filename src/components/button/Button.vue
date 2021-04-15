@@ -9,8 +9,13 @@
         'animate-pulse': props.busy,
         // variant
         'text-white border-primary-500 bg-primary-500 hover:border-primary-600 hover:bg-primary-600 focus:bg-primary-600 active:bg-primary-700':
-          props.variant === 'primary' && !props.disabled,
-        'border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 active:border-gray-500 dark:active:border-gray-300': props.variant === 'secondary' && !props.disabled,
+          props.variant === 'primary' && props.color === 'primary' && !props.disabled,
+        'text-white border-danger-500 bg-danger-500 hover:border-danger-600 hover:bg-danger-600 focus:bg-danger-600 active:bg-danger-700':
+          props.variant === 'primary' && props.color === 'danger' && !props.disabled,
+        'text-white border-warning-500 bg-warning-500 hover:border-warning-600 hover:bg-warning-600 focus:bg-warning-600 active:bg-warning-700':
+          props.variant === 'primary' && props.color === 'warning' && !props.disabled,
+        'border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 active:border-gray-500 dark:active:border-gray-300':
+          props.variant === 'secondary' && !props.disabled,
         // disabled
         'border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 cursor-not-allowed': props.disabled,
         // loading
@@ -77,6 +82,11 @@
 
 <script>
 const validator = {
+  color: [
+    'danger',
+    'primary',
+    'warning',
+  ],
   group: [
     false,
     true,
@@ -104,6 +114,12 @@ export default {
     busy: {
       default: false,
       type: Boolean,
+    },
+
+    color: {
+      default: 'primary',
+      type: String,
+      validator: (value) => validator.color.includes(value),
     },
 
     disabled: {
