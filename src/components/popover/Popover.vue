@@ -1,9 +1,20 @@
 <template>
   <div
-    class="inline-block relative"
+    :class="[
+      'relative',
+      {
+        'block': display === 'block',
+        'inline-block': display === 'inline-block',
+      },
+    ]"
   >
     <div
-      class="inline-block"
+      :class="[
+        {
+          'block': display === 'block',
+          'inline-block': display === 'inline-block',
+        },
+      ]"
       @click="toggle()"
     >
       <slot />
@@ -70,6 +81,10 @@ const validator = {
     'right',
     'top',
   ],
+  display: [
+    'block',
+    'inline-block',
+  ],
   position: [
     'bottom',
     'left',
@@ -88,6 +103,12 @@ export default {
       type: String,
       default: 'center',
       validator: (value) => validator.align.includes(value),
+    },
+
+    display: {
+      type: [String],
+      default: 'inline-block',
+      validator: (value) => validator.display.includes(value),
     },
 
     dismissible: {
