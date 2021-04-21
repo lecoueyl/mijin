@@ -14,6 +14,8 @@
           props.variant === 'primary' && props.color === 'danger' && !props.disabled,
         'text-white border-warning-500 bg-warning-500 hover:border-warning-600 hover:bg-warning-600 focus:bg-warning-600 active:bg-warning-700':
           props.variant === 'primary' && props.color === 'warning' && !props.disabled,
+        'text-white border-success-500 bg-success-500 hover:border-success-600 hover:bg-success-600 focus:bg-success-600 active:bg-success-700':
+          props.variant === 'primary' && props.color === 'success' && !props.disabled,
         'border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 active:border-gray-500 dark:active:border-gray-300':
           props.variant === 'secondary' && !props.disabled,
         // disabled
