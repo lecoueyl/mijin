@@ -35,7 +35,8 @@
       >
         <button
           v-if="dismissButton"
-          class="absolute top-4 right-4 h-6 w-6 p-1 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 transition-colors duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-500"
+          class="absolute top-4 right-4 h-6 w-6 p-1 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300
+                  transition-colors duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-500"
           aria-label="close modal"
           @click="close()"
         >
