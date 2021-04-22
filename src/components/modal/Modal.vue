@@ -21,8 +21,8 @@
         :class="[
           {
             'w-full sm:max-w-lg': size === 'base',
-            'w-full  sm:max-w-3xl': size === 'lg',
-            'w-full  sm:max-w-5xl': size === 'xl',
+            'w-full sm:max-w-3xl': size === 'lg',
+            'w-full sm:max-w-5xl': size === 'xl',
             'w-full': size === 'full',
           },
           isOpen ?
