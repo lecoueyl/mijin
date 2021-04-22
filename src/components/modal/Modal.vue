@@ -10,18 +10,19 @@
       :class="[
         isOpen ? 'ease-out duration-200 opacity-75' : 'ease-in duration-100 opacity-0',
       ]"
-      @click.self="close()"
+      @click.self="onOverlayClick()"
     />
 
     <div
-      class="flex items-end sm:items-center justify-center min-h-full p-2"
+      class="flex items-end sm:items-center justify-center min-h-full p-2 sm:p-6"
     >
       <div
         class="inline-block bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-xl transform transition-all p-4 sm:p-6"
         :class="[
           {
-            'sm:max-w-lg': size === 'base',
-            'sm:max-w-3xl': size === 'lg',
+            'w-full sm:max-w-lg': size === 'base',
+            'w-full  sm:max-w-3xl': size === 'lg',
+            'w-full  sm:max-w-5xl': size === 'xl',
             'w-full': size === 'full',
           },
           isOpen ?
@@ -43,6 +44,7 @@ const validator = {
   size: [
     'base',
     'lg',
+    'xl',
     'full',
   ],
 };
@@ -53,6 +55,11 @@ export default {
   validator,
 
   props: {
+    dismissible: {
+      type: Boolean,
+      default: true,
+    },
+
     size: {
       type: String,
       default: 'base',
@@ -78,6 +85,11 @@ export default {
     close() {
       this.isOpen = false;
       this.$emit('close');
+    },
+
+    onOverlayClick() {
+      if (!this.dismissible) return;
+      this.close();
     },
 
     onKeydown(event) {
