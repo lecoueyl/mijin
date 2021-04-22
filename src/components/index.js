@@ -16,6 +16,7 @@ export { default as List } from './list/List.vue';
 export { default as ListItem } from './list/ListItem.vue';
 export { default as Modal } from './modal/Modal.vue';
 export { default as Note } from './note/Note.vue';
+export { default as Paragraph } from './paragraph/Paragraph.vue';
 export { default as Popover } from './popover/Popover.vue';
 export { default as PopoverContainer } from './popover/PopoverContainer.vue';
 export { default as PopoverItem } from './popover/PopoverItem.vue';

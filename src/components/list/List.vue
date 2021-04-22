@@ -18,6 +18,7 @@ const validator = {
   gutter: [
     'base',
     'lg',
+    'xl',
   ],
 };
 

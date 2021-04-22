@@ -8,6 +8,8 @@
         'px-1':listProps && listProps.inline && listProps.gutter === 'base',
         'py-2':listProps && !listProps.inline && listProps.gutter === 'lg',
         'px-2':listProps && listProps.inline && listProps.gutter === 'lg',
+        'py-4':listProps && !listProps.inline && listProps.gutter === 'xl',
+        'px-4':listProps && listProps.inline && listProps.gutter === 'xl',
       },
     ]"
   >

@@ -10,18 +10,19 @@
       :class="[
         isOpen ? 'ease-out duration-200 opacity-75' : 'ease-in duration-100 opacity-0',
       ]"
-      @click.self="close()"
+      @click.self="onOverlayClick()"
     />
 
     <div
-      class="flex items-end sm:items-center justify-center min-h-full p-2"
+      class="flex items-end sm:items-center justify-center min-h-full p-2 sm:p-6"
     >
       <div
-        class="inline-block bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-xl transform transition-all p-4 sm:p-6"
+        class="relative inline-block bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-xl transform transition-all p-4 sm:p-6"
         :class="[
           {
-            'sm:max-w-lg': size === 'base',
-            'sm:max-w-3xl': size === 'lg',
+            'w-full sm:max-w-lg': size === 'base',
+            'w-full sm:max-w-3xl': size === 'lg',
+            'w-full sm:max-w-5xl': size === 'xl',
             'w-full': size === 'full',
           },
           isOpen ?
@@ -32,6 +33,26 @@
         aria-modal="true"
         aria-labelledby="modal-headline"
       >
+        <button
+          v-if="dismissButton"
+          class="absolute top-4 right-4 h-6 w-6 p-1 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300
+                  transition-colors duration-150 ease-in-out focus:outline-none focus:ring-2 focus:ring-gray-500"
+          aria-label="close"
+          @click="close()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
         <slot />
       </div>
     </div>
@@ -43,6 +64,7 @@ const validator = {
   size: [
     'base',
     'lg',
+    'xl',
     'full',
   ],
 };
@@ -53,6 +75,16 @@ export default {
   validator,
 
   props: {
+    dismissible: {
+      type: Boolean,
+      default: true,
+    },
+
+    dismissButton: {
+      type: Boolean,
+      default: false,
+    },
+
     size: {
       type: String,
       default: 'base',
@@ -78,6 +110,11 @@ export default {
     close() {
       this.isOpen = false;
       this.$emit('close');
+    },
+
+    onOverlayClick() {
+      if (!this.dismissible) return;
+      this.close();
     },
 
     onKeydown(event) {

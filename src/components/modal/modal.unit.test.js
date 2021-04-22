@@ -34,6 +34,23 @@ describe('Modal', () => {
     expect(wrapper.element.tagName).toBe('DIV');
   });
 
+  it('accepts dismissButton prop', async () => {
+    const wrapper = shallowMount(Modal, {
+      propsData: {
+        dismissButton: true,
+      },
+    });
+
+    await wrapper.vm.open();
+    expect(wrapper.vm.isOpen).toBe(true);
+    expect(wrapper.classes('visible')).toBe(true);
+
+    await wrapper.find('button').trigger('click');
+
+    expect(wrapper.classes('visible')).toBe(false);
+    expect(wrapper.vm.isOpen).toBe(false);
+  });
+
   it('open, close and toggle modal', async () => {
     const wrapper = shallowMount(Modal);
 
@@ -54,6 +71,40 @@ describe('Modal', () => {
     expect(wrapper.classes('visible')).toBe(true);
     expect(wrapper.classes('invisible')).toBe(false);
     expect(wrapper.emitted().toggle).toBeTruthy();
+  });
+
+  it('accepts dismissible props', async () => {
+    let wrapper = shallowMount(Modal, {
+      propsData: {
+        dismissible: false,
+      },
+    });
+
+    await wrapper.vm.open();
+    expect(wrapper.vm.isOpen).toBe(true);
+    expect(wrapper.classes('visible')).toBe(true);
+    expect(wrapper.find('.opacity-75').exists()).toBe(true);
+
+    await wrapper.find('.opacity-75').trigger('click');
+
+    expect(wrapper.find('.opacity-75').exists()).toBe(true);
+    expect(wrapper.classes('visible')).toBe(true);
+    expect(wrapper.vm.isOpen).toBe(true);
+
+    wrapper = shallowMount(Modal, {
+      propsData: {
+        dismissible: true,
+      },
+    });
+
+    await wrapper.vm.open();
+    expect(wrapper.vm.isOpen).toBe(true);
+    expect(wrapper.classes('visible')).toBe(true);
+
+    await wrapper.find('.opacity-75').trigger('click');
+
+    expect(wrapper.classes('visible')).toBe(false);
+    expect(wrapper.vm.isOpen).toBe(false);
   });
 
   it('closes modal on escape key', async () => {
