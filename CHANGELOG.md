@@ -1,3 +1,18 @@
+# [1.2.0](https://github.com/lecoueyl/mijin/compare/v1.1.0...v1.2.0) (2021-04-22)
+
+
+### Bug Fixes
+
+* **modal:** classes line length ([9c31370](https://github.com/lecoueyl/mijin/commit/9c31370bab911c9070cfa2434b9193fc717620e3))
+* **modal:** remove extra white space ([293fe61](https://github.com/lecoueyl/mijin/commit/293fe611eec8258f301e15e93113e265aac8bb09))
+* **popover:** add display property ([c7ba2bd](https://github.com/lecoueyl/mijin/commit/c7ba2bd4637c7eb4d61cdf2281911af9f600f4e2))
+
+
+### Features
+
+* **modal:** add dismissButton prop ([c6b76fe](https://github.com/lecoueyl/mijin/commit/c6b76fef19e764fbde948b5c93908f25e704b60d))
+* **paragraph:** add paragraph component ([390195f](https://github.com/lecoueyl/mijin/commit/390195fafeeb2463c19cb281805332e619b91ee3))
+
 # [1.1.0](https://github.com/lecoueyl/mijin/compare/v1.0.8...v1.1.0) (2021-04-15)
 
 
