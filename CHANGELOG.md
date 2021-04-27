@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/lecoueyl/mijin/compare/v1.2.0...v1.2.1) (2021-04-27)
+
+
+### Bug Fixes
+
+* **collapse:** wait for transition to finish to remove overflow ([5b68b91](https://github.com/lecoueyl/mijin/commit/5b68b91c85c9c88d1b0ac963f3e33a4c8752f086))
+
 # [1.2.0](https://github.com/lecoueyl/mijin/compare/v1.1.0...v1.2.0) (2021-04-22)
 
 
