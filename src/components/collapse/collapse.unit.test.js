@@ -61,7 +61,7 @@ describe('Collapse', () => {
     expect(wrapper.vm.collapsed).toBe(false);
   });
 
-  it('expands content', async () => {
+  it('expands content', async (done) => {
     const wrapper = shallowMount(Collapse, {
       slots: {
         default: '<span>default</span>',
@@ -74,5 +74,10 @@ describe('Collapse', () => {
     await wrapper.find('span').trigger('click');
     expect(wrapper.vm.collapsed).toBe(false);
     expect(wrapper.emitted('toggle')).toBeTruthy();
+    expect(wrapper.vm.expandedCompleted).toBe(false);
+    setTimeout(() => {
+      expect(wrapper.vm.expandedCompleted).toBe(true);
+      done();
+    }, 300);
   });
 });
