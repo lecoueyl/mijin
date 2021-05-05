@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: 'MijinTabs',
+  name: 'MijinTabsItem',
 
   props: {
     disabled: {
