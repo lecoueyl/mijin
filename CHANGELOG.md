@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/lecoueyl/mijin/compare/v1.2.1...v1.3.0) (2021-05-05)
+
+
+### Features
+
+* **color:** add cyan color ([51bb503](https://github.com/lecoueyl/mijin/commit/51bb503be4462b7ed6f78651fe29dbdb5fa8579a))
+* **segmented-control:** add SegmentedControl and SegmentedControlItem component ([2aee9b4](https://github.com/lecoueyl/mijin/commit/2aee9b439d783c82184c96944fd7ae0367995663))
+
 ## [1.2.1](https://github.com/lecoueyl/mijin/compare/v1.2.0...v1.2.1) (2021-04-27)
 
 
