@@ -1,3 +1,11 @@
+## [1.3.1](https://github.com/lecoueyl/mijin/compare/v1.3.0...v1.3.1) (2021-05-07)
+
+
+### Bug Fixes
+
+* **badge:** props color validation ([7924360](https://github.com/lecoueyl/mijin/commit/7924360eb1833bf8499869239ed982db48a629eb))
+* **color:** add all colors to badge and tag ([ed3ced1](https://github.com/lecoueyl/mijin/commit/ed3ced121c100c5f3235bd2f3ee6170b85dcea44))
+
 # [1.3.0](https://github.com/lecoueyl/mijin/compare/v1.2.1...v1.3.0) (2021-05-05)
 
 
