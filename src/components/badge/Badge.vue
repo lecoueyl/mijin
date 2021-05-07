@@ -87,7 +87,7 @@ export default {
     color: {
       default: 'gray',
       type: String,
-      validator: (value) => validator.size.includes(value),
+      validator: (value) => validator.color.includes(value),
     },
 
     size: {
