@@ -8,6 +8,7 @@
         {
           // color
           'bg-blue-200 text-blue-900': props.color === 'blue',
+          'bg-cyan-200 text-cyan-900': props.color === 'cyan',
           'bg-gray-200 text-gray-900': props.color === 'gray',
           'bg-green-200 text-green-900': props.color === 'green',
           'bg-indigo-200 text-indigo-900': props.color === 'indigo',
@@ -74,6 +75,7 @@
 const validator = {
   color: [
     'blue',
+    'cyan',
     'gray',
     'green',
     'indigo',
