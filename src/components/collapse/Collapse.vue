@@ -42,9 +42,8 @@
     </template>
 
     <div
-      class=""
       :class="[
-        ' transition-all duration-300 ease-in-out',
+        'transition-all duration-300 ease-in-out',
         { 'overflow-y-hidden': !expandedCompleted }
       ]"
       :style="{ maxHeight: maxHeight + 'px' }"

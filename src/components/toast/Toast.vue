@@ -18,7 +18,7 @@
       enter-to-class="transform translate-y-0 opacity-100"
       leave-class="transform translate-y-0 opacity-100"
       leave-to-class="transform translate-y-2 opacity-0"
-      move-class="ease-in-out duration-200"
+      move-class="ease-in-out-mijin duration-200"
     >
       <li
         v-for="event in events"
