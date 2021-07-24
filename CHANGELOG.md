@@ -1,3 +1,11 @@
+## [1.3.2](https://github.com/lecoueyl/mijin/compare/v1.3.1...v1.3.2) (2021-07-24)
+
+
+### Bug Fixes
+
+* **collapse:** remove extra whitespace ([d5bef6e](https://github.com/lecoueyl/mijin/commit/d5bef6eb0c326ab69725073db1e28da7c9d8666a))
+* **transition:** unify transition classes ([4d60d70](https://github.com/lecoueyl/mijin/commit/4d60d70bc1a8498a96a6d059cec588458a663dff))
+
 ## [1.3.1](https://github.com/lecoueyl/mijin/compare/v1.3.0...v1.3.1) (2021-05-07)
 
 
