@@ -66,7 +66,8 @@ import Mijin from 'mijin'
 
 Vue.use(Mijin)
 
-// or
+// or load specific components
+
 import {
   Button
   Input,
@@ -82,7 +83,7 @@ Vue.component('MjInput', Select)
 Add `mijin.js` file to your `plugins` directory
 
 ```javascript
-// plugins.mijin.js
+// plugins/mijin.js
 import Vue from 'vue';
 
 Vue.use(Mijin)
