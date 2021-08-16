@@ -1,7 +1,7 @@
 <template>
   <table
-    class="w-full"
     :class="[
+      'w-full',
       {
         'overflow-x-scroll sm:overflow-x-auto whitespace-wrap sm:whitespace-normal block sm:table': scrollable,
         'relative': stickyHeader,

@@ -1,7 +1,7 @@
 <template>
   <td
-    class="last:pr-0"
     :class="[
+      'last:pr-0',
       {
         // density
         'py-1 pr-2': tableProps.density === 'tight',
