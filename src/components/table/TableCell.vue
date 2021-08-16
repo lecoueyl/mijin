@@ -73,7 +73,11 @@ export default {
 
   computed: {
     tableProps() {
-      return this.$parent?.$parent?.$parent?.$props;
+      if (this.$parent?.$parent?.$parent?.$options?.name === 'MijinTable') return this.$parent?.$parent?.$parent?.$props;
+      if (this.$parent?.$parent?.$parent?.$parent?.$options?.name === 'MijinTable') return this.$parent?.$parent?.$parent?.$parent?.$props;
+      return {
+        density: 'normal',
+      };
     },
   },
 
