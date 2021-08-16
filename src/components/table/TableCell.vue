@@ -1,7 +1,7 @@
 <template>
   <td
-    class="last:pr-0"
     :class="[
+      'last:pr-0',
       {
         // density
         'py-1 pr-2': tableProps.density === 'tight',
@@ -73,7 +73,11 @@ export default {
 
   computed: {
     tableProps() {
-      return this.$parent?.$parent?.$parent?.$props;
+      if (this.$parent?.$parent?.$parent?.$options?.name === 'MijinTable') return this.$parent?.$parent?.$parent?.$props;
+      if (this.$parent?.$parent?.$parent?.$parent?.$options?.name === 'MijinTable') return this.$parent?.$parent?.$parent?.$parent?.$props;
+      return {
+        density: 'normal',
+      };
     },
   },
 

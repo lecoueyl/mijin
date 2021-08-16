@@ -4,6 +4,7 @@
 
 <p align="center">
   <a href="https://www.npmjs.com/package/mijin"><img src="https://img.shields.io/npm/v/mijin.svg?sanitize=true" alt="Version"></a>
+  <a href="https://www.npmjs.com/package/mijin"><img src="https://img.shields.io/npm/dt/mijin.svg?sanitize=true" alt="Downloads"></a>
   <a href="https://www.npmjs.com/package/mijin"><img src="https://img.shields.io/npm/l/vue.svg?sanitize=true" alt="License"></a>
   <a href="https://codecov.io/github/lecoueyl/mijin"><img src="https://img.shields.io/codecov/c/github/lecoueyl/mijin.svg?sanitize=true" alt="Coverage Status"></a>
   <img src="https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg" alt="semantic-release"></a>
@@ -30,9 +31,9 @@
 
 ```bash
 # using npm
-npm install mijin --save-dev
+npm install mijin tailwindcss --save-dev
 # using yarn
-yarn add mijin --dev
+yarn add mijin tailwindcss --dev
 ```
 
 2. Add mijin Tailwind CSS preset `tailwind-preset.js` to your Tailwind CSS configuration file `tailwind.config.js`
@@ -65,7 +66,8 @@ import Mijin from 'mijin'
 
 Vue.use(Mijin)
 
-// or
+// or load specific components
+
 import {
   Button
   Input,
@@ -81,7 +83,7 @@ Vue.component('MjInput', Select)
 Add `mijin.js` file to your `plugins` directory
 
 ```javascript
-// plugins.mijin.js
+// plugins/mijin.js
 import Vue from 'vue';
 
 Vue.use(Mijin)

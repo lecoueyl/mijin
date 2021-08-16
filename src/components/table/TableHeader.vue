@@ -1,8 +1,12 @@
 <template>
   <th
-    class="py-2 font-medium pr-1 last:pr-0"
+    class="font-medium"
     :class="[
+      'last:pr-0',
       {
+        // density
+        'py-1 pr-2': tableProps.density === 'tight',
+        'py-2 pr-4': tableProps.density === 'normal',
         //sort
         'cursor-pointer hover:text-gray-800 dark:hover:text-gray-300 transition-colors duration-150 ease-in-out': sort,
         //stickyHeader
