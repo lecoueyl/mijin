@@ -1,3 +1,11 @@
+## [1.3.3](https://github.com/lecoueyl/mijin/compare/v1.3.2...v1.3.3) (2021-08-16)
+
+
+### Bug Fixes
+
+* **table:** fix header density spacer ([f0d9c8e](https://github.com/lecoueyl/mijin/commit/f0d9c8e2f891230a0e861afed40ecac2d3654188))
+* **table-cell:** check nested parent for props ([a4ffa72](https://github.com/lecoueyl/mijin/commit/a4ffa725afe1a5d005e135230febba7cf218d26e))
+
 ## [1.3.2](https://github.com/lecoueyl/mijin/compare/v1.3.1...v1.3.2) (2021-07-24)
 
 
