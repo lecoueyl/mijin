@@ -6,7 +6,7 @@
     :tabindex="0"
   >
     <div
-      class="flex items-center"
+      class="flex"
       :class="{ 'cursor-not-allowed': disabled }"
     >
       <input
@@ -20,10 +20,10 @@
         :value="value"
       >
       <div
-        class="border rounded w-5 h-5 flex justify-center items-center flex-none"
+        class="border rounded w-4 h-4 flex justify-center items-center flex-none mt-1"
         :class="[
           {
-            'hover:border-primary-500': !disabled,
+            'hover:border-primary-500 dark:hover:border-primary-500': !disabled,
             'bg-primary-500 border-primary-500': checked && !disabled,
             'bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700': !checked && !disabled,
             // disabled
@@ -33,11 +33,16 @@
         ]"
       >
         <svg
-          class="fill-current w-3 h-3 text-primary-100"
+          class="stroke-current w-3 h-3 text-primary-50"
           :class="{ 'opacity-0': !checked }"
-          viewBox="0 0 20 20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
         >
-          <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
+          <polyline points="20 6 9 17 4 12" />
         </svg>
       </div>
       <span class="pl-2"><slot /></span>
