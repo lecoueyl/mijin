@@ -46,7 +46,7 @@
         <div
           :class="[
             'bg-primary-50 rounded w-1.5 h-1.5',
-            { 'opacity-0': !checked },
+            { 'invisible': !checked },
           ]"
         />
       </div>
