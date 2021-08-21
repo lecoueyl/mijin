@@ -28,7 +28,7 @@
       >
       <div
         :class="[
-          'border rounded w-4 h-4 flex justify-center items-center flex-none my-1 transition-colors',
+          'border rounded w-4 h-4 my-1 flex justify-center items-center flex-none transition-colors',
           {
             'group-hover:border-primary-500 dark:group-hover:border-primary-500': !disabled,
             'bg-primary-500 border-primary-500': (checked || mixed) && !disabled,
