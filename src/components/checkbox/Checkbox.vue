@@ -28,14 +28,14 @@
       >
       <div
         :class="[
-          'border rounded w-4 h-4 flex justify-center items-center flex-none my-1',
+          'border rounded w-4 h-4 flex justify-center items-center flex-none my-1 transition-colors',
           {
             'group-hover:border-primary-500 dark:group-hover:border-primary-500': !disabled,
-            'bg-primary-500 border-primary-500': checked || mixed && !disabled,
-            'bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700': !checked && !mixed && !disabled,
+            'bg-primary-500 border-primary-500': (checked || mixed) && !disabled,
+            'bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700': (!checked && !mixed )&& !disabled,
             // disabled
-            'bg-gray-500 border-gray-600 dark:border-gray-400': checked || mixed && disabled,
-            'bg-gray-200 border-gray-300 dark:border-gray-700': !checked && !mixed && disabled,
+            'bg-gray-500 border-gray-600 dark:border-gray-400': (checked || mixed) && disabled,
+            'bg-gray-200 border-gray-300 dark:border-gray-700': (!checked && !mixed) && disabled,
           }
         ]"
       >
