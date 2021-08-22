@@ -1,18 +1,24 @@
 <template>
   <label
-    class="inline-block cursor-pointer focus:outline-none"
-    :class="{
-      'rounded border border-gray-300 dark:border-gray-700 p-2 hover:border-primary-500 dark:hover:border-primary-500': bordered,
-      'transition-colors duration-150 ease-in-out': bordered,
-      'border-primary-500 dark:border-primary-500': checked && !disabled,
-    }"
+    ref="label"
+    :class="[
+      'inline-block cursor-pointer focus:outline-none group',
+      {
+        'rounded border border-gray-300 dark:border-gray-700 p-2 hover:border-primary-500 dark:hover:border-primary-500': bordered,
+        'transition-colors duration-150 ease-in-out': bordered,
+        'border-primary-500 dark:border-primary-500': checked && !disabled,
+      }
+    ]"
     :aria-checked="checked ? 'true' : 'false'"
     :aria-disabled="disabled ? 'true' : null"
     :tabindex="0"
+    @keydown.prevent.enter="$refs.label.click()"
   >
     <div
-      class="flex items-center"
-      :class="{ 'cursor-not-allowed': disabled }"
+      :class="[
+        'flex',
+        { 'cursor-not-allowed': disabled },
+      ]"
     >
       <input
         :id="id"
@@ -25,10 +31,10 @@
         :value="value"
       >
       <div
-        class="border rounded-full w-5 h-5 flex justify-center items-center flex-none"
         :class="[
+          'border rounded-full w-4 h-4 my-1 flex justify-center items-center flex-none transition-colors',
           {
-            'hover:border-primary-500': !disabled,
+            'group-hover:border-primary-500': !disabled,
             'bg-primary-500 border-primary-500': checked && !disabled,
             'bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700': !checked && !disabled,
             // disabled
@@ -37,20 +43,19 @@
           }
         ]"
       >
-        <svg
-          class="fill-current w-3 h-3 text-primary-100"
-          :class="{ 'opacity-0': !checked }"
-          viewBox="0 0 20 20"
-        >
-          <path d="M0 11l2-2 5 5L18 3l2 2L7 18z" />
-        </svg>
+        <div
+          :class="[
+            'bg-primary-50 rounded w-1.5 h-1.5',
+            { 'invisible': !checked },
+          ]"
+        />
       </div>
       <div class="pl-2"><slot /></div>
     </div>
 
     <div
       v-if="$slots.summary"
-      class="pl-6 ml-1"
+      class="pl-4 ml-2"
     >
       <slot name="summary" />
     </div>
