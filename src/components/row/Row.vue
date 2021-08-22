@@ -1,8 +1,8 @@
 <template>
   <component
     :is="tag"
-    class="flex flex-wrap"
     :class="[
+      'flex',
       {
         // align
         'items-baseline': align && align === 'baseline',
