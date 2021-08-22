@@ -82,10 +82,11 @@ describe('Toast', () => {
     const message = 'foobar';
 
     await wrapper.vm.success(message);
-    const $toastItem = wrapper.find('li > div');
+    const $toastItem = wrapper.find('svg');
+    const $toastContent = wrapper.find('li > div > div');
     expect($toastItem.exists()).toBe(true);
-    expect($toastItem.classes('bg-success-500')).toBe(true);
-    expect($toastItem.text()).toBe(message);
+    expect($toastItem.classes('text-success-500')).toBe(true);
+    expect($toastContent.text()).toBe(message);
   });
 
   it('trigger warn message', async () => {
@@ -93,10 +94,11 @@ describe('Toast', () => {
     const message = 'foobar';
 
     await wrapper.vm.warn(message);
-    const $toastItem = wrapper.find('li > div');
+    const $toastItem = wrapper.find('svg');
+    const $toastContent = wrapper.find('li > div > div');
     expect($toastItem.exists()).toBe(true);
-    expect($toastItem.classes('bg-warning-500')).toBe(true);
-    expect($toastItem.text()).toBe(message);
+    expect($toastItem.classes('text-warning-500')).toBe(true);
+    expect($toastContent.text()).toBe(message);
   });
 
   it('trigger error message', async () => {
@@ -104,10 +106,11 @@ describe('Toast', () => {
     const message = 'foobar';
 
     await wrapper.vm.error(message);
-    const $toastItem = wrapper.find('li > div');
+    const $toastItem = wrapper.find('svg');
+    const $toastContent = wrapper.find('li > div > div');
     expect($toastItem.exists()).toBe(true);
-    expect($toastItem.classes('bg-danger-500')).toBe(true);
-    expect($toastItem.text()).toBe(message);
+    expect($toastItem.classes('text-danger-500')).toBe(true);
+    expect($toastContent.text()).toBe(message);
   });
 
   it('remove message on click', async () => {
