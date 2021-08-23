@@ -1,3 +1,18 @@
+# [1.4.0](https://github.com/lecoueyl/mijin/compare/v1.3.3...v1.4.0) (2021-08-22)
+
+
+### Bug Fixes
+
+* **checkbox:** add transition-colors class ([20994cf](https://github.com/lecoueyl/mijin/commit/20994cf1ba4afa0df501497405b8a0a6f753685f))
+* **checkbox:** adjust size and fix hover style on dark mode ([71e66d4](https://github.com/lecoueyl/mijin/commit/71e66d4394a5f8173bfb32c366b085d0de61a8dd))
+* **radio:** improve alignment and radio size ([9e75954](https://github.com/lecoueyl/mijin/commit/9e759544850f2fcb416a03cce1ec41bddf07981c))
+* **radio and checkbox:** use invisible class instead of opacity-0 to hide checked mark ([8a916e8](https://github.com/lecoueyl/mijin/commit/8a916e8d773bb4e5ff2288715704984152ed25d9))
+
+
+### Features
+
+* **checkbox:** add mixed prop ([725206c](https://github.com/lecoueyl/mijin/commit/725206c9ebae54c78f80223734bfae6f830deecc))
+
 ## [1.3.3](https://github.com/lecoueyl/mijin/compare/v1.3.2...v1.3.3) (2021-08-16)
 
 
