@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/lecoueyl/mijin/compare/v1.4.0...v1.5.0) (2021-08-23)
+
+
+### Features
+
+* **toggle:** add centered and reversed props ([c3cd549](https://github.com/lecoueyl/mijin/commit/c3cd549182e4cfb554000c2761613a9220c9ae18))
+
 # [1.4.0](https://github.com/lecoueyl/mijin/compare/v1.3.3...v1.4.0) (2021-08-22)
 
 
