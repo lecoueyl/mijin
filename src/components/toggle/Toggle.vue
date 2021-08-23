@@ -2,15 +2,19 @@
   <label
     :class="[
       !disabled ? 'cursor-pointer' : 'cursor-not-allowed',
-      $slots.default ? 'flex items-center' : 'inline-block',
+      $slots.default ? 'inline-flex' : 'inline-block',
+      {
+        'items-center': centered,
+        'flex-row-reverse': reversed,
+      },
     ]"
   >
     <div
       class="rounded-full transition-colors duration-300"
       :class="[
         {
-          'w-6': size === 'sm',
-          'w-10 p-1': size === 'base',
+          'w-6 h-3 my-2': size === 'sm',
+          'w-10 h-6 p-1': size === 'base',
           'bg-gray-300 dark:bg-gray-600': disabled && !checked,
           'bg-gray-400 dark:bg-gray-400': disabled && checked,
           'bg-gray-200 dark:bg-gray-600': !disabled && !checked,
@@ -46,7 +50,7 @@
     </div>
     <span
       v-if="$slots.default"
-      class="pl-2"
+      :class="reversed ? 'pr-2' : 'pl-2'"
     >
       <slot />
     </span>
@@ -72,6 +76,11 @@ export default {
   },
 
   props: {
+    centered: {
+      type: Boolean,
+      default: false,
+    },
+
     disabled: {
       type: Boolean,
       default: false,
@@ -93,6 +102,11 @@ export default {
     },
 
     required: {
+      type: Boolean,
+      default: false,
+    },
+
+    reversed: {
       type: Boolean,
       default: false,
     },

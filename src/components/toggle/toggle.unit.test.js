@@ -33,6 +33,24 @@ describe('Toggle', () => {
     expect(wrapper.text()).toBe('foobar');
   });
 
+  it('accepts centered property', () => {
+    const wrapper = shallowMount(Toggle, {
+      propsData: {
+        centered: true,
+      },
+    });
+    expect(wrapper.classes('items-center')).toBe(true);
+  });
+
+  it('accepts reversed property', () => {
+    const wrapper = shallowMount(Toggle, {
+      propsData: {
+        reversed: true,
+      },
+    });
+    expect(wrapper.classes('flex-row-reverse')).toBe(true);
+  });
+
   it('has attribute disabled when disabled set', () => {
     const wrapper = shallowMount(Toggle, {
       propsData: {
