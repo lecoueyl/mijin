@@ -1,3 +1,11 @@
+## [1.5.2](https://github.com/lecoueyl/mijin/compare/v1.5.1...v1.5.2) (2021-08-24)
+
+
+### Bug Fixes
+
+* **checkbox:** remove trailing space ([467c748](https://github.com/lecoueyl/mijin/commit/467c7481c2f32949c1340b5a674feb74e7170b84))
+* **toggle:** add flex-grow class to slot ([77d7765](https://github.com/lecoueyl/mijin/commit/77d7765673889aebbf65043dc184c169c41fc80a))
+
 ## [1.5.1](https://github.com/lecoueyl/mijin/compare/v1.5.0...v1.5.1) (2021-08-24)
 
 
