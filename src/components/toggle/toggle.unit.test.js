@@ -35,6 +35,9 @@ describe('Toggle', () => {
 
   it('accepts centered property', () => {
     const wrapper = shallowMount(Toggle, {
+      slots: {
+        default: 'foobar',
+      },
       propsData: {
         centered: true,
       },
@@ -44,6 +47,9 @@ describe('Toggle', () => {
 
   it('accepts reversed property', () => {
     const wrapper = shallowMount(Toggle, {
+      slots: {
+        default: 'foobar',
+      },
       propsData: {
         reversed: true,
       },
