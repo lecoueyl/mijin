@@ -10,10 +10,10 @@
     ]"
   >
     <div
-      class="rounded-full transition-colors duration-300"
+      class="flex-none rounded-full transition-colors duration-300"
       :class="[
         {
-          'w-6 h-3 my-2': size === 'sm',
+          'w-6 h-3 my-1.5': size === 'sm',
           'w-10 h-6 p-1': size === 'base',
           'bg-gray-300 dark:bg-gray-600': disabled && !checked,
           'bg-gray-400 dark:bg-gray-400': disabled && checked,
