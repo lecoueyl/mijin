@@ -50,12 +50,15 @@
         ]"
       />
     </div>
-    <span
+    <div
       v-if="$slots.default"
-      :class="reversed ? 'pr-2' : 'pl-2'"
+      :class="[
+        'flex-grow',
+        reversed ? 'pr-2' : 'pl-2',
+      ]"
     >
       <slot />
-    </span>
+    </div>
   </label>
 </template>
 

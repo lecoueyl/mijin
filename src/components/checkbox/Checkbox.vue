@@ -11,7 +11,7 @@
     :aria-disabled="disabled ? 'true' : null"
     :tabindex="0"
     @keydown.prevent.enter="$refs.label.click()"
->
+  >
     <input
       :id="id"
       v-model="selected"
