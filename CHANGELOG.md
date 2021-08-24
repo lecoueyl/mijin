@@ -1,3 +1,11 @@
+## [1.5.1](https://github.com/lecoueyl/mijin/compare/v1.5.0...v1.5.1) (2021-08-24)
+
+
+### Bug Fixes
+
+* **toggle:** add flex-none to prevent button to collapse ([ee944fc](https://github.com/lecoueyl/mijin/commit/ee944fc914b581752367d1294a53eb6350b53006))
+* **toggle/checkbox/radio:** remove button margin when default slot is not used ([86e8dc9](https://github.com/lecoueyl/mijin/commit/86e8dc9c2f99489ab5b28f165cc74b7744c77489))
+
 # [1.5.0](https://github.com/lecoueyl/mijin/compare/v1.4.0...v1.5.0) (2021-08-23)
 
 
