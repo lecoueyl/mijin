@@ -1,29 +1,28 @@
 <template>
   <div
-    class="fixed z-30 inset-0 overflow-y-auto transition-all"
     :class="[
+      'fixed z-30 inset-0 overflow-y-auto transition-all',
       isOpen ? 'visible' : 'invisible ease-in duration-100'
     ]"
   >
     <div
-      class="fixed inset-0 bg-gray-500 dark:bg-gray-600 transition-opacity"
       :class="[
+        'fixed inset-0 bg-gray-500 dark:bg-gray-600 transition-opacity',
         isOpen ? 'ease-out duration-200 opacity-75' : 'ease-in duration-100 opacity-0',
       ]"
       @click.self="onOverlayClick()"
     />
 
-    <div
-      class="flex items-end sm:items-center justify-center min-h-full p-2 sm:p-6"
-    >
+    <div class="flex items-end sm:items-center justify-center min-h-full p-2 sm:p-6">
       <div
-        class="relative inline-block bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-xl transform transition-all p-4 sm:p-6"
         :class="[
+          'relative inline-block bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-xl transform transition-all',
           {
             'w-full sm:max-w-lg': size === 'base',
             'w-full sm:max-w-3xl': size === 'lg',
             'w-full sm:max-w-5xl': size === 'xl',
             'w-full': size === 'full',
+            'p-4 sm:p-6': padded,
           },
           isOpen ?
             'ease-out-mijin duration-500 opacity-100 translate-y-0 sm:scale-100'
@@ -83,6 +82,11 @@ export default {
     dismissButton: {
       type: Boolean,
       default: false,
+    },
+
+    padded: {
+      type: Boolean,
+      default: true,
     },
 
     size: {
