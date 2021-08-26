@@ -11,10 +11,10 @@
         'text-danger-500 border-danger-500': !props.filled && props.variant === 'danger',
         'text-warning-500 border-warning-500': !props.filled && props.variant === 'warning',
         // filled
-        'bg-blue-500 text-blue-50': props.filled && props.variant === 'info',
-        'bg-success-500 text-success-50': props.filled && props.variant === 'success',
-        'bg-danger-500 text-danger-50': props.filled && props.variant === 'danger',
-        'bg-warning-500 text-warning-50': props.filled && props.variant === 'warning',
+        'bg-blue-50 text-blue-900 dark:bg-blue-700 dark:text-blue-50': props.filled && props.variant === 'info',
+        'bg-success-50 text-success-900 dark:bg-success-700 dark:text-success-50': props.filled && props.variant === 'success',
+        'bg-danger-50 text-danger-900 dark:bg-danger-700 dark:text-danger-50': props.filled && props.variant === 'danger',
+        'bg-warning-50 text-warning-900 dark:bg-warning-700 dark:text-warning-50': props.filled && props.variant === 'warning',
       },
       data.class,
       data.staticClass,
@@ -36,7 +36,7 @@
       stroke-linecap="round"
       fill="none"
       role="presentation"
-      class="flex-none stroke-2 w-4 h-4 mt-1 mr-2"
+      class="flex-none stroke-2 w-4 h-4 my-1 mr-2"
     >
       <template v-if="props.variant === 'info'">
         <circle
