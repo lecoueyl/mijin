@@ -47,7 +47,7 @@
       :src="props.src"
       class="h-full w-full"
     >
-    <slot />
+    <slot v-if="$slots.default" />
   </component>
 </template>
 
