@@ -2,7 +2,7 @@
   <component
     :is="props.tag"
     :ref="data.ref"
-    class="pb-2 transition-colors duration-150 ease-in-out"
+    class="-mb-px pb-2 transition-colors duration-150 ease-in-out"
     :class="[
       {
         'border-b-2 border-primary-500 text-primary-500': props.selected,
