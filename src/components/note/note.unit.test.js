@@ -9,7 +9,7 @@ describe('Note', () => {
 
     expect(wrapper.element.tagName).toBe('DIV');
     expect(wrapper.classes('border')).toBe(true);
-    expect(wrapper.classes('bg-blue-500')).toBe(false);
+    expect(wrapper.classes('bg-blue-50')).toBe(false);
   });
 
   it('renders default slot content', async () => {
@@ -58,7 +58,7 @@ describe('Note', () => {
     });
 
     expect(wrapper.classes('border')).toBe(false);
-    expect(wrapper.classes('bg-blue-500')).toBe(true);
+    expect(wrapper.classes('bg-blue-50')).toBe(true);
   });
 
   it('should emit events', async () => {

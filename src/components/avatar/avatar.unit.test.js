@@ -20,8 +20,8 @@ describe('Avatar', () => {
       },
     });
 
-    expect(wrapper.find('section').exists()).toBe(false);
-    expect(wrapper.text()).toBe('');
+    expect(wrapper.find('section').exists()).toBe(true);
+    expect(wrapper.text()).toBe('foobar');
   });
 
   it('renders custom root element', async () => {
