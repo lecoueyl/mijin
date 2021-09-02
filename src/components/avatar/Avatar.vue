@@ -47,6 +47,7 @@
       :src="props.src"
       class="h-full w-full"
     >
+    <slot />
   </component>
 </template>
 
