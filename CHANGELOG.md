@@ -1,3 +1,18 @@
+# [1.6.0](https://github.com/lecoueyl/mijin/compare/v1.5.2...v1.6.0) (2021-09-02)
+
+
+### Bug Fixes
+
+* **tabs:** improve TabsItem activate state bar position ([1cd4652](https://github.com/lecoueyl/mijin/commit/1cd4652404d87860a458b2278ff232865591f3ef))
+* **tailwindcss:** replace lightBlue with sky to remove migration warning ([1d28c01](https://github.com/lecoueyl/mijin/commit/1d28c014ca63d6975a24ce837979b269296957ae))
+* **texttarea:** able to set textarea height by class ([6ef3292](https://github.com/lecoueyl/mijin/commit/6ef329246e3c97ed7eab548a99889470fa0c3377))
+
+
+### Features
+
+* **avatar:** able to pass slot to Avatar component ([f5538d0](https://github.com/lecoueyl/mijin/commit/f5538d049e9e39b9c1531449500ad438877a398b))
+* **modal:** add padded props ([b0cd360](https://github.com/lecoueyl/mijin/commit/b0cd360a9a355b8f77de6bdc2ca4bff3f5132202))
+
 ## [1.5.2](https://github.com/lecoueyl/mijin/compare/v1.5.1...v1.5.2) (2021-08-24)
 
 
