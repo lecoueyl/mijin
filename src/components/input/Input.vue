@@ -35,7 +35,7 @@
 
         <input
           ref="input"
-          class="appearance-none block w-full text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-600 border
+          class="appearance-none block w-full text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 border
             focus:outline-none transition-colors duration-150 ease-in-out"
           :class="[
             $slots.icon ? 'pl-8' : 'pl-2',

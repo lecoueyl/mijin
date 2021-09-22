@@ -8,7 +8,7 @@
     </p>
 
     <textarea
-      class="h-full pl-2 appearance-none block w-full text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-600 border rounded-form leading-tight
+      class="h-full pl-2 appearance-none block w-full text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 border rounded-form leading-tight
         focus:outline-none transition-colors duration-150 ease-in-out"
       :class="[
         disabled ? 'bg-gray-200 dark:bg-gray-800 cursor-not-allowed' : 'bg-white dark:bg-gray-900',
