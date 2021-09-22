@@ -16,9 +16,10 @@
     <div class="flex items-end sm:items-center justify-center min-h-full p-2 sm:p-6">
       <div
         :class="[
-          'relative inline-block bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-xl transform transition-all',
+          'relative inline-block bg-white dark:bg-gray-900 rounded-lg shadow-xl transform transition-all',
           {
             'w-full sm:max-w-lg': size === 'base',
+            'w-full sm:max-w-xl': size === 'md',
             'w-full sm:max-w-3xl': size === 'lg',
             'w-full sm:max-w-5xl': size === 'xl',
             'w-full': size === 'full',
@@ -62,6 +63,7 @@
 const validator = {
   size: [
     'base',
+    'md',
     'lg',
     'xl',
     'full',
