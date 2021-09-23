@@ -9,7 +9,6 @@
         'border-gray-300 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500': bordered && !checked && !disabled,
         'border-primary-500 dark:border-primary-500': bordered && checked,
         'border-gray-300 dark:border-gray-700  cursor-not-allowed': disabled,
-        'focus:ring-2 focus:ring-primary-500 focus:rounded': !disabled,
       }
     ]"
     :aria-checked="checked ? 'true' : 'false'"
