@@ -5,10 +5,10 @@
       'cursor-pointer focus:outline-none group',
       $slots.default ? 'inline-flex' : 'inline-block',
       {
-        'rounded border border-gray-300 dark:border-gray-700 p-2 hover:border-primary-500 dark:hover:border-primary-500': bordered,
-        'transition-colors duration-150 ease-in-out': bordered,
-        'border-primary-500 dark:border-primary-500': checked && !disabled,
-        'cursor-not-allowed': disabled,
+        'rounded border p-2 transition-colors duration-150 ease-in-out': bordered,
+        'border-gray-300 dark:border-gray-700 hover:border-primary-500 dark:hover:border-primary-500': bordered && !checked && !disabled,
+        'border-primary-500 dark:border-primary-500': bordered && checked,
+        'border-gray-300 dark:border-gray-700  cursor-not-allowed': disabled,
       }
     ]"
     :aria-checked="checked ? 'true' : 'false'"

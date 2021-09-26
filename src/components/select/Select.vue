@@ -17,7 +17,7 @@
             : 'bg-white dark:bg-gray-900',
           size === 'sm' ? 'text-sm py-1 pl-2' : 'py-2 pl-2',
           {
-            'text-gray-400 dark:text-gray-600': value === '' || value === null,
+            'text-gray-400 dark:text-gray-500': value === '' || value === null,
           },
         ]"
         :disabled="disabled"
