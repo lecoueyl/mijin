@@ -1,3 +1,15 @@
+# [1.7.0](https://github.com/lecoueyl/mijin/compare/v1.6.0...v1.7.0) (2021-09-26)
+
+
+### Bug Fixes
+
+* **modal:** remove modal content overflow-hidden ([4492d3d](https://github.com/lecoueyl/mijin/commit/4492d3dd701ad245032bed8ac4bfdeb124734410))
+
+
+### Features
+
+* **input:** add suffix and prefix slots ([948efac](https://github.com/lecoueyl/mijin/commit/948efac764e0693ad22e5fbd044ecf0da2ce75ad))
+
 # [1.6.0](https://github.com/lecoueyl/mijin/compare/v1.5.2...v1.6.0) (2021-09-02)
 
 
