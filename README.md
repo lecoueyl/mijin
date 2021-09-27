@@ -101,6 +101,7 @@ Load the plugin from `nuxt.config.js`
 ```
 
 [📖 &nbsp;Read more](https://lecoueyl.github.io/mijin.web/docs/general/getting-started/)
+
 ## Support
 
 ### Bug report
