@@ -7,7 +7,7 @@
       {
         'flex items-center': $slots.prefix || $slots.suffix,
         'hover:bg-gray-100 dark:hover:bg-gray-800': props.variant === 'base' && !props.disabled,
-        'hover:text-danger-500 hover:bg-danger-50': props.variant === 'danger' && !props.disabled,
+        'hover:text-danger-500 hover:bg-danger-50 dark:hover:text-danger-50 dark:hover:bg-danger-900': props.variant === 'danger' && !props.disabled,
         'opacity-70': props.disabled,
         'cursor-pointer': !props.disabled,
       },
