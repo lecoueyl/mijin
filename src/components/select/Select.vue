@@ -10,11 +10,12 @@
     <div class="relative">
       <select
         class="block appearance-none w-full border border-gray-300 dark:border-gray-700 pr-8 rounded-form leading-tight
-          focus:outline-none focus:border-primary-500 dark:focus:border-primary-500 transition-colors duration-150 ease-in-out"
+          focus:outline-none transition-colors duration-150 ease-in-out"
         :class="[
           disabled
             ? 'bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 cursor-not-allowed'
             : 'bg-white dark:bg-gray-900',
+          readonly ? 'pointer-events-none' : 'focus:border-primary-500 dark:focus:border-primary-500',
           size === 'sm' ? 'text-sm py-1 pl-2' : 'py-2 pl-2',
           {
             'text-gray-400 dark:text-gray-500': value === '' || value === null,
@@ -22,7 +23,6 @@
         ]"
         :disabled="disabled"
         :name="name"
-        :readonly="readonly"
         :value="value"
         v-bind="$attrs"
         v-on="listeners"
