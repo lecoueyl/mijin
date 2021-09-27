@@ -1,3 +1,10 @@
+## [1.7.1](https://github.com/lecoueyl/mijin/compare/v1.7.0...v1.7.1) (2021-09-27)
+
+
+### Bug Fixes
+
+* **readme:** add spaces ([f8f08c1](https://github.com/lecoueyl/mijin/commit/f8f08c186f0b374b9b96272d45a34d8c008c9957))
+
 # [1.7.0](https://github.com/lecoueyl/mijin/compare/v1.6.0...v1.7.0) (2021-09-26)
 
 
