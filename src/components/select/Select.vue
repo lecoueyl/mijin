@@ -2,7 +2,7 @@
   <label class="block">
     <p
       v-if="$slots.label"
-      class="text-gray-800 dark:text-gray-200 mb-1"
+      class="mb-1 text-gray-800 font-label dark:text-gray-200"
     >
       <slot name="label" />
     </p>
@@ -16,7 +16,7 @@
             ? 'bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 cursor-not-allowed'
             : 'bg-white dark:bg-gray-900',
           readonly ? 'pointer-events-none' : 'focus:border-primary-500 dark:focus:border-primary-500',
-          size === 'sm' ? 'text-sm py-1 pl-2' : 'py-2 pl-2',
+          size === 'sm' ? 'py-1 pl-2' : 'py-2 pl-2',
           {
             'text-gray-400 dark:text-gray-500': value === '' || value === null,
           },

@@ -2,18 +2,18 @@
   <label class="block">
     <p
       v-if="$slots.default"
-      class="text-gray-800 dark:text-gray-200 mb-1"
+      class="mb-1 text-gray-800 font-label dark:text-gray-200"
     >
       <slot />
     </p>
-    <div class="flex leading-tight">
+    <div class="flex">
       <div
         v-if="$slots.prefix"
         :class="[
-          'flex-none rounded-l-form bg-gray-50 border-l border-t border-b border-gray-300 px-2 text-gray-600 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400',
+          'flex-none rounded-l-form bg-gray-50 border-l border-t border-b border-gray-300 px-2 text-gray-600 leading-tight dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400',
           {
             // size
-            'text-sm py-1': size === 'sm',
+            'py-1': size === 'sm',
             'py-2': size === 'base',
           }
         ]"
@@ -35,7 +35,7 @@
 
         <input
           ref="input"
-          class="appearance-none block w-full text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 border
+          class="appearance-none block w-full border text-gray-700 dark:text-gray-200 placeholder-gray-400 leading-tight dark:placeholder-gray-500
             focus:outline-none transition-colors duration-150 ease-in-out"
           :class="[
             $slots.icon ? 'pl-8' : 'pl-2',
@@ -43,7 +43,7 @@
             type === 'password' ? 'pr-8' : 'pr-2',
             {
               // size
-              'text-sm py-1': size === 'sm',
+              'py-1': size === 'sm',
               'py-2': size === 'base',
               // status
               'border-gray-300 dark:border-gray-700': !status,
@@ -107,10 +107,10 @@
       <div
         v-if="$slots.suffix"
         :class="[
-          'flex-none rounded-r-form bg-gray-50 border-t border-r border-b border-gray-300 px-2 text-gray-600 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400',
+          'flex-none rounded-r-form bg-gray-50 border-t border-r border-b border-gray-300 px-2 text-gray-600 leading-tight dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400',
           {
             // size
-            'text-sm py-1': size === 'sm',
+            'py-1': size === 'sm',
             'py-2': size === 'base',
           }
         ]"

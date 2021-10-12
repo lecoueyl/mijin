@@ -2,7 +2,7 @@
   <label class="block">
     <p
       v-if="$slots.default"
-      class="text-gray-800 dark:text-gray-200 mb-1"
+      class="mb-1 text-gray-800 font-label dark:text-gray-200"
     >
       <slot />
     </p>
@@ -14,7 +14,7 @@
         disabled ? 'bg-gray-200 dark:bg-gray-800 cursor-not-allowed' : 'bg-white dark:bg-gray-900',
         {
           // size
-          'text-sm py-1': size === 'sm',
+          'py-1': size === 'sm',
           'py-2': size === 'base',
           // status
           'border-gray-300 dark:border-gray-700': !status,
