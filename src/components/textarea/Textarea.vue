@@ -14,7 +14,7 @@
         disabled ? 'bg-gray-200 dark:bg-gray-800 cursor-not-allowed' : 'bg-white dark:bg-gray-900',
         {
           // size
-          'text-sm py-1': size === 'sm',
+          'py-1': size === 'sm',
           'py-2': size === 'base',
           // status
           'border-gray-300 dark:border-gray-700': !status,
