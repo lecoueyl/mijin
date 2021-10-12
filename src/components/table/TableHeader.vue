@@ -1,8 +1,7 @@
 <template>
   <th
-    class="font-medium"
     :class="[
-      'last:pr-0',
+      'font-header last:pr-0',
       {
         // density
         'py-1 pr-2': tableProps.density === 'tight',

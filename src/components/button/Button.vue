@@ -3,7 +3,7 @@
     :is="props.tag"
     :ref="data.ref"
     :class="[
-      'relative leading-tight font-medium border transition-colors duration-150 focus:outline-none shadow-sm',
+      'relative leading-tight font-button border transition-colors duration-150 focus:outline-none shadow-sm',
       {
         // busy
         'animate-pulse': props.busy,

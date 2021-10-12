@@ -2,7 +2,7 @@
   <label class="block">
     <p
       v-if="$slots.label"
-      class="text-gray-800 dark:text-gray-200 mb-1"
+      class="mb-1 text-gray-800 font-label dark:text-gray-200"
     >
       <slot name="label" />
     </p>

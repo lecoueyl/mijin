@@ -1,5 +1,5 @@
 const colors = require('tailwindcss/colors');
-const { borderRadius } = require('tailwindcss/defaultTheme');
+const { borderRadius, fontWeight } = require('tailwindcss/defaultTheme');
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
@@ -32,6 +32,11 @@ module.exports = {
       borderRadius: {
         button: borderRadius.lg,
         form: borderRadius.md,
+      },
+      fontWeight: {
+        button: fontWeight.medium,
+        header: fontWeight.medium,
+        label: fontWeight.medium,
       },
       transitionTimingFunction: {
         'in-mijin': 'cubic-bezier(0.7, 0, 0.84, 0)',
