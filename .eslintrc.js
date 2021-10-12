@@ -12,7 +12,7 @@ module.exports = {
   },
   rules: {
     'import/no-extraneous-dependencies': 0,
-    'max-len': ['error', { code: 180 }],
+    'max-len': ['error', { code: 200 }],
     'vue/no-v-html': 0,
   },
   overrides: [
