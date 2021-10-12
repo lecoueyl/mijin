@@ -1,3 +1,11 @@
+## [1.7.2](https://github.com/lecoueyl/mijin/compare/v1.7.1...v1.7.2) (2021-10-12)
+
+
+### Bug Fixes
+
+* **input:** text leading ([5adb093](https://github.com/lecoueyl/mijin/commit/5adb09340ed9fdaa90ee05a6e54d25886f9ba8a7))
+* **test:** increase max-len ([9009a12](https://github.com/lecoueyl/mijin/commit/9009a1242dedf652cadc62d1309f3fa18847a9ce))
+
 ## [1.7.1](https://github.com/lecoueyl/mijin/compare/v1.7.0...v1.7.1) (2021-09-27)
 
 
