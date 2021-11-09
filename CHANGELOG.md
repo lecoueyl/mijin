@@ -1,3 +1,10 @@
+## [1.7.3](https://github.com/lecoueyl/mijin/compare/v1.7.2...v1.7.3) (2021-11-09)
+
+
+### Bug Fixes
+
+* **select:** accept Boolean, Object, Array, Function, Date value type ([6028b23](https://github.com/lecoueyl/mijin/commit/6028b23d30963b9526f6b855f95521f720de339d))
+
 ## [1.7.2](https://github.com/lecoueyl/mijin/compare/v1.7.1...v1.7.2) (2021-10-12)
 
 
