@@ -103,7 +103,7 @@ export default {
     },
 
     value: {
-      type: [String, Number],
+      type: [String, Number, Boolean, Object, Array, Function, Date],
       default: null,
     },
   },
