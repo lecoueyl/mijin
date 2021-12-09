@@ -1,10 +1,24 @@
 import * as components from './components';
 
-const install = (Vue, config = {}) => {
-  Object.entries(components).forEach(([name, component]) => {
-    const prefix = config.prefix ? config.prefix : 'Mj';
+export let options = {
+  extendIcons: {},
+  prefix: 'Mj',
+};
 
-    Vue.component(`${prefix}${name}`, component);
+const setOptions = (newOptions) => {
+  Object.entries(newOptions).forEach(([key, value]) => {
+    if (!options[key]) throw new Error(`[Mijin] ${key} is not a valid plugin option`);
+    if (typeof value !== typeof options[key]) throw new Error(`[Mijin] Invalid prop: type check failed for option "${key}". Expected ${typeof options[key]} , got ${typeof value}`);
+
+    options[key] = value;
+  });
+};
+
+const install = (Vue, config = {}) => {
+  setOptions(config);
+
+  Object.entries(components).forEach(([name, component]) => {
+    Vue.component(`${options.prefix}${name}`, component);
   });
 };
 
