@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/lecoueyl/mijin/compare/v1.7.3...v1.8.0) (2021-12-09)
+
+
+### Features
+
+* **plugin:** add extendIcons plugin option ([773f271](https://github.com/lecoueyl/mijin/commit/773f2711ca02548d8de8f7ae3ff3fde29e1db354))
+
 ## [1.7.3](https://github.com/lecoueyl/mijin/compare/v1.7.2...v1.7.3) (2021-11-09)
 
 
