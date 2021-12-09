@@ -19,6 +19,7 @@
 
 <script>
 import featherIcons from 'feather-icons/dist/icons.json';
+import { options } from '../../index';
 
 const validator = {
   size: [
@@ -50,6 +51,12 @@ export default {
     return {
       icons: featherIcons,
     };
+  },
+
+  created() {
+    this.icons = { ...featherIcons, ...options.extendIcons };
+
+    if (!this.icons[this.name]) throw new Error(`${this.name} icon is not available. You can pass it as an option in Mijin plugin configuration`);
   },
 };
 </script>
