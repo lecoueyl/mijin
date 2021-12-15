@@ -19,11 +19,11 @@
       class="animate-ping absolute h-full w-full rounded-full opacity-75"
       :class="[
         {
-          // status
-          'bg-primary-400': props.status === 'primary',
-          'bg-danger-400': ['danger', 'error'].includes(props.status),
-          'bg-success-400': props.status === 'success',
-          'bg-warning-400': props.status === 'warning',
+          'bg-danger-500': ['danger', 'error'].includes(props.status),
+          'bg-gray-500': props.status === 'disabled',
+          'bg-primary-500': props.status === 'primary',
+          'bg-success-500': props.status === 'success',
+          'bg-warning-500': props.status === 'warning',
         },
       ]"
     />
@@ -32,9 +32,9 @@
       class="absolute rounded-full h-full w-full"
       :class="[
         {
-          // status
-          'bg-primary-500': props.status === 'primary',
           'bg-danger-500': ['danger', 'error'].includes(props.status),
+          'bg-gray-500': props.status === 'disabled',
+          'bg-primary-500': props.status === 'primary',
           'bg-success-500': props.status === 'success',
           'bg-warning-500': props.status === 'warning',
         },
@@ -46,8 +46,9 @@
 <script>
 const validator = {
   status: [
-    'primary',
     'danger',
+    'disabled',
+    'primary',
     'success',
     'warning',
   ],
