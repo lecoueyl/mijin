@@ -35,7 +35,7 @@ describe('StatusDot', () => {
 
   test.each([
     ['danger', '.bg-danger-500'],
-    ['gray', '.bg-gray-500'],
+    ['disabled', '.bg-gray-500'],
     ['success', '.bg-success-500'],
     ['warning', '.bg-warning-500'],
   ])(
