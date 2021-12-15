@@ -34,8 +34,9 @@ describe('StatusDot', () => {
   });
 
   test.each([
-    ['success', '.bg-success-500'],
     ['danger', '.bg-danger-500'],
+    ['gray', '.bg-gray-500'],
+    ['success', '.bg-success-500'],
     ['warning', '.bg-warning-500'],
   ])(
     'with prop status %p render class %p',
