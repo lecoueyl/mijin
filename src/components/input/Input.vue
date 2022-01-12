@@ -24,11 +24,7 @@
       <div class="relative flex-grow">
         <span
           v-if="$slots.icon"
-          class="flex items-center w-5 h-5 text-gray-500 absolute my-auto ml-2 inset-y-0 left-0"
-          :class="[{
-            'mr-1': $slots.default && !props.iconRight,
-            'ml-1': $slots.default && props.iconRight,
-          }]"
+          class="flex self-end items-center w-5 h-5 text-gray-500 absolute my-auto ml-2 inset-y-0 left-0"
         >
           <slot name="icon" />
         </span>
@@ -38,13 +34,18 @@
           class="appearance-none block w-full border text-gray-700 dark:text-gray-200 placeholder-gray-400 leading-tight dark:placeholder-gray-500
             focus:outline-none transition-colors duration-150 ease-in-out"
           :class="[
-            $slots.icon ? 'pl-8' : 'pl-2',
             disabled ? 'bg-gray-200 dark:bg-gray-800 cursor-not-allowed' : 'bg-white dark:bg-gray-900',
             type === 'password' ? 'pr-8' : 'pr-2',
             {
-              // size
+              // padding vertical
               'py-1': size === 'sm',
               'py-2': size === 'base',
+              // padding left
+              'pl-2': !$slots.icon,
+              'pl-7': $slots.icon,
+              // padding right
+              'pr-4': type === 'password' ,
+              'pr-2': type !== 'password',
               // status
               'border-gray-300 dark:border-gray-700': !status,
               'border-danger-500': status === 'error',
@@ -69,7 +70,6 @@
           v-bind="$attrs"
           v-on="listeners"
         >
-
         <svg
           v-if="type === 'password'"
           width="24"
