@@ -1,3 +1,10 @@
+## [1.9.1](https://github.com/lecoueyl/mijin/compare/v1.9.0...v1.9.1) (2022-01-12)
+
+
+### Bug Fixes
+
+* **input:** input component will not error when using icon and default slot ([4187735](https://github.com/lecoueyl/mijin/commit/41877354d64c9d12adb48db5bf9090c97ba3382c))
+
 # [1.9.0](https://github.com/lecoueyl/mijin/compare/v1.8.0...v1.9.0) (2021-12-15)
 
 
