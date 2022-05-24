@@ -16,6 +16,7 @@
 <script>
 const validator = {
   density: [
+    'none',
     'tight',
     'normal',
   ],
