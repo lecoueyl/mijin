@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/lecoueyl/mijin/compare/v1.9.1...v1.10.0) (2022-05-24)
+
+
+### Features
+
+* **table:** add null density ([47d1d05](https://github.com/lecoueyl/mijin/commit/47d1d050a84b6973b8537e1659da74d8ea1a25a5))
+
 ## [1.9.1](https://github.com/lecoueyl/mijin/compare/v1.9.0...v1.9.1) (2022-01-12)
 
 
